@@ -1,4 +1,4 @@
-# NASDAQ News Database 2017
+# NASDAQ News Database 2016
 
 NASDAQ News data is collected from NASDAQ News platform (https://www.nasdaq.com) that offers news related to Global Market, US Stock Market, US Fix-income Market and etc.
 This dataset can only be used on academic research purpose.
@@ -19,7 +19,7 @@ import json
 
 path = 'your working dirctory path'
 
-with open(path + 'NASDAQ_News_2017.json', 'r') as json_file:
+with open(path + 'NASDAQ_News_2016.json', 'r') as json_file:
     nasdaq_news_2017 = json.load(json_file)
 ```
 
