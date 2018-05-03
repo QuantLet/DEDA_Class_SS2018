@@ -17,7 +17,7 @@ Note: Please unzip the json.zip file before reading it
 ```python
 import json
 
-path = 'your working dirctory path'
+path = 'your working directory path'
 
 with open(path + 'NASDAQ_News_2016.json', 'r') as json_file:
     nasdaq_news_2016 = json.load(json_file)
