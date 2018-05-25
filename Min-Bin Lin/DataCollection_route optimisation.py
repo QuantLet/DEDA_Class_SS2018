@@ -16,16 +16,17 @@ import copy
 from bs4 import BeautifulSoup
 import pandas as pd
 import dill
+import folium
+from folium.plugins import MarkerCluster
 from scipy.spatial.distance import squareform
 
 # google map api (2,500 free requests per day): geocoding and distance matrix
 # api key: https://developers.google.com/maps/documentation/geocoding/get-api-key
 import googlemaps
-gmaps = googlemaps.Client(key = 'YOUR KEY HERE')
+gmaps = googlemaps.Client(key = 'AIzaSyBStGhUd8RwlGYmU7fFaQN9tjMmrycG7ls')
 
 logger = logging.getLogger("DataCollection")
-logger.setLevel(logging.DEBUG)
-
+logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
 # Pickle file names
 DISTANCE_PKL = 'distance.pkl'
 GEOCODED_DATA_PKL = 'geocoded_data.pkl'
@@ -101,15 +102,12 @@ class Data(object):
     TYPES = {
             'shop': 'shop',
             'warehouse': 'warehouse',
-            'gas_station': 'gas_station'
             }
    
     def __init__(self):
-        self.gas_id = None
         self.warehouse_id = None
         self.shop_id = None
         
-        self.gas_stations = []
         self.shops = []
         self.warehouses = []
         
@@ -119,8 +117,8 @@ class Data(object):
         return len(self.data.all)
 
     def __repr__(self):
-        return '%d gas_stations, %d shops, %d warehouses' % (
-                len(self.gas_stations), len(self.shops), len(self.warehouses))
+        return '%d shops, %d warehouses' % (
+                len(self.shops), len(self.warehouses))
         
     def _next_id(self, id_val):
         # initial case, return 0 when not set
@@ -133,17 +131,9 @@ class Data(object):
         
         return id_val
     
-    def next_gas_id(self):
-        self.gas_id = self._next_id(self.gas_id)
-        return self.gas_id
-    
     def next_warehouse_id(self):
         self.warehouse_id = self._next_id(self.warehouse_id)
         return self.warehouse_id
-    
-    def add_gas(self, gas_data):
-        self.gas_stations += [gas_data]
-        self.all += [gas_data]
         
     def add_shop(self, shop_data):
         self.shops += [shop_data]
@@ -174,7 +164,7 @@ class Data(object):
     
     @classmethod
     def split_pair(cls, pair_str):
-        # like "gas_station 02 / warehouse 01"
+        # like "shop 119478 / warehouse 01"
         return [e.strip() for e in pair_str.split('/')]
     
     @classmethod
@@ -191,40 +181,15 @@ if os.path.exists(GEOCODED_DATA_PKL):
     data = dill.load(open(GEOCODED_DATA_PKL))
 else:
     data = Data()
+    
     ############################################################
     ### add warehouse ###
+    
     logger.info("Adding warehouse")
     wh = DataEntry(name='倉庫', address='台北市忠孝東路四段560號', 
                    entry_type=data.TYPES['warehouse'], entry_id=data.next_warehouse_id())
     data.add_warehouse(wh)
     
-    ############################################################
-    ### add gas stations ###
-    
-    # gas station data (only in XinYi District) by headers
-    logger.info("Fetching gas stations")
-    url_gas = 'https://www.doed.gov.taipei/News_Content.aspx?n=8BB267BCC208E737&sms=ECA63C34B5675544&s=BA9A67FC9650C01F'
-    response_gas = requests.get(url_gas)
-    soup_gas = BeautifulSoup(response_gas.text, 'lxml')
-    table_gas = soup_gas.select('table')
-    
-    tables = soup_gas.select('table')
-    for table in tables:
-        rows = table.find_all('tr')
-    
-        for row in rows:
-            cols = row.find_all('td')
-            cols = [elem.text.strip() for elem in cols]
-            if cols and cols[1] ==  u'信義區':
-                gas_data = DataEntry(name=cols[3], address=cols[4],
-                                     entry_type = data.TYPES['gas_station'], entry_id = data.next_gas_id())
-                data.add_gas(gas_data)
-                
-    logger.info("Fetched %d gas stations", len(data.gas_stations))
-    # gas stations are missing 台北市, so we need to add it to the string.
-    for gas_station in data.gas_stations:
-        gas_station.name = ''.join(['台北市',gas_station.name])
-       
     ############################################################
     ### 711s data ###      
     
@@ -272,7 +237,33 @@ else:
     dill.dump(data, open(GEOCODED_DATA_PKL, "w"))
     
 ############################################################
+# create interaction map
+
+xinyi_coordinates = (25.033964, 121.564468)
+xinyi_map = folium.Map(location=xinyi_coordinates,
+                       tiles='Stamen Toner',
+                       zoom_start=10)
+
+# create cluster
+mc = MarkerCluster()
+for place in data.all:   
+    # colour warehouse specially
+    if place.entry_type == data.TYPES['warehouse']:
+        logger.info("found warehouse")
+        folium.Marker(location=[place.lat, place.lon],
+                      icon=folium.Icon(icon='circle',color='red')
+                      ).add_to(xinyi_map)
+    else:
+        mc.add_child(folium.Marker(location=[place.lat, place.lon], 
+                                   popup=place.name.decode('utf-8'),
+                                   icon=folium.Icon(icon='circle',color='blue')))
+                    
+xinyi_map.add_child(mc)
+xinyi_map.save("map_xinyi.html")
+
+############################################################
 # create distance list (sorted with 0) and distance matrix (pairwise distance): in meter
+
 if os.path.exists(DISTANCE_PKL):
     logger.info("Found pickled file %s, loading...", DISTANCE_PKL)
     distance = dill.load(open(DISTANCE_PKL))

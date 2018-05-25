@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_25a727230c58443d8911cc4b0c48f28f {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_25a727230c58443d8911cc4b0c48f28f" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_25a727230c58443d8911cc4b0c48f28f = L.map(
+                                  'map_25a727230c58443d8911cc4b0c48f28f',
+                                  {center: [25.033964,121.564468],
+                                  zoom: 10,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_d46a7d87860a4e78af5746dafdb77c1d = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_25a727230c58443d8911cc4b0c48f28f);
+        
+    
+
+            var marker_a844aa17be354e0a91b137ea0a94c40b = L.marker(
+                [25.0407381,121.5637989],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_25a727230c58443d8911cc4b0c48f28f);
+            
+    
+
+                var icon_07554c6925f84567a1eeb1f76b93dbd1 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a844aa17be354e0a91b137ea0a94c40b.setIcon(icon_07554c6925f84567a1eeb1f76b93dbd1);
+            
+    
+            var marker_cluster_b5bfe66c997d41709376666a77d49705 = L.markerClusterGroup({
+                
+            });
+            map_25a727230c58443d8911cc4b0c48f28f.addLayer(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+            var marker_62102f411b6e43e583162f2c5ce6e389 = L.marker(
+                [25.040764,121.574124],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_3cd20444327b45e799a1b368dc14580e = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_62102f411b6e43e583162f2c5ce6e389.setIcon(icon_3cd20444327b45e799a1b368dc14580e);
+            
+    
+            var popup_021d6bcbbf7743caa1cf1604a162d54b = L.popup({maxWidth: '300'});
+
+            
+                var html_994a9377b304440f87736f135c6ddaa1 = $('<div id="html_994a9377b304440f87736f135c6ddaa1" style="width: 100.0%; height: 100.0%;">松山</div>')[0];
+                popup_021d6bcbbf7743caa1cf1604a162d54b.setContent(html_994a9377b304440f87736f135c6ddaa1);
+            
+
+            marker_62102f411b6e43e583162f2c5ce6e389.bindPopup(popup_021d6bcbbf7743caa1cf1604a162d54b);
+
+            
+        
+    
+
+            var marker_f896d010c2fc493588f48033f7494a92 = L.marker(
+                [25.0318104,121.5666576],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_566ca3652bdc4157a282d84578a8b844 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f896d010c2fc493588f48033f7494a92.setIcon(icon_566ca3652bdc4157a282d84578a8b844);
+            
+    
+            var popup_ae3cdcd6e6af4f73abde1438d119f419 = L.popup({maxWidth: '300'});
+
+            
+                var html_886868a92be4466c84a94a838d3bae3d = $('<div id="html_886868a92be4466c84a94a838d3bae3d" style="width: 100.0%; height: 100.0%;">信運</div>')[0];
+                popup_ae3cdcd6e6af4f73abde1438d119f419.setContent(html_886868a92be4466c84a94a838d3bae3d);
+            
+
+            marker_f896d010c2fc493588f48033f7494a92.bindPopup(popup_ae3cdcd6e6af4f73abde1438d119f419);
+
+            
+        
+    
+
+            var marker_d3e2cbe87b57404b879990d3c7f16a97 = L.marker(
+                [25.027249,121.5637452],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_968617ecc03143b4b0fc814d518cea75 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d3e2cbe87b57404b879990d3c7f16a97.setIcon(icon_968617ecc03143b4b0fc814d518cea75);
+            
+    
+            var popup_d476414e36234acca5540f2857cb7b4e = L.popup({maxWidth: '300'});
+
+            
+                var html_26bee8e620214b188abf78fcdb45adbf = $('<div id="html_26bee8e620214b188abf78fcdb45adbf" style="width: 100.0%; height: 100.0%;">醫學</div>')[0];
+                popup_d476414e36234acca5540f2857cb7b4e.setContent(html_26bee8e620214b188abf78fcdb45adbf);
+            
+
+            marker_d3e2cbe87b57404b879990d3c7f16a97.bindPopup(popup_d476414e36234acca5540f2857cb7b4e);
+
+            
+        
+    
+
+            var marker_02bd5aaa64184889839f6f468fc8a61e = L.marker(
+                [25.0376944,121.5833164],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_d00e6f3bc0a84ef9942957f84797cf51 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_02bd5aaa64184889839f6f468fc8a61e.setIcon(icon_d00e6f3bc0a84ef9942957f84797cf51);
+            
+    
+            var popup_b3dda0dc7e5f47288d2c9f694e521473 = L.popup({maxWidth: '300'});
+
+            
+                var html_5e10dcd54b764754b07ed1caf0b57cef = $('<div id="html_5e10dcd54b764754b07ed1caf0b57cef" style="width: 100.0%; height: 100.0%;">福中</div>')[0];
+                popup_b3dda0dc7e5f47288d2c9f694e521473.setContent(html_5e10dcd54b764754b07ed1caf0b57cef);
+            
+
+            marker_02bd5aaa64184889839f6f468fc8a61e.bindPopup(popup_b3dda0dc7e5f47288d2c9f694e521473);
+
+            
+        
+    
+
+            var marker_f5e2c76558f54f5e98457006cbbe978d = L.marker(
+                [25.0259066,121.5545048],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_442510d515bd42b18684212b9e9c63cc = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f5e2c76558f54f5e98457006cbbe978d.setIcon(icon_442510d515bd42b18684212b9e9c63cc);
+            
+    
+            var popup_31994ec331a04231a3a8ef5f06300860 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce6e72c74e2c4f429cb8116cbfd32df9 = $('<div id="html_ce6e72c74e2c4f429cb8116cbfd32df9" style="width: 100.0%; height: 100.0%;">喬治</div>')[0];
+                popup_31994ec331a04231a3a8ef5f06300860.setContent(html_ce6e72c74e2c4f429cb8116cbfd32df9);
+            
+
+            marker_f5e2c76558f54f5e98457006cbbe978d.bindPopup(popup_31994ec331a04231a3a8ef5f06300860);
+
+            
+        
+    
+
+            var marker_9b613adec3774b05bc29baec24f223eb = L.marker(
+                [25.040468,121.563152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_4e2a44d86aeb40fd87d1a2e833fc806b = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9b613adec3774b05bc29baec24f223eb.setIcon(icon_4e2a44d86aeb40fd87d1a2e833fc806b);
+            
+    
+            var popup_e7dbe7ec600e40c3b279d37d6221a458 = L.popup({maxWidth: '300'});
+
+            
+                var html_a04f33f0a1c14ff6be70f35b38d4eb27 = $('<div id="html_a04f33f0a1c14ff6be70f35b38d4eb27" style="width: 100.0%; height: 100.0%;">新三連</div>')[0];
+                popup_e7dbe7ec600e40c3b279d37d6221a458.setContent(html_a04f33f0a1c14ff6be70f35b38d4eb27);
+            
+
+            marker_9b613adec3774b05bc29baec24f223eb.bindPopup(popup_e7dbe7ec600e40c3b279d37d6221a458);
+
+            
+        
+    
+
+            var marker_0f7484b6676c48e3a242d84de927be91 = L.marker(
+                [25.046781,121.566688],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_72694a14a12f46e884fc506ab83aa5ef = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0f7484b6676c48e3a242d84de927be91.setIcon(icon_72694a14a12f46e884fc506ab83aa5ef);
+            
+    
+            var popup_4c54b77d90784c038ff8f1ed06276c00 = L.popup({maxWidth: '300'});
+
+            
+                var html_09bbb4d1c6bb425ea3e71da9ff31a075 = $('<div id="html_09bbb4d1c6bb425ea3e71da9ff31a075" style="width: 100.0%; height: 100.0%;">總部</div>')[0];
+                popup_4c54b77d90784c038ff8f1ed06276c00.setContent(html_09bbb4d1c6bb425ea3e71da9ff31a075);
+            
+
+            marker_0f7484b6676c48e3a242d84de927be91.bindPopup(popup_4c54b77d90784c038ff8f1ed06276c00);
+
+            
+        
+    
+
+            var marker_4c335d3a95c64c58abf391f3cacd56a5 = L.marker(
+                [25.023995,121.555603],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_517139cfd5a3410aa224490cb7618a39 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4c335d3a95c64c58abf391f3cacd56a5.setIcon(icon_517139cfd5a3410aa224490cb7618a39);
+            
+    
+            var popup_5cae6fb537b5406d9c2c51ef6112541c = L.popup({maxWidth: '300'});
+
+            
+                var html_1de115461c7f477aa86f2ab7f4db769d = $('<div id="html_1de115461c7f477aa86f2ab7f4db769d" style="width: 100.0%; height: 100.0%;">崇德</div>')[0];
+                popup_5cae6fb537b5406d9c2c51ef6112541c.setContent(html_1de115461c7f477aa86f2ab7f4db769d);
+            
+
+            marker_4c335d3a95c64c58abf391f3cacd56a5.bindPopup(popup_5cae6fb537b5406d9c2c51ef6112541c);
+
+            
+        
+    
+
+            var marker_df79b0e61f9c4a2fa63004bc495a2cfe = L.marker(
+                [25.040831,121.562594],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_a2f511407c5842d2b1bd15563e0dee0a = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_df79b0e61f9c4a2fa63004bc495a2cfe.setIcon(icon_a2f511407c5842d2b1bd15563e0dee0a);
+            
+    
+            var popup_66cb1ffa4cad41e99ae9ae930416bd74 = L.popup({maxWidth: '300'});
+
+            
+                var html_33540d0783414ba5bded44e6c1ddd8e7 = $('<div id="html_33540d0783414ba5bded44e6c1ddd8e7" style="width: 100.0%; height: 100.0%;">東暉</div>')[0];
+                popup_66cb1ffa4cad41e99ae9ae930416bd74.setContent(html_33540d0783414ba5bded44e6c1ddd8e7);
+            
+
+            marker_df79b0e61f9c4a2fa63004bc495a2cfe.bindPopup(popup_66cb1ffa4cad41e99ae9ae930416bd74);
+
+            
+        
+    
+
+            var marker_e837a6aa26e548ecb0e6621521ac1993 = L.marker(
+                [25.040158,121.571738],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_d606cd0aaf4449ab812e9c457bd343e8 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e837a6aa26e548ecb0e6621521ac1993.setIcon(icon_d606cd0aaf4449ab812e9c457bd343e8);
+            
+    
+            var popup_167ded46daf2458196f4e05100e70764 = L.popup({maxWidth: '300'});
+
+            
+                var html_7f92c38f0b1e4a8d964d52fea3adfd74 = $('<div id="html_7f92c38f0b1e4a8d964d52fea3adfd74" style="width: 100.0%; height: 100.0%;">新工農</div>')[0];
+                popup_167ded46daf2458196f4e05100e70764.setContent(html_7f92c38f0b1e4a8d964d52fea3adfd74);
+            
+
+            marker_e837a6aa26e548ecb0e6621521ac1993.bindPopup(popup_167ded46daf2458196f4e05100e70764);
+
+            
+        
+    
+
+            var marker_a22ad45f17514d3b90d482f9986d6075 = L.marker(
+                [25.0319501,121.5587135],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_f05996fe8bf84c63a43bc899533a45ef = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a22ad45f17514d3b90d482f9986d6075.setIcon(icon_f05996fe8bf84c63a43bc899533a45ef);
+            
+    
+            var popup_556bf48c052644d29501796ef09d4daa = L.popup({maxWidth: '300'});
+
+            
+                var html_17bd91eebbb14156874a6876c1e9415c = $('<div id="html_17bd91eebbb14156874a6876c1e9415c" style="width: 100.0%; height: 100.0%;">中興</div>')[0];
+                popup_556bf48c052644d29501796ef09d4daa.setContent(html_17bd91eebbb14156874a6876c1e9415c);
+            
+
+            marker_a22ad45f17514d3b90d482f9986d6075.bindPopup(popup_556bf48c052644d29501796ef09d4daa);
+
+            
+        
+    
+
+            var marker_d65863e3ea464c68b0fc2e298b1eaba0 = L.marker(
+                [25.043098,121.5682983],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_81f7869b3898447ba388997d92fac8a0 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d65863e3ea464c68b0fc2e298b1eaba0.setIcon(icon_81f7869b3898447ba388997d92fac8a0);
+            
+    
+            var popup_014009e0b4cd4e109660a753bf3e7442 = L.popup({maxWidth: '300'});
+
+            
+                var html_804101887131426aa7132394daece78d = $('<div id="html_804101887131426aa7132394daece78d" style="width: 100.0%; height: 100.0%;">敦厚</div>')[0];
+                popup_014009e0b4cd4e109660a753bf3e7442.setContent(html_804101887131426aa7132394daece78d);
+            
+
+            marker_d65863e3ea464c68b0fc2e298b1eaba0.bindPopup(popup_014009e0b4cd4e109660a753bf3e7442);
+
+            
+        
+    
+
+            var marker_1e0dc55593d6461099dc64952b7535e5 = L.marker(
+                [25.0397197,121.5658739],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_6730efdebe62470ea84934af0ce424b8 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1e0dc55593d6461099dc64952b7535e5.setIcon(icon_6730efdebe62470ea84934af0ce424b8);
+            
+    
+            var popup_03736cae5a0f4626ab3f9a8f910f5a3c = L.popup({maxWidth: '300'});
+
+            
+                var html_a9f82f02545a41068984b2d0c8c300b1 = $('<div id="html_a9f82f02545a41068984b2d0c8c300b1" style="width: 100.0%; height: 100.0%;">統誠</div>')[0];
+                popup_03736cae5a0f4626ab3f9a8f910f5a3c.setContent(html_a9f82f02545a41068984b2d0c8c300b1);
+            
+
+            marker_1e0dc55593d6461099dc64952b7535e5.bindPopup(popup_03736cae5a0f4626ab3f9a8f910f5a3c);
+
+            
+        
+    
+
+            var marker_d899e03ffb20486ebc94c788eeeffa13 = L.marker(
+                [25.0435395,121.5688373],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_f3a0bab89e73429499c980b3dbb89b6b = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d899e03ffb20486ebc94c788eeeffa13.setIcon(icon_f3a0bab89e73429499c980b3dbb89b6b);
+            
+    
+            var popup_0b24d0ed4cb140c7afeb8c92e9f1623a = L.popup({maxWidth: '300'});
+
+            
+                var html_42d595e51b74422ebf53f1e3813f3e5d = $('<div id="html_42d595e51b74422ebf53f1e3813f3e5d" style="width: 100.0%; height: 100.0%;">永信</div>')[0];
+                popup_0b24d0ed4cb140c7afeb8c92e9f1623a.setContent(html_42d595e51b74422ebf53f1e3813f3e5d);
+            
+
+            marker_d899e03ffb20486ebc94c788eeeffa13.bindPopup(popup_0b24d0ed4cb140c7afeb8c92e9f1623a);
+
+            
+        
+    
+
+            var marker_4d8cd81580ef4bb2a6f027a60700661e = L.marker(
+                [25.0413231,121.5651274],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_51f1d8b3f46944fc92c422d16e961464 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4d8cd81580ef4bb2a6f027a60700661e.setIcon(icon_51f1d8b3f46944fc92c422d16e961464);
+            
+    
+            var popup_d0cf6c89ec5643afa1d7bbd611f63f6a = L.popup({maxWidth: '300'});
+
+            
+                var html_03b56c748b4240dfbeaca845ec0cd3ce = $('<div id="html_03b56c748b4240dfbeaca845ec0cd3ce" style="width: 100.0%; height: 100.0%;">松捷</div>')[0];
+                popup_d0cf6c89ec5643afa1d7bbd611f63f6a.setContent(html_03b56c748b4240dfbeaca845ec0cd3ce);
+            
+
+            marker_4d8cd81580ef4bb2a6f027a60700661e.bindPopup(popup_d0cf6c89ec5643afa1d7bbd611f63f6a);
+
+            
+        
+    
+
+            var marker_a599c68094744f9ab5a7cd0a2d413bc7 = L.marker(
+                [25.0187114,121.5589378],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_84bd544252f64d8faaea51818a4eb9a1 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_a599c68094744f9ab5a7cd0a2d413bc7.setIcon(icon_84bd544252f64d8faaea51818a4eb9a1);
+            
+    
+            var popup_710c0497da894c9ba58a4f418f2064e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_025a2212818342689fadd8a0c1c46052 = $('<div id="html_025a2212818342689fadd8a0c1c46052" style="width: 100.0%; height: 100.0%;">麟運</div>')[0];
+                popup_710c0497da894c9ba58a4f418f2064e8.setContent(html_025a2212818342689fadd8a0c1c46052);
+            
+
+            marker_a599c68094744f9ab5a7cd0a2d413bc7.bindPopup(popup_710c0497da894c9ba58a4f418f2064e8);
+
+            
+        
+    
+
+            var marker_496f154dc544428ab63d0d596196d02f = L.marker(
+                [25.038253,121.5794416],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_0966a5a9cce346d4af6526de2882f59a = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_496f154dc544428ab63d0d596196d02f.setIcon(icon_0966a5a9cce346d4af6526de2882f59a);
+            
+    
+            var popup_40abb85b1cbb4245a12af21902e6279f = L.popup({maxWidth: '300'});
+
+            
+                var html_9930330ede1b4c52a9b3d5de56c978aa = $('<div id="html_9930330ede1b4c52a9b3d5de56c978aa" style="width: 100.0%; height: 100.0%;">萊福</div>')[0];
+                popup_40abb85b1cbb4245a12af21902e6279f.setContent(html_9930330ede1b4c52a9b3d5de56c978aa);
+            
+
+            marker_496f154dc544428ab63d0d596196d02f.bindPopup(popup_40abb85b1cbb4245a12af21902e6279f);
+
+            
+        
+    
+
+            var marker_f97aefea119a4a268311bd487bd22b47 = L.marker(
+                [25.0337254,121.5576657],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_15da7a50147e495883b22d568ad1167e = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f97aefea119a4a268311bd487bd22b47.setIcon(icon_15da7a50147e495883b22d568ad1167e);
+            
+    
+            var popup_7a7c874aa9e244459805dbe153a7273c = L.popup({maxWidth: '300'});
+
+            
+                var html_de98d4543aaa4cd097caaea1dba2ef44 = $('<div id="html_de98d4543aaa4cd097caaea1dba2ef44" style="width: 100.0%; height: 100.0%;">光復</div>')[0];
+                popup_7a7c874aa9e244459805dbe153a7273c.setContent(html_de98d4543aaa4cd097caaea1dba2ef44);
+            
+
+            marker_f97aefea119a4a268311bd487bd22b47.bindPopup(popup_7a7c874aa9e244459805dbe153a7273c);
+
+            
+        
+    
+
+            var marker_079026b972454e61bd95d8edccf7e141 = L.marker(
+                [25.0491901,121.5782994],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_4fec555bbf704c97ba655dc662eb2617 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_079026b972454e61bd95d8edccf7e141.setIcon(icon_4fec555bbf704c97ba655dc662eb2617);
+            
+    
+            var popup_b275672244e646a18f56d7a9899e2469 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce4ea8daf5b946b297548e85867d70ca = $('<div id="html_ce4ea8daf5b946b297548e85867d70ca" style="width: 100.0%; height: 100.0%;">松泰</div>')[0];
+                popup_b275672244e646a18f56d7a9899e2469.setContent(html_ce4ea8daf5b946b297548e85867d70ca);
+            
+
+            marker_079026b972454e61bd95d8edccf7e141.bindPopup(popup_b275672244e646a18f56d7a9899e2469);
+
+            
+        
+    
+
+            var marker_bf3784a4cc98462e9e423ac793291c4c = L.marker(
+                [25.0406569,121.576851],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_fb695f3691ac4d51815e0ccb473fafbe = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_bf3784a4cc98462e9e423ac793291c4c.setIcon(icon_fb695f3691ac4d51815e0ccb473fafbe);
+            
+    
+            var popup_002a965a47a944148be50a31dce54f29 = L.popup({maxWidth: '300'});
+
+            
+                var html_99bc4f9e961148d28ade7bc3da25700c = $('<div id="html_99bc4f9e961148d28ade7bc3da25700c" style="width: 100.0%; height: 100.0%;">忠林</div>')[0];
+                popup_002a965a47a944148be50a31dce54f29.setContent(html_99bc4f9e961148d28ade7bc3da25700c);
+            
+
+            marker_bf3784a4cc98462e9e423ac793291c4c.bindPopup(popup_002a965a47a944148be50a31dce54f29);
+
+            
+        
+    
+
+            var marker_1c398e64045a4ce7b2ddc42c82f7bcff = L.marker(
+                [25.0388485,121.5668016],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_0d71a636b5e34ffe97891c1f09641c9d = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1c398e64045a4ce7b2ddc42c82f7bcff.setIcon(icon_0d71a636b5e34ffe97891c1f09641c9d);
+            
+    
+            var popup_5b9b0b9ee6994db2ac5f8d0603975314 = L.popup({maxWidth: '300'});
+
+            
+                var html_dd3ba6c16b43494a8ffda8758be6b29c = $('<div id="html_dd3ba6c16b43494a8ffda8758be6b29c" style="width: 100.0%; height: 100.0%;">新光</div>')[0];
+                popup_5b9b0b9ee6994db2ac5f8d0603975314.setContent(html_dd3ba6c16b43494a8ffda8758be6b29c);
+            
+
+            marker_1c398e64045a4ce7b2ddc42c82f7bcff.bindPopup(popup_5b9b0b9ee6994db2ac5f8d0603975314);
+
+            
+        
+    
+
+            var marker_eb953793726443b8a8b99fc5368ba777 = L.marker(
+                [25.037434,121.575297],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_602684b2bd5347578f68994baad03351 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_eb953793726443b8a8b99fc5368ba777.setIcon(icon_602684b2bd5347578f68994baad03351);
+            
+    
+            var popup_44c69d2257a6496aa98c62fd8700b8cc = L.popup({maxWidth: '300'});
+
+            
+                var html_3f340eee701341af97257935711a2816 = $('<div id="html_3f340eee701341af97257935711a2816" style="width: 100.0%; height: 100.0%;">德鄰</div>')[0];
+                popup_44c69d2257a6496aa98c62fd8700b8cc.setContent(html_3f340eee701341af97257935711a2816);
+            
+
+            marker_eb953793726443b8a8b99fc5368ba777.bindPopup(popup_44c69d2257a6496aa98c62fd8700b8cc);
+
+            
+        
+    
+
+            var marker_2f023cfd784847bd88c23a32351f8025 = L.marker(
+                [25.032912,121.574648],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_a1af99b992a144b1a0f9ee4eb896a2d9 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2f023cfd784847bd88c23a32351f8025.setIcon(icon_a1af99b992a144b1a0f9ee4eb896a2d9);
+            
+    
+            var popup_c37f99aa47474b9bbb4d0918952731ce = L.popup({maxWidth: '300'});
+
+            
+                var html_00d41bed418744f88ab99d4b3e74e6f3 = $('<div id="html_00d41bed418744f88ab99d4b3e74e6f3" style="width: 100.0%; height: 100.0%;">松義</div>')[0];
+                popup_c37f99aa47474b9bbb4d0918952731ce.setContent(html_00d41bed418744f88ab99d4b3e74e6f3);
+            
+
+            marker_2f023cfd784847bd88c23a32351f8025.bindPopup(popup_c37f99aa47474b9bbb4d0918952731ce);
+
+            
+        
+    
+
+            var marker_85dfe5c1d36749b08cf2365079e8bf8d = L.marker(
+                [25.0290989,121.561392],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_243dd447a4ee4ec2b1192f9418afdf1c = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_85dfe5c1d36749b08cf2365079e8bf8d.setIcon(icon_243dd447a4ee4ec2b1192f9418afdf1c);
+            
+    
+            var popup_b4d317c690c04f358074dfa7ab97224e = L.popup({maxWidth: '300'});
+
+            
+                var html_5057efe1f8874942b75c20dfcfdc515b = $('<div id="html_5057efe1f8874942b75c20dfcfdc515b" style="width: 100.0%; height: 100.0%;">三興</div>')[0];
+                popup_b4d317c690c04f358074dfa7ab97224e.setContent(html_5057efe1f8874942b75c20dfcfdc515b);
+            
+
+            marker_85dfe5c1d36749b08cf2365079e8bf8d.bindPopup(popup_b4d317c690c04f358074dfa7ab97224e);
+
+            
+        
+    
+
+            var marker_dad5de91a8e94d7492af19ffe9bbb965 = L.marker(
+                [25.036607,121.55849],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_dfc690bbcac04559b6740b2612e6ce90 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dad5de91a8e94d7492af19ffe9bbb965.setIcon(icon_dfc690bbcac04559b6740b2612e6ce90);
+            
+    
+            var popup_d3c1eacedce2489bb31c86a6ad2432eb = L.popup({maxWidth: '300'});
+
+            
+                var html_4e3f3b42736e46c59573295a43cedb41 = $('<div id="html_4e3f3b42736e46c59573295a43cedb41" style="width: 100.0%; height: 100.0%;">仁和</div>')[0];
+                popup_d3c1eacedce2489bb31c86a6ad2432eb.setContent(html_4e3f3b42736e46c59573295a43cedb41);
+            
+
+            marker_dad5de91a8e94d7492af19ffe9bbb965.bindPopup(popup_d3c1eacedce2489bb31c86a6ad2432eb);
+
+            
+        
+    
+
+            var marker_4e8073938aeb4171aa84554f01e01cd7 = L.marker(
+                [25.0258406,121.5612122],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_7308e4b79bbc48cf9a278b085596b230 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4e8073938aeb4171aa84554f01e01cd7.setIcon(icon_7308e4b79bbc48cf9a278b085596b230);
+            
+    
+            var popup_f1f2da51adc249b8ab96c03cfae615d3 = L.popup({maxWidth: '300'});
+
+            
+                var html_ff5f3ba5643a4227b25c0d8d6ad0376c = $('<div id="html_ff5f3ba5643a4227b25c0d8d6ad0376c" style="width: 100.0%; height: 100.0%;">北醫大</div>')[0];
+                popup_f1f2da51adc249b8ab96c03cfae615d3.setContent(html_ff5f3ba5643a4227b25c0d8d6ad0376c);
+            
+
+            marker_4e8073938aeb4171aa84554f01e01cd7.bindPopup(popup_f1f2da51adc249b8ab96c03cfae615d3);
+
+            
+        
+    
+
+            var marker_db3da866f51d426da8478b7c09aa674c = L.marker(
+                [25.0334929,121.564101],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_bc8732b9bb0f484da17bd77eaf557ffe = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_db3da866f51d426da8478b7c09aa674c.setIcon(icon_bc8732b9bb0f484da17bd77eaf557ffe);
+            
+    
+            var popup_c45c39329b594c9bb06e82f94cd57bc1 = L.popup({maxWidth: '300'});
+
+            
+                var html_8e5159a09e7644448112f0df33cddbd2 = $('<div id="html_8e5159a09e7644448112f0df33cddbd2" style="width: 100.0%; height: 100.0%;">台金</div>')[0];
+                popup_c45c39329b594c9bb06e82f94cd57bc1.setContent(html_8e5159a09e7644448112f0df33cddbd2);
+            
+
+            marker_db3da866f51d426da8478b7c09aa674c.bindPopup(popup_c45c39329b594c9bb06e82f94cd57bc1);
+
+            
+        
+    
+
+            var marker_8de7e9e368df46f2a3eb7d2d3c20231f = L.marker(
+                [25.043684,121.571913],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_83ca221e658b4986b1c0ae8d05b0cd8f = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8de7e9e368df46f2a3eb7d2d3c20231f.setIcon(icon_83ca221e658b4986b1c0ae8d05b0cd8f);
+            
+    
+            var popup_bd51462e91f44e7ca4367cea5db2a39f = L.popup({maxWidth: '300'});
+
+            
+                var html_1f0fff9edf30422c8c8bd8438b8307d9 = $('<div id="html_1f0fff9edf30422c8c8bd8438b8307d9" style="width: 100.0%; height: 100.0%;">松信</div>')[0];
+                popup_bd51462e91f44e7ca4367cea5db2a39f.setContent(html_1f0fff9edf30422c8c8bd8438b8307d9);
+            
+
+            marker_8de7e9e368df46f2a3eb7d2d3c20231f.bindPopup(popup_bd51462e91f44e7ca4367cea5db2a39f);
+
+            
+        
+    
+
+            var marker_81b5a146a20c46ca9588335a277a3b24 = L.marker(
+                [25.037183,121.577097],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_b9e8ff034a794b28aeb78c18db4a8585 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_81b5a146a20c46ca9588335a277a3b24.setIcon(icon_b9e8ff034a794b28aeb78c18db4a8585);
+            
+    
+            var popup_53715984610f42edb448169ca8a34f0a = L.popup({maxWidth: '300'});
+
+            
+                var html_385da55dad4949bbbaf9c8ae2c61d8a0 = $('<div id="html_385da55dad4949bbbaf9c8ae2c61d8a0" style="width: 100.0%; height: 100.0%;">信林</div>')[0];
+                popup_53715984610f42edb448169ca8a34f0a.setContent(html_385da55dad4949bbbaf9c8ae2c61d8a0);
+            
+
+            marker_81b5a146a20c46ca9588335a277a3b24.bindPopup(popup_53715984610f42edb448169ca8a34f0a);
+
+            
+        
+    
+
+            var marker_709afc0f9ae5415abce0e27c6915099f = L.marker(
+                [25.0467571,121.5722919],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_3b9d29d122334ae6a822f8fecabf9abd = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_709afc0f9ae5415abce0e27c6915099f.setIcon(icon_3b9d29d122334ae6a822f8fecabf9abd);
+            
+    
+            var popup_afc7570b46c94ead942d469c1f9846e3 = L.popup({maxWidth: '300'});
+
+            
+                var html_bd245351c916417498f8f3526d79809f = $('<div id="html_bd245351c916417498f8f3526d79809f" style="width: 100.0%; height: 100.0%;">松錢</div>')[0];
+                popup_afc7570b46c94ead942d469c1f9846e3.setContent(html_bd245351c916417498f8f3526d79809f);
+            
+
+            marker_709afc0f9ae5415abce0e27c6915099f.bindPopup(popup_afc7570b46c94ead942d469c1f9846e3);
+
+            
+        
+    
+
+            var marker_f99301cd022f4aaaacf7bb859eb096ed = L.marker(
+                [25.0416917,121.5790542],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_eab201dd58c34cb0b07a39548149d36f = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f99301cd022f4aaaacf7bb859eb096ed.setIcon(icon_eab201dd58c34cb0b07a39548149d36f);
+            
+    
+            var popup_7fa12556479a4014a80f55ff646d011e = L.popup({maxWidth: '300'});
+
+            
+                var html_41dfa644bd384fcdb2f989d043dd449a = $('<div id="html_41dfa644bd384fcdb2f989d043dd449a" style="width: 100.0%; height: 100.0%;">捷忠</div>')[0];
+                popup_7fa12556479a4014a80f55ff646d011e.setContent(html_41dfa644bd384fcdb2f989d043dd449a);
+            
+
+            marker_f99301cd022f4aaaacf7bb859eb096ed.bindPopup(popup_7fa12556479a4014a80f55ff646d011e);
+
+            
+        
+    
+
+            var marker_f313c33bbdd047fbb1e2fcd1632c5205 = L.marker(
+                [25.0234125,121.5695056],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_6cf71da1d04a4316b8567e6207b0065a = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f313c33bbdd047fbb1e2fcd1632c5205.setIcon(icon_6cf71da1d04a4316b8567e6207b0065a);
+            
+    
+            var popup_9d0ce8992e0b4b9dae1880efb7972dd4 = L.popup({maxWidth: '300'});
+
+            
+                var html_ca59673641584698883ae7060e8cf63e = $('<div id="html_ca59673641584698883ae7060e8cf63e" style="width: 100.0%; height: 100.0%;">總站</div>')[0];
+                popup_9d0ce8992e0b4b9dae1880efb7972dd4.setContent(html_ca59673641584698883ae7060e8cf63e);
+            
+
+            marker_f313c33bbdd047fbb1e2fcd1632c5205.bindPopup(popup_9d0ce8992e0b4b9dae1880efb7972dd4);
+
+            
+        
+    
+
+            var marker_3530700ba88e401db9eaa5cbb7f96424 = L.marker(
+                [25.0342889,121.5600266],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_b5d30041d45847c0a9f61e075a219d88 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3530700ba88e401db9eaa5cbb7f96424.setIcon(icon_b5d30041d45847c0a9f61e075a219d88);
+            
+    
+            var popup_8010714138f346f8bc63c47e93675318 = L.popup({maxWidth: '300'});
+
+            
+                var html_1dc046b49e1944739e7a4f2aabba1d4b = $('<div id="html_1dc046b49e1944739e7a4f2aabba1d4b" style="width: 100.0%; height: 100.0%;">凱悅</div>')[0];
+                popup_8010714138f346f8bc63c47e93675318.setContent(html_1dc046b49e1944739e7a4f2aabba1d4b);
+            
+
+            marker_3530700ba88e401db9eaa5cbb7f96424.bindPopup(popup_8010714138f346f8bc63c47e93675318);
+
+            
+        
+    
+
+            var marker_32dce525f86b414faebba09fbe93dc69 = L.marker(
+                [25.0245326,121.5634423],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_fd0f5788f39c4ca1b978094f1416f00b = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_32dce525f86b414faebba09fbe93dc69.setIcon(icon_fd0f5788f39c4ca1b978094f1416f00b);
+            
+    
+            var popup_60432a629fd7456ca72e688cb1182259 = L.popup({maxWidth: '300'});
+
+            
+                var html_2b3bd367d3d94997bf7c5b8ec3a62a2c = $('<div id="html_2b3bd367d3d94997bf7c5b8ec3a62a2c" style="width: 100.0%; height: 100.0%;">吳興</div>')[0];
+                popup_60432a629fd7456ca72e688cb1182259.setContent(html_2b3bd367d3d94997bf7c5b8ec3a62a2c);
+            
+
+            marker_32dce525f86b414faebba09fbe93dc69.bindPopup(popup_60432a629fd7456ca72e688cb1182259);
+
+            
+        
+    
+
+            var marker_6050a671a0814d0892997a49eb8aa0a9 = L.marker(
+                [25.0342313,121.5610091],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_60a1daf7f5454126b55dc99dd176f6b0 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6050a671a0814d0892997a49eb8aa0a9.setIcon(icon_60a1daf7f5454126b55dc99dd176f6b0);
+            
+    
+            var popup_86be6f497e664bbba55908d6035e5ffc = L.popup({maxWidth: '300'});
+
+            
+                var html_eeb71a6ba8404b2b9be35d1a73fe448e = $('<div id="html_eeb71a6ba8404b2b9be35d1a73fe448e" style="width: 100.0%; height: 100.0%;">國貿</div>')[0];
+                popup_86be6f497e664bbba55908d6035e5ffc.setContent(html_eeb71a6ba8404b2b9be35d1a73fe448e);
+            
+
+            marker_6050a671a0814d0892997a49eb8aa0a9.bindPopup(popup_86be6f497e664bbba55908d6035e5ffc);
+
+            
+        
+    
+
+            var marker_58887b7e0e504dfa8c586b59fead2d85 = L.marker(
+                [25.0339639,121.5644722],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_ad8150c988b94be7b0b2b6715df3fa8c = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_58887b7e0e504dfa8c586b59fead2d85.setIcon(icon_ad8150c988b94be7b0b2b6715df3fa8c);
+            
+    
+            var popup_9f572fbdce384d9eb408b306af42b458 = L.popup({maxWidth: '300'});
+
+            
+                var html_3d0ef66751044b329b2e754ffc3618ac = $('<div id="html_3d0ef66751044b329b2e754ffc3618ac" style="width: 100.0%; height: 100.0%;">一零一</div>')[0];
+                popup_9f572fbdce384d9eb408b306af42b458.setContent(html_3d0ef66751044b329b2e754ffc3618ac);
+            
+
+            marker_58887b7e0e504dfa8c586b59fead2d85.bindPopup(popup_9f572fbdce384d9eb408b306af42b458);
+
+            
+        
+    
+
+            var marker_9f72ef87973e480b905abd4d17403bc5 = L.marker(
+                [25.04727,121.577578],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_718a3829859c473ba85bcdd1debe72c1 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9f72ef87973e480b905abd4d17403bc5.setIcon(icon_718a3829859c473ba85bcdd1debe72c1);
+            
+    
+            var popup_db88561ed6304f20bed0935dd140677e = L.popup({maxWidth: '300'});
+
+            
+                var html_8dc0ea1c74264c039ef31a70cdad3790 = $('<div id="html_8dc0ea1c74264c039ef31a70cdad3790" style="width: 100.0%; height: 100.0%;">開源</div>')[0];
+                popup_db88561ed6304f20bed0935dd140677e.setContent(html_8dc0ea1c74264c039ef31a70cdad3790);
+            
+
+            marker_9f72ef87973e480b905abd4d17403bc5.bindPopup(popup_db88561ed6304f20bed0935dd140677e);
+
+            
+        
+    
+
+            var marker_9d895a7c1fc0436bbe8618e12346b3b0 = L.marker(
+                [25.028375,121.568193],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_34e7e738d7614fa0831eae899c7d7a56 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9d895a7c1fc0436bbe8618e12346b3b0.setIcon(icon_34e7e738d7614fa0831eae899c7d7a56);
+            
+    
+            var popup_10de69f3571440b49b98798207b7a58a = L.popup({maxWidth: '300'});
+
+            
+                var html_5c3b92be1d4546e3958663fc3b24968c = $('<div id="html_5c3b92be1d4546e3958663fc3b24968c" style="width: 100.0%; height: 100.0%;">北府</div>')[0];
+                popup_10de69f3571440b49b98798207b7a58a.setContent(html_5c3b92be1d4546e3958663fc3b24968c);
+            
+
+            marker_9d895a7c1fc0436bbe8618e12346b3b0.bindPopup(popup_10de69f3571440b49b98798207b7a58a);
+
+            
+        
+    
+
+            var marker_c06ddb64f65c479792c9845c5cb98e56 = L.marker(
+                [25.0447069,121.577308],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_7cd49136ace4499697c7cda0a89b2128 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c06ddb64f65c479792c9845c5cb98e56.setIcon(icon_7cd49136ace4499697c7cda0a89b2128);
+            
+    
+            var popup_7069804c4d1247528c48d5d3734b6f79 = L.popup({maxWidth: '300'});
+
+            
+                var html_ae0f345433b34098bebdbaefe6783b93 = $('<div id="html_ae0f345433b34098bebdbaefe6783b93" style="width: 100.0%; height: 100.0%;">鑫吉</div>')[0];
+                popup_7069804c4d1247528c48d5d3734b6f79.setContent(html_ae0f345433b34098bebdbaefe6783b93);
+            
+
+            marker_c06ddb64f65c479792c9845c5cb98e56.bindPopup(popup_7069804c4d1247528c48d5d3734b6f79);
+
+            
+        
+    
+
+            var marker_4c6bf452741343898d04b798660a60db = L.marker(
+                [25.0291055,121.5648436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_90c6d488936e4e2a94bf1e565bbdadf5 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4c6bf452741343898d04b798660a60db.setIcon(icon_90c6d488936e4e2a94bf1e565bbdadf5);
+            
+    
+            var popup_d1328df9a6da42e0b200f433497d3e71 = L.popup({maxWidth: '300'});
+
+            
+                var html_fe801b4fd89b4905b1eea8bb7fa12896 = $('<div id="html_fe801b4fd89b4905b1eea8bb7fa12896" style="width: 100.0%; height: 100.0%;">松智</div>')[0];
+                popup_d1328df9a6da42e0b200f433497d3e71.setContent(html_fe801b4fd89b4905b1eea8bb7fa12896);
+            
+
+            marker_4c6bf452741343898d04b798660a60db.bindPopup(popup_d1328df9a6da42e0b200f433497d3e71);
+
+            
+        
+    
+
+            var marker_850b6c7c864a4921815c3829bf1cf046 = L.marker(
+                [25.0405044,121.5668964],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_7bba1fd2f2eb4cd3a8b5da1c04e7e598 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_850b6c7c864a4921815c3829bf1cf046.setIcon(icon_7bba1fd2f2eb4cd3a8b5da1c04e7e598);
+            
+    
+            var popup_0ed15065d7f14c6cac1f383e795874e4 = L.popup({maxWidth: '300'});
+
+            
+                var html_e5e9185898d9459cae281f5dee78c849 = $('<div id="html_e5e9185898d9459cae281f5dee78c849" style="width: 100.0%; height: 100.0%;">鑫國泰</div>')[0];
+                popup_0ed15065d7f14c6cac1f383e795874e4.setContent(html_e5e9185898d9459cae281f5dee78c849);
+            
+
+            marker_850b6c7c864a4921815c3829bf1cf046.bindPopup(popup_0ed15065d7f14c6cac1f383e795874e4);
+
+            
+        
+    
+
+            var marker_c17d6920c38f41fd8602ffdb073421d3 = L.marker(
+                [25.0393572,121.5874363],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_36cc5c39d9284fef8086507d684843fd = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c17d6920c38f41fd8602ffdb073421d3.setIcon(icon_36cc5c39d9284fef8086507d684843fd);
+            
+    
+            var popup_c96f53f13bc7447d814211ac4acf0a2e = L.popup({maxWidth: '300'});
+
+            
+                var html_4b752dc4786949a8bafccb0e53fae068 = $('<div id="html_4b752dc4786949a8bafccb0e53fae068" style="width: 100.0%; height: 100.0%;">信福</div>')[0];
+                popup_c96f53f13bc7447d814211ac4acf0a2e.setContent(html_4b752dc4786949a8bafccb0e53fae068);
+            
+
+            marker_c17d6920c38f41fd8602ffdb073421d3.bindPopup(popup_c96f53f13bc7447d814211ac4acf0a2e);
+
+            
+        
+    
+
+            var marker_c77799cae2a14941800c77a70ef53a2a = L.marker(
+                [25.0437322,121.5444485],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_2aa7aa84d77e4a83a08004b1daa07087 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c77799cae2a14941800c77a70ef53a2a.setIcon(icon_2aa7aa84d77e4a83a08004b1daa07087);
+            
+    
+            var popup_6390032c3a5a4fe996a22c190f5d6c9d = L.popup({maxWidth: '300'});
+
+            
+                var html_315622de2bfd4132ae8660f5bd4cc5cf = $('<div id="html_315622de2bfd4132ae8660f5bd4cc5cf" style="width: 100.0%; height: 100.0%;">光忠</div>')[0];
+                popup_6390032c3a5a4fe996a22c190f5d6c9d.setContent(html_315622de2bfd4132ae8660f5bd4cc5cf);
+            
+
+            marker_c77799cae2a14941800c77a70ef53a2a.bindPopup(popup_6390032c3a5a4fe996a22c190f5d6c9d);
+
+            
+        
+    
+
+            var marker_38d5a21edef64aaba7309095282d8506 = L.marker(
+                [25.041892,121.563704],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_4a4badc4317e4c36a8057016a9f85174 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_38d5a21edef64aaba7309095282d8506.setIcon(icon_4a4badc4317e4c36a8057016a9f85174);
+            
+    
+            var popup_3b0c2d6cd15341c893566f4a8d1c9b86 = L.popup({maxWidth: '300'});
+
+            
+                var html_dfb916c53bba45cfa733ca0092c516ac = $('<div id="html_dfb916c53bba45cfa733ca0092c516ac" style="width: 100.0%; height: 100.0%;">聯合</div>')[0];
+                popup_3b0c2d6cd15341c893566f4a8d1c9b86.setContent(html_dfb916c53bba45cfa733ca0092c516ac);
+            
+
+            marker_38d5a21edef64aaba7309095282d8506.bindPopup(popup_3b0c2d6cd15341c893566f4a8d1c9b86);
+
+            
+        
+    
+
+            var marker_96225c916bad46d3b5a500139f03fb96 = L.marker(
+                [25.0280154,121.5567227],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_7bf38665f9f444bdbf88ae1cfad3fcd7 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_96225c916bad46d3b5a500139f03fb96.setIcon(icon_7bf38665f9f444bdbf88ae1cfad3fcd7);
+            
+    
+            var popup_453bf00861754611a8741b85ba8dbb4a = L.popup({maxWidth: '300'});
+
+            
+                var html_3c9f782522804f3aae7f5a36a2178f96 = $('<div id="html_3c9f782522804f3aae7f5a36a2178f96" style="width: 100.0%; height: 100.0%;">昌隆</div>')[0];
+                popup_453bf00861754611a8741b85ba8dbb4a.setContent(html_3c9f782522804f3aae7f5a36a2178f96);
+            
+
+            marker_96225c916bad46d3b5a500139f03fb96.bindPopup(popup_453bf00861754611a8741b85ba8dbb4a);
+
+            
+        
+    
+
+            var marker_84ef5674d1ea446d8bad5dfe19fabfdc = L.marker(
+                [25.0434723,121.5740349],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_2fabfa33c8a84016a26d8497a80e43fe = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_84ef5674d1ea446d8bad5dfe19fabfdc.setIcon(icon_2fabfa33c8a84016a26d8497a80e43fe);
+            
+    
+            var popup_1e5e5c6172af43cf99c35168f930c87a = L.popup({maxWidth: '300'});
+
+            
+                var html_7c58700115564d72961451ca79a9061f = $('<div id="html_7c58700115564d72961451ca79a9061f" style="width: 100.0%; height: 100.0%;">信吉</div>')[0];
+                popup_1e5e5c6172af43cf99c35168f930c87a.setContent(html_7c58700115564d72961451ca79a9061f);
+            
+
+            marker_84ef5674d1ea446d8bad5dfe19fabfdc.bindPopup(popup_1e5e5c6172af43cf99c35168f930c87a);
+
+            
+        
+    
+
+            var marker_f247d2a5fb3445899205fa34e66c0ba2 = L.marker(
+                [25.0348367,121.573658],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_5ac28dbb7fbe474c8b5b66e7b47b7283 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f247d2a5fb3445899205fa34e66c0ba2.setIcon(icon_5ac28dbb7fbe474c8b5b66e7b47b7283);
+            
+    
+            var popup_017f1f3da8714a38b1d18f76778fd0b7 = L.popup({maxWidth: '300'});
+
+            
+                var html_f0d38b58f91c44bb9b1790d727043a36 = $('<div id="html_f0d38b58f91c44bb9b1790d727043a36" style="width: 100.0%; height: 100.0%;">信德</div>')[0];
+                popup_017f1f3da8714a38b1d18f76778fd0b7.setContent(html_f0d38b58f91c44bb9b1790d727043a36);
+            
+
+            marker_f247d2a5fb3445899205fa34e66c0ba2.bindPopup(popup_017f1f3da8714a38b1d18f76778fd0b7);
+
+            
+        
+    
+
+            var marker_18b809d6c0ed4c258349671c8e560155 = L.marker(
+                [25.0424762,121.5649533],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_c0949f0d42994e1d97e1fef6b144e4dc = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_18b809d6c0ed4c258349671c8e560155.setIcon(icon_c0949f0d42994e1d97e1fef6b144e4dc);
+            
+    
+            var popup_8031f82b44314b3183ef33b16a0b9f45 = L.popup({maxWidth: '300'});
+
+            
+                var html_ac8571e527a043269732695852e3c75e = $('<div id="html_ac8571e527a043269732695852e3c75e" style="width: 100.0%; height: 100.0%;">必成</div>')[0];
+                popup_8031f82b44314b3183ef33b16a0b9f45.setContent(html_ac8571e527a043269732695852e3c75e);
+            
+
+            marker_18b809d6c0ed4c258349671c8e560155.bindPopup(popup_8031f82b44314b3183ef33b16a0b9f45);
+
+            
+        
+    
+
+            var marker_2c80fad396dc4321ada92fe85e64559f = L.marker(
+                [25.0388052,121.5859694],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_39d069b40c934e72ad3477a9e34935f8 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2c80fad396dc4321ada92fe85e64559f.setIcon(icon_39d069b40c934e72ad3477a9e34935f8);
+            
+    
+            var popup_b5644d95b7544e188d2969826b8b2dc6 = L.popup({maxWidth: '300'});
+
+            
+                var html_c01bc12833714ee19820c767518f5967 = $('<div id="html_c01bc12833714ee19820c767518f5967" style="width: 100.0%; height: 100.0%;">留公</div>')[0];
+                popup_b5644d95b7544e188d2969826b8b2dc6.setContent(html_c01bc12833714ee19820c767518f5967);
+            
+
+            marker_2c80fad396dc4321ada92fe85e64559f.bindPopup(popup_b5644d95b7544e188d2969826b8b2dc6);
+
+            
+        
+    
+
+            var marker_1c37fdc1b5e647ae935672396a493753 = L.marker(
+                [25.047321,121.566457],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_5a9d3c45971e4e8697c4ed0748cc50bd = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1c37fdc1b5e647ae935672396a493753.setIcon(icon_5a9d3c45971e4e8697c4ed0748cc50bd);
+            
+    
+            var popup_97bd0e70f4e9416d910a7996ff53422c = L.popup({maxWidth: '300'});
+
+            
+                var html_74e6dc692faa4c76b6e2547f44e49794 = $('<div id="html_74e6dc692faa4c76b6e2547f44e49794" style="width: 100.0%; height: 100.0%;">道生</div>')[0];
+                popup_97bd0e70f4e9416d910a7996ff53422c.setContent(html_74e6dc692faa4c76b6e2547f44e49794);
+            
+
+            marker_1c37fdc1b5e647ae935672396a493753.bindPopup(popup_97bd0e70f4e9416d910a7996ff53422c);
+
+            
+        
+    
+
+            var marker_2526705ed6404dc7b8b191545757f8d1 = L.marker(
+                [25.0267673,121.5685436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_3878b5e181564d31b9021bdb390c26af = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2526705ed6404dc7b8b191545757f8d1.setIcon(icon_3878b5e181564d31b9021bdb390c26af);
+            
+    
+            var popup_56b544a1e74d41cd982432315c7a5d3d = L.popup({maxWidth: '300'});
+
+            
+                var html_6f9646f428f44d788133f5b7bf152e6f = $('<div id="html_6f9646f428f44d788133f5b7bf152e6f" style="width: 100.0%; height: 100.0%;">松仁</div>')[0];
+                popup_56b544a1e74d41cd982432315c7a5d3d.setContent(html_6f9646f428f44d788133f5b7bf152e6f);
+            
+
+            marker_2526705ed6404dc7b8b191545757f8d1.bindPopup(popup_56b544a1e74d41cd982432315c7a5d3d);
+
+            
+        
+    
+
+            var marker_263880b09505429b812734425afa1189 = L.marker(
+                [25.041214,121.5794663],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_9ac150398be246a58bade809368c8813 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_263880b09505429b812734425afa1189.setIcon(icon_9ac150398be246a58bade809368c8813);
+            
+    
+            var popup_a3dd607845204ab0aae2cdc02929bd58 = L.popup({maxWidth: '300'});
+
+            
+                var html_8f7f7d868e3a4f98896f2f8fb41ffde5 = $('<div id="html_8f7f7d868e3a4f98896f2f8fb41ffde5" style="width: 100.0%; height: 100.0%;">光東</div>')[0];
+                popup_a3dd607845204ab0aae2cdc02929bd58.setContent(html_8f7f7d868e3a4f98896f2f8fb41ffde5);
+            
+
+            marker_263880b09505429b812734425afa1189.bindPopup(popup_a3dd607845204ab0aae2cdc02929bd58);
+
+            
+        
+    
+
+            var marker_fdef47cb58c44450ae2750342f92faf8 = L.marker(
+                [25.0221574,121.5688723],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_d8139c9407ee49cda46e7e4b3d736e13 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fdef47cb58c44450ae2750342f92faf8.setIcon(icon_d8139c9407ee49cda46e7e4b3d736e13);
+            
+    
+            var popup_7ac0e43b37ac45789bafb895f1bc0e9b = L.popup({maxWidth: '300'});
+
+            
+                var html_540890fa148e4214b371b92a4792b11e = $('<div id="html_540890fa148e4214b371b92a4792b11e" style="width: 100.0%; height: 100.0%;">惠安</div>')[0];
+                popup_7ac0e43b37ac45789bafb895f1bc0e9b.setContent(html_540890fa148e4214b371b92a4792b11e);
+            
+
+            marker_fdef47cb58c44450ae2750342f92faf8.bindPopup(popup_7ac0e43b37ac45789bafb895f1bc0e9b);
+
+            
+        
+    
+
+            var marker_98f41fa8e8d2403ea74675e10f1eb402 = L.marker(
+                [25.0454044,121.5689813],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_67a5545dc1144cdebea1bdabf16ba2a0 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_98f41fa8e8d2403ea74675e10f1eb402.setIcon(icon_67a5545dc1144cdebea1bdabf16ba2a0);
+            
+    
+            var popup_8f0f00e167554a2f83693a8f591e9a12 = L.popup({maxWidth: '300'});
+
+            
+                var html_fb11d7a32b284e5eb81babb7c9ee947d = $('<div id="html_fb11d7a32b284e5eb81babb7c9ee947d" style="width: 100.0%; height: 100.0%;">革新</div>')[0];
+                popup_8f0f00e167554a2f83693a8f591e9a12.setContent(html_fb11d7a32b284e5eb81babb7c9ee947d);
+            
+
+            marker_98f41fa8e8d2403ea74675e10f1eb402.bindPopup(popup_8f0f00e167554a2f83693a8f591e9a12);
+
+            
+        
+    
+
+            var marker_752d779d1abf46169657de4902a1ec00 = L.marker(
+                [25.0312165,121.5611086],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_5086318353d440bbabdff554f57ad414 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_752d779d1abf46169657de4902a1ec00.setIcon(icon_5086318353d440bbabdff554f57ad414);
+            
+    
+            var popup_957667f5a5fd49579e4287dfb5019a73 = L.popup({maxWidth: '300'});
+
+            
+                var html_cda7b55cb55a469797d412786bf116d8 = $('<div id="html_cda7b55cb55a469797d412786bf116d8" style="width: 100.0%; height: 100.0%;">興貿</div>')[0];
+                popup_957667f5a5fd49579e4287dfb5019a73.setContent(html_cda7b55cb55a469797d412786bf116d8);
+            
+
+            marker_752d779d1abf46169657de4902a1ec00.bindPopup(popup_957667f5a5fd49579e4287dfb5019a73);
+
+            
+        
+    
+
+            var marker_8969290165b441ac9e11535f2c365c88 = L.marker(
+                [25.026175,121.557473],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_54c1d3d98657485ab227f80ce82864d8 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8969290165b441ac9e11535f2c365c88.setIcon(icon_54c1d3d98657485ab227f80ce82864d8);
+            
+    
+            var popup_bcbde47758bc49b5bfb19b3785ddfdf7 = L.popup({maxWidth: '300'});
+
+            
+                var html_c502b81eb0ac48968e165bd222271ecd = $('<div id="html_c502b81eb0ac48968e165bd222271ecd" style="width: 100.0%; height: 100.0%;">信嘉</div>')[0];
+                popup_bcbde47758bc49b5bfb19b3785ddfdf7.setContent(html_c502b81eb0ac48968e165bd222271ecd);
+            
+
+            marker_8969290165b441ac9e11535f2c365c88.bindPopup(popup_bcbde47758bc49b5bfb19b3785ddfdf7);
+
+            
+        
+    
+
+            var marker_38eda994bfff4605841848e3e8bd1057 = L.marker(
+                [25.0258373,121.5663366],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_ef6d405a9b124b978eab11d4f208392c = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_38eda994bfff4605841848e3e8bd1057.setIcon(icon_ef6d405a9b124b978eab11d4f208392c);
+            
+    
+            var popup_b47c38e7ec20489689739d5460a20eff = L.popup({maxWidth: '300'});
+
+            
+                var html_37e50a8839d44248b5029bfe785bbed0 = $('<div id="html_37e50a8839d44248b5029bfe785bbed0" style="width: 100.0%; height: 100.0%;">信醫</div>')[0];
+                popup_b47c38e7ec20489689739d5460a20eff.setContent(html_37e50a8839d44248b5029bfe785bbed0);
+            
+
+            marker_38eda994bfff4605841848e3e8bd1057.bindPopup(popup_b47c38e7ec20489689739d5460a20eff);
+
+            
+        
+    
+
+            var marker_785a98308d304ab99ac8268d3420dcea = L.marker(
+                [25.0397963,121.5780166],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_28be801f87c7448fa4d8708febeb84ca = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_785a98308d304ab99ac8268d3420dcea.setIcon(icon_28be801f87c7448fa4d8708febeb84ca);
+            
+    
+            var popup_63784486a33e42549feaa7669a427d32 = L.popup({maxWidth: '300'});
+
+            
+                var html_888bcb70aa7b4d85864087674badead2 = $('<div id="html_888bcb70aa7b4d85864087674badead2" style="width: 100.0%; height: 100.0%;">新東宮</div>')[0];
+                popup_63784486a33e42549feaa7669a427d32.setContent(html_888bcb70aa7b4d85864087674badead2);
+            
+
+            marker_785a98308d304ab99ac8268d3420dcea.bindPopup(popup_63784486a33e42549feaa7669a427d32);
+
+            
+        
+    
+
+            var marker_dcaa93fbd67b4dd99c040e167cb745da = L.marker(
+                [25.0270409,121.5631091],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_d41e4b99267349d5b5870c85e570df38 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dcaa93fbd67b4dd99c040e167cb745da.setIcon(icon_d41e4b99267349d5b5870c85e570df38);
+            
+    
+            var popup_2685c29916834105b0dff428aee7c472 = L.popup({maxWidth: '300'});
+
+            
+                var html_d0f595dbd6bd4b6ab34ba278beecf09e = $('<div id="html_d0f595dbd6bd4b6ab34ba278beecf09e" style="width: 100.0%; height: 100.0%;">北醫</div>')[0];
+                popup_2685c29916834105b0dff428aee7c472.setContent(html_d0f595dbd6bd4b6ab34ba278beecf09e);
+            
+
+            marker_dcaa93fbd67b4dd99c040e167cb745da.bindPopup(popup_2685c29916834105b0dff428aee7c472);
+
+            
+        
+    
+
+            var marker_9a240c0a321c4ccf8e81f866028ad70e = L.marker(
+                [25.0368446,121.5686546],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_2f0c9440b3f94ed69285321cf97aeb5e = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9a240c0a321c4ccf8e81f866028ad70e.setIcon(icon_2f0c9440b3f94ed69285321cf97aeb5e);
+            
+    
+            var popup_6ac5147d6ea247cca37bf35162222b4f = L.popup({maxWidth: '300'});
+
+            
+                var html_0a42ed1220344c3faba5d7816eedca4a = $('<div id="html_0a42ed1220344c3faba5d7816eedca4a" style="width: 100.0%; height: 100.0%;">宏泰</div>')[0];
+                popup_6ac5147d6ea247cca37bf35162222b4f.setContent(html_0a42ed1220344c3faba5d7816eedca4a);
+            
+
+            marker_9a240c0a321c4ccf8e81f866028ad70e.bindPopup(popup_6ac5147d6ea247cca37bf35162222b4f);
+
+            
+        
+    
+
+            var marker_c235f8f0870646368ce239a570a769a2 = L.marker(
+                [25.034161,121.575201],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_5dfa67932acb4743b8814f0f7699659f = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c235f8f0870646368ce239a570a769a2.setIcon(icon_5dfa67932acb4743b8814f0f7699659f);
+            
+    
+            var popup_87c0926aab404de09ba2a45e015388f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_9725b82a13e24002b6727368947e8d62 = $('<div id="html_9725b82a13e24002b6727368947e8d62" style="width: 100.0%; height: 100.0%;">嘉馥</div>')[0];
+                popup_87c0926aab404de09ba2a45e015388f3.setContent(html_9725b82a13e24002b6727368947e8d62);
+            
+
+            marker_c235f8f0870646368ce239a570a769a2.bindPopup(popup_87c0926aab404de09ba2a45e015388f3);
+
+            
+        
+    
+
+            var marker_6382647f2cde4bfab16ffa1df22783d0 = L.marker(
+                [25.0358094,121.5785008],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_c7a1a20da9db409cbde9d231eaf886ce = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6382647f2cde4bfab16ffa1df22783d0.setIcon(icon_c7a1a20da9db409cbde9d231eaf886ce);
+            
+    
+            var popup_aa66089d8f1b43f691967900f01f0c69 = L.popup({maxWidth: '300'});
+
+            
+                var html_f6099ab1a7e344dc81d8edeaa8d33318 = $('<div id="html_f6099ab1a7e344dc81d8edeaa8d33318" style="width: 100.0%; height: 100.0%;">松家</div>')[0];
+                popup_aa66089d8f1b43f691967900f01f0c69.setContent(html_f6099ab1a7e344dc81d8edeaa8d33318);
+            
+
+            marker_6382647f2cde4bfab16ffa1df22783d0.bindPopup(popup_aa66089d8f1b43f691967900f01f0c69);
+
+            
+        
+    
+
+            var marker_7c5f01291fd446a7a07e3878702893db = L.marker(
+                [25.0429861,121.5659519],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_b5bfe66c997d41709376666a77d49705);
+            
+    
+
+                var icon_d5f7c39b1b0f466bac06d1f660188898 = L.AwesomeMarkers.icon({
+                    icon: 'circle',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7c5f01291fd446a7a07e3878702893db.setIcon(icon_d5f7c39b1b0f466bac06d1f660188898);
+            
+    
+            var popup_b304476038184d3f8e689a001d5e695c = L.popup({maxWidth: '300'});
+
+            
+                var html_4a6c2c1156894257a2a989ee45e94266 = $('<div id="html_4a6c2c1156894257a2a989ee45e94266" style="width: 100.0%; height: 100.0%;">松高</div>')[0];
+                popup_b304476038184d3f8e689a001d5e695c.setContent(html_4a6c2c1156894257a2a989ee45e94266);
+            
+
+            marker_7c5f01291fd446a7a07e3878702893db.bindPopup(popup_b304476038184d3f8e689a001d5e695c);
+
+            
+        
+</script>
