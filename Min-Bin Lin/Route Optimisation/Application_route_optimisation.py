@@ -11,7 +11,7 @@ import dill
 from operator import itemgetter
 from collections import OrderedDict
 
-from ACO_route_optimisation import MMAS, ANT
+from ACO_route_optimisation import MMAS
 
 # Pickle file names
 DISTANCE_MATRIX_PKL = 'distance_matrix.pkl'
@@ -48,8 +48,9 @@ dist_dict = sorted_dist_dict
 ############################################################       
 # apply ACO
 
-aco = MMAS(num_iters=3000, num_ants=50, init_alpha=10, alpha=1, beta=3, rho=0.3,
+aco = MMAS(num_iters=3, num_ants=50, init_alpha=10, alpha=1, beta=3, rho=0.3,
             q=80, place_dict=place_dict,dist_dict=dist_dict)
 
 aco.addPlace()
-aco.Search()    
+aco.Search()  
+

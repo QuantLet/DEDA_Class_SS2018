@@ -8,11 +8,12 @@
 
 # import package
 import random
+from math import pow
 import time
 import logging
 import itertools
 
-import pylab as pl
+import matplotlib.pyplot as plt
 
 logger = logging.getLogger("Ant Colony Optimisation")
 logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
@@ -50,7 +51,7 @@ class MMAS(object):
         self.shortest = float('inf') # inital shortest distance (inf)
         self.ant_list = []
         
-        pl.show()
+        plt.show()
         
     # problem construction
     def addPlace(self):
@@ -70,13 +71,13 @@ class MMAS(object):
     def PutAnts(self):
         del self.ant_list [:] # same as clear()
         for a in range(self.num_ants):
-            # randomly select a destination
-            place = random.choice(self.place_names)
-            ant = ANT(place, self.place_names,  self.dist_dict, self.pheromones)
+            # the inital point is "warehouse 0" for each ant
+            ant = ANT('warehouse 0', self.place_names,  self.dist_dict, self.pheromones)
             self.ant_list.append(ant)
-    
+            
     # define the searching method  
     def Search(self):
+        shortest = []
         for iteration in range(self.num_iters):
             
             start = time.time()
@@ -87,11 +88,12 @@ class MMAS(object):
             
             for ant in self.ant_list:
                 for t in range(self.num_places):
-                    ant.MoveToNextPlace(self.alpha, self.beta)
-                ant.local_search() # same as two_opt_search
+                    ant.MoveToNextPlace(self.alpha, self.beta)                   
+                ant.local_search() # same as two_opt_search               
                 ant.UpdatePathLen()
+                # only keep the best one      
                 if ant.currLen < tmpLen:
-                    self.bestAnt = ant
+                    self.BestAnt = ant
                     tmpLen = ant.currLen
                     tmpTour = ant.TabuList # TabuList records every solution that have been visited
             if tmpLen < self.shortest: # current distance < inital predefined shortest distance
@@ -101,21 +103,24 @@ class MMAS(object):
             self.UpdatePheromoneTrail() # update information
             end = time.time()
             
-            logger.info("time: %d, iter: %d, shortest: %d, best: %s", 
-                        end - start,iteration, self.shortest, self.BestTour)
-            
-            # plotting
-            points = []
-            for p in self.BestTour:
-                if p:
-                    points.append(self.place_dict[p])
+            logger.info("time: %f, iter: %d, shortest: %d", 
+                        end - start,iteration, self.shortest)
 # should plot it on map (needed to be revised)
-            pl.plot(points)
-            pl.scatter(points, s=30, c='r')
-            pl.pause(0.01)
-
+            
+            shortest += [self.shortest]
+            
+        plt.plot(list(range(self.num_iters)), shortest, '-o', color='black')
+        logger.info("Best tour: %s", self.BestTour)
+        # mapping the route
+        route = []
+        for p in self.BestTour:
+            route.append(self.place_dict[p])
+        gmplot = Gmplot((25.033964, 121.564468), route)
+        gmplot.Mapping()
+        
     def UpdatePheromoneTrail(self):
-        ant = self.bestAnt
+        # only the best ant generate pheromone deltas
+        ant = self.BestAnt
         updated_pheromone = self.q/ant.currLen # 1/Lk
         tabu =  ant.TabuList
         
@@ -186,7 +191,6 @@ class ANT(object):
                  return good_locs[0]
                  
      def MoveToNextPlace(self, alpha, beta):
-         
          nextPlace = self.SelectNextPlace(alpha, beta)
          # exclude current place for monving to next step
          if nextPlace is not None:
@@ -205,7 +209,7 @@ class ANT(object):
      # swape the sequence
      def local_search(self):
          num = len(self.TabuList)
-         for i in range(num):
+         for i in range(1,num):
              for j in range(num - 1, i, -1):
                  currPlace1 = self.TabuList[i]
                  prePlace1 = self.TabuList[(i - 1) % num]
@@ -220,5 +224,6 @@ class ANT(object):
                  
                  if nextLen < currLen:
                      tempList = self.TabuList[i:j + 1]
-                     self.TabuList[i:j + 1] = tempList[::-1]                    
+                     self.TabuList[i:j + 1] = tempList[::-1] 
+                     
        
