@@ -28,7 +28,7 @@ from shapely.geometry import shape
 # google map api (2,500 free requests per day): geocoding and distance matrix
 # api key: https://developers.google.com/maps/documentation/geocoding/get-api-key
 import googlemaps
-gmaps = googlemaps.Client(key = 'AIzaSyBStGhUd8RwlGYmU7fFaQN9tjMmrycG7ls')
+gmaps = googlemaps.Client(key = 'ENTER YOUR KEY HERE')
 
 logger = logging.getLogger("DataCollection")
 logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
@@ -396,7 +396,7 @@ page_1 = pop_pdf.pages[1]
 pop_table = page_0.extract_table() + page_1.extract_table()
 
 # convert to dataframe
-df = pd.DataFrame(pop_table[1:], columns=table[0])
+df = pd.DataFrame(pop_table[1:], columns=pop_table[0])
 pop_df = df[[u'\u91cc\u5225\nLi',u'\u5408\u8a08\nSub-total']]
 
 # input missing data (due to the table frame)
@@ -453,9 +453,7 @@ xinyi_map.choropleth(
  data=pop_df,
  columns=['Li', 'population'],
  key_on='feature.properties.LIE_NAME',
- fill_color='PuBuGn',
- fill_opacity=0.4,
- line_opacity=0.2,
+ fill_color='PuBuGn', fill_opacity=0.5,line_opacity=1,
  legend_name='Population'
 )
 
@@ -504,7 +502,7 @@ for place in data.all:
                        ).add_to(group_heat)
     xinyi_map.add_child(group_heat)
 geocode = pd.DataFrame([(place.lat, place.lon) for place in data.all]).values.tolist()
-group_heat.add_child(plugins.HeatMap(geocode, radius=50))
+group_heat.add_child(plugins.HeatMap(geocode, radius=40))
 
 # add layer control
 folium.LayerControl().add_to(xinyi_map)

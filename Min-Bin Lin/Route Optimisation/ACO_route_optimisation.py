@@ -24,7 +24,7 @@ logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
 class MMAS(object):
     
     # parameter setting
-    def __init__(self, num_iters, num_ants, init_alpha, alpha, beta, rho, q, 
+    def __init__(self, init_place,num_iters, num_ants, init_alpha, alpha, beta, rho, q, 
                  place_dict,dist_dict):
         """
         num_iters: number of iterations (generations)
@@ -35,6 +35,7 @@ class MMAS(object):
         q: pheromone intensity
         places_info: type + number + geocode
         """
+        self.init_place = init_place
         self.num_iters = num_iters
         self.num_ants = num_ants
         self.init_alpha = init_alpha
@@ -72,7 +73,7 @@ class MMAS(object):
         del self.ant_list [:] # same as clear()
         for a in range(self.num_ants):
             # the inital point is "warehouse 0" for each ant
-            ant = ANT('warehouse 0', self.place_names,  self.dist_dict, self.pheromones)
+            ant = ANT(self.init_place, self.place_names,  self.dist_dict, self.pheromones)
             self.ant_list.append(ant)
             
     # define the searching method  
@@ -91,6 +92,8 @@ class MMAS(object):
                     ant.MoveToNextPlace(self.alpha, self.beta)                   
                 ant.local_search() # same as two_opt_search               
                 ant.UpdatePathLen()
+                # add the distance from end point to the inital place
+                ant.currLen = ant.currLen+self.dist_dict[ant.TabuList[-1]][self.init_place]                
                 # only keep the best one      
                 if ant.currLen < tmpLen:
                     self.BestAnt = ant
@@ -99,24 +102,22 @@ class MMAS(object):
             if tmpLen < self.shortest: # current distance < inital predefined shortest distance
                 self.shortest = tmpLen # replace it with current one
                 self.BestTour = tmpTour
-                            
+                # travel back to the initial place
+                self.BestTour.append(self.init_place)
+                
             self.UpdatePheromoneTrail() # update information
             end = time.time()
             
             logger.info("time: %f, iter: %d, shortest: %d", 
-                        end - start,iteration, self.shortest)
-# should plot it on map (needed to be revised)
+                        end - start,iteration, self.shortest)            
             
             shortest += [self.shortest]
             
         plt.plot(list(range(self.num_iters)), shortest, '-o', color='black')
+        plt.xlabel('Iteration')
+        plt.ylabel('Distance (unit: meter)')
+        plt.savefig('optimisation process.png', dpi=300)
         logger.info("Best tour: %s", self.BestTour)
-        # mapping the route
-        route = []
-        for p in self.BestTour:
-            route.append(self.place_dict[p])
-        gmplot = Gmplot((25.033964, 121.564468), route)
-        gmplot.Mapping()
         
     def UpdatePheromoneTrail(self):
         # only the best ant generate pheromone deltas

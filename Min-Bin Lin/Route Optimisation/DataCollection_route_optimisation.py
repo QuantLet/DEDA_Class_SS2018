@@ -24,7 +24,7 @@ from scipy.spatial.distance import squareform
 # google map api (2,500 free requests per day): geocoding and distance matrix
 # api key: https://developers.google.com/maps/documentation/geocoding/get-api-key
 import googlemaps
-gmaps = googlemaps.Client(key = 'AIzaSyBStGhUd8RwlGYmU7fFaQN9tjMmrycG7ls')
+gmaps = googlemaps.Client(key = 'ENTER YOUR KEY HERE')
 
 logger = logging.getLogger("DataCollection")
 logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
@@ -271,7 +271,7 @@ if __name__ == '__main__':
                                        icon=folium.Icon(icon='circle',color='blue')))
                         
     xinyi_map.add_child(mc)
-    xinyi_map.save("map_xinyi.html")
+    xinyi_map.save("xinyi_map.html")
     
     ############################################################
     # create distance list (sorted with 0) and distance matrix (pairwise distance): in meter
