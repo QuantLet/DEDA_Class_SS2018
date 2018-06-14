@@ -253,7 +253,6 @@ if __name__ == '__main__':
     
     xinyi_coordinates = (25.033964, 121.564468)
     xinyi_map = folium.Map(location=xinyi_coordinates,
-                           tiles='Stamen Toner',
                            zoom_start=10)
     
     # create cluster

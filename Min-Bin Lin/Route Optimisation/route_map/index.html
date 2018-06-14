@@ -1,0 +1,3828 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_15db13da775648689a9bf751ee377196 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_15db13da775648689a9bf751ee377196" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_15db13da775648689a9bf751ee377196 = L.map(
+                                  'map_15db13da775648689a9bf751ee377196',
+                                  {center: [25.033964,121.564468],
+                                  zoom: 15,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_2abc043b350c4999aa02ddd09f10f267 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_15db13da775648689a9bf751ee377196);
+        
+    
+            var tile_layer_16935fb9b6cb409a883acd2963c73678 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_15db13da775648689a9bf751ee377196);
+        
+    
+            var tile_layer_af4b7bda264243358d1745f0bf9bde81 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_15db13da775648689a9bf751ee377196);
+        
+    
+            var tile_layer_643588eb75a14730a01e143f948c6b8d = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_15db13da775648689a9bf751ee377196);
+        
+    
+            var layer_control_976d983c7bdc48cfae0552992c95bbf5 = {
+                base_layers : { "openstreetmap" : tile_layer_16935fb9b6cb409a883acd2963c73678,"stamenwatercolor" : tile_layer_af4b7bda264243358d1745f0bf9bde81,"stamentoner" : tile_layer_643588eb75a14730a01e143f948c6b8d, },
+                overlays : {  }
+                };
+            L.control.layers(
+                layer_control_976d983c7bdc48cfae0552992c95bbf5.base_layers,
+                layer_control_976d983c7bdc48cfae0552992c95bbf5.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_15db13da775648689a9bf751ee377196);
+        
+    
+
+            var marker_92eff6b9455e4984bf158ed1ee339759 = L.marker(
+                [25.0407381,121.5637989],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_7ad0892142154d6ba90b52ed84122af6 = L.icon({
+                    iconUrl: './pic/warehouse.png',
+                    iconSize: [50,50],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_92eff6b9455e4984bf158ed1ee339759.setIcon(custom_icon_7ad0892142154d6ba90b52ed84122af6);
+            
+    
+            var popup_ffa3dd2193b046d4a44ca4cdb455806a = L.popup({maxWidth: '300'});
+
+            
+                var html_f5c3a11c6f8e4d73a1817edcb79a1a4a = $('<div id="html_f5c3a11c6f8e4d73a1817edcb79a1a4a" style="width: 100.0%; height: 100.0%;">倉庫0</div>')[0];
+                popup_ffa3dd2193b046d4a44ca4cdb455806a.setContent(html_f5c3a11c6f8e4d73a1817edcb79a1a4a);
+            
+
+            marker_92eff6b9455e4984bf158ed1ee339759.bindPopup(popup_ffa3dd2193b046d4a44ca4cdb455806a);
+
+            
+        
+    
+
+            var marker_198eb1b387c848b581ed4fce626744dc = L.marker(
+                [25.040764,121.574124],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_f0f754f4288d4566831afdabf682a486 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_198eb1b387c848b581ed4fce626744dc.setIcon(custom_icon_f0f754f4288d4566831afdabf682a486);
+            
+    
+            var popup_b4661643623b4157808cc25de0e27758 = L.popup({maxWidth: '300'});
+
+            
+                var html_438c59f9a7b6411faeeb555d4e007f42 = $('<div id="html_438c59f9a7b6411faeeb555d4e007f42" style="width: 100.0%; height: 100.0%;">松山118970</div>')[0];
+                popup_b4661643623b4157808cc25de0e27758.setContent(html_438c59f9a7b6411faeeb555d4e007f42);
+            
+
+            marker_198eb1b387c848b581ed4fce626744dc.bindPopup(popup_b4661643623b4157808cc25de0e27758);
+
+            
+        
+    
+
+            var marker_343f56b0f11b4855978d8c295a41bc19 = L.marker(
+                [25.0318104,121.5666576],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_f4146e7989914d278f036bbf4a81be72 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_343f56b0f11b4855978d8c295a41bc19.setIcon(custom_icon_f4146e7989914d278f036bbf4a81be72);
+            
+    
+            var popup_61b52425677746f7838afb2ccc93bbdd = L.popup({maxWidth: '300'});
+
+            
+                var html_e9b7039d89fb4e5d8188032d1c952da7 = $('<div id="html_e9b7039d89fb4e5d8188032d1c952da7" style="width: 100.0%; height: 100.0%;">信運119054</div>')[0];
+                popup_61b52425677746f7838afb2ccc93bbdd.setContent(html_e9b7039d89fb4e5d8188032d1c952da7);
+            
+
+            marker_343f56b0f11b4855978d8c295a41bc19.bindPopup(popup_61b52425677746f7838afb2ccc93bbdd);
+
+            
+        
+    
+
+            var marker_76181a9d546a4fccbc19a77bedc24c66 = L.marker(
+                [25.027249,121.5637452],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_c1b701ffb5174615bbd73df86c85a1dc = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_76181a9d546a4fccbc19a77bedc24c66.setIcon(custom_icon_c1b701ffb5174615bbd73df86c85a1dc);
+            
+    
+            var popup_753ff26fc4864f28a0151e3f181a9a64 = L.popup({maxWidth: '300'});
+
+            
+                var html_c20493c6aee645be94937422db3e50ee = $('<div id="html_c20493c6aee645be94937422db3e50ee" style="width: 100.0%; height: 100.0%;">醫學119478</div>')[0];
+                popup_753ff26fc4864f28a0151e3f181a9a64.setContent(html_c20493c6aee645be94937422db3e50ee);
+            
+
+            marker_76181a9d546a4fccbc19a77bedc24c66.bindPopup(popup_753ff26fc4864f28a0151e3f181a9a64);
+
+            
+        
+    
+
+            var marker_efea21f2ff854ddf94ef1a4207ab04f4 = L.marker(
+                [25.0376944,121.5833164],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_cce6a1d23b094e38ac0c004896bba375 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_efea21f2ff854ddf94ef1a4207ab04f4.setIcon(custom_icon_cce6a1d23b094e38ac0c004896bba375);
+            
+    
+            var popup_beb97f85bb6543eaa57b9495bc3d462f = L.popup({maxWidth: '300'});
+
+            
+                var html_86dafcd0b7154bb3bafb9e6f5c8eb6db = $('<div id="html_86dafcd0b7154bb3bafb9e6f5c8eb6db" style="width: 100.0%; height: 100.0%;">福中120353</div>')[0];
+                popup_beb97f85bb6543eaa57b9495bc3d462f.setContent(html_86dafcd0b7154bb3bafb9e6f5c8eb6db);
+            
+
+            marker_efea21f2ff854ddf94ef1a4207ab04f4.bindPopup(popup_beb97f85bb6543eaa57b9495bc3d462f);
+
+            
+        
+    
+
+            var marker_0a78d53af8b146d6aa5ecd6a43de1d40 = L.marker(
+                [25.0259066,121.5545048],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_63d8a84d0c1645ff942e76d162feb477 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_0a78d53af8b146d6aa5ecd6a43de1d40.setIcon(custom_icon_63d8a84d0c1645ff942e76d162feb477);
+            
+    
+            var popup_6da16c2740f4441e9a76faa482247f1f = L.popup({maxWidth: '300'});
+
+            
+                var html_6448bc3160a949fd91765197cd22bc8a = $('<div id="html_6448bc3160a949fd91765197cd22bc8a" style="width: 100.0%; height: 100.0%;">喬治120515</div>')[0];
+                popup_6da16c2740f4441e9a76faa482247f1f.setContent(html_6448bc3160a949fd91765197cd22bc8a);
+            
+
+            marker_0a78d53af8b146d6aa5ecd6a43de1d40.bindPopup(popup_6da16c2740f4441e9a76faa482247f1f);
+
+            
+        
+    
+
+            var marker_8cf4a6368fc6416f83124676d7feca6c = L.marker(
+                [25.040468,121.563152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_95484b98f6d94672880304bc13a252c6 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8cf4a6368fc6416f83124676d7feca6c.setIcon(custom_icon_95484b98f6d94672880304bc13a252c6);
+            
+    
+            var popup_8e04d37daa6b466fb2e7e593e0bd60c9 = L.popup({maxWidth: '300'});
+
+            
+                var html_ada411a9524148e48c9082b10ea24021 = $('<div id="html_ada411a9524148e48c9082b10ea24021" style="width: 100.0%; height: 100.0%;">新三連121079</div>')[0];
+                popup_8e04d37daa6b466fb2e7e593e0bd60c9.setContent(html_ada411a9524148e48c9082b10ea24021);
+            
+
+            marker_8cf4a6368fc6416f83124676d7feca6c.bindPopup(popup_8e04d37daa6b466fb2e7e593e0bd60c9);
+
+            
+        
+    
+
+            var marker_d6d5e933e50e44f4aaf97ce9ea07ff15 = L.marker(
+                [25.046781,121.566688],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_91ddd26953564e68a3e2c8ce931bba6f = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_d6d5e933e50e44f4aaf97ce9ea07ff15.setIcon(custom_icon_91ddd26953564e68a3e2c8ce931bba6f);
+            
+    
+            var popup_d4300c686b164dbb85ab132b9f644003 = L.popup({maxWidth: '300'});
+
+            
+                var html_3323cae0044448e4973cb5d4964a11d0 = $('<div id="html_3323cae0044448e4973cb5d4964a11d0" style="width: 100.0%; height: 100.0%;">總部122186</div>')[0];
+                popup_d4300c686b164dbb85ab132b9f644003.setContent(html_3323cae0044448e4973cb5d4964a11d0);
+            
+
+            marker_d6d5e933e50e44f4aaf97ce9ea07ff15.bindPopup(popup_d4300c686b164dbb85ab132b9f644003);
+
+            
+        
+    
+
+            var marker_d85d7044f5a6405088f580e7b7c89bda = L.marker(
+                [25.023995,121.555603],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_7618d86ccf464d0bb9acff9cf3138f21 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_d85d7044f5a6405088f580e7b7c89bda.setIcon(custom_icon_7618d86ccf464d0bb9acff9cf3138f21);
+            
+    
+            var popup_3e2665a86c594b5baeafe55cce3c163b = L.popup({maxWidth: '300'});
+
+            
+                var html_184302a887754c89ad717800f602c218 = $('<div id="html_184302a887754c89ad717800f602c218" style="width: 100.0%; height: 100.0%;">崇德122212</div>')[0];
+                popup_3e2665a86c594b5baeafe55cce3c163b.setContent(html_184302a887754c89ad717800f602c218);
+            
+
+            marker_d85d7044f5a6405088f580e7b7c89bda.bindPopup(popup_3e2665a86c594b5baeafe55cce3c163b);
+
+            
+        
+    
+
+            var marker_b5274d1e70b144b7a40971ddc8c7ef8f = L.marker(
+                [25.040831,121.562594],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_c231bac9ffb14ac49c2d4ea025343939 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_b5274d1e70b144b7a40971ddc8c7ef8f.setIcon(custom_icon_c231bac9ffb14ac49c2d4ea025343939);
+            
+    
+            var popup_3e9bc00ca7834b23a8863ba6e310e07e = L.popup({maxWidth: '300'});
+
+            
+                var html_7aed467f28d740d4af2b5ca5b3dbe94e = $('<div id="html_7aed467f28d740d4af2b5ca5b3dbe94e" style="width: 100.0%; height: 100.0%;">東暉127723</div>')[0];
+                popup_3e9bc00ca7834b23a8863ba6e310e07e.setContent(html_7aed467f28d740d4af2b5ca5b3dbe94e);
+            
+
+            marker_b5274d1e70b144b7a40971ddc8c7ef8f.bindPopup(popup_3e9bc00ca7834b23a8863ba6e310e07e);
+
+            
+        
+    
+
+            var marker_9d2aaaee67e3439c9a727858e8899a23 = L.marker(
+                [25.040158,121.571738],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_aaaf0aeb80394f8aa7512c5fa971e0bf = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_9d2aaaee67e3439c9a727858e8899a23.setIcon(custom_icon_aaaf0aeb80394f8aa7512c5fa971e0bf);
+            
+    
+            var popup_21dd5d699f114100926d7155bcda3b25 = L.popup({maxWidth: '300'});
+
+            
+                var html_389b367f18904819959ef17b6b353106 = $('<div id="html_389b367f18904819959ef17b6b353106" style="width: 100.0%; height: 100.0%;">新工農128036</div>')[0];
+                popup_21dd5d699f114100926d7155bcda3b25.setContent(html_389b367f18904819959ef17b6b353106);
+            
+
+            marker_9d2aaaee67e3439c9a727858e8899a23.bindPopup(popup_21dd5d699f114100926d7155bcda3b25);
+
+            
+        
+    
+
+            var marker_11855764fb1d4375bbe2591da6e25aa8 = L.marker(
+                [25.0319501,121.5587135],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_1525d0f7ee904bef9c01e1fec6d7eda4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_11855764fb1d4375bbe2591da6e25aa8.setIcon(custom_icon_1525d0f7ee904bef9c01e1fec6d7eda4);
+            
+    
+            var popup_31b5de7b6b874869b53646cd8ae0d5c9 = L.popup({maxWidth: '300'});
+
+            
+                var html_0dd86bfdac3a4ed983c8bfb687a04ce6 = $('<div id="html_0dd86bfdac3a4ed983c8bfb687a04ce6" style="width: 100.0%; height: 100.0%;">中興128542</div>')[0];
+                popup_31b5de7b6b874869b53646cd8ae0d5c9.setContent(html_0dd86bfdac3a4ed983c8bfb687a04ce6);
+            
+
+            marker_11855764fb1d4375bbe2591da6e25aa8.bindPopup(popup_31b5de7b6b874869b53646cd8ae0d5c9);
+
+            
+        
+    
+
+            var marker_7a6e61d9877748d296335ff89f31dcc8 = L.marker(
+                [25.043098,121.5682983],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_749293206d804adf9457cdd66922e5f9 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_7a6e61d9877748d296335ff89f31dcc8.setIcon(custom_icon_749293206d804adf9457cdd66922e5f9);
+            
+    
+            var popup_99018d096d674d00a9d7896dd5e6066a = L.popup({maxWidth: '300'});
+
+            
+                var html_d7d603633e594f9cb2031d2c2b1611e5 = $('<div id="html_d7d603633e594f9cb2031d2c2b1611e5" style="width: 100.0%; height: 100.0%;">敦厚130132</div>')[0];
+                popup_99018d096d674d00a9d7896dd5e6066a.setContent(html_d7d603633e594f9cb2031d2c2b1611e5);
+            
+
+            marker_7a6e61d9877748d296335ff89f31dcc8.bindPopup(popup_99018d096d674d00a9d7896dd5e6066a);
+
+            
+        
+    
+
+            var marker_0420f2598c764db3a3ccd0a27825768b = L.marker(
+                [25.0397197,121.5658739],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_3cb0a7c494ad4d20bec0278c3ac6f179 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_0420f2598c764db3a3ccd0a27825768b.setIcon(custom_icon_3cb0a7c494ad4d20bec0278c3ac6f179);
+            
+    
+            var popup_815c70905a734de8b56c0586adbb26a1 = L.popup({maxWidth: '300'});
+
+            
+                var html_50a1afd1e0f84016a17b0bd9218464ae = $('<div id="html_50a1afd1e0f84016a17b0bd9218464ae" style="width: 100.0%; height: 100.0%;">統誠135012</div>')[0];
+                popup_815c70905a734de8b56c0586adbb26a1.setContent(html_50a1afd1e0f84016a17b0bd9218464ae);
+            
+
+            marker_0420f2598c764db3a3ccd0a27825768b.bindPopup(popup_815c70905a734de8b56c0586adbb26a1);
+
+            
+        
+    
+
+            var marker_6e4d0e316b5f428995d995b6df17c96e = L.marker(
+                [25.0435395,121.5688373],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_d874e8fbe3744f3383fadd8cd278bcf5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_6e4d0e316b5f428995d995b6df17c96e.setIcon(custom_icon_d874e8fbe3744f3383fadd8cd278bcf5);
+            
+    
+            var popup_5efd591ac2e44076b1c4146a731500b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_b124a19af4dc48539d4a0ddc1f6a2000 = $('<div id="html_b124a19af4dc48539d4a0ddc1f6a2000" style="width: 100.0%; height: 100.0%;">永信135241</div>')[0];
+                popup_5efd591ac2e44076b1c4146a731500b2.setContent(html_b124a19af4dc48539d4a0ddc1f6a2000);
+            
+
+            marker_6e4d0e316b5f428995d995b6df17c96e.bindPopup(popup_5efd591ac2e44076b1c4146a731500b2);
+
+            
+        
+    
+
+            var marker_d8370686bb574ed59d7b71c6251ff06f = L.marker(
+                [25.0413231,121.5651274],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_ac3afc116d6842e4b2c0f8c463289a0f = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_d8370686bb574ed59d7b71c6251ff06f.setIcon(custom_icon_ac3afc116d6842e4b2c0f8c463289a0f);
+            
+    
+            var popup_5bc034b15a6a4a9192a58fc6e923edb8 = L.popup({maxWidth: '300'});
+
+            
+                var html_e2b22000d29a47a0b748a2efb8945b41 = $('<div id="html_e2b22000d29a47a0b748a2efb8945b41" style="width: 100.0%; height: 100.0%;">松捷135425</div>')[0];
+                popup_5bc034b15a6a4a9192a58fc6e923edb8.setContent(html_e2b22000d29a47a0b748a2efb8945b41);
+            
+
+            marker_d8370686bb574ed59d7b71c6251ff06f.bindPopup(popup_5bc034b15a6a4a9192a58fc6e923edb8);
+
+            
+        
+    
+
+            var marker_bdb3b252d7be4e0a8b376be50176c868 = L.marker(
+                [25.0187114,121.5589378],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_f6b34a40631145e1bc8e9d2dba93c321 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_bdb3b252d7be4e0a8b376be50176c868.setIcon(custom_icon_f6b34a40631145e1bc8e9d2dba93c321);
+            
+    
+            var popup_e29035acd3a64da4b8d273a0cd504267 = L.popup({maxWidth: '300'});
+
+            
+                var html_6ec1c9f019ed4e53b2704c5cd3ac72fb = $('<div id="html_6ec1c9f019ed4e53b2704c5cd3ac72fb" style="width: 100.0%; height: 100.0%;">麟運135562</div>')[0];
+                popup_e29035acd3a64da4b8d273a0cd504267.setContent(html_6ec1c9f019ed4e53b2704c5cd3ac72fb);
+            
+
+            marker_bdb3b252d7be4e0a8b376be50176c868.bindPopup(popup_e29035acd3a64da4b8d273a0cd504267);
+
+            
+        
+    
+
+            var marker_ada5731bf42c4ca1b7f2a21141699d76 = L.marker(
+                [25.038253,121.5794416],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_8e8806868b8f4182bda48db4c62aab5e = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ada5731bf42c4ca1b7f2a21141699d76.setIcon(custom_icon_8e8806868b8f4182bda48db4c62aab5e);
+            
+    
+            var popup_06d51f843ba84fffb282b562c41fe4cb = L.popup({maxWidth: '300'});
+
+            
+                var html_26f769e9d1084f10b751bcbc1b5e0d7a = $('<div id="html_26f769e9d1084f10b751bcbc1b5e0d7a" style="width: 100.0%; height: 100.0%;">萊福135942</div>')[0];
+                popup_06d51f843ba84fffb282b562c41fe4cb.setContent(html_26f769e9d1084f10b751bcbc1b5e0d7a);
+            
+
+            marker_ada5731bf42c4ca1b7f2a21141699d76.bindPopup(popup_06d51f843ba84fffb282b562c41fe4cb);
+
+            
+        
+    
+
+            var marker_02ef1c77dc854673998b815b5c4fb112 = L.marker(
+                [25.0337254,121.5576657],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_119536e710cb436fa5b9d0abd6244098 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_02ef1c77dc854673998b815b5c4fb112.setIcon(custom_icon_119536e710cb436fa5b9d0abd6244098);
+            
+    
+            var popup_910ca4491f2b4ed6a80cd1dc937c2cbe = L.popup({maxWidth: '300'});
+
+            
+                var html_b664af44b4cf45a1aa37117bcb358614 = $('<div id="html_b664af44b4cf45a1aa37117bcb358614" style="width: 100.0%; height: 100.0%;">光復136716</div>')[0];
+                popup_910ca4491f2b4ed6a80cd1dc937c2cbe.setContent(html_b664af44b4cf45a1aa37117bcb358614);
+            
+
+            marker_02ef1c77dc854673998b815b5c4fb112.bindPopup(popup_910ca4491f2b4ed6a80cd1dc937c2cbe);
+
+            
+        
+    
+
+            var marker_055c3a15a6674a55aae4977714d083be = L.marker(
+                [25.0491901,121.5782994],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_532548ea601d4d68906ac06d3678740d = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_055c3a15a6674a55aae4977714d083be.setIcon(custom_icon_532548ea601d4d68906ac06d3678740d);
+            
+    
+            var popup_b8ec68c79ee14595bd472f516f5520a1 = L.popup({maxWidth: '300'});
+
+            
+                var html_3e893769f6d34a9dbf6ca2a52e34966b = $('<div id="html_3e893769f6d34a9dbf6ca2a52e34966b" style="width: 100.0%; height: 100.0%;">松泰136783</div>')[0];
+                popup_b8ec68c79ee14595bd472f516f5520a1.setContent(html_3e893769f6d34a9dbf6ca2a52e34966b);
+            
+
+            marker_055c3a15a6674a55aae4977714d083be.bindPopup(popup_b8ec68c79ee14595bd472f516f5520a1);
+
+            
+        
+    
+
+            var marker_0336207f264e42d8b997af2f807b1fb5 = L.marker(
+                [25.0406569,121.576851],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_19a48c6e82b54ddcbb05512ae69021e1 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_0336207f264e42d8b997af2f807b1fb5.setIcon(custom_icon_19a48c6e82b54ddcbb05512ae69021e1);
+            
+    
+            var popup_7f1030d7466140c8bf6478f854075303 = L.popup({maxWidth: '300'});
+
+            
+                var html_a5797300124a488c8ac786c3762b4c70 = $('<div id="html_a5797300124a488c8ac786c3762b4c70" style="width: 100.0%; height: 100.0%;">忠林144315</div>')[0];
+                popup_7f1030d7466140c8bf6478f854075303.setContent(html_a5797300124a488c8ac786c3762b4c70);
+            
+
+            marker_0336207f264e42d8b997af2f807b1fb5.bindPopup(popup_7f1030d7466140c8bf6478f854075303);
+
+            
+        
+    
+
+            var marker_cee993756b6a4da1ba335134b870c513 = L.marker(
+                [25.0388485,121.5668016],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_472b68fa9c674107881c2aff091d8d36 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_cee993756b6a4da1ba335134b870c513.setIcon(custom_icon_472b68fa9c674107881c2aff091d8d36);
+            
+    
+            var popup_e617f142a12045deb4221ccfc3e6e5af = L.popup({maxWidth: '300'});
+
+            
+                var html_12fda007d8aa415590b512faa0954563 = $('<div id="html_12fda007d8aa415590b512faa0954563" style="width: 100.0%; height: 100.0%;">新光144636</div>')[0];
+                popup_e617f142a12045deb4221ccfc3e6e5af.setContent(html_12fda007d8aa415590b512faa0954563);
+            
+
+            marker_cee993756b6a4da1ba335134b870c513.bindPopup(popup_e617f142a12045deb4221ccfc3e6e5af);
+
+            
+        
+    
+
+            var marker_366ded5fc76548e88f33745761b684f3 = L.marker(
+                [25.037434,121.575297],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_f744022ed76545edb7781af5095e873d = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_366ded5fc76548e88f33745761b684f3.setIcon(custom_icon_f744022ed76545edb7781af5095e873d);
+            
+    
+            var popup_9bb6fc5e2e564184b364efddd36fc31c = L.popup({maxWidth: '300'});
+
+            
+                var html_8737a3715209469ea3a589b23dd79709 = $('<div id="html_8737a3715209469ea3a589b23dd79709" style="width: 100.0%; height: 100.0%;">德鄰144669</div>')[0];
+                popup_9bb6fc5e2e564184b364efddd36fc31c.setContent(html_8737a3715209469ea3a589b23dd79709);
+            
+
+            marker_366ded5fc76548e88f33745761b684f3.bindPopup(popup_9bb6fc5e2e564184b364efddd36fc31c);
+
+            
+        
+    
+
+            var marker_fa01a68de2fa45428d26f5b5eb6e15b8 = L.marker(
+                [25.032912,121.574648],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_66ddab6a24a447a39d21c8120d6f920e = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_fa01a68de2fa45428d26f5b5eb6e15b8.setIcon(custom_icon_66ddab6a24a447a39d21c8120d6f920e);
+            
+    
+            var popup_1facc86950644e6a8248a083c9e5d3a9 = L.popup({maxWidth: '300'});
+
+            
+                var html_86847da6d1524d8ab9cc0cafae6ca171 = $('<div id="html_86847da6d1524d8ab9cc0cafae6ca171" style="width: 100.0%; height: 100.0%;">松義147299</div>')[0];
+                popup_1facc86950644e6a8248a083c9e5d3a9.setContent(html_86847da6d1524d8ab9cc0cafae6ca171);
+            
+
+            marker_fa01a68de2fa45428d26f5b5eb6e15b8.bindPopup(popup_1facc86950644e6a8248a083c9e5d3a9);
+
+            
+        
+    
+
+            var marker_e6953a497996478bbcf093e0af332cdd = L.marker(
+                [25.0290989,121.561392],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_08e72272242c4e519a0b8055756d7df2 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_e6953a497996478bbcf093e0af332cdd.setIcon(custom_icon_08e72272242c4e519a0b8055756d7df2);
+            
+    
+            var popup_8c48f4bcff8b466d921a934c88de9269 = L.popup({maxWidth: '300'});
+
+            
+                var html_ab0d758bfbf145e1a2b526a0ffea6fe7 = $('<div id="html_ab0d758bfbf145e1a2b526a0ffea6fe7" style="width: 100.0%; height: 100.0%;">三興149697</div>')[0];
+                popup_8c48f4bcff8b466d921a934c88de9269.setContent(html_ab0d758bfbf145e1a2b526a0ffea6fe7);
+            
+
+            marker_e6953a497996478bbcf093e0af332cdd.bindPopup(popup_8c48f4bcff8b466d921a934c88de9269);
+
+            
+        
+    
+
+            var marker_c5c573096de843efab988713eb924f16 = L.marker(
+                [25.036607,121.55849],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_efe69ed21ce245f8ae705a473576925c = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c5c573096de843efab988713eb924f16.setIcon(custom_icon_efe69ed21ce245f8ae705a473576925c);
+            
+    
+            var popup_7cd633c5da99443db9505487ca6a714c = L.popup({maxWidth: '300'});
+
+            
+                var html_5369ccd97f3b47e2ab2d187f4c1552f5 = $('<div id="html_5369ccd97f3b47e2ab2d187f4c1552f5" style="width: 100.0%; height: 100.0%;">仁和151335</div>')[0];
+                popup_7cd633c5da99443db9505487ca6a714c.setContent(html_5369ccd97f3b47e2ab2d187f4c1552f5);
+            
+
+            marker_c5c573096de843efab988713eb924f16.bindPopup(popup_7cd633c5da99443db9505487ca6a714c);
+
+            
+        
+    
+
+            var marker_ad924a5e750f492baf73ca87ccb97e31 = L.marker(
+                [25.0258406,121.5612122],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_c8665c9749364b8ea906a96a96c0c3c2 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ad924a5e750f492baf73ca87ccb97e31.setIcon(custom_icon_c8665c9749364b8ea906a96a96c0c3c2);
+            
+    
+            var popup_1201f3bbe1e04c8991b568ac41bb477e = L.popup({maxWidth: '300'});
+
+            
+                var html_b2668b7dde7246f7be6b533ee73f451b = $('<div id="html_b2668b7dde7246f7be6b533ee73f451b" style="width: 100.0%; height: 100.0%;">北醫大153216</div>')[0];
+                popup_1201f3bbe1e04c8991b568ac41bb477e.setContent(html_b2668b7dde7246f7be6b533ee73f451b);
+            
+
+            marker_ad924a5e750f492baf73ca87ccb97e31.bindPopup(popup_1201f3bbe1e04c8991b568ac41bb477e);
+
+            
+        
+    
+
+            var marker_1b627e63c8f04fdf848ff2069a4ddd04 = L.marker(
+                [25.0334929,121.564101],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_3c56b9e9ee124573971c395e4d6592b4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_1b627e63c8f04fdf848ff2069a4ddd04.setIcon(custom_icon_3c56b9e9ee124573971c395e4d6592b4);
+            
+    
+            var popup_be907d8dc29e4f5891d39449594c27fe = L.popup({maxWidth: '300'});
+
+            
+                var html_c78cda64b9b646178f6a6cc68da8a8a2 = $('<div id="html_c78cda64b9b646178f6a6cc68da8a8a2" style="width: 100.0%; height: 100.0%;">台金153294</div>')[0];
+                popup_be907d8dc29e4f5891d39449594c27fe.setContent(html_c78cda64b9b646178f6a6cc68da8a8a2);
+            
+
+            marker_1b627e63c8f04fdf848ff2069a4ddd04.bindPopup(popup_be907d8dc29e4f5891d39449594c27fe);
+
+            
+        
+    
+
+            var marker_6f998f269021446ca2e693c0b810e464 = L.marker(
+                [25.043684,121.571913],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_add26a5dc5624ec6b0c42afea9471080 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_6f998f269021446ca2e693c0b810e464.setIcon(custom_icon_add26a5dc5624ec6b0c42afea9471080);
+            
+    
+            var popup_717f5a62e73f4fffbe546c984157d09d = L.popup({maxWidth: '300'});
+
+            
+                var html_449af43ece7b4fa88614ddc58271a1c8 = $('<div id="html_449af43ece7b4fa88614ddc58271a1c8" style="width: 100.0%; height: 100.0%;">松信155061</div>')[0];
+                popup_717f5a62e73f4fffbe546c984157d09d.setContent(html_449af43ece7b4fa88614ddc58271a1c8);
+            
+
+            marker_6f998f269021446ca2e693c0b810e464.bindPopup(popup_717f5a62e73f4fffbe546c984157d09d);
+
+            
+        
+    
+
+            var marker_477d2d859cbe43e8a53f06621ed407f3 = L.marker(
+                [25.037183,121.577097],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_9ffa6bc6de7e4a2198b5ab1f6aacd0a1 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_477d2d859cbe43e8a53f06621ed407f3.setIcon(custom_icon_9ffa6bc6de7e4a2198b5ab1f6aacd0a1);
+            
+    
+            var popup_498237f47a864765a2c3498af748ad1a = L.popup({maxWidth: '300'});
+
+            
+                var html_ebe46067c6004427abbc849350869a34 = $('<div id="html_ebe46067c6004427abbc849350869a34" style="width: 100.0%; height: 100.0%;">信林158738</div>')[0];
+                popup_498237f47a864765a2c3498af748ad1a.setContent(html_ebe46067c6004427abbc849350869a34);
+            
+
+            marker_477d2d859cbe43e8a53f06621ed407f3.bindPopup(popup_498237f47a864765a2c3498af748ad1a);
+
+            
+        
+    
+
+            var marker_d2ee56eba947440aabf03200f13da823 = L.marker(
+                [25.0467571,121.5722919],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_72015f25c8da4b59a3ddcc568f30a450 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_d2ee56eba947440aabf03200f13da823.setIcon(custom_icon_72015f25c8da4b59a3ddcc568f30a450);
+            
+    
+            var popup_65d77adef7da4dde8f156e5f41ba319b = L.popup({maxWidth: '300'});
+
+            
+                var html_4c742ab510384c55bc14e5da1dea34ea = $('<div id="html_4c742ab510384c55bc14e5da1dea34ea" style="width: 100.0%; height: 100.0%;">松錢159269</div>')[0];
+                popup_65d77adef7da4dde8f156e5f41ba319b.setContent(html_4c742ab510384c55bc14e5da1dea34ea);
+            
+
+            marker_d2ee56eba947440aabf03200f13da823.bindPopup(popup_65d77adef7da4dde8f156e5f41ba319b);
+
+            
+        
+    
+
+            var marker_216da082ac374b6482158e6805e13655 = L.marker(
+                [25.0416917,121.5790542],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_ad473b1271bd48959461398a33d21f2d = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_216da082ac374b6482158e6805e13655.setIcon(custom_icon_ad473b1271bd48959461398a33d21f2d);
+            
+    
+            var popup_7276bc38f52b49418dc262c1c35e40d3 = L.popup({maxWidth: '300'});
+
+            
+                var html_4cd045a751014ffa9d0a139c3bae0e66 = $('<div id="html_4cd045a751014ffa9d0a139c3bae0e66" style="width: 100.0%; height: 100.0%;">捷忠161376</div>')[0];
+                popup_7276bc38f52b49418dc262c1c35e40d3.setContent(html_4cd045a751014ffa9d0a139c3bae0e66);
+            
+
+            marker_216da082ac374b6482158e6805e13655.bindPopup(popup_7276bc38f52b49418dc262c1c35e40d3);
+
+            
+        
+    
+
+            var marker_c3e991d9dd3d47fe8fafe9882cc707e0 = L.marker(
+                [25.0234125,121.5695056],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_90723d0f532b43f59752fb2ffbc64684 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c3e991d9dd3d47fe8fafe9882cc707e0.setIcon(custom_icon_90723d0f532b43f59752fb2ffbc64684);
+            
+    
+            var popup_6bc8ef6c2607433db8f75712ecb929a6 = L.popup({maxWidth: '300'});
+
+            
+                var html_dc1e8364952248568912abc937b2236c = $('<div id="html_dc1e8364952248568912abc937b2236c" style="width: 100.0%; height: 100.0%;">總站162483</div>')[0];
+                popup_6bc8ef6c2607433db8f75712ecb929a6.setContent(html_dc1e8364952248568912abc937b2236c);
+            
+
+            marker_c3e991d9dd3d47fe8fafe9882cc707e0.bindPopup(popup_6bc8ef6c2607433db8f75712ecb929a6);
+
+            
+        
+    
+
+            var marker_b3a6e35a9ce54d788b8565190861af87 = L.marker(
+                [25.0342889,121.5600266],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_13a458e29cf341ecb2cc03d0b5e70ebd = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_b3a6e35a9ce54d788b8565190861af87.setIcon(custom_icon_13a458e29cf341ecb2cc03d0b5e70ebd);
+            
+    
+            var popup_eccf9957d22d45cd9988c5df05399875 = L.popup({maxWidth: '300'});
+
+            
+                var html_d71d0b4b02d041b48b8189c7fe9c8800 = $('<div id="html_d71d0b4b02d041b48b8189c7fe9c8800" style="width: 100.0%; height: 100.0%;">凱悅164216</div>')[0];
+                popup_eccf9957d22d45cd9988c5df05399875.setContent(html_d71d0b4b02d041b48b8189c7fe9c8800);
+            
+
+            marker_b3a6e35a9ce54d788b8565190861af87.bindPopup(popup_eccf9957d22d45cd9988c5df05399875);
+
+            
+        
+    
+
+            var marker_b5345d01950d42be84a35513df4f689c = L.marker(
+                [25.0245326,121.5634423],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_8bdc07aefeb741df948b1bfa39b6388f = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_b5345d01950d42be84a35513df4f689c.setIcon(custom_icon_8bdc07aefeb741df948b1bfa39b6388f);
+            
+    
+            var popup_cc07e327ec694f39bc9489010f51c902 = L.popup({maxWidth: '300'});
+
+            
+                var html_ac15f05f158b4e199113d5eee19e29e6 = $('<div id="html_ac15f05f158b4e199113d5eee19e29e6" style="width: 100.0%; height: 100.0%;">吳興164490</div>')[0];
+                popup_cc07e327ec694f39bc9489010f51c902.setContent(html_ac15f05f158b4e199113d5eee19e29e6);
+            
+
+            marker_b5345d01950d42be84a35513df4f689c.bindPopup(popup_cc07e327ec694f39bc9489010f51c902);
+
+            
+        
+    
+
+            var marker_ae37251bee5b4be88be12b5b5cb63757 = L.marker(
+                [25.0342313,121.5610091],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_c0965bd11c3c4472a5a42130581ba3d8 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ae37251bee5b4be88be12b5b5cb63757.setIcon(custom_icon_c0965bd11c3c4472a5a42130581ba3d8);
+            
+    
+            var popup_b871784e38dc47228784247054ae7cb8 = L.popup({maxWidth: '300'});
+
+            
+                var html_b984d02c3ee0402eab9876c68a8e1605 = $('<div id="html_b984d02c3ee0402eab9876c68a8e1605" style="width: 100.0%; height: 100.0%;">國貿165987</div>')[0];
+                popup_b871784e38dc47228784247054ae7cb8.setContent(html_b984d02c3ee0402eab9876c68a8e1605);
+            
+
+            marker_ae37251bee5b4be88be12b5b5cb63757.bindPopup(popup_b871784e38dc47228784247054ae7cb8);
+
+            
+        
+    
+
+            var marker_5d19c17bf358488ab1e83bdc60a0bc99 = L.marker(
+                [25.0339639,121.5644722],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_c1b9e435f17a4aa38512a7c2c7f2aff5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_5d19c17bf358488ab1e83bdc60a0bc99.setIcon(custom_icon_c1b9e435f17a4aa38512a7c2c7f2aff5);
+            
+    
+            var popup_4a796f0520f84af9b8b9eb68915c5b47 = L.popup({maxWidth: '300'});
+
+            
+                var html_f1c796eeef684eb0bfac1cb3103af678 = $('<div id="html_f1c796eeef684eb0bfac1cb3103af678" style="width: 100.0%; height: 100.0%;">一零一167651</div>')[0];
+                popup_4a796f0520f84af9b8b9eb68915c5b47.setContent(html_f1c796eeef684eb0bfac1cb3103af678);
+            
+
+            marker_5d19c17bf358488ab1e83bdc60a0bc99.bindPopup(popup_4a796f0520f84af9b8b9eb68915c5b47);
+
+            
+        
+    
+
+            var marker_a731a28f8a2c4c5abb003bb3971c7f3e = L.marker(
+                [25.04727,121.577578],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_7d78e45a40e243439e680795e2708ec7 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_a731a28f8a2c4c5abb003bb3971c7f3e.setIcon(custom_icon_7d78e45a40e243439e680795e2708ec7);
+            
+    
+            var popup_ebf786884ca64b1495edfc57d5265f1d = L.popup({maxWidth: '300'});
+
+            
+                var html_8319f31a60244acbb22edc381c9883d5 = $('<div id="html_8319f31a60244acbb22edc381c9883d5" style="width: 100.0%; height: 100.0%;">開源170141</div>')[0];
+                popup_ebf786884ca64b1495edfc57d5265f1d.setContent(html_8319f31a60244acbb22edc381c9883d5);
+            
+
+            marker_a731a28f8a2c4c5abb003bb3971c7f3e.bindPopup(popup_ebf786884ca64b1495edfc57d5265f1d);
+
+            
+        
+    
+
+            var marker_a02a7c33c1b1428d9b2fbdf77a69a7f9 = L.marker(
+                [25.028375,121.568193],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_332bc6de102c4cc8af3348d6ad376120 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_a02a7c33c1b1428d9b2fbdf77a69a7f9.setIcon(custom_icon_332bc6de102c4cc8af3348d6ad376120);
+            
+    
+            var popup_55cdba0ddad641989708d0818868799f = L.popup({maxWidth: '300'});
+
+            
+                var html_d57a9cbe6bfd4ba081c1a88534071250 = $('<div id="html_d57a9cbe6bfd4ba081c1a88534071250" style="width: 100.0%; height: 100.0%;">北府170738</div>')[0];
+                popup_55cdba0ddad641989708d0818868799f.setContent(html_d57a9cbe6bfd4ba081c1a88534071250);
+            
+
+            marker_a02a7c33c1b1428d9b2fbdf77a69a7f9.bindPopup(popup_55cdba0ddad641989708d0818868799f);
+
+            
+        
+    
+
+            var marker_c7d2b924b67a42c0b7f54853a7bdbf98 = L.marker(
+                [25.0447069,121.577308],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_191c7334f3cc43858ecb01dd13bb19ea = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c7d2b924b67a42c0b7f54853a7bdbf98.setIcon(custom_icon_191c7334f3cc43858ecb01dd13bb19ea);
+            
+    
+            var popup_56db015510df443597e1eaf48cf35f58 = L.popup({maxWidth: '300'});
+
+            
+                var html_18893b32f11340ff8518abbdf8da7e88 = $('<div id="html_18893b32f11340ff8518abbdf8da7e88" style="width: 100.0%; height: 100.0%;">鑫吉174534</div>')[0];
+                popup_56db015510df443597e1eaf48cf35f58.setContent(html_18893b32f11340ff8518abbdf8da7e88);
+            
+
+            marker_c7d2b924b67a42c0b7f54853a7bdbf98.bindPopup(popup_56db015510df443597e1eaf48cf35f58);
+
+            
+        
+    
+
+            var marker_6471dd7b77ba4778a17c826cbb2592bc = L.marker(
+                [25.0291055,121.5648436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_edf10cd8db844a99b8c21ae7d46eabe9 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_6471dd7b77ba4778a17c826cbb2592bc.setIcon(custom_icon_edf10cd8db844a99b8c21ae7d46eabe9);
+            
+    
+            var popup_8e591b765a9e4a22b8ce1c5830142cbc = L.popup({maxWidth: '300'});
+
+            
+                var html_2889679a442144d5b3a350ac7c4374ea = $('<div id="html_2889679a442144d5b3a350ac7c4374ea" style="width: 100.0%; height: 100.0%;">松智174970</div>')[0];
+                popup_8e591b765a9e4a22b8ce1c5830142cbc.setContent(html_2889679a442144d5b3a350ac7c4374ea);
+            
+
+            marker_6471dd7b77ba4778a17c826cbb2592bc.bindPopup(popup_8e591b765a9e4a22b8ce1c5830142cbc);
+
+            
+        
+    
+
+            var marker_45f9d4abf4e94d238e82b9b23e3aae81 = L.marker(
+                [25.0405044,121.5668964],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_899c25506f6b4d6a9d1ae0b3e24e81e5 = L.icon({
+                    iconUrl: './pic/end_shop.png',
+                    iconSize: [50,50],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_45f9d4abf4e94d238e82b9b23e3aae81.setIcon(custom_icon_899c25506f6b4d6a9d1ae0b3e24e81e5);
+            
+    
+            var popup_88a8c92081e2410fa44adf41614354a6 = L.popup({maxWidth: '300'});
+
+            
+                var html_24cfa24b2b3b45f49c59c283c74cdf17 = $('<div id="html_24cfa24b2b3b45f49c59c283c74cdf17" style="width: 100.0%; height: 100.0%;">鑫國泰181912</div>')[0];
+                popup_88a8c92081e2410fa44adf41614354a6.setContent(html_24cfa24b2b3b45f49c59c283c74cdf17);
+            
+
+            marker_45f9d4abf4e94d238e82b9b23e3aae81.bindPopup(popup_88a8c92081e2410fa44adf41614354a6);
+
+            
+        
+    
+
+            var marker_919a08c19e124afaa7cf740d8e0d108d = L.marker(
+                [25.0393572,121.5874363],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_48d5137452f447f4a305867695361808 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_919a08c19e124afaa7cf740d8e0d108d.setIcon(custom_icon_48d5137452f447f4a305867695361808);
+            
+    
+            var popup_7472bfe27cac410aae9783e572cdb3bc = L.popup({maxWidth: '300'});
+
+            
+                var html_e4c77fbedb254e2486c4d597708acb98 = $('<div id="html_e4c77fbedb254e2486c4d597708acb98" style="width: 100.0%; height: 100.0%;">信福181945</div>')[0];
+                popup_7472bfe27cac410aae9783e572cdb3bc.setContent(html_e4c77fbedb254e2486c4d597708acb98);
+            
+
+            marker_919a08c19e124afaa7cf740d8e0d108d.bindPopup(popup_7472bfe27cac410aae9783e572cdb3bc);
+
+            
+        
+    
+
+            var marker_789501ef071c482ead42290598189066 = L.marker(
+                [25.0437322,121.5444485],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_7a833015b36c4d9ab7481ebb3460f4ed = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_789501ef071c482ead42290598189066.setIcon(custom_icon_7a833015b36c4d9ab7481ebb3460f4ed);
+            
+    
+            var popup_3d7d1370165f4b8ba470ab9f0fc8e892 = L.popup({maxWidth: '300'});
+
+            
+                var html_380709a690fa44b4a4946f7c29565a99 = $('<div id="html_380709a690fa44b4a4946f7c29565a99" style="width: 100.0%; height: 100.0%;">光忠182269</div>')[0];
+                popup_3d7d1370165f4b8ba470ab9f0fc8e892.setContent(html_380709a690fa44b4a4946f7c29565a99);
+            
+
+            marker_789501ef071c482ead42290598189066.bindPopup(popup_3d7d1370165f4b8ba470ab9f0fc8e892);
+
+            
+        
+    
+
+            var marker_b9ba9566a6ee407899885433c9aa8a74 = L.marker(
+                [25.041892,121.563704],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_a6d24d72d4a245eaa2039cf8315bbfb2 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_b9ba9566a6ee407899885433c9aa8a74.setIcon(custom_icon_a6d24d72d4a245eaa2039cf8315bbfb2);
+            
+    
+            var popup_0e989e9ea52845a09fe5651a87ac7753 = L.popup({maxWidth: '300'});
+
+            
+                var html_70bca04f46774f89954e5717807a889f = $('<div id="html_70bca04f46774f89954e5717807a889f" style="width: 100.0%; height: 100.0%;">聯合184575</div>')[0];
+                popup_0e989e9ea52845a09fe5651a87ac7753.setContent(html_70bca04f46774f89954e5717807a889f);
+            
+
+            marker_b9ba9566a6ee407899885433c9aa8a74.bindPopup(popup_0e989e9ea52845a09fe5651a87ac7753);
+
+            
+        
+    
+
+            var marker_da5b8b6e054c4a33bbcad8941311eda4 = L.marker(
+                [25.0280154,121.5567227],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_0f55e73a486d428ca8b066d77364f564 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_da5b8b6e054c4a33bbcad8941311eda4.setIcon(custom_icon_0f55e73a486d428ca8b066d77364f564);
+            
+    
+            var popup_43d4b0da8d86413cb9b7d889d4ed5aa1 = L.popup({maxWidth: '300'});
+
+            
+                var html_ebfe447540d740189ce266cc9b462fc8 = $('<div id="html_ebfe447540d740189ce266cc9b462fc8" style="width: 100.0%; height: 100.0%;">昌隆185143</div>')[0];
+                popup_43d4b0da8d86413cb9b7d889d4ed5aa1.setContent(html_ebfe447540d740189ce266cc9b462fc8);
+            
+
+            marker_da5b8b6e054c4a33bbcad8941311eda4.bindPopup(popup_43d4b0da8d86413cb9b7d889d4ed5aa1);
+
+            
+        
+    
+
+            var marker_2c7aaee5bd4547b3b86a31ac1c657f23 = L.marker(
+                [25.0434723,121.5740349],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_5e2bed4c2e884c628a1f9ade524abffa = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_2c7aaee5bd4547b3b86a31ac1c657f23.setIcon(custom_icon_5e2bed4c2e884c628a1f9ade524abffa);
+            
+    
+            var popup_f230384c8f444de1bc036da03c9a4bf8 = L.popup({maxWidth: '300'});
+
+            
+                var html_f652b81645f247e793d6c1c7d5584ba2 = $('<div id="html_f652b81645f247e793d6c1c7d5584ba2" style="width: 100.0%; height: 100.0%;">信吉188094</div>')[0];
+                popup_f230384c8f444de1bc036da03c9a4bf8.setContent(html_f652b81645f247e793d6c1c7d5584ba2);
+            
+
+            marker_2c7aaee5bd4547b3b86a31ac1c657f23.bindPopup(popup_f230384c8f444de1bc036da03c9a4bf8);
+
+            
+        
+    
+
+            var marker_41ded04e31094b638767dd6f57ae5bb8 = L.marker(
+                [25.0348367,121.573658],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_e8faec5aa4ac45c3829fd1bc3aea52a4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_41ded04e31094b638767dd6f57ae5bb8.setIcon(custom_icon_e8faec5aa4ac45c3829fd1bc3aea52a4);
+            
+    
+            var popup_3bd5eea9fa694eb1b64fded88af76f89 = L.popup({maxWidth: '300'});
+
+            
+                var html_f07f270ffa8a4018b7fc3a2b95a5102a = $('<div id="html_f07f270ffa8a4018b7fc3a2b95a5102a" style="width: 100.0%; height: 100.0%;">信德190259</div>')[0];
+                popup_3bd5eea9fa694eb1b64fded88af76f89.setContent(html_f07f270ffa8a4018b7fc3a2b95a5102a);
+            
+
+            marker_41ded04e31094b638767dd6f57ae5bb8.bindPopup(popup_3bd5eea9fa694eb1b64fded88af76f89);
+
+            
+        
+    
+
+            var marker_b035d6ffdc464551b8bcf56547c8c3a3 = L.marker(
+                [25.0424762,121.5649533],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_f9c6c17f9c1943f3847915e0684af1f6 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_b035d6ffdc464551b8bcf56547c8c3a3.setIcon(custom_icon_f9c6c17f9c1943f3847915e0684af1f6);
+            
+    
+            var popup_04c84c10cd6546f698b20b41bb4f6be9 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce001c1de391472db2394ef6fb778774 = $('<div id="html_ce001c1de391472db2394ef6fb778774" style="width: 100.0%; height: 100.0%;">必成190330</div>')[0];
+                popup_04c84c10cd6546f698b20b41bb4f6be9.setContent(html_ce001c1de391472db2394ef6fb778774);
+            
+
+            marker_b035d6ffdc464551b8bcf56547c8c3a3.bindPopup(popup_04c84c10cd6546f698b20b41bb4f6be9);
+
+            
+        
+    
+
+            var marker_955815eb967949f2837ddf890299f614 = L.marker(
+                [25.0388052,121.5859694],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_a2d3d7dd18874ed392bf02f1fa0a4c2a = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_955815eb967949f2837ddf890299f614.setIcon(custom_icon_a2d3d7dd18874ed392bf02f1fa0a4c2a);
+            
+    
+            var popup_ce6b3e0dbf2f47a98c7ac6951f61f22e = L.popup({maxWidth: '300'});
+
+            
+                var html_30c940cc142648b4adc63e18b18bbf6e = $('<div id="html_30c940cc142648b4adc63e18b18bbf6e" style="width: 100.0%; height: 100.0%;">留公854580</div>')[0];
+                popup_ce6b3e0dbf2f47a98c7ac6951f61f22e.setContent(html_30c940cc142648b4adc63e18b18bbf6e);
+            
+
+            marker_955815eb967949f2837ddf890299f614.bindPopup(popup_ce6b3e0dbf2f47a98c7ac6951f61f22e);
+
+            
+        
+    
+
+            var marker_ea0a85f1f99e4b008e52891f3e11b100 = L.marker(
+                [25.047321,121.566457],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_d19f2dc4d8024a0196213d2150dd00f5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ea0a85f1f99e4b008e52891f3e11b100.setIcon(custom_icon_d19f2dc4d8024a0196213d2150dd00f5);
+            
+    
+            var popup_b0443e2715464c7fb1912f94354cba34 = L.popup({maxWidth: '300'});
+
+            
+                var html_c2550871bda74b77827c899d3ae7577d = $('<div id="html_c2550871bda74b77827c899d3ae7577d" style="width: 100.0%; height: 100.0%;">道生870504</div>')[0];
+                popup_b0443e2715464c7fb1912f94354cba34.setContent(html_c2550871bda74b77827c899d3ae7577d);
+            
+
+            marker_ea0a85f1f99e4b008e52891f3e11b100.bindPopup(popup_b0443e2715464c7fb1912f94354cba34);
+
+            
+        
+    
+
+            var marker_604d6886c9834c0fb3e0206a04f9b563 = L.marker(
+                [25.0267673,121.5685436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_5bc70467a99a43b2a3922aba7e3f9a04 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_604d6886c9834c0fb3e0206a04f9b563.setIcon(custom_icon_5bc70467a99a43b2a3922aba7e3f9a04);
+            
+    
+            var popup_764588493a204a1797d2b7e668f57aed = L.popup({maxWidth: '300'});
+
+            
+                var html_375cf224c4c7401bac3946e34a3ea8a9 = $('<div id="html_375cf224c4c7401bac3946e34a3ea8a9" style="width: 100.0%; height: 100.0%;">松仁906564</div>')[0];
+                popup_764588493a204a1797d2b7e668f57aed.setContent(html_375cf224c4c7401bac3946e34a3ea8a9);
+            
+
+            marker_604d6886c9834c0fb3e0206a04f9b563.bindPopup(popup_764588493a204a1797d2b7e668f57aed);
+
+            
+        
+    
+
+            var marker_c195cd2ef4024dcc9f3bb8078ed18643 = L.marker(
+                [25.041214,121.5794663],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_e2d92607394f4b7c85c72d0f8c707876 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c195cd2ef4024dcc9f3bb8078ed18643.setIcon(custom_icon_e2d92607394f4b7c85c72d0f8c707876);
+            
+    
+            var popup_58329d3a397d4f28b7cfa1b485865674 = L.popup({maxWidth: '300'});
+
+            
+                var html_aed4596f5ae0474a9afa0754923c693c = $('<div id="html_aed4596f5ae0474a9afa0754923c693c" style="width: 100.0%; height: 100.0%;">光東930637</div>')[0];
+                popup_58329d3a397d4f28b7cfa1b485865674.setContent(html_aed4596f5ae0474a9afa0754923c693c);
+            
+
+            marker_c195cd2ef4024dcc9f3bb8078ed18643.bindPopup(popup_58329d3a397d4f28b7cfa1b485865674);
+
+            
+        
+    
+
+            var marker_cc6e574560ae43cf88d619e0cf1344b9 = L.marker(
+                [25.0221574,121.5688723],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_8e24ab72390d42eba061af916b669fef = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_cc6e574560ae43cf88d619e0cf1344b9.setIcon(custom_icon_8e24ab72390d42eba061af916b669fef);
+            
+    
+            var popup_589aa4c4729a46d2af703fc141108d5b = L.popup({maxWidth: '300'});
+
+            
+                var html_833a40915a57412c85e2533ec495d059 = $('<div id="html_833a40915a57412c85e2533ec495d059" style="width: 100.0%; height: 100.0%;">惠安961000</div>')[0];
+                popup_589aa4c4729a46d2af703fc141108d5b.setContent(html_833a40915a57412c85e2533ec495d059);
+            
+
+            marker_cc6e574560ae43cf88d619e0cf1344b9.bindPopup(popup_589aa4c4729a46d2af703fc141108d5b);
+
+            
+        
+    
+
+            var marker_ef5d8d3557e240bea9ce7e690f72d4d9 = L.marker(
+                [25.0454044,121.5689813],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_94b5d6971dc54ff38b9a0fb7c95b3100 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ef5d8d3557e240bea9ce7e690f72d4d9.setIcon(custom_icon_94b5d6971dc54ff38b9a0fb7c95b3100);
+            
+    
+            var popup_3a94e73238db4af0a19e9af9bec6c9cb = L.popup({maxWidth: '300'});
+
+            
+                var html_f709e882998f4c13974de122576150e6 = $('<div id="html_f709e882998f4c13974de122576150e6" style="width: 100.0%; height: 100.0%;">革新961974</div>')[0];
+                popup_3a94e73238db4af0a19e9af9bec6c9cb.setContent(html_f709e882998f4c13974de122576150e6);
+            
+
+            marker_ef5d8d3557e240bea9ce7e690f72d4d9.bindPopup(popup_3a94e73238db4af0a19e9af9bec6c9cb);
+
+            
+        
+    
+
+            var marker_12f85668c8154b7aaf5fd3fcb955fe2f = L.marker(
+                [25.0312165,121.5611086],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_480c9c0ff96445f1b6ddb3919b696ef8 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_12f85668c8154b7aaf5fd3fcb955fe2f.setIcon(custom_icon_480c9c0ff96445f1b6ddb3919b696ef8);
+            
+    
+            var popup_d144bd6ad9ed4952a3ecc80c3ce57dbc = L.popup({maxWidth: '300'});
+
+            
+                var html_aa6e0a67d81b43cfad34950326aca6b3 = $('<div id="html_aa6e0a67d81b43cfad34950326aca6b3" style="width: 100.0%; height: 100.0%;">興貿963556</div>')[0];
+                popup_d144bd6ad9ed4952a3ecc80c3ce57dbc.setContent(html_aa6e0a67d81b43cfad34950326aca6b3);
+            
+
+            marker_12f85668c8154b7aaf5fd3fcb955fe2f.bindPopup(popup_d144bd6ad9ed4952a3ecc80c3ce57dbc);
+
+            
+        
+    
+
+            var marker_54ef3fc20bd0406fb4ae4c9a33898040 = L.marker(
+                [25.026175,121.557473],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_fd94cfa0938e4e88a015545e6ffca630 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_54ef3fc20bd0406fb4ae4c9a33898040.setIcon(custom_icon_fd94cfa0938e4e88a015545e6ffca630);
+            
+    
+            var popup_cb9ebaa62f65466c991ae604eed07a7a = L.popup({maxWidth: '300'});
+
+            
+                var html_16be468aeefb45cca4559844fc882669 = $('<div id="html_16be468aeefb45cca4559844fc882669" style="width: 100.0%; height: 100.0%;">信嘉965194</div>')[0];
+                popup_cb9ebaa62f65466c991ae604eed07a7a.setContent(html_16be468aeefb45cca4559844fc882669);
+            
+
+            marker_54ef3fc20bd0406fb4ae4c9a33898040.bindPopup(popup_cb9ebaa62f65466c991ae604eed07a7a);
+
+            
+        
+    
+
+            var marker_4218faffcbca418ba207f7fa995e79a3 = L.marker(
+                [25.0258373,121.5663366],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_a07ea9cc291749d080cdb7c72ce8c2f3 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_4218faffcbca418ba207f7fa995e79a3.setIcon(custom_icon_a07ea9cc291749d080cdb7c72ce8c2f3);
+            
+    
+            var popup_8f1ab8b8b9ce45f0833f290e75714b06 = L.popup({maxWidth: '300'});
+
+            
+                var html_b0aad24fe11a4056846b0b39f8945a99 = $('<div id="html_b0aad24fe11a4056846b0b39f8945a99" style="width: 100.0%; height: 100.0%;">信醫970901</div>')[0];
+                popup_8f1ab8b8b9ce45f0833f290e75714b06.setContent(html_b0aad24fe11a4056846b0b39f8945a99);
+            
+
+            marker_4218faffcbca418ba207f7fa995e79a3.bindPopup(popup_8f1ab8b8b9ce45f0833f290e75714b06);
+
+            
+        
+    
+
+            var marker_e8e64a9a65534b79a9ef151a2b186479 = L.marker(
+                [25.0397963,121.5780166],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_25fd7144044e4297a4a1b1000b2316a5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_e8e64a9a65534b79a9ef151a2b186479.setIcon(custom_icon_25fd7144044e4297a4a1b1000b2316a5);
+            
+    
+            var popup_d7ab17325a094f6a8a48a9754016148a = L.popup({maxWidth: '300'});
+
+            
+                var html_4d30f1bf11814d2b97c40e11d957c99e = $('<div id="html_4d30f1bf11814d2b97c40e11d957c99e" style="width: 100.0%; height: 100.0%;">新東宮975607</div>')[0];
+                popup_d7ab17325a094f6a8a48a9754016148a.setContent(html_4d30f1bf11814d2b97c40e11d957c99e);
+            
+
+            marker_e8e64a9a65534b79a9ef151a2b186479.bindPopup(popup_d7ab17325a094f6a8a48a9754016148a);
+
+            
+        
+    
+
+            var marker_4bf3486cce7344638d4dba0a77e4ee11 = L.marker(
+                [25.0270409,121.5631091],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_d97dc1912d4d46c09ad3aaaae6f22581 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_4bf3486cce7344638d4dba0a77e4ee11.setIcon(custom_icon_d97dc1912d4d46c09ad3aaaae6f22581);
+            
+    
+            var popup_9117959a15fb4e4b8870a8c288db259c = L.popup({maxWidth: '300'});
+
+            
+                var html_735fe473434a458ca3e6e30d3966d394 = $('<div id="html_735fe473434a458ca3e6e30d3966d394" style="width: 100.0%; height: 100.0%;">北醫978798</div>')[0];
+                popup_9117959a15fb4e4b8870a8c288db259c.setContent(html_735fe473434a458ca3e6e30d3966d394);
+            
+
+            marker_4bf3486cce7344638d4dba0a77e4ee11.bindPopup(popup_9117959a15fb4e4b8870a8c288db259c);
+
+            
+        
+    
+
+            var marker_3055f06ebe57427397cc6411be0e6395 = L.marker(
+                [25.0368446,121.5686546],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_92bacfac173446a39165815542557385 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_3055f06ebe57427397cc6411be0e6395.setIcon(custom_icon_92bacfac173446a39165815542557385);
+            
+    
+            var popup_490d1fa0c1c94e319f6951b0ec19d7b0 = L.popup({maxWidth: '300'});
+
+            
+                var html_8850764c10e34d4f8d784a5870ad0441 = $('<div id="html_8850764c10e34d4f8d784a5870ad0441" style="width: 100.0%; height: 100.0%;">宏泰981901</div>')[0];
+                popup_490d1fa0c1c94e319f6951b0ec19d7b0.setContent(html_8850764c10e34d4f8d784a5870ad0441);
+            
+
+            marker_3055f06ebe57427397cc6411be0e6395.bindPopup(popup_490d1fa0c1c94e319f6951b0ec19d7b0);
+
+            
+        
+    
+
+            var marker_8879ddd3694f4d6c923209293db24c95 = L.marker(
+                [25.034161,121.575201],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_a2e30fb8a28f4b0b947ceac4c1736ef5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8879ddd3694f4d6c923209293db24c95.setIcon(custom_icon_a2e30fb8a28f4b0b947ceac4c1736ef5);
+            
+    
+            var popup_6678ed3cd9d5413b887661f6b7ddf9ca = L.popup({maxWidth: '300'});
+
+            
+                var html_d3247c488a284ef7ac06d6d2ad8e2335 = $('<div id="html_d3247c488a284ef7ac06d6d2ad8e2335" style="width: 100.0%; height: 100.0%;">嘉馥988016</div>')[0];
+                popup_6678ed3cd9d5413b887661f6b7ddf9ca.setContent(html_d3247c488a284ef7ac06d6d2ad8e2335);
+            
+
+            marker_8879ddd3694f4d6c923209293db24c95.bindPopup(popup_6678ed3cd9d5413b887661f6b7ddf9ca);
+
+            
+        
+    
+
+            var marker_2f4d767a68bc40808a5ad78a18468891 = L.marker(
+                [25.0358094,121.5785008],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_b15e86acfa50476cafdec63152899830 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_2f4d767a68bc40808a5ad78a18468891.setIcon(custom_icon_b15e86acfa50476cafdec63152899830);
+            
+    
+            var popup_f67c851ca1e5431eb7a3f3b394dbcdd0 = L.popup({maxWidth: '300'});
+
+            
+                var html_c391e91f2beb4bf289da41e608993f1a = $('<div id="html_c391e91f2beb4bf289da41e608993f1a" style="width: 100.0%; height: 100.0%;">松家991702</div>')[0];
+                popup_f67c851ca1e5431eb7a3f3b394dbcdd0.setContent(html_c391e91f2beb4bf289da41e608993f1a);
+            
+
+            marker_2f4d767a68bc40808a5ad78a18468891.bindPopup(popup_f67c851ca1e5431eb7a3f3b394dbcdd0);
+
+            
+        
+    
+
+            var marker_98b32478e7504d95b88570a9beadf682 = L.marker(
+                [25.0429861,121.5659519],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+
+                var custom_icon_aa31393c21d84a41bd17aa045153c2bc = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_98b32478e7504d95b88570a9beadf682.setIcon(custom_icon_aa31393c21d84a41bd17aa045153c2bc);
+            
+    
+            var popup_e542bae2ae6942a69a0f364b06421abd = L.popup({maxWidth: '300'});
+
+            
+                var html_057fa5d80b4c4f3d8d6e1cef4d3adf7f = $('<div id="html_057fa5d80b4c4f3d8d6e1cef4d3adf7f" style="width: 100.0%; height: 100.0%;">松高993041</div>')[0];
+                popup_e542bae2ae6942a69a0f364b06421abd.setContent(html_057fa5d80b4c4f3d8d6e1cef4d3adf7f);
+            
+
+            marker_98b32478e7504d95b88570a9beadf682.bindPopup(popup_e542bae2ae6942a69a0f364b06421abd);
+
+            
+        
+    
+                var poly_line_1cd6cc298af442fd8e80ec2f4cf2260a = L.polyline(
+                    [[25.04062, 121.56404], [25.0405, 121.56394], [25.04045, 121.5639], [25.04038, 121.56385], [25.0406, 121.56338], [25.04063, 121.56256], [25.04083, 121.56256]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_83925277109a4ca6b79a3bc1d6c320c7 = L.polyline(
+                    [[25.04083, 121.56256], [25.04037, 121.56254], [25.04022, 121.56254], [25.04019, 121.56311], [25.04041, 121.56325]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_27ce7055269043b09fce279dece3abea = L.polyline(
+                    [[25.04041, 121.56325], [25.04094, 121.56357], [25.04112, 121.56367], [25.04111, 121.56433], [25.04111, 121.56455], [25.04111, 121.56475], [25.04107, 121.56597], [25.04099, 121.56789], [25.04099, 121.56841], [25.04049, 121.5684], [25.04049, 121.56853], [25.04067, 121.56854], [25.04111, 121.56854], [25.04114, 121.56727], [25.04121, 121.56529], [25.04121, 121.56512]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_bdc08f92baa74ecb8c90e72992b36179 = L.polyline(
+                    [[25.04121, 121.56512], [25.04125, 121.56441], [25.04127, 121.56364], [25.04145, 121.56364], [25.04189, 121.56365]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_ed514da312dd466ba9bb16a30b65bfac = L.polyline(
+                    [[25.04193, 121.56365], [25.04236, 121.56366], [25.04271, 121.56367], [25.04325, 121.56368], [25.04323, 121.5646], [25.04322, 121.56484], [25.0432, 121.56493], [25.04307, 121.56522], [25.04298, 121.5654], [25.04262, 121.56518], [25.04242, 121.56506]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_7f922ff56a384839b1274894b1af6a31 = L.polyline(
+                    [[25.04242, 121.56506], [25.04176, 121.56468], [25.04164, 121.56463], [25.0416, 121.56463], [25.04152, 121.56463], [25.04149, 121.56464], [25.04147, 121.56467], [25.04147, 121.5647], [25.04152, 121.56481], [25.0431, 121.56575]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_7f9dee13605e430d89416ec5dc6dbd61 = L.polyline(
+                    [[25.0431, 121.56575], [25.04334, 121.56589], [25.04331, 121.56607], [25.04327, 121.56659], [25.04327, 121.56684], [25.04334, 121.56708], [25.04355, 121.56749], [25.04431, 121.56871], [25.04439, 121.56879], [25.04397, 121.56878], [25.04315, 121.56875], [25.04253, 121.56873], [25.04171, 121.56875], [25.0411, 121.56871], [25.0411, 121.5684], [25.04049, 121.5684], [25.03913, 121.56839], [25.03894, 121.56837], [25.03742, 121.56831], [25.03584, 121.56828], [25.03473, 121.56828], [25.03393, 121.56826], [25.03288, 121.56824], [25.0329, 121.5671], [25.03293, 121.56665], [25.03294, 121.56559], [25.03294, 121.56529], [25.03307, 121.56361], [25.03308, 121.5635], [25.0332, 121.56351], [25.03326, 121.56351], [25.03329, 121.56351], [25.03341, 121.56352], [25.034, 121.56356]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_cb2921a232604d728d2fa44060d78ed9 = L.polyline(
+                    [[25.034, 121.56356], [25.03499, 121.56358], [25.0359, 121.56362], [25.03589, 121.56399], [25.03588, 121.56501], [25.03588, 121.56546], [25.03535, 121.56544], [25.03462, 121.56545], [25.03316, 121.56541], [25.03294, 121.56541], [25.03304, 121.56406]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_cdd88bf929164285af5d49493559b27f = L.polyline(
+                    [[25.03304, 121.56406], [25.03308, 121.56337], [25.03308, 121.56179], [25.03315, 121.56119], [25.03313, 121.5601], [25.03311, 121.55971], [25.03312, 121.55951], [25.03297, 121.55942], [25.03288, 121.55937], [25.03282, 121.55933], [25.0319, 121.55882]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_b9ba766e3d8a438ca9e00dc5dce6e1a7 = L.polyline(
+                    [[25.0319, 121.55882], [25.03086, 121.55821], [25.03039, 121.55793], [25.03007, 121.55773], [25.02991, 121.5576], [25.02952, 121.55737], [25.0294, 121.55733], [25.02865, 121.55688], [25.02804, 121.55654], [25.02784, 121.5564], [25.02773, 121.55631], [25.02744, 121.556], [25.0265, 121.55492], [25.02583, 121.55415], [25.02576, 121.55423], [25.02595, 121.55445]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_cafa7eaf3bea4a4482e396858ae12e2e = L.polyline(
+                    [[25.02595, 121.55445], [25.02739, 121.55607], [25.02767, 121.55639], [25.02805, 121.55665]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_d01d5afc4859488da1748152c50fa004 = L.polyline(
+                    [[25.02805, 121.55665], [25.02914, 121.55731], [25.02892, 121.55773], [25.0287, 121.55817], [25.0283, 121.55808], [25.02808, 121.55807], [25.02787, 121.55807], [25.02759, 121.55808], [25.02749, 121.55814], [25.0273, 121.55824], [25.02722, 121.55825], [25.02707, 121.55825], [25.02697, 121.55822], [25.02681, 121.55814], [25.0267, 121.55798], [25.02661, 121.55781], [25.02646, 121.55763], [25.02626, 121.55753], [25.0261, 121.55746], [25.02595, 121.55735], [25.02565, 121.55683], [25.02538, 121.55655], [25.02522, 121.55643], [25.0244, 121.55593], [25.02402, 121.55578], [25.02407, 121.55564]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_fad48e93590b44a395319a61ee29b50c = L.polyline(
+                    [[25.02407, 121.55564], [25.02402, 121.55578], [25.0244, 121.55593], [25.02522, 121.55643], [25.02538, 121.55655], [25.02565, 121.55683], [25.02595, 121.55735], [25.0261, 121.55746], [25.02617, 121.55749]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_844a9cbcd40c48baaaade7d1bd295421 = L.polyline(
+                    [[25.02617, 121.55749], [25.0261, 121.55746], [25.02606, 121.55756], [25.02604, 121.55767], [25.02598, 121.55835], [25.02593, 121.56025], [25.02591, 121.56089], [25.02643, 121.56153], [25.02742, 121.56278], [25.02772, 121.56316], [25.02739, 121.56343], [25.02691, 121.56383], [25.02681, 121.56392], [25.02662, 121.56368], [25.02651, 121.56356], [25.02597, 121.56299], [25.02554, 121.5625], [25.02508, 121.56295], [25.02481, 121.5632], [25.02454, 121.56346]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_e520e46f973545bb884e711f20da477d = L.polyline(
+                    [[25.02454, 121.56346], [25.02437, 121.56364], [25.0247, 121.5637], [25.02555, 121.56392], [25.02572, 121.56397], [25.02603, 121.56411], [25.02637, 121.56426], [25.02652, 121.56419], [25.02653, 121.56423], [25.02653, 121.56433], [25.02655, 121.56514], [25.02655, 121.56587], [25.02653, 121.56594], [25.02628, 121.56613], [25.02588, 121.56642]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_ad2da8407b5647a68c0eef1f79cf48b4 = L.polyline(
+                    [[25.02588, 121.56642], [25.02533, 121.56677], [25.02479, 121.56745], [25.02471, 121.56759], [25.0245, 121.56782], [25.02423, 121.56811], [25.02337, 121.56979], [25.02287, 121.56949], [25.02243, 121.56922], [25.02211, 121.56904], [25.02219, 121.56889]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_28fd5bb8114e4d6c90d6168140c5105b = L.polyline(
+                    [[25.02219, 121.56889], [25.02211, 121.56904], [25.02243, 121.56922], [25.02275, 121.56942], [25.0232, 121.5697], [25.02337, 121.56979], [25.02349, 121.56956]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_e71551c1d14b42ed85130ceb5af55ab5 = L.polyline(
+                    [[25.02349, 121.56956], [25.02423, 121.56811], [25.0245, 121.56782], [25.02471, 121.56759], [25.02479, 121.56745], [25.02533, 121.56677], [25.02544, 121.56669], [25.02595, 121.56637], [25.02649, 121.56599], [25.02655, 121.56592], [25.02655, 121.56576], [25.02653, 121.56433], [25.02653, 121.56423], [25.02652, 121.56419], [25.02681, 121.56392], [25.0271, 121.56368], [25.02716, 121.56362]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_b3466efdc2b5482eb1d636afde771ce1 = L.polyline(
+                    [[25.02716, 121.56362], [25.02761, 121.56325], [25.02772, 121.56316], [25.02785, 121.56333], [25.02792, 121.56343], [25.02836, 121.56393], [25.0286, 121.56423], [25.02889, 121.56462], [25.02909, 121.56486]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_c2c5976cebfe48fc98d6d7de4a1a28b8 = L.polyline(
+                    [[25.02909, 121.56486], [25.02922, 121.565], [25.02955, 121.56527], [25.02965, 121.56533], [25.02979, 121.56535], [25.02998, 121.56536], [25.03122, 121.56537], [25.03198, 121.56539], [25.03196, 121.56572], [25.03195, 121.56582], [25.03193, 121.56666]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_35ea55caad3e4b009de9a4cee93c1d28 = L.polyline(
+                    [[25.03193, 121.56666], [25.03189, 121.56817], [25.03189, 121.5683], [25.03215, 121.56829], [25.0326, 121.56829], [25.03276, 121.56836], [25.03273, 121.56884], [25.0327, 121.56934], [25.03268, 121.56936], [25.03267, 121.56954], [25.03261, 121.57102], [25.0326, 121.57208], [25.03264, 121.57262], [25.03274, 121.57306], [25.03287, 121.57343], [25.03298, 121.5737], [25.03335, 121.57439], [25.03342, 121.57445], [25.03345, 121.57447], [25.03348, 121.57451], [25.03339, 121.57458], [25.03294, 121.57458], [25.03294, 121.57465]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_e9d7da4c5c634c059d72d94cabc9aa26 = L.polyline(
+                    [[25.03294, 121.57465], [25.03293, 121.57488], [25.03294, 121.57511], [25.03345, 121.5751], [25.03355, 121.5751], [25.0336, 121.57509], [25.03364, 121.57508], [25.03366, 121.57507], [25.03384, 121.57492], [25.0341, 121.57526]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_6b7b9d024fa342d58b58618509ac857d = L.polyline(
+                    [[25.03422, 121.57527], [25.03437, 121.57514], [25.03442, 121.57512], [25.03577, 121.57517], [25.03611, 121.57518], [25.03611, 121.57546], [25.03612, 121.57552], [25.0372, 121.57702]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_0a75536585a4413aa8ecfdb2c5fbfe5d = L.polyline(
+                    [[25.03723, 121.57706], [25.03734, 121.57721], [25.03711, 121.57731], [25.0367, 121.57753], [25.03634, 121.57775], [25.03611, 121.57793], [25.03615, 121.57801], [25.03624, 121.57838], [25.03621, 121.57847], [25.0361, 121.5785], [25.03596, 121.57853], [25.03585, 121.57859]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_b5eb24786176455ea463f04cd38d0991 = L.polyline(
+                    [[25.03585, 121.57859], [25.03596, 121.57853], [25.0361, 121.5785], [25.03621, 121.57847], [25.03627, 121.57878], [25.0363, 121.57892], [25.03629, 121.57904], [25.03627, 121.57914], [25.03633, 121.57915], [25.03688, 121.57921], [25.03761, 121.5793], [25.03814, 121.57937], [25.03824, 121.57936]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_37f87ff2d9e74f828c369a5711bae73b = L.polyline(
+                    [[25.03824, 121.57936], [25.03874, 121.57926], [25.03912, 121.57918], [25.03936, 121.57916], [25.03944, 121.57918], [25.03955, 121.57921], [25.03961, 121.57929], [25.03969, 121.57942], [25.0399, 121.57999], [25.03997, 121.58018], [25.04026, 121.58], [25.0406, 121.57979], [25.04119, 121.57941]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_3f55969a436e481c87df9da26ef6e720 = L.polyline(
+                    [[25.04119, 121.57941], [25.04172, 121.5791]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_93e761e6f74047fc9ffc4070d3e89287 = L.polyline(
+                    [[25.04172, 121.5791], [25.04149, 121.57924], [25.04174, 121.5796], [25.04224, 121.5803], [25.04264, 121.58072], [25.04289, 121.58096], [25.04304, 121.58113], [25.04294, 121.58122], [25.04286, 121.58129], [25.04193, 121.5819], [25.04159, 121.58212], [25.0412, 121.58231], [25.04024, 121.58275], [25.03962, 121.58303], [25.03838, 121.58361], [25.03803, 121.58377], [25.03797, 121.58379], [25.03801, 121.58386], [25.03805, 121.58392], [25.03809, 121.58396], [25.0382, 121.58406], [25.03826, 121.58409], [25.0383, 121.5841], [25.0383, 121.58415], [25.0383, 121.58418], [25.03831, 121.58421], [25.03853, 121.58486], [25.03884, 121.58596]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_2ac52feb56f149a6b15cf4313d7bded8 = L.polyline(
+                    [[25.03884, 121.58596], [25.03926, 121.58746]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_0fa953d3d78846e1b4e86ca54d188b76 = L.polyline(
+                    [[25.03926, 121.58746], [25.039, 121.5865], [25.03853, 121.58486], [25.03832, 121.58425], [25.0383, 121.58418], [25.03831, 121.58403], [25.03816, 121.58394], [25.03803, 121.58377], [25.03766, 121.58276], [25.03762, 121.58265], [25.03755, 121.58268], [25.03778, 121.58328]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_6ce45657882e4e1d898c5c0a5580c623 = L.polyline(
+                    [[25.03778, 121.58328], [25.03797, 121.58379], [25.03803, 121.58377], [25.0379, 121.58339], [25.03768, 121.58282], [25.03762, 121.58265], [25.03749, 121.58231], [25.03718, 121.58149], [25.03683, 121.58057], [25.03641, 121.5796], [25.03632, 121.57931], [25.03633, 121.57915], [25.03637, 121.57893], [25.03627, 121.57846], [25.03616, 121.57807], [25.03613, 121.57796], [25.03529, 121.57683], [25.03452, 121.57583], [25.03367, 121.57468], [25.03359, 121.5745], [25.03336, 121.57405], [25.0332, 121.57367], [25.03301, 121.5731], [25.03297, 121.57297], [25.03288, 121.57263], [25.03286, 121.57244], [25.03284, 121.5719], [25.03285, 121.57172], [25.03284, 121.57082], [25.03286, 121.56967], [25.03288, 121.56839], [25.03315, 121.56838], [25.03394, 121.56839], [25.03482, 121.56842], [25.03595, 121.56844], [25.03685, 121.56845]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_6d1083be339743c0af58a4e173655878 = L.polyline(
+                    [[25.03685, 121.56845], [25.03754, 121.56846], [25.03857, 121.56849], [25.03905, 121.5685], [25.03906, 121.56837], [25.03908, 121.56714], [25.03908, 121.56681]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_20cd7eece3ef41a9a809c1dbf600fc1d = L.polyline(
+                    [[25.03908, 121.56681], [25.03906, 121.56764], [25.03906, 121.56837], [25.03894, 121.56837], [25.03742, 121.56831], [25.03584, 121.56828], [25.03473, 121.56828], [25.03393, 121.56826], [25.03288, 121.56824], [25.03277, 121.56824], [25.03267, 121.56827], [25.0326, 121.56829], [25.03233, 121.56829], [25.03189, 121.5683], [25.02995, 121.56832], [25.02838, 121.56834]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_eabe217fe5f540d1aa82549699931c92 = L.polyline(
+                    [[25.02838, 121.56834], [25.02672, 121.56839], [25.02677, 121.56854]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_2952d03b256a4c2ba73a15348b70a33d = L.polyline(
+                    [[25.02677, 121.56854], [25.02674, 121.56846], [25.02672, 121.56832], [25.02673, 121.5682], [25.02679, 121.56787], [25.02695, 121.56727], [25.02723, 121.56634], [25.02747, 121.56553], [25.02792, 121.56397], [25.02805, 121.56357], [25.02809, 121.56352], [25.02816, 121.56346], [25.02915, 121.56265], [25.02959, 121.56228], [25.02943, 121.56203], [25.02915, 121.56162], [25.02903, 121.56146], [25.02911, 121.5614]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_5a7f26de5d4d4cabbaaf8997008f15bb = L.polyline(
+                    [[25.02911, 121.5614], [25.02903, 121.56146], [25.02915, 121.56162], [25.02943, 121.56203], [25.02959, 121.56228], [25.02967, 121.56221], [25.03063, 121.56135], [25.03074, 121.56129], [25.03083, 121.56128], [25.03109, 121.56128], [25.03111, 121.56122], [25.03112, 121.5611]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_ce2e55c4685545d9b27761db3ca41d9b = L.polyline(
+                    [[25.03112, 121.5611], [25.03121, 121.56048], [25.03123, 121.56039], [25.03125, 121.56019], [25.0319, 121.56032], [25.03203, 121.56034], [25.0321, 121.56036], [25.0321, 121.56041], [25.03206, 121.56132], [25.03253, 121.5613], [25.03295, 121.56133], [25.03315, 121.56133], [25.03315, 121.56119], [25.03316, 121.56101], [25.03311, 121.55971], [25.03312, 121.55951], [25.03297, 121.55942], [25.03288, 121.55937], [25.03282, 121.55933], [25.03262, 121.55921], [25.0326, 121.55916], [25.03257, 121.55909], [25.03248, 121.55898], [25.03221, 121.55865], [25.03217, 121.55857], [25.0322, 121.55843], [25.03215, 121.55789], [25.03212, 121.55751], [25.03315, 121.55754], [25.03365, 121.55755], [25.03365, 121.55767]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_f7e24aa1733e43d28884f609666ef792 = L.polyline(
+                    [[25.03365, 121.55767], [25.03366, 121.55816], [25.03363, 121.55917], [25.03402, 121.5594], [25.03431, 121.55958], [25.03451, 121.55969], [25.03454, 121.55969], [25.03456, 121.55969], [25.0346, 121.55993], [25.03461, 121.56005], [25.03461, 121.56011], [25.0345, 121.56031], [25.03423, 121.56014]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_576795785bc44a72b65d4ccd4e70baf3 = L.polyline(
+                    [[25.03423, 121.56014], [25.03392, 121.55997], [25.03343, 121.5597], [25.03297, 121.55942], [25.03282, 121.55933], [25.03262, 121.55921], [25.0326, 121.55916], [25.03257, 121.55909], [25.03221, 121.55865], [25.03217, 121.55857], [25.0322, 121.55843], [25.03212, 121.55751], [25.03365, 121.55755], [25.03652, 121.55761], [25.03651, 121.55849]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_f8995893bd964d59b73584bc257f67ee = L.polyline(
+                    [[25.03661, 121.5584], [25.03618, 121.55839], [25.03557, 121.5584], [25.03556, 121.5581], [25.0355, 121.55744], [25.03501, 121.55744], [25.03386, 121.55744], [25.03323, 121.55743], [25.03315, 121.55743], [25.03315, 121.55754], [25.03314, 121.55899], [25.03313, 121.55929], [25.03312, 121.55951], [25.03311, 121.55971], [25.03341, 121.5599], [25.03377, 121.56013], [25.03385, 121.5602], [25.03435, 121.56052], [25.03413, 121.56095]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_f0788a23452242868973c3c6317eff0a = L.polyline(
+                    [[25.03413, 121.56095], [25.03399, 121.56122], [25.03394, 121.56129], [25.03387, 121.56134], [25.03383, 121.56135], [25.03369, 121.56137], [25.03253, 121.5613], [25.03197, 121.56132], [25.03178, 121.56131], [25.03087, 121.56128], [25.03075, 121.56128], [25.03067, 121.56132], [25.02959, 121.56228], [25.02812, 121.56349], [25.02805, 121.56357], [25.02788, 121.56338], [25.02772, 121.56316], [25.02739, 121.56343]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_253c9a45649642379399d104c0b87115 = L.polyline(
+                    [[25.02739, 121.56343], [25.02772, 121.56316], [25.02742, 121.56278], [25.02643, 121.56153], [25.02608, 121.56107]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_281c564ab5644d098401fb438e3e79a9 = L.polyline(
+                    [[25.02603, 121.56102], [25.02591, 121.56089], [25.02592, 121.56072], [25.02594, 121.55975], [25.02599, 121.55824], [25.02605, 121.55761], [25.0261, 121.55746], [25.02595, 121.55735], [25.02565, 121.55683], [25.02538, 121.55655], [25.02522, 121.55643], [25.0244, 121.55593], [25.02387, 121.5557], [25.02363, 121.55558], [25.02317, 121.55538], [25.0229, 121.55523], [25.02276, 121.5551], [25.02233, 121.55464], [25.02049, 121.5566], [25.02018, 121.55693], [25.01902, 121.55815], [25.01872, 121.55844], [25.01867, 121.55843], [25.01861, 121.55841], [25.01855, 121.55839], [25.01848, 121.55835], [25.01836, 121.55847], [25.01821, 121.55865], [25.01815, 121.55878], [25.01814, 121.55905], [25.01829, 121.55918], [25.01859, 121.55881]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_4e8c690296eb4bfd866de22a1232f2df = L.polyline(
+                    [[25.01859, 121.55881], [25.01906, 121.55827], [25.02036, 121.55689], [25.0207, 121.55653], [25.02157, 121.5556], [25.02216, 121.555], [25.02304, 121.55405], [25.02341, 121.55364], [25.02426, 121.55275], [25.02436, 121.55263], [25.02442, 121.5524], [25.02453, 121.55056], [25.02454, 121.55024], [25.02452, 121.54954], [25.02458, 121.54906], [25.02459, 121.54887], [25.02461, 121.54872], [25.02529, 121.54873], [25.0281, 121.54876], [25.03002, 121.54877], [25.03316, 121.54881], [25.03356, 121.5488], [25.03557, 121.54882], [25.03634, 121.54882], [25.03692, 121.54881], [25.03702, 121.54886], [25.03715, 121.54892], [25.03734, 121.54898], [25.03742, 121.54901], [25.03743, 121.54903], [25.03744, 121.54907], [25.0375, 121.54916], [25.03759, 121.54925], [25.03773, 121.54932], [25.03789, 121.54933], [25.03802, 121.54929], [25.03813, 121.54923], [25.0382, 121.54916], [25.03824, 121.54908], [25.0383, 121.54885], [25.03829, 121.5487], [25.03824, 121.54857], [25.03816, 121.54847], [25.03808, 121.54842], [25.03798, 121.54821], [25.03795, 121.54793], [25.03795, 121.54626], [25.038, 121.54398], [25.03801, 121.54378], [25.03812, 121.54379], [25.03875, 121.54379], [25.03983, 121.54383], [25.04111, 121.54384], [25.04155, 121.54387], [25.0417, 121.54387], [25.04175, 121.54385], [25.04253, 121.54386], [25.04319, 121.54387], [25.04473, 121.5439], [25.0448, 121.54449], [25.04475, 121.54452], [25.04467, 121.54454], [25.04382, 121.54451], [25.04373, 121.54451]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_f5dc6c2ee5b742b4acc16ab3f9d91659 = L.polyline(
+                    [[25.04373, 121.54451], [25.04363, 121.54451], [25.04363, 121.54464], [25.0436, 121.54619], [25.04422, 121.5462], [25.04482, 121.54622], [25.04493, 121.54625], [25.04499, 121.54627], [25.045, 121.54645], [25.04499, 121.54676], [25.04497, 121.54697], [25.04482, 121.54847], [25.04455, 121.55081], [25.04429, 121.55304], [25.04428, 121.55364], [25.04432, 121.55424], [25.04457, 121.55561], [25.04503, 121.55796], [25.04513, 121.55824], [25.04532, 121.5586], [25.04552, 121.55899], [25.04571, 121.55944], [25.04597, 121.56003], [25.04603, 121.56024], [25.04622, 121.56075], [25.04638, 121.56109], [25.04667, 121.56175], [25.04707, 121.5626], [25.04822, 121.56582], [25.04727, 121.56627]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_542a4c71d83947799bc6e8a064b6f26d = L.polyline(
+                    [[25.04727, 121.56627], [25.04672, 121.56652]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_d9989c55c6024bca829aaaaa7db24a95 = L.polyline(
+                    [[25.04672, 121.56652], [25.04597, 121.56687], [25.04587, 121.56689], [25.04582, 121.56691], [25.04572, 121.56704], [25.04566, 121.56724], [25.04565, 121.56791], [25.04563, 121.56855], [25.04563, 121.56883], [25.04557, 121.56882], [25.04541, 121.56882]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_5e336d4be3e4495585574f3973d6ba86 = L.polyline(
+                    [[25.04541, 121.56882], [25.04439, 121.56879], [25.04356, 121.56877], [25.04356, 121.56884]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_3050cd0465b34925a9f78e35e2a8ab6f = L.polyline(
+                    [[25.04356, 121.56884], [25.04356, 121.56877], [25.04315, 121.56875], [25.04273, 121.56873], [25.04276, 121.56772], [25.04301, 121.56773], [25.04309, 121.56776], [25.04313, 121.56778], [25.04316, 121.56779], [25.04318, 121.56778], [25.04316, 121.5683]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_ba0d9721ecc948ad814222829c057d86 = L.polyline(
+                    [[25.04316, 121.5683], [25.04315, 121.56875], [25.04273, 121.56873], [25.04253, 121.56873], [25.04209, 121.56874], [25.04171, 121.56875], [25.04131, 121.56873], [25.0411, 121.56871], [25.04099, 121.56871], [25.04097, 121.56911], [25.04091, 121.57137], [25.04088, 121.57212], [25.04087, 121.57294], [25.04087, 121.57402], [25.0402, 121.57401], [25.03893, 121.57397], [25.03847, 121.57394], [25.03844, 121.57396], [25.03784, 121.57447], [25.03738, 121.57489], [25.03759, 121.57516]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_a1c811a8bd904a0fbd97577356a9dfbe = L.polyline(
+                    [[25.03759, 121.57516], [25.03948, 121.57777], [25.03953, 121.57781], [25.03962, 121.57787], [25.03979, 121.57789]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_b0f7ee706bf8402aa7b5725ce4b31fe7 = L.polyline(
+                    [[25.03979, 121.57789], [25.0408, 121.57789], [25.04092, 121.5779], [25.04089, 121.57776], [25.04087, 121.57761], [25.04087, 121.57753], [25.04088, 121.57696], [25.04065, 121.57693]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_3b8224a280f24ad7bc249c3da6e4ce3b = L.polyline(
+                    [[25.04065, 121.57693], [25.04034, 121.57691], [25.0403, 121.5769], [25.0403, 121.57688], [25.04031, 121.5767], [25.04034, 121.57541], [25.04037, 121.57401], [25.04077, 121.57402]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_8d56ab5307904426b7c94466f982d3c1 = L.polyline(
+                    [[25.04077, 121.57402], [25.03967, 121.574], [25.03847, 121.57394], [25.03784, 121.57447], [25.03747, 121.57481], [25.03742, 121.57473], [25.03737, 121.57467], [25.03726, 121.57461], [25.03715, 121.57458], [25.03644, 121.57455], [25.03468, 121.57449], [25.0347, 121.57365]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_8f12e0aea67148399a975b6beea3a625 = L.polyline(
+                    [[25.03483, 121.5735], [25.03652, 121.57356], [25.03653, 121.57298], [25.03652, 121.57283], [25.03658, 121.57192], [25.03661, 121.57188], [25.03664, 121.57186], [25.03708, 121.57187], [25.03852, 121.57186], [25.03903, 121.57186], [25.04041, 121.57192], [25.04384, 121.57204], [25.04529, 121.57209], [25.04556, 121.5721], [25.04554, 121.57268], [25.04552, 121.57346], [25.04547, 121.57547], [25.04544, 121.57659], [25.04542, 121.57701], [25.04529, 121.57706], [25.04511, 121.57714], [25.04505, 121.57715], [25.04472, 121.57714]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_02ef4599a06a44a0bbda9b92c53a61f4 = L.polyline(
+                    [[25.04472, 121.57714], [25.04435, 121.57712], [25.04435, 121.57691], [25.04437, 121.57635], [25.04438, 121.5758], [25.04439, 121.57545], [25.04455, 121.57545], [25.04508, 121.57545], [25.04547, 121.57547], [25.04546, 121.57574], [25.04542, 121.57701], [25.04604, 121.577], [25.04649, 121.57698], [25.04675, 121.57694], [25.04733, 121.57683], [25.04732, 121.57758]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_28f2b98832914085bd9f2275394b7514 = L.polyline(
+                    [[25.04732, 121.57758], [25.04733, 121.57733], [25.04769, 121.57732], [25.04785, 121.57733], [25.04801, 121.57736], [25.04797, 121.57773], [25.04799, 121.57784], [25.04808, 121.57785], [25.04892, 121.57785], [25.04891, 121.57829]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_cfdd31da2b1845ee84492a6bd3f36297 = L.polyline(
+                    [[25.04891, 121.57829], [25.04886, 121.57979], [25.04887, 121.58006], [25.04847, 121.58007], [25.04844, 121.57997], [25.04826, 121.57951], [25.04819, 121.57923], [25.04813, 121.57875], [25.04808, 121.57785], [25.04809, 121.57746], [25.04817, 121.57708], [25.04847, 121.57607], [25.04863, 121.57547], [25.04864, 121.57536], [25.04861, 121.57516], [25.04855, 121.57501], [25.04836, 121.57467], [25.04819, 121.57435], [25.04697, 121.57215], [25.04676, 121.57214]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_fdb1794627a94b8a84dfb120527f675b = L.polyline(
+                    [[25.04676, 121.57214], [25.04566, 121.57211], [25.04465, 121.57207], [25.04368, 121.57203]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_8343e3d66d184dff8150db32d5b6e176 = L.polyline(
+                    [[25.04368, 121.57203], [25.04347, 121.57202], [25.04346, 121.57236], [25.04346, 121.57288], [25.04342, 121.57403]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_a04c0e796129439ebb9dd947dae4d41a = L.polyline(
+                    [[25.04342, 121.57403], [25.04346, 121.57288], [25.04346, 121.57236], [25.04347, 121.57202], [25.04282, 121.572], [25.04207, 121.57198], [25.04101, 121.57194], [25.04041, 121.57192], [25.04002, 121.5719], [25.04002, 121.57173]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_2a2512fccb2e4baeae1358c79f3bc0f4 = L.polyline(
+                    [[25.04002, 121.57173], [25.04002, 121.5719], [25.0397, 121.57189], [25.03903, 121.57186], [25.03906, 121.57125], [25.03907, 121.57084], [25.03903, 121.5698], [25.03905, 121.5685], [25.03909, 121.56647], [25.03911, 121.56608], [25.03925, 121.56608], [25.03971, 121.5661]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_bb97268dbea94240b4bf1c2b0490ed2a = L.polyline(
+                    [[25.03971, 121.5661], [25.04074, 121.56613], [25.04106, 121.56614], [25.04106, 121.56622], [25.04103, 121.56692]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+    
+                var poly_line_918d12b74906442ba41d227480f7fe4f = L.polyline(
+                    [[25.04103, 121.56692], [25.04099, 121.56789], [25.04099, 121.56841], [25.04049, 121.5684], [25.04049, 121.56853], [25.04067, 121.56854], [25.04111, 121.56854], [25.04114, 121.56727], [25.04118, 121.56623], [25.04122, 121.56488], [25.04128, 121.56273], [25.04132, 121.56159], [25.04117, 121.56158], [25.04116, 121.5621], [25.04114, 121.56272], [25.04113, 121.56337], [25.04111, 121.56433], [25.04062, 121.56404]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_15db13da775648689a9bf751ee377196);
+            
+</script>

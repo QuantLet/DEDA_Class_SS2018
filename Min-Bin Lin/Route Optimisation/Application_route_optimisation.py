@@ -65,7 +65,7 @@ aco.addPlace()
 aco.Search()  
 
 ############################################################
-### map the route ###
+### polyline ###
 
 # generate polyline for each path from google direction api
 directions_results = {}
@@ -77,8 +77,9 @@ for i in range(len(aco.BestTour)):
         directions_results[i] = gmaps.directions(place_dict[currPlace],
                           place_dict[nextPlace])
 
+############################################################        
+### map the route ###
         
-# set the initial map     
 xinyi_coordinates = (25.033964, 121.564468)
 route_map = folium.Map(location=xinyi_coordinates,
                        zoom_start=15)
@@ -90,34 +91,34 @@ folium.TileLayer('Stamen Toner').add_to(route_map)
 folium.LayerControl().add_to(route_map)
 
 # icon in the map
-logo_WH = './warehouse.png'
-logo_end = './end_shop.png'
-logo_shop = './shop.png'
+logo_WH = './pic/warehouse.png'
+logo_end = './pic/end_shop.png'
+logo_shop = './pic/shop.png'
 
 for place in data.all:   
     # colour warehouse specially
     info = (place.name+str(place.entry_id)).decode('utf-8')
     if place.entry_type == data.TYPES['warehouse']:
-        icon_WH = folium.features.CustomIcon(logo_WH,icon_size=(40, 40)) 
+        icon_WH = folium.features.CustomIcon(logo_WH,icon_size=(50, 50)) 
         folium.Marker(location=[place.lat, place.lon],
                       popup=info,
                       icon=icon_WH
                       ).add_to(route_map)
     # point out the last shop
     elif Data.make_type_id(place) == aco.BestTour[-2]:
-        icon_end = folium.features.CustomIcon(logo_end,icon_size=(40, 40))
+        icon_end = folium.features.CustomIcon(logo_end,icon_size=(50, 50))
         folium.Marker(location=[place.lat, place.lon], 
                       popup=info,
                       icon=icon_end
                       ).add_to(route_map)
     else:
-        icon_shop = folium.features.CustomIcon(logo_shop,icon_size=(25, 25))
+        icon_shop = folium.features.CustomIcon(logo_shop,icon_size=(40, 40))
         folium.Marker(location=[place.lat, place.lon], 
                       popup=info,
                       icon=icon_shop
                       ).add_to(route_map)
         
-color_list = ['#bd0026','#f03b20','#fd8d3c','#fecc5c','#ffffb2']
+color_list = ['#253494','#2c7fb8','#41b6c4','#a1dab4','#ffffcc']
                    
 for p in range(len(directions_results)):
     # decode all the polyline (overview_polyline)
@@ -126,7 +127,7 @@ for p in range(len(directions_results)):
     color = color_list[p%5]
     folium.PolyLine(path, 
                     color=color, 
-                    weight=8, 
+                    weight=5, 
                     opacity=1).add_to(route_map)
 
 route_map.save("route_map.html")
