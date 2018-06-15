@@ -15,7 +15,7 @@ There are 63 7-Eleven stores and a warehouse in the Xinyi District. The distribu
 
 ### 1. Research Process ###
 
-![](pic/research process.png?raw=true)
+![image](/pic/research process.png)
 
 ### 2. Data Collection and Distance Calculation ###
 
