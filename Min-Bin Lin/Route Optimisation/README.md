@@ -14,6 +14,7 @@ There are 63 7-Eleven stores and a warehouse in the Xinyi District. The distribu
 [Xinyi District Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/c3d4e0c8/Min-Bin%20Lin/Route%20Optimisation/xinyi_map/index.html)
 
 ### 1. Research Process ###
+
 ![](pic/research process.png)
 
 ### 2. Data Collection and Distance Calculation ###
@@ -47,31 +48,3 @@ Before distance calculation, we need to convert all of addresses into geocodes, 
 - <span style="color:black">The types of delivery vehicles and gasoline consumption are not considered.</span>
 
 ### 4. Problem Formulation ###
-
-$$
-\sum_{i=1}^{n} \sum_{j=1,\, j\neq i}^{n} p_{ij}\,x_{ij} \qquad ...........................(1)
-$$
-
-<span style="color:black">
-subject to
-</span>
-
-$$
-\sum_{i=1, \, i\neq j}^{n} x_{ij} = 1 \qquad j=1,2,...,n
-\qquad ...........(2)
-$$
-
-$$
-\sum_{j=1, \, j\neq i}^{n} x_{ij} = 1 \qquad i=1,2,...,n
-\qquad ...........(3)
-$$
-
-$$
-u_i - u_j + nx_{ij} \le n-1 \qquad i,j = 2,3,...,n
-\qquad (4)
-$$
-
-$$
-x_{ij}={0,1} \qquad i,j = 1,2,...,n
-\qquad .............(5)
-$$
