@@ -163,6 +163,8 @@ Figure 5-3 Optimisation process
 
 The final logistic route is demonstrated by the map (plotted by [folium package](http://folium.readthedocs.io/en/latest/)):
 
+[Route Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/e0f20521/Min-Bin%20Lin/Route%20Optimisation/route_map/index.html)
+
 
 
 
