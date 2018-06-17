@@ -13,7 +13,7 @@ There are 63 7-Eleven stores and a warehouse in the Xinyi District. The distribu
 
 ![](pic/research.png)
 
-<p style="text-align: center;">
+<p align="center">
 Figure 1-1 Research flow
 </p>
 
@@ -67,10 +67,10 @@ The equation (1) is the sum of the distance for the delivery route that travels 
 ACO was initially proposed by  Marco Dorigo (1992). It is a metaheuristic algorithm for finding optimal paths, based on the simulation of the foraging behaviour of a colony of searching ants. After an ant finds food, it generates pheromones on the way back to the nest to inform other ants of the path to the food. The pheromones fade over time and the unused paths become less likely to be taken; otherwise, the density of pheromones on the used paths becomes higher.
 
 ![](pic/ant.png)
-<p style="text-align: center;">
+<p align="center">
 Figure 5-1 Shortest path find by an ant colony
 </p>
-<p style="text-align: center;">
+<p align="center">
 Source: Johann Dréo (https://commons.wikimedia.org/wiki/File:Aco_branches.svg)
 </p>
 
@@ -90,7 +90,7 @@ pheromone trail and the heuristic information; 𝜏<sub>𝒊𝑗</sub> and η<su
 The local search tries to swap the sequence of the tour at various points (e.g., 1-2-3-4 to 3-4-2-1.) to determine if a different sequence can generate better fitness values (shorter distance).
 
 ![](pic/ACO.png)
-<p style="text-align: center;">
+<p align="center">
 Figure 5-2 The process of ant colony optimisation
 </p>
 
@@ -112,7 +112,7 @@ The parameter setting for the project: (based on the literature):
 
 The optimised route distance is 40,307 m. The optimisation process of ACO is shown as below:
 ![](pic/optimisation.png)
-<p style="text-align: center;">
+<p align="center">
 Figure 5-3 Optimisation process
 </p>
 
