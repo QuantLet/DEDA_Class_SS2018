@@ -42,7 +42,6 @@ Before distance calculation, we need to convert all of addresses into geocodes, 
 ### 4. Problem Formulation ###
 The problem (TSP) is formulated as below:
 
-
 $$
 min \quad \sum_{i=1}^{n} \sum_{j=1,\, j\neq i}^{n} d_{ij}\,x_{ij} \qquad .............................(1)
 $$
@@ -136,7 +135,7 @@ Figure 5-3 Optimisation process
 
 The final logistic route is demonstrated by the map (plotted by [folium package](http://folium.readthedocs.io/en/latest/)):
 
-[Route Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/e0f20521/Min-Bin%20Lin/Route%20Optimisation/route_map/index.html)
+[Route Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/07a1a29c/Min-Bin%20Lin/Route%20Optimisation/index.html)
 
 
 
