@@ -15,7 +15,11 @@ There are 63 7-Eleven stores and a warehouse in the Xinyi District. The distribu
 
 ### 1. Research Process ###
 
-![image](/pic/research process.png)
+![](pic/research.png)
+
+<p style="text-align: center;">
+Figure 1-1 Research flow
+</p>
 
 ### 2. Data Collection and Distance Calculation ###
 
@@ -48,3 +52,123 @@ Before distance calculation, we need to convert all of addresses into geocodes, 
 - <span style="color:black">The types of delivery vehicles and gasoline consumption are not considered.</span>
 
 ### 4. Problem Formulation ###
+<span style="color:black">
+The problem (TSP) is formulated as below:
+</span>
+
+$$
+min \quad \sum_{i=1}^{n} \sum_{j=1,\, j\neq i}^{n} d_{ij}\,x_{ij} \qquad .............................(1)
+$$
+
+<span style="color:black">
+subject to
+</span>
+
+$$
+\sum_{i=1, \, i\neq j}^{n} x_{ij} = 1 \qquad j=1,2,...,n
+\qquad ....................(2)
+$$
+
+$$
+\sum_{j=1, \, j\neq i}^{n} x_{ij} = 1 \qquad i=1,2,...,n
+\qquad ....................(3)
+$$
+
+$$
+u_i - u_j + nx_{ij} \le n-1 \qquad i,j = 2,3,...,n
+\qquad .........(4)
+$$
+
+$$
+x_{ij}={0,1} \qquad i,j = 1,2,...,n
+\qquad ......................(5)
+$$
+
+<span style="color:black">
+
+where \(d_{ij}\)  represent the actual distance from  location \(i\) to location \(j\). \(x_{ij}\) is a dummy variable. If \(x_{ij}=1\), the path goes from  location \(i\) to location \(j\); otherwise, the path does not go from location \(i\) to location \(j\). \(u_{i}\) and \(u_{j}\) are the sequence number of  location \(i\) and location \(j\) in the tour, respectively.
+
+The equation (1) is the sum of the distance for the delivery route that travels from location 1 (warehouse) to all the stores. The equation (2) and equation (3) limit that the travel from location \(i\) to location \(j\) can only have "one ending location" and "one starting location." The equation (3) proves that every feasible solution contains only one closed sequence of locations,  it suffices to show that every subtour in a feasible solution passes through location 1. The equation (5) is the Miller-Tucker-Zemlin (MTZ) constraint, which eliminates the subtours.
+
+</span>
+
+### 5. Route Optimisation ###
+#### 5.1 Ant Colony Optimisation (ACO) ####
+
+**File:**
+<span style="color:blue">
+*ACO_route_optimisation.py*
+</span>
+
+<span style="color:black">
+ACO was initially proposed by  Marco Dorigo (1992). It is a metaheuristic algorithm for finding optimal paths, based on the simulation of the foraging behaviour of a colony of searching ants. After an ant finds food, it generates pheromones on the way back to the nest to inform other ants of the path to the food. The pheromones fade over time and the unused paths become less likely to be taken; otherwise, the density of pheromones on the used paths becomes higher.
+</span>
+
+![](pic/ant.png)
+<p style="text-align: center;">
+Figure 5-1 Shortest path find by an ant colony
+</p>
+<p style="text-align: center;">
+Source: Johann Dréo (https://commons.wikimedia.org/wiki/File:Aco_branches.svg)
+</p>
+
+<span style="color:black">
+
+In this project, we implement the Max-Min Ant System (MMAS) (Stützle and Hoos, 1996), which we only update pheromones by
+for \(\Delta\tau_{ij} = q/d_{BestTour}\) the best ant at the iteration (\(q\) controls the degree of influence of \(\Delta\tau_{ij}\)). If the path is unused, the the density of pheromones is decreased by \(\rho\) (a given initial parameter).  
+
+Additionally, the selection of next place is based on the probability constructed by the pheromones. The probability of ant  \(k\) at location \(i\) chooses to go to location \(j\) is as follows:
+<span>
+
+$$
+p_{ij}^k =  \frac{(\tau_{ij})^\alpha (\eta_{ij})^\beta}{\sum_{l\in X_i}(\tau_{il})^\alpha (\eta_{il})^\beta}
+$$
+$$
+\eta_{ij}^\beta = 1/d_{ij}
+$$
+
+where \(\alpha\) and \(\beta\) determines
+pheromone trail and the heuristic information; \(\tau_{ij}\) and \(\eta_{ij}\) are the pheromone trail and the locally available heuristic information, respectively. \(X_i\) are all  the feasible (visitable) locations of ant 􏰯\(k\).
+
+The local search tries to swap the sequence of the tour at various points (e.g., 1-2-3-4 to 3-4-2-1.) to determine if a different sequence can generate better fitness values (shorter distance).
+
+![](pic/ACO.png)
+<p style="text-align: center;">
+Figure 5-2 The process of ant colony optimisation
+</p>
+
+#### 5.2 Application and Result ####
+**File:**
+<span style="color:blue">
+*Application_route_optimisation.py* (main execution file)
+</span>
+
+The parameter setting for the project: (based on the literature):
+
+
+- Initial place (init_place) = 'warehouse 0'
+- Number iterations (num_iters) = 2,000
+- Number of ants (num_ants) = 50 (also called population)
+- Initial  \(\alpha\)  (init_alpha) = 10
+- \(\alpha\) (alpha) = 1
+- \(\beta\) (beta) = 3
+- \(\rho\) (rho) = 0.3
+- \(q\) = 80
+
+The optimised route distance is 40,307 m. The optimisation process of ACO is shown as below:
+![](pic/optimisation.png)
+<p style="text-align: center;">
+Figure 5-3 Optimisation process
+</p>
+
+The final logistic route is demonstrated by the map (plotted by [folium package](http://folium.readthedocs.io/en/latest/)):
+
+
+
+
+### 6. Literature Review ###
+
+- Blum, C. (2005). Ant colony optimization: Introduction and recent trends. Physics of Life reviews, 2(4), 353-373.
+- Le, T. Q., & Pishva, D. (2015, July). Optimization of convenience stores' distribution system with web scraping and Google API service. In Advanced Communication Technology (ICACT), 2015 17th International Conference on (pp. 596-606). IEEE.
+- Stützle, T., & Hoos, H. H. (2000). MAX–MIN ant system. Future generation computer systems, 16(8), 889-914.
+- Wikipedia: Ant colony optimization algorithms. FL: Wikimedia Foundation, Inc. Retrieved June 16, 2018, from https://en.wikipedia.org/wiki/Ant_colony_optimization_algorithms.
