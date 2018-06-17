@@ -20,9 +20,7 @@ Figure 1-1 Research flow
 ### 2. Data Collection and Distance Calculation ###
 
 **File:**
-<span style="color:blue">
 *DataCollection_route_optimisation.py*
-</span>
 
 #### 2.1 Data Collection ####
 There are two set of data: warehouse and shop. Each data entry has six elements: name, address, entry_id, entry_type (warehouse or shop), latitude(lat), and longitude(lon). This information is stored in the dictionary. Below is an example for representation of data entry:
@@ -79,9 +77,7 @@ The equation (1) is the sum of the distance for the delivery route that travels 
 #### 5.1 Ant Colony Optimisation (ACO) ####
 
 **File:**
-<span style="color:blue">
 *ACO_route_optimisation.py*
-</span>
 
 ACO was initially proposed by  Marco Dorigo (1992). It is a metaheuristic algorithm for finding optimal paths, based on the simulation of the foraging behaviour of a colony of searching ants. After an ant finds food, it generates pheromones on the way back to the nest to inform other ants of the path to the food. The pheromones fade over time and the unused paths become less likely to be taken; otherwise, the density of pheromones on the used paths becomes higher.
 
@@ -118,9 +114,7 @@ Figure 5-2 The process of ant colony optimisation
 
 #### 5.2 Application and Result ####
 **File:**
-<span style="color:blue">
 *Application_route_optimisation.py* (main execution file)
-</span>
 
 The parameter setting for the project: (based on the literature):
 
