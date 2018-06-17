@@ -42,17 +42,17 @@ Before distance calculation, we need to convert all of addresses into geocodes, 
 ### 4. Problem Formulation ###
 The problem (TSP) is formulated as below:
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/859dd0499d602687f9c141d045454ad1.svg?invert_in_darkmode" align=middle width=358.25626485pt height=47.5115553pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/859dd0499d602687f9c141d045454ad1.svg?invert_in_darkmode" align=middle width=358.25626485pt height=47.5115553pt/></p>
 
 subject to
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/46883a4fb678d10d068bf9a1b40979e1.svg?invert_in_darkmode" align=middle width=371.771763pt height=47.5115553pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/46883a4fb678d10d068bf9a1b40979e1.svg?invert_in_darkmode" align=middle width=371.771763pt height=47.5115553pt/></p>
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/8adf0213d561dc9e98f8f5a4b8ba002b.svg?invert_in_darkmode" align=middle width=371.1781788pt height=47.5115553pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/8adf0213d561dc9e98f8f5a4b8ba002b.svg?invert_in_darkmode" align=middle width=371.1781788pt height=47.5115553pt/></p>
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/bbea2cf60526cf83c9907b1824b1e370.svg?invert_in_darkmode" align=middle width=394.70914065pt height=17.0319402pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/bbea2cf60526cf83c9907b1824b1e370.svg?invert_in_darkmode" align=middle width=394.70914065pt height=17.0319402pt/></p>
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/d88243e88a0ff3f40d846c69e619e4f7.svg?invert_in_darkmode" align=middle width=358.3680606pt height=17.0319402pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/d88243e88a0ff3f40d846c69e619e4f7.svg?invert_in_darkmode" align=middle width=358.3680606pt height=17.0319402pt/></p>
 
 where \(d_{ij}\)  represent the actual distance from  location \(i\) to location \(j\). \(x_{ij}\) is a dummy variable. If \(x_{ij}=1\), the path goes from  location \(i\) to location \(j\); otherwise, the path does not go from location \(i\) to location \(j\). \(u_{i}\) and \(u_{j}\) are the sequence number of  location \(i\) and location \(j\) in the tour, respectively.
 
@@ -80,8 +80,8 @@ for \(\Delta\tau_{ij} = q/d_{BestTour}\) the best ant at the iteration (\(q\) co
 
 Additionally, the selection of next place is based on the probability constructed by the pheromones. The probability of ant  \(k\) at location \(i\) chooses to go to location \(j\) is as follows:
 
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/e1c266efd778e39f0e575dcfca83e753.svg?invert_in_darkmode" align=middle width=169.52870055pt height=42.92819685pt/></p>
-<p align="center"><img src="https://rawgit.com/in	git@github.com:linminbin/DEDA_Class_SS2018/master/svgs/a2ff07f6cfd19f84cc40b4bdfaa7454b.svg?invert_in_darkmode" align=middle width=77.40686415pt height=22.70986245pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/e1c266efd778e39f0e575dcfca83e753.svg?invert_in_darkmode" align=middle width=169.52870055pt height=42.92819685pt/></p>
+<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/a2ff07f6cfd19f84cc40b4bdfaa7454b.svg?invert_in_darkmode" align=middle width=77.40686415pt height=22.70986245pt/></p>
 
 where \(\alpha\) and \(\beta\) determines
 pheromone trail and the heuristic information; \(\tau_{ij}\) and \(\eta_{ij}\) are the pheromone trail and the locally available heuristic information, respectively. \(X_i\) are all  the feasible (visitable) locations of ant 􏰯\(k\).
