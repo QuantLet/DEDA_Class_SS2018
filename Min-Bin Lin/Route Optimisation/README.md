@@ -42,21 +42,21 @@ Before distance calculation, we need to convert all of addresses into geocodes, 
 ### 4. Problem Formulation ###
 The problem (TSP) is formulated as below:
 
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/svgs/859dd0499d602687f9c141d045454ad1.svg?invert_in_darkmode" align=middle width=358.25626485pt height=47.5115553pt/></p>
+![](svgs/859dd0499d602687f9c141d045454ad1.svg)
 
 subject to
 
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/svgs/46883a4fb678d10d068bf9a1b40979e1.svg?invert_in_darkmode" align=middle width=371.771763pt height=47.5115553pt/></p>
+![](svgs/46883a4fb678d10d068bf9a1b40979e1.svg)
 
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/svgs/8adf0213d561dc9e98f8f5a4b8ba002b.svg?invert_in_darkmode" align=middle width=371.1781788pt height=47.5115553pt/></p>
+![](svgs/8adf0213d561dc9e98f8f5a4b8ba002b.svg)
 
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/svgs/bbea2cf60526cf83c9907b1824b1e370.svg?invert_in_darkmode" align=middle width=394.70914065pt height=17.0319402pt/></p>
+![](svgs/bbea2cf60526cf83c9907b1824b1e370.svg)
 
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/svgs/d88243e88a0ff3f40d846c69e619e4f7.svg?invert_in_darkmode" align=middle width=358.3680606pt height=17.0319402pt/></p>
+![](svgs/d88243e88a0ff3f40d846c69e619e4f7.svg)
 
-where \(d_{ij}\)  represent the actual distance from  location \(i\) to location \(j\). \(x_{ij}\) is a dummy variable. If \(x_{ij}=1\), the path goes from  location \(i\) to location \(j\); otherwise, the path does not go from location \(i\) to location \(j\). \(u_{i}\) and \(u_{j}\) are the sequence number of  location \(i\) and location \(j\) in the tour, respectively.
+where d<sub>𝒊𝑗</sub> represent the actual distance from  location 𝒊 to location 𝑗. 𝑥<sub>𝒊𝑗</sub> is a dummy variable. If 𝑥<sub>𝒊𝑗</sub> = 1, the path goes from  location 𝒊 to location 𝑗; otherwise, the path does not go from location 𝒊 to location 𝑗. 𝑢<sub>𝒊</sub> and 𝑢<sub>j</sub>  are the sequence number of location 𝒊 and location 𝑗 in the tour, respectively.
 
-The equation (1) is the sum of the distance for the delivery route that travels from location 1 (warehouse) to all the stores. The equation (2) and equation (3) limit that the travel from location \(i\) to location \(j\) can only have "one ending location" and "one starting location." The equation (3) proves that every feasible solution contains only one closed sequence of locations,  it suffices to show that every subtour in a feasible solution passes through location 1. The equation (5) is the Miller-Tucker-Zemlin (MTZ) constraint, which eliminates the subtours.
+The equation (1) is the sum of the distance for the delivery route that travels from location 1 (warehouse) to all the stores. The equation (2) and equation (3) limit that the travel from location 𝒊 to location 𝑗 can only have "one ending location" and "one starting location." The equation (3) proves that every feasible solution contains only one closed sequence of locations,  it suffices to show that every subtour in a feasible solution passes through location 1. The equation (5) is the Miller-Tucker-Zemlin (MTZ) constraint, which eliminates the subtours.
 
 ### 5. Route Optimisation ###
 #### 5.1 Ant Colony Optimisation (ACO) ####
@@ -76,15 +76,16 @@ Source: Johann Dréo (https://commons.wikimedia.org/wiki/File:Aco_branches.svg)
 
 
 In this project, we implement the Max-Min Ant System (MMAS) (Stützle and Hoos, 1996), which we only update pheromones by
-for \(\Delta\tau_{ij} = q/d_{BestTour}\) the best ant at the iteration (\(q\) controls the degree of influence of \(\Delta\tau_{ij}\)). If the path is unused, the the density of pheromones is decreased by \(\rho\) (a given initial parameter).  
+for Δ𝜏<sub>𝒊𝑗</sub> = q/𝒅<sub>BestTour</sub> the best ant at the iteration (q controls the degree of influence of Δ𝜏<sub>𝒊𝑗</sub>. If the path is unused, the the density of pheromones is decreased by ρ (a given initial parameter).  
 
-Additionally, the selection of next place is based on the probability constructed by the pheromones. The probability of ant  \(k\) at location \(i\) chooses to go to location \(j\) is as follows:
+Additionally, the selection of next place is based on the probability constructed by the pheromones. The probability of ant k at location 𝒊 chooses to go to location 𝑗 is as follows:
 
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/e1c266efd778e39f0e575dcfca83e753.svg?invert_in_darkmode" align=middle width=169.52870055pt height=42.92819685pt/></p>
-<p align="center"><img src="https://rawgit.com/linminbin/DEDA_Class_SS2018/None/svgs/a2ff07f6cfd19f84cc40b4bdfaa7454b.svg?invert_in_darkmode" align=middle width=77.40686415pt height=22.70986245pt/></p>
+![](svgs/e1c266efd778e39f0e575dcfca83e753.svg)
 
-where \(\alpha\) and \(\beta\) determines
-pheromone trail and the heuristic information; \(\tau_{ij}\) and \(\eta_{ij}\) are the pheromone trail and the locally available heuristic information, respectively. \(X_i\) are all  the feasible (visitable) locations of ant 􏰯\(k\).
+![](svgs/a2ff07f6cfd19f84cc40b4bdfaa7454b.svg)
+
+where α and β determines
+pheromone trail and the heuristic information; 𝜏<sub>𝒊𝑗</sub> and η<sub>𝒊𝑗</sub> are the pheromone trail and the locally available heuristic information, respectively. 𝑿<sub>𝒊</sub> are all  the feasible (visitable) locations of ant 􏰯k.
 
 The local search tries to swap the sequence of the tour at various points (e.g., 1-2-3-4 to 3-4-2-1.) to determine if a different sequence can generate better fitness values (shorter distance).
 
@@ -103,11 +104,11 @@ The parameter setting for the project: (based on the literature):
 - Initial place (init_place) = 'warehouse 0'
 - Number iterations (num_iters) = 2,000
 - Number of ants (num_ants) = 50 (also called population)
-- Initial  \(\alpha\)  (init_alpha) = 10
-- \(\alpha\) (alpha) = 1
-- \(\beta\) (beta) = 3
-- \(\rho\) (rho) = 0.3
-- \(q\) = 80
+- Initial α (init_alpha) = 10
+- α (alpha) = 1
+- β (beta) = 3
+- ρ (rho) = 0.3
+- q = 80
 
 The optimised route distance is 40,307 m. The optimisation process of ACO is shown as below:
 ![](pic/optimisation.png)
