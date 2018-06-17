@@ -42,17 +42,17 @@ Before distance calculation, we need to convert all of addresses into geocodes, 
 ### 4. Problem Formulation ###
 The problem (TSP) is formulated as below:
 
-![](svgs/859dd0499d602687f9c141d045454ad1.svg =400x50)
+![](svgs/859dd0499d602687f9c141d045454ad1.svg)
 
 subject to
 
-![](svgs/46883a4fb678d10d068bf9a1b40979e1.svg =400x50)
+![](svgs/46883a4fb678d10d068bf9a1b40979e1.svg)
 
-![](svgs/8adf0213d561dc9e98f8f5a4b8ba002b.svg =400x50)
+![](svgs/8adf0213d561dc9e98f8f5a4b8ba002b.svg)
 
-![](svgs/bbea2cf60526cf83c9907b1824b1e370.svg =400x50)
+![](svgs/bbea2cf60526cf83c9907b1824b1e370.svg)
 
-![](svgs/d88243e88a0ff3f40d846c69e619e4f7.svg =400x50)
+![](svgs/d88243e88a0ff3f40d846c69e619e4f7.svg)
 
 where d<sub>𝒊𝑗</sub> represent the actual distance from  location 𝒊 to location 𝑗. 𝑥<sub>𝒊𝑗</sub> is a dummy variable. If 𝑥<sub>𝒊𝑗</sub> = 1, the path goes from  location 𝒊 to location 𝑗; otherwise, the path does not go from location 𝒊 to location 𝑗. 𝑢<sub>𝒊</sub> and 𝑢<sub>j</sub>  are the sequence number of location 𝒊 and location 𝑗 in the tour, respectively.
 
@@ -80,14 +80,11 @@ for Δ𝜏<sub>𝒊𝑗</sub> = q/𝒅<sub>BestTour</sub> the best ant at the it
 
 Additionally, the selection of next place is based on the probability constructed by the pheromones. The probability of ant k at location 𝒊 chooses to go to location 𝑗 is as follows:
 
-![](svgs/e1c266efd778e39f0e575dcfca83e753.svg =250x50)
-<p align="center">
+![](svgs/e1c266efd778e39f0e575dcfca83e753.svg)
 
-![](svgs/a2ff07f6cfd19f84cc40b4bdfaa7454b.svg =95x50)
+![](svgs/a2ff07f6cfd19f84cc40b4bdfaa7454b.svg)
 
-</p>
-where α and β determines
-pheromone trail and the heuristic information; 𝜏<sub>𝒊𝑗</sub> and η<sub>𝒊𝑗</sub> are the pheromone trail and the locally available heuristic information, respectively. 𝑿<sub>𝒊</sub> are all  the feasible (visitable) locations of ant 􏰯k.
+where α and β determines pheromone trail and the heuristic information; 𝜏<sub>𝒊𝑗</sub> and η<sub>𝒊𝑗</sub> are the pheromone trail and the locally available heuristic information, respectively. 𝑿<sub>𝒊</sub> are all  the feasible (visitable) locations of ant 􏰯k.
 
 The local search tries to swap the sequence of the tour at various points (e.g., 1-2-3-4 to 3-4-2-1.) to determine if a different sequence can generate better fitness values (shorter distance).
 
