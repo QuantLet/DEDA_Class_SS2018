@@ -2,10 +2,10 @@
 ## A Case for Logistic Distribution of 7-Eleven Stores in the Xinyi District of Taipei ##
 ----------
 ### Introduction ###
-Taiwan is the second highest in the world for the ratio of convenience stores per population in 2017. According to Statistics Department of the Ministry of Economic Affairs (MOEA), there were 10,662 different convenience stores at the beginning of March 2017. In average, every 2,211 people around the country shares one convenience store. Convenience stores play an critical role in Taiwanese everyday life.
+Taiwan was the second highest in the world for the ratio of convenience stores per population in 2017. According to Statistics Department of the Ministry of Economic Affairs (MOEA), there were 10,662 different convenience stores at the beginning of March 2017. In average, every 2,211 people around the country shares one convenience store. Convenience stores play an critical role in Taiwanese everyday life.
 Having high variety and operating 24/7, frequent replenishment is required for the retailers in Taiwan. However, due to the high density of stores, the logistic networks for replenishment are relatively complex. In this project, we use the replenishment delivery of 7-Eleven stores in the Xinyi District as an example and apply ant colony optimisation (ACO), which is a population-based evolutionary algorithm to plan the logistic route for minimising travel distance for delivery vehicles. The vehicles require to travel all over the stores (travelling salesman problem, TSP) and finally return to the warehouse, which is also the start point for the delivery. The store information (e.g., store id, address) is obtained from the [7-Eleven ibon website](https://www.ibon.com.tw) and the location of warehouse is assumed in the project. The traffic condition is not considered.
 
-There are 63 7-Eleven stores and a warehouse in the Xinyi District. The distribution of 7-Eleven stores and warehouse (plotted by [folium package](http://folium.readthedocs.io/en/latest/)):
+There are 63 7-Eleven stores and a warehouse in the Xinyi District. The distribution of 7-Eleven stores and warehouse (plotted by [Folium package](http://folium.readthedocs.io/en/latest/)):
 
 [Xinyi District Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/c3d4e0c8/Min-Bin%20Lin/Route%20Optimisation/xinyi_map/index.html)
 
@@ -115,7 +115,7 @@ The optimised route distance is 40,307 m. The optimisation process of ACO is sho
 Figure 5-3 Optimisation process
 </p>
 
-The final logistic route is demonstrated by the map (plotted by [folium package](http://folium.readthedocs.io/en/latest/)):
+The final logistic route is demonstrated by the map (plotted by [Folium package](http://folium.readthedocs.io/en/latest/)):
 
 [Route Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/07a1a29c/Min-Bin%20Lin/Route%20Optimisation/index.html)
 
