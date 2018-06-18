@@ -27,7 +27,7 @@ There are two set of data: warehouse and shop. Each data entry has six elements:
 
 - warehouse 0 (倉庫) at address 台北市忠孝東路四段560號 (25.0407381, 121.5637989)
 
-The warehouse location is assumed as "台北市忠孝東路四段560號" and store data is scrapped from the 7-Eleven website by requests.post with url_data "strTargetField" and "strKeyWords" to specify requested data.
+The warehouse location is assumed as "台北市忠孝東路四段560號" and store data is scraped from the 7-Eleven website by requests.post with url_data "strTargetField" and "strKeyWords" to specify requested data.
 
 #### 2.2 Distance Calculation ####
 Before distance calculation, we need to convert all of addresses into geocodes, which include latitude and longitude in order to  represent the location accurately and plot maps. The geocoding and distance calculation are computed by [Google Maps Geocoding API](https://developers.google.com/maps/documentation/geocoding/start?hl=zh-tw) and [Google Maps Distance Matrix API](https://developers.google.com/maps/documentation/distance-matrix/intro?hl=zh-tw), respectively. The Google Maps API only allow  2,500 free requests per day in total. To avoid over-requesting data, we use [Dill package ](https://pypi.org/project/dill/) to pickle the data.
