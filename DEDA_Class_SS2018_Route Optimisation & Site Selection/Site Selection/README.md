@@ -25,9 +25,15 @@ The data of HiLife is scraped by using [Selenium package](http://selenium-python
 Except for the FamilyMart data, the rest of data needs to be geocoded via [Google Geocoding API](https://developers.google.com/maps/documentation/geocoding/start?hl=zh-tw) to convert the addresses into latitude/longitude pairs.
 
 #### 2.2 MRT Exit Data ####
-The MRT exit data is obtained from [Data.Taipei](http://data.taipei/opendata/datalist/datasetMeta?oid=cfa4778c-62c1-497b-b704-756231de348b). Since the data set includes the exit information in the whole Taipei city, we use the polygon information ([Shapely packgage](https://pypi.org/project/Shapely/)) to find the exits in the Xinyi District.
+The MRT exit data is obtained from [Data.Taipei](http://data.taipei/opendata/datalist/datasetMeta?oid=cfa4778c-62c1-497b-b704-756231de348b). Since the data set includes the exit information in the whole Taipei city, we use the polygon information [Shapely packgage](https://pypi.org/project/Shapely/) to find the exits in the Xinyi District.
 
 #### 2.3 Population ####
 The data of distribution of population (scale: Li) is obtained from the [Household Registration Office](https://xyhr.gov.taipei/Content_List.aspx?n=B38A8F9293AD70BD). The data is preserved in a PDF file. We use [pdfplumber package](https://github.com/jsvine/pdfplumber) to extract the information that is readable with Python.
 
 ### 3. Thematic Analysis ###
+The thematic analysis combines a choropleth map, scatter plot, and heatmap.
+
+First, we use "choropleth" in the [Folium package](http://folium.readthedocs.io/en/latest/) to display population distribution at the divided geographical areas (Li) in the Xinyi District with a sequential [colour scheme](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3). This requires the geographical data for each Li and the corresponding population data. Second, we overlay the scatter plot of the stores and MRT exits. Lately, according to the distribution of all stores, we plot the heatmap to show the density of stores on the map. The thematic analysis allows  layers  to control which layers they see on your map. 
+
+Below is the thematic analysis map:
+[Thematic Analysis](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/3760085b/DEDA_Class_SS2018_Route%20Optimisation%20%26%20Site%20Selection/Site%20Selection/xinyi_map.html)
