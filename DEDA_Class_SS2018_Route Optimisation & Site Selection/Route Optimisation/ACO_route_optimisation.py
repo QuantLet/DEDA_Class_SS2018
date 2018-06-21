@@ -8,11 +8,12 @@
 
 # import package
 import random
+from math import pow
 import time
 import logging
 import itertools
 
-import pylab as pl
+import matplotlib.pyplot as plt
 
 logger = logging.getLogger("Ant Colony Optimisation")
 logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
@@ -23,7 +24,7 @@ logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
 class MMAS(object):
     
     # parameter setting
-    def __init__(self, num_iters, num_ants, init_alpha, alpha, beta, rho, q, 
+    def __init__(self, init_place,num_iters, num_ants, init_alpha, alpha, beta, rho, q, 
                  place_dict,dist_dict):
         """
         num_iters: number of iterations (generations)
@@ -34,6 +35,7 @@ class MMAS(object):
         q: pheromone intensity
         places_info: type + number + geocode
         """
+        self.init_place = init_place
         self.num_iters = num_iters
         self.num_ants = num_ants
         self.init_alpha = init_alpha
@@ -50,7 +52,7 @@ class MMAS(object):
         self.shortest = float('inf') # inital shortest distance (inf)
         self.ant_list = []
         
-        pl.show()
+        plt.show()
         
     # problem construction
     def addPlace(self):
@@ -70,13 +72,13 @@ class MMAS(object):
     def PutAnts(self):
         del self.ant_list [:] # same as clear()
         for a in range(self.num_ants):
-            # randomly select a destination
-            place = random.choice(self.place_names)
-            ant = ANT(place, self.place_names,  self.dist_dict, self.pheromones)
+            # the inital point is "warehouse 0" for each ant
+            ant = ANT(self.init_place, self.place_names,  self.dist_dict, self.pheromones)
             self.ant_list.append(ant)
-    
+            
     # define the searching method  
     def Search(self):
+        shortest = []
         for iteration in range(self.num_iters):
             
             start = time.time()
@@ -87,35 +89,39 @@ class MMAS(object):
             
             for ant in self.ant_list:
                 for t in range(self.num_places):
-                    ant.MoveToNextPlace(self.alpha, self.beta)
-                ant.local_search() # same as two_opt_search
+                    ant.MoveToNextPlace(self.alpha, self.beta)                   
+                ant.local_search() # same as two_opt_search               
                 ant.UpdatePathLen()
+                # add the distance from end point to the inital place
+                ant.currLen = ant.currLen+self.dist_dict[ant.TabuList[-1]][self.init_place]                
+                # only keep the best one      
                 if ant.currLen < tmpLen:
-                    self.bestAnt = ant
+                    self.BestAnt = ant
                     tmpLen = ant.currLen
                     tmpTour = ant.TabuList # TabuList records every solution that have been visited
             if tmpLen < self.shortest: # current distance < inital predefined shortest distance
                 self.shortest = tmpLen # replace it with current one
                 self.BestTour = tmpTour
-                            
+                # travel back to the initial place
+                self.BestTour.append(self.init_place)
+                
             self.UpdatePheromoneTrail() # update information
             end = time.time()
             
-            logger.info("time: %d, iter: %d, shortest: %d, best: %s", 
-                        end - start,iteration, self.shortest, self.BestTour)
+            logger.info("time: %f, iter: %d, shortest: %d", 
+                        end - start,iteration, self.shortest)            
             
-            # plotting
-            points = []
-            for p in self.BestTour:
-                if p:
-                    points.append(self.place_dict[p])
-# should plot it on map (needed to be revised)
-            pl.plot(points)
-            pl.scatter(points, s=30, c='r')
-            pl.pause(0.01)
-
+            shortest += [self.shortest]
+            
+        plt.plot(list(range(self.num_iters)), shortest, '-o', color='black')
+        plt.xlabel('Iteration')
+        plt.ylabel('Distance (unit: meter)')
+        plt.savefig('optimisation process.png', dpi=300)
+        logger.info("Best tour: %s", self.BestTour)
+        
     def UpdatePheromoneTrail(self):
-        ant = self.bestAnt
+        # only the best ant generate pheromone deltas
+        ant = self.BestAnt
         updated_pheromone = self.q/ant.currLen # 1/Lk
         tabu =  ant.TabuList
         
@@ -186,7 +192,6 @@ class ANT(object):
                  return good_locs[0]
                  
      def MoveToNextPlace(self, alpha, beta):
-         
          nextPlace = self.SelectNextPlace(alpha, beta)
          # exclude current place for monving to next step
          if nextPlace is not None:
@@ -205,7 +210,7 @@ class ANT(object):
      # swape the sequence
      def local_search(self):
          num = len(self.TabuList)
-         for i in range(num):
+         for i in range(1,num):
              for j in range(num - 1, i, -1):
                  currPlace1 = self.TabuList[i]
                  prePlace1 = self.TabuList[(i - 1) % num]
@@ -220,5 +225,6 @@ class ANT(object):
                  
                  if nextLen < currLen:
                      tempList = self.TabuList[i:j + 1]
-                     self.TabuList[i:j + 1] = tempList[::-1]                    
+                     self.TabuList[i:j + 1] = tempList[::-1] 
+                     
        

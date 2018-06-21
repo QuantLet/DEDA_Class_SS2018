@@ -185,7 +185,8 @@ class Data(object):
         return ' '.join([cls.make_type_id(place_one), '/', cls.make_type_id(place_two)])
 
 ############################################################
-        
+# ony run the codes when there  is no "GEOCODED_DATA_PKL"
+
 if __name__ == '__main__':
     if os.path.exists(GEOCODED_DATA_PKL):
         logger.info("Found pickled file %s, loading...", GEOCODED_DATA_PKL)
@@ -252,7 +253,6 @@ if __name__ == '__main__':
     
     xinyi_coordinates = (25.033964, 121.564468)
     xinyi_map = folium.Map(location=xinyi_coordinates,
-                           tiles='Stamen Toner',
                            zoom_start=10)
     
     # create cluster
@@ -270,7 +270,7 @@ if __name__ == '__main__':
                                        icon=folium.Icon(icon='circle',color='blue')))
                         
     xinyi_map.add_child(mc)
-    xinyi_map.save("map_xinyi.html")
+    xinyi_map.save("xinyi_map.html")
     
     ############################################################
     # create distance list (sorted with 0) and distance matrix (pairwise distance): in meter
@@ -311,7 +311,7 @@ if __name__ == '__main__':
     dill.dump(sorted_distance, open(SORTED_DISTANCE_PKL, "w"))
     
     ### distance matrix ###
-    # extract distance value
+    # extract distance values
     distance_values = [value[0] for value in distance]
     # form an squareform arrary
     distance_entries = [
@@ -322,13 +322,12 @@ if __name__ == '__main__':
     
     distance_matrix.to_csv(open('matrix.csv', 'w'), sep = ',')
     
+    # data collection
     places_info = [[Data.make_type_id(place), (place.lat, place.lon)] for place in data.all]
     place_names =  [name[0] for name in places_info]
     place_dict = dict(places_info)
     distance_matrix = np.array(distance_matrix)
-    
+    # pickle files
     dill.dump(place_names, open(PLACE_NAMES_PKL, "w"))
     dill.dump(place_dict, open(PLACE_DICT_PKL, "w"))
     dill.dump(distance_matrix, open(DISTANCE_MATRIX_PKL, "w"))
-
-
