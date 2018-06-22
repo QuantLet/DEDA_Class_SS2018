@@ -6,7 +6,7 @@ Taiwan had the second highest in the world for the ratio of convenience stores p
 
 ### 1. Research Process ###
 
-![](research.png)
+![](pic/research.png)
 <p align="center">
 Figure 1-1 Research flow
 </p>
@@ -33,7 +33,7 @@ The data of distribution of population (scale: Li-- city block) is obtained from
 ### 3. Thematic Analysis ###
 The thematic analysis combines a choropleth map, scatter plot, and heatmap.
 
-First, we use "choropleth" in the [Folium package](http://folium.readthedocs.io/en/latest/) to display population distribution at the district's subdivisions (Li) in the Xinyi District with a sequential [colour scheme](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3). This requires the geographical data for each Li and the corresponding population data. Second, we overlay the scatter plot of the stores and MRT exits. Finally, according to the distribution of all stores, we plot a heatmap to show the density. The thematic analysis allows control of which layers can be seen on the map. 
+First, we use "choropleth" in the [Folium package](http://folium.readthedocs.io/en/latest/) to display population distribution at the district's subdivisions (Li) in the Xinyi District with a sequential [colour scheme](http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3). This requires the geographical data for each Li and the corresponding population data. Second, we overlay the scatter plot of the stores and MRT exits. Finally, according to the distribution of all stores, we plot a heatmap to show the density. The thematic analysis allows control of which layers can be seen on the map.
 
 Below is the thematic analysis map:
 [Thematic Analysis](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/3760085b/DEDA_Class_SS2018_Route%20Optimisation%20%26%20Site%20Selection/Site%20Selection/xinyi_map.html)

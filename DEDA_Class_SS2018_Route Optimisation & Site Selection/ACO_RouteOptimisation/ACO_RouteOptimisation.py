@@ -14,11 +14,15 @@ from collections import OrderedDict
 import polyline
 import folium
 
-import googlemaps
-gmaps = googlemaps.Client(key = 'ENTER YOUR KEY HERE')
 
-from DataCollection_route_optimisation import DataEntry, Data
-from ACO_route_optimisation import MMAS
+import googlemaps
+
+from ACO_DataCollection import Data
+from ACO_Algorithm import MMAS
+
+# google map api (2,500 free requests per day): geocoding and distance matrix
+# api key: https://developers.google.com/maps/documentation/geocoding/get-api-key
+gmaps = googlemaps.Client(key ='ENTER YOUR KEY HERE')
 
 # Pickle file names
 GEOCODED_DATA_PKL = 'geocoded_data.pkl'
@@ -57,7 +61,7 @@ dist_dict = sorted_dist_dict
 ############################################################       
 # apply ACO ###
 
-aco = MMAS(init_place='warehouse 0',num_iters=10, num_ants=50, 
+aco = MMAS(init_place='warehouse 0',num_iters=2000, num_ants=50, 
            init_alpha=10, alpha=1, beta=3, rho=0.3,
             q=80, place_dict=place_dict,dist_dict=dist_dict)
 

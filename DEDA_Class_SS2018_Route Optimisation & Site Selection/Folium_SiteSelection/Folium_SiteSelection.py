@@ -442,11 +442,11 @@ xinyi_map = folium.Map(location=xinyi_coordinates,
                        tiles='Stamen Toner',
                        zoom_start=14)
 # icon in the map
-logo_FM = './FM.jpg'
-logo_711 = './711.jpg'
-logo_HL = './HL.jpg'
-logo_OK = './OK.jpg'
-logo_mrt = './MRT.png'
+logo_FM = './pic/FM.jpg'
+logo_711 = './pic/711.jpg'
+logo_HL = './pic/HL.jpg'
+logo_OK = './pic/OK.jpg'
+logo_mrt = './pic/MRT.png'
 
 # choropleth
 xinyi_map.choropleth(
