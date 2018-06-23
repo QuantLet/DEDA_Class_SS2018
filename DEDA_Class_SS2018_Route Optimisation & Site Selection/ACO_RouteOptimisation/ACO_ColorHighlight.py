@@ -14,6 +14,7 @@ import pandas as pd
 ############################################################
 # load data
 distance_matrix = pd.read_csv('matrix.csv', index_col=0)
+
 ############################################################
 # highlight method (for dataframe)
 
