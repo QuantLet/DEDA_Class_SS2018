@@ -98,7 +98,7 @@ Figure 5-2 The process of ant colony optimisation
 **File:**
 *Application_route_optimisation.py* (main execution file)
 
-The parameter setting for the project: (based on the literature):
+The parameter setting for the project(based on the literature):
 
 
 - Initial place (init_place) = 'warehouse 0'
