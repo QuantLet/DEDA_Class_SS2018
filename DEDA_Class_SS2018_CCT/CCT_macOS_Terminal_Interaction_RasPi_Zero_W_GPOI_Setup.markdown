@@ -1,11 +1,5 @@
 **MacOS GPOI Setup of Raspberry Pi Zero W for use with CCT setup**
 
-1. **Formatt the Micro SD card**
-Open a terminal and type 'diskutil list'. Find your card and copy the disk name (For example mine is: /dev/disk2). 
-Format the card with `diskutil eraseDisk ExFat temp disk2(Use your disk here)`
-
-
-
 1. **relog to the RasPi** and load the essentials
 `pi@raspberrypi:~ $ sudo apt-get update 
 pi@raspberrypi:~ $ sudo apt-get install build-essential python-dev python-pip pi@raspberrypi:~ $ sudo pip install RPi.GPIO
