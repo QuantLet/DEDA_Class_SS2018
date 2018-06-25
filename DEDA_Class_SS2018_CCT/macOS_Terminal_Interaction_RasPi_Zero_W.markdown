@@ -1,4 +1,4 @@
-#Headless Setup of Raspberry Pi Zero W (Raspberry Pi 3 Wireless) (macOS)
+**MacOS Headless Setup of Raspberry Pi Zero W for use with CCT setup**
 
 1. **Formatt the Micro SD card**
 Open a terminal and type 'diskutil list'. Find your card and copy the disk name (For example mine is: /dev/disk2). 
