@@ -7,6 +7,7 @@ Produces:
 
 Base:
 - https://www.raspberrypi.org/magpi/program-python/
+- https://www.datacamp.com/courses/intro-to-python-for-data-science
 - https://github.com/adafruit/Adafruit_Python_SSD1306
 - https://www.bluetin.io/displays/oled-display-raspberry-pi-ssd1331/
 - https://www.raspberrypi.org/forums/viewtopic.php?t=150342
