@@ -128,7 +128,7 @@ pprice = [i['price'] for i in d]
 
 draw.text((1,26), str('Date - ') + ' /', font=fontsmall, fill=255)
 draw.text((1,1), str('ddate') + ' /', font=fontlarge, fill=255)
-draw.text((1,48), str('Price - '), font=fontsmall, fill=255)
+draw.text((1,48),  ' /' + str('Price - '), font=fontsmall, fill=255)
 draw.text((64,1), ' /' + str('pprice'), font=fontlarge, fill=255)
 
 sleep(1)
