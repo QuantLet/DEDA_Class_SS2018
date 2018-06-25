@@ -98,19 +98,18 @@ Figure 5-2 The process of ant colony optimisation
 **File:**
 *Application_route_optimisation.py* (main execution file)
 
-The parameter setting for the project: (based on the literature):
+The parameter setting for the project(based on the literature):
 
 
 - Initial place (init_place) = 'warehouse 0'
 - Number of iterations of the ACO (num_iters) = 2,000
 - Number of ants (num_ants) = 50 (also called population)
-- Initial α (init_alpha) = 10
 - α (alpha) = 1
 - β (beta) = 3
 - ρ (rho) = 0.3
 - q = 80
 
-The optimised route distance is 40,307 m. The optimisation process of ACO is shown as below:
+The optimised route distance is 39,417 m. The optimisation process of ACO is shown as below:
 ![](pic/optimisation.png)
 <p align="center">
 Figure 5-3 Optimisation process
@@ -120,8 +119,7 @@ The final logistic route is demonstrated by the map (plotted by [Folium package]
 
 [Route Map](https://cdn.rawgit.com/linminbin/DEDA_Class_SS2018/07a1a29c/Min-Bin%20Lin/Route%20Optimisation/index.html)
 
-
-
+INFO:Ant Colony Optimisation:Best tour: ['warehouse 0', 'shop 127723', 'shop 121079', 'shop 993041', 'shop 135425', 'shop 184575', 'shop 190330', 'shop 135241', 'shop 130132', 'shop 159269', 'shop 155061', 'shop 188094', 'shop 161376', 'shop 975607', 'shop 144669', 'shop 118970', 'shop 144315', 'shop 147299', 'shop 988016', 'shop 158738', 'shop 991702', 'shop 135942', 'shop 930637', 'shop 120353', 'shop 854580', 'shop 181945', 'shop 136783', 'shop 170141', 'shop 174534', 'shop 190259', 'shop 170738', 'shop 906564', 'shop 961000', 'shop 162483', 'shop 970901', 'shop 978798', 'shop 119478', 'shop 174970', 'shop 153216', 'shop 149697', 'shop 164490', 'shop 963556', 'shop 165987', 'shop 153294', 'shop 167651', 'shop 119054', 'shop 981901', 'shop 181912', 'shop 135012', 'shop 144636', 'shop 128036', 'shop 961974', 'shop 122186', 'shop 870504', 'shop 182269', 'shop 135562', 'shop 122212', 'shop 965194', 'shop 120515', 'shop 185143', 'shop 128542', 'shop 136716', 'shop 151335', 'shop 164216', 'warehouse 0']
 
 ### 6. Reference ###
 
