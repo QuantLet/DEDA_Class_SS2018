@@ -24,7 +24,7 @@ logger.basicConfig = logging.basicConfig(level=logging.DEBUG)
 class MMAS(object):
     
     # parameter setting
-    def __init__(self, init_place,num_iters, num_ants, init_alpha, alpha, beta, rho, q, 
+    def __init__(self, init_place,num_iters, num_ants, alpha, beta, rho, q,
                  place_dict,dist_dict):
         """
         num_iters: number of iterations (generations)
@@ -38,7 +38,6 @@ class MMAS(object):
         self.init_place = init_place
         self.num_iters = num_iters
         self.num_ants = num_ants
-        self.init_alpha = init_alpha
         self.alpha = alpha
         self.beta = beta
         self.rho = rho

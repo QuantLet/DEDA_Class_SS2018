@@ -104,7 +104,6 @@ The parameter setting for the project: (based on the literature):
 - Initial place (init_place) = 'warehouse 0'
 - Number of iterations of the ACO (num_iters) = 2,000
 - Number of ants (num_ants) = 50 (also called population)
-- Initial α (init_alpha) = 10
 - α (alpha) = 1
 - β (beta) = 3
 - ρ (rho) = 0.3
