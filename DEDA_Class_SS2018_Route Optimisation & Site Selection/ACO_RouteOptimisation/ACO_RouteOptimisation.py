@@ -61,8 +61,8 @@ dist_dict = sorted_dist_dict
 ############################################################       
 # apply ACO ###
 
-aco = MMAS(init_place='warehouse 0',num_iters=2000, num_ants=50, 
-           init_alpha=10, alpha=1, beta=3, rho=0.3,
+aco = MMAS(init_place='warehouse 0',num_iters=2000, num_ants=50,
+           alpha=1, beta=3, rho=0.3,
             q=80, place_dict=place_dict,dist_dict=dist_dict)
 
 aco.addPlace()
