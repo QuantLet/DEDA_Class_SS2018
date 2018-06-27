@@ -1,0 +1,29 @@
+Name of Quantlet:  SSN
+
+ 
+
+Published in:      "Digital Economy and Decision Analytics (SS 18)"
+
+  
+
+Description:       „Calculates forecasts based on historic data and Sentiment of Stock News“
+
+ 
+
+Keywords:          „sentiment, news, textmining, lexicon, forecasting, stocks"
+
+
+
+See also :         
+
+
+
+Author:            Marvin Gauer
+
+  
+
+Submitted:         Wed, June 27 2018 by Marvin Gauer
+
+  
+
+Datafile:          PY Script
