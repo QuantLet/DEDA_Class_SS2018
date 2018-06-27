@@ -1,0 +1,3828 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_1949e294c7444cdfbba8d5f3a7f1399a {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1949e294c7444cdfbba8d5f3a7f1399a" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_1949e294c7444cdfbba8d5f3a7f1399a = L.map(
+                                  'map_1949e294c7444cdfbba8d5f3a7f1399a',
+                                  {center: [25.033964,121.564468],
+                                  zoom: 15,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_2361c9858f0241a99af59c0f929d68c2 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+        
+    
+            var tile_layer_9c2d4ab62309456ab9c08203e37ff259 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+        
+    
+            var tile_layer_553ed41437fe463b94aa4fb1222b26c5 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+        
+    
+            var tile_layer_e75600076e994bd98de9c34583c86c76 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+  "attribution": null, 
+  "detectRetina": false, 
+  "maxZoom": 18, 
+  "minZoom": 1, 
+  "noWrap": false, 
+  "subdomains": "abc"
+}
+                ).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+        
+    
+            var layer_control_e901aa83127c406fb3981928270944d6 = {
+                base_layers : { "openstreetmap" : tile_layer_9c2d4ab62309456ab9c08203e37ff259,"stamenwatercolor" : tile_layer_553ed41437fe463b94aa4fb1222b26c5,"stamentoner" : tile_layer_e75600076e994bd98de9c34583c86c76, },
+                overlays : {  }
+                };
+            L.control.layers(
+                layer_control_e901aa83127c406fb3981928270944d6.base_layers,
+                layer_control_e901aa83127c406fb3981928270944d6.overlays,
+                {position: 'topright',
+                 collapsed: true,
+                 autoZIndex: true
+                }).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+        
+    
+
+            var marker_9de2ef72350c4da997fecacd71562732 = L.marker(
+                [25.0407381,121.5637989],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_b180ffc0d8834d98a8e85045fe071e4e = L.icon({
+                    iconUrl: './pic/warehouse.png',
+                    iconSize: [50,50],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_9de2ef72350c4da997fecacd71562732.setIcon(custom_icon_b180ffc0d8834d98a8e85045fe071e4e);
+            
+    
+            var popup_986fbabecffe4dee996cd1b26cce3db3 = L.popup({maxWidth: '300'});
+
+            
+                var html_a6f08ed49dbd4c63b4adf1b53bb63402 = $('<div id="html_a6f08ed49dbd4c63b4adf1b53bb63402" style="width: 100.0%; height: 100.0%;">倉庫 warehouse0</div>')[0];
+                popup_986fbabecffe4dee996cd1b26cce3db3.setContent(html_a6f08ed49dbd4c63b4adf1b53bb63402);
+            
+
+            marker_9de2ef72350c4da997fecacd71562732.bindPopup(popup_986fbabecffe4dee996cd1b26cce3db3);
+
+            
+        
+    
+
+            var marker_8abc0a3307374306b2dc3e138affc422 = L.marker(
+                [25.040764,121.574124],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_28377f8ba1b8426cbb2474f563cdf843 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8abc0a3307374306b2dc3e138affc422.setIcon(custom_icon_28377f8ba1b8426cbb2474f563cdf843);
+            
+    
+            var popup_1e98ae49514f401ab89dc92cc6378c3d = L.popup({maxWidth: '300'});
+
+            
+                var html_ff494d1cb13c4c98bb2958e76b8894fd = $('<div id="html_ff494d1cb13c4c98bb2958e76b8894fd" style="width: 100.0%; height: 100.0%;">松山 shop118970</div>')[0];
+                popup_1e98ae49514f401ab89dc92cc6378c3d.setContent(html_ff494d1cb13c4c98bb2958e76b8894fd);
+            
+
+            marker_8abc0a3307374306b2dc3e138affc422.bindPopup(popup_1e98ae49514f401ab89dc92cc6378c3d);
+
+            
+        
+    
+
+            var marker_cec20a5c282d4271b9074bf0d1ec7144 = L.marker(
+                [25.0318104,121.5666576],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_633f5b8d51f541268e35541cc714c535 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_cec20a5c282d4271b9074bf0d1ec7144.setIcon(custom_icon_633f5b8d51f541268e35541cc714c535);
+            
+    
+            var popup_b16436452633481f975bd582a49c845d = L.popup({maxWidth: '300'});
+
+            
+                var html_8c3c640b339d4d04b9f92a208f77e952 = $('<div id="html_8c3c640b339d4d04b9f92a208f77e952" style="width: 100.0%; height: 100.0%;">信運 shop119054</div>')[0];
+                popup_b16436452633481f975bd582a49c845d.setContent(html_8c3c640b339d4d04b9f92a208f77e952);
+            
+
+            marker_cec20a5c282d4271b9074bf0d1ec7144.bindPopup(popup_b16436452633481f975bd582a49c845d);
+
+            
+        
+    
+
+            var marker_ae35ad2060a345928ad2f515c07af7ad = L.marker(
+                [25.027249,121.5637452],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_c241ab246f414d8cb53c3e2469e99de5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ae35ad2060a345928ad2f515c07af7ad.setIcon(custom_icon_c241ab246f414d8cb53c3e2469e99de5);
+            
+    
+            var popup_3dedb8b5ada54fba84f531a7df8661a6 = L.popup({maxWidth: '300'});
+
+            
+                var html_639ebeef95df4a0c9d542c19ccf729c4 = $('<div id="html_639ebeef95df4a0c9d542c19ccf729c4" style="width: 100.0%; height: 100.0%;">醫學 shop119478</div>')[0];
+                popup_3dedb8b5ada54fba84f531a7df8661a6.setContent(html_639ebeef95df4a0c9d542c19ccf729c4);
+            
+
+            marker_ae35ad2060a345928ad2f515c07af7ad.bindPopup(popup_3dedb8b5ada54fba84f531a7df8661a6);
+
+            
+        
+    
+
+            var marker_c51dc6f3ffef4cfe907f76e8d6ec19ab = L.marker(
+                [25.0376944,121.5833164],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_fcde6b62bcaa4aef80d020143431b4d2 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c51dc6f3ffef4cfe907f76e8d6ec19ab.setIcon(custom_icon_fcde6b62bcaa4aef80d020143431b4d2);
+            
+    
+            var popup_cf0ebe81f5f640d5bd84f4ad8ffa4aac = L.popup({maxWidth: '300'});
+
+            
+                var html_ddf401ac17404f329a77a2631b9dd3c7 = $('<div id="html_ddf401ac17404f329a77a2631b9dd3c7" style="width: 100.0%; height: 100.0%;">福中 shop120353</div>')[0];
+                popup_cf0ebe81f5f640d5bd84f4ad8ffa4aac.setContent(html_ddf401ac17404f329a77a2631b9dd3c7);
+            
+
+            marker_c51dc6f3ffef4cfe907f76e8d6ec19ab.bindPopup(popup_cf0ebe81f5f640d5bd84f4ad8ffa4aac);
+
+            
+        
+    
+
+            var marker_f0a9141696394e00b0d69a242e9b2a9e = L.marker(
+                [25.0259066,121.5545048],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_b86a7ac508ce405994d9901da1b524c4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_f0a9141696394e00b0d69a242e9b2a9e.setIcon(custom_icon_b86a7ac508ce405994d9901da1b524c4);
+            
+    
+            var popup_4908d2a5132e4fec942e3343680d1ed0 = L.popup({maxWidth: '300'});
+
+            
+                var html_2fe6c417b1af4625a0cad7f8c69189fb = $('<div id="html_2fe6c417b1af4625a0cad7f8c69189fb" style="width: 100.0%; height: 100.0%;">喬治 shop120515</div>')[0];
+                popup_4908d2a5132e4fec942e3343680d1ed0.setContent(html_2fe6c417b1af4625a0cad7f8c69189fb);
+            
+
+            marker_f0a9141696394e00b0d69a242e9b2a9e.bindPopup(popup_4908d2a5132e4fec942e3343680d1ed0);
+
+            
+        
+    
+
+            var marker_ace203d289d6487c9d7a1b8e92368956 = L.marker(
+                [25.040468,121.563152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_a70c93a050cb428995d398264dfde2cb = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_ace203d289d6487c9d7a1b8e92368956.setIcon(custom_icon_a70c93a050cb428995d398264dfde2cb);
+            
+    
+            var popup_c15c03a5297c4f23a0eb5133df463884 = L.popup({maxWidth: '300'});
+
+            
+                var html_8a91227185224b7998921812e3b74641 = $('<div id="html_8a91227185224b7998921812e3b74641" style="width: 100.0%; height: 100.0%;">新三連 shop121079</div>')[0];
+                popup_c15c03a5297c4f23a0eb5133df463884.setContent(html_8a91227185224b7998921812e3b74641);
+            
+
+            marker_ace203d289d6487c9d7a1b8e92368956.bindPopup(popup_c15c03a5297c4f23a0eb5133df463884);
+
+            
+        
+    
+
+            var marker_6c46f8134f044ce2afd366cd689a5acb = L.marker(
+                [25.046781,121.566688],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_9109d60555244a54a7ae7f37fec1166f = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_6c46f8134f044ce2afd366cd689a5acb.setIcon(custom_icon_9109d60555244a54a7ae7f37fec1166f);
+            
+    
+            var popup_2b3b615be18843b0b3675bd0e429e55d = L.popup({maxWidth: '300'});
+
+            
+                var html_3f6f4a65fc734585977d7f5890f39cdc = $('<div id="html_3f6f4a65fc734585977d7f5890f39cdc" style="width: 100.0%; height: 100.0%;">總部 shop122186</div>')[0];
+                popup_2b3b615be18843b0b3675bd0e429e55d.setContent(html_3f6f4a65fc734585977d7f5890f39cdc);
+            
+
+            marker_6c46f8134f044ce2afd366cd689a5acb.bindPopup(popup_2b3b615be18843b0b3675bd0e429e55d);
+
+            
+        
+    
+
+            var marker_5ee04457260c409cbb597fd86e75f7ab = L.marker(
+                [25.023995,121.555603],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_9faeb3e5ce324cdeaae5d08c6a0e2577 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_5ee04457260c409cbb597fd86e75f7ab.setIcon(custom_icon_9faeb3e5ce324cdeaae5d08c6a0e2577);
+            
+    
+            var popup_d7ab2156fdf24525b271eaa30bc4f7b1 = L.popup({maxWidth: '300'});
+
+            
+                var html_31cb931a1495465cbe84971a5d165284 = $('<div id="html_31cb931a1495465cbe84971a5d165284" style="width: 100.0%; height: 100.0%;">崇德 shop122212</div>')[0];
+                popup_d7ab2156fdf24525b271eaa30bc4f7b1.setContent(html_31cb931a1495465cbe84971a5d165284);
+            
+
+            marker_5ee04457260c409cbb597fd86e75f7ab.bindPopup(popup_d7ab2156fdf24525b271eaa30bc4f7b1);
+
+            
+        
+    
+
+            var marker_8eb24d2635854e1abf4297b1252ff05b = L.marker(
+                [25.040831,121.562594],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_b4f05cabc2824abbac150721647c1b8a = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8eb24d2635854e1abf4297b1252ff05b.setIcon(custom_icon_b4f05cabc2824abbac150721647c1b8a);
+            
+    
+            var popup_5862825bcfd841d0b22dd23f62df0788 = L.popup({maxWidth: '300'});
+
+            
+                var html_cabf11ff51f145da952da3c5e4a1b409 = $('<div id="html_cabf11ff51f145da952da3c5e4a1b409" style="width: 100.0%; height: 100.0%;">東暉 shop127723</div>')[0];
+                popup_5862825bcfd841d0b22dd23f62df0788.setContent(html_cabf11ff51f145da952da3c5e4a1b409);
+            
+
+            marker_8eb24d2635854e1abf4297b1252ff05b.bindPopup(popup_5862825bcfd841d0b22dd23f62df0788);
+
+            
+        
+    
+
+            var marker_b41ad6e9f3434cbbbc0a4a344ee42ddf = L.marker(
+                [25.040158,121.571738],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_118a5ee2f2f24db394e9e3ecd5b25385 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_b41ad6e9f3434cbbbc0a4a344ee42ddf.setIcon(custom_icon_118a5ee2f2f24db394e9e3ecd5b25385);
+            
+    
+            var popup_042c8787c77a45b9992c52b884ea46ce = L.popup({maxWidth: '300'});
+
+            
+                var html_d9cf3b1a33d144ea9df2721dfd57de6f = $('<div id="html_d9cf3b1a33d144ea9df2721dfd57de6f" style="width: 100.0%; height: 100.0%;">新工農 shop128036</div>')[0];
+                popup_042c8787c77a45b9992c52b884ea46ce.setContent(html_d9cf3b1a33d144ea9df2721dfd57de6f);
+            
+
+            marker_b41ad6e9f3434cbbbc0a4a344ee42ddf.bindPopup(popup_042c8787c77a45b9992c52b884ea46ce);
+
+            
+        
+    
+
+            var marker_c7a681ac2dc542ce8a11e6b2a246ead3 = L.marker(
+                [25.0319501,121.5587135],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_bcb6924b6f5d40409cf49f787601a42e = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c7a681ac2dc542ce8a11e6b2a246ead3.setIcon(custom_icon_bcb6924b6f5d40409cf49f787601a42e);
+            
+    
+            var popup_6ee68151487047f89fb6ab842a40fd80 = L.popup({maxWidth: '300'});
+
+            
+                var html_2032b9ad13f1484d9320c75b7cfefb36 = $('<div id="html_2032b9ad13f1484d9320c75b7cfefb36" style="width: 100.0%; height: 100.0%;">中興 shop128542</div>')[0];
+                popup_6ee68151487047f89fb6ab842a40fd80.setContent(html_2032b9ad13f1484d9320c75b7cfefb36);
+            
+
+            marker_c7a681ac2dc542ce8a11e6b2a246ead3.bindPopup(popup_6ee68151487047f89fb6ab842a40fd80);
+
+            
+        
+    
+
+            var marker_eec273a8f5c9436382ce4f4bb932e3de = L.marker(
+                [25.043098,121.5682983],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_44ee2c57aa444c8786f7e94e8d5b0c15 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_eec273a8f5c9436382ce4f4bb932e3de.setIcon(custom_icon_44ee2c57aa444c8786f7e94e8d5b0c15);
+            
+    
+            var popup_ec73a4fb565940f88ebc33f86a8b6e00 = L.popup({maxWidth: '300'});
+
+            
+                var html_b3d9271d41be47d5aadbc9efc8ef47f1 = $('<div id="html_b3d9271d41be47d5aadbc9efc8ef47f1" style="width: 100.0%; height: 100.0%;">敦厚 shop130132</div>')[0];
+                popup_ec73a4fb565940f88ebc33f86a8b6e00.setContent(html_b3d9271d41be47d5aadbc9efc8ef47f1);
+            
+
+            marker_eec273a8f5c9436382ce4f4bb932e3de.bindPopup(popup_ec73a4fb565940f88ebc33f86a8b6e00);
+
+            
+        
+    
+
+            var marker_a9fda697ccbd4b2992be2d3061675299 = L.marker(
+                [25.0397197,121.5658739],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_cae3155d2c0442a88f8143874423a373 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_a9fda697ccbd4b2992be2d3061675299.setIcon(custom_icon_cae3155d2c0442a88f8143874423a373);
+            
+    
+            var popup_c0e6de093c4548dfa9831e08fac5393d = L.popup({maxWidth: '300'});
+
+            
+                var html_1186b1da500e40ea83cf3c29a3e3df1b = $('<div id="html_1186b1da500e40ea83cf3c29a3e3df1b" style="width: 100.0%; height: 100.0%;">統誠 shop135012</div>')[0];
+                popup_c0e6de093c4548dfa9831e08fac5393d.setContent(html_1186b1da500e40ea83cf3c29a3e3df1b);
+            
+
+            marker_a9fda697ccbd4b2992be2d3061675299.bindPopup(popup_c0e6de093c4548dfa9831e08fac5393d);
+
+            
+        
+    
+
+            var marker_e84866a5441346cf969e5e9a7dab67cf = L.marker(
+                [25.0435395,121.5688373],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_2524d043877e4d2885f171ecc58fe5d3 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_e84866a5441346cf969e5e9a7dab67cf.setIcon(custom_icon_2524d043877e4d2885f171ecc58fe5d3);
+            
+    
+            var popup_2a508fd165f84db1951594ed1cfca6f9 = L.popup({maxWidth: '300'});
+
+            
+                var html_60ece1551349491284e92d4e995b9800 = $('<div id="html_60ece1551349491284e92d4e995b9800" style="width: 100.0%; height: 100.0%;">永信 shop135241</div>')[0];
+                popup_2a508fd165f84db1951594ed1cfca6f9.setContent(html_60ece1551349491284e92d4e995b9800);
+            
+
+            marker_e84866a5441346cf969e5e9a7dab67cf.bindPopup(popup_2a508fd165f84db1951594ed1cfca6f9);
+
+            
+        
+    
+
+            var marker_3c305da7503e492a8417a2dee8572d1f = L.marker(
+                [25.0413231,121.5651274],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_6925b691bde34e088728c1663697622a = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_3c305da7503e492a8417a2dee8572d1f.setIcon(custom_icon_6925b691bde34e088728c1663697622a);
+            
+    
+            var popup_a942892f04384163aeaac3110b2a294c = L.popup({maxWidth: '300'});
+
+            
+                var html_68432e212ed844c796ab26711e1195fc = $('<div id="html_68432e212ed844c796ab26711e1195fc" style="width: 100.0%; height: 100.0%;">松捷 shop135425</div>')[0];
+                popup_a942892f04384163aeaac3110b2a294c.setContent(html_68432e212ed844c796ab26711e1195fc);
+            
+
+            marker_3c305da7503e492a8417a2dee8572d1f.bindPopup(popup_a942892f04384163aeaac3110b2a294c);
+
+            
+        
+    
+
+            var marker_5370d034f79c485da378a808c2e02057 = L.marker(
+                [25.0187114,121.5589378],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_4b9cce847cbd4a1595db5e357d32ca0d = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_5370d034f79c485da378a808c2e02057.setIcon(custom_icon_4b9cce847cbd4a1595db5e357d32ca0d);
+            
+    
+            var popup_c79709ef10d74d629b04fb6b461b4fff = L.popup({maxWidth: '300'});
+
+            
+                var html_f078554fd9e946799ddc0f3381109e55 = $('<div id="html_f078554fd9e946799ddc0f3381109e55" style="width: 100.0%; height: 100.0%;">麟運 shop135562</div>')[0];
+                popup_c79709ef10d74d629b04fb6b461b4fff.setContent(html_f078554fd9e946799ddc0f3381109e55);
+            
+
+            marker_5370d034f79c485da378a808c2e02057.bindPopup(popup_c79709ef10d74d629b04fb6b461b4fff);
+
+            
+        
+    
+
+            var marker_cb3464f740a44087a00049837cb5d55d = L.marker(
+                [25.038253,121.5794416],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_90061594d3a14bddaf08d054ebd61b88 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_cb3464f740a44087a00049837cb5d55d.setIcon(custom_icon_90061594d3a14bddaf08d054ebd61b88);
+            
+    
+            var popup_5452ecddc4a7448c8e83b6e66b35eab2 = L.popup({maxWidth: '300'});
+
+            
+                var html_3d584867a0bc4c72a52d1adafe01d446 = $('<div id="html_3d584867a0bc4c72a52d1adafe01d446" style="width: 100.0%; height: 100.0%;">萊福 shop135942</div>')[0];
+                popup_5452ecddc4a7448c8e83b6e66b35eab2.setContent(html_3d584867a0bc4c72a52d1adafe01d446);
+            
+
+            marker_cb3464f740a44087a00049837cb5d55d.bindPopup(popup_5452ecddc4a7448c8e83b6e66b35eab2);
+
+            
+        
+    
+
+            var marker_40886707197e474980446ab9855ace54 = L.marker(
+                [25.0337254,121.5576657],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_261f6645442d42c59137b61b24e7b0f8 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_40886707197e474980446ab9855ace54.setIcon(custom_icon_261f6645442d42c59137b61b24e7b0f8);
+            
+    
+            var popup_13ff097e2a444905a72d62e8bb0fda80 = L.popup({maxWidth: '300'});
+
+            
+                var html_76360a1a5f9c4871ac57bf56eed5d8ec = $('<div id="html_76360a1a5f9c4871ac57bf56eed5d8ec" style="width: 100.0%; height: 100.0%;">光復 shop136716</div>')[0];
+                popup_13ff097e2a444905a72d62e8bb0fda80.setContent(html_76360a1a5f9c4871ac57bf56eed5d8ec);
+            
+
+            marker_40886707197e474980446ab9855ace54.bindPopup(popup_13ff097e2a444905a72d62e8bb0fda80);
+
+            
+        
+    
+
+            var marker_17ed4571645c45b7b1c1f78a2424fd59 = L.marker(
+                [25.0491901,121.5782994],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_b117f5ef4b2b47e7af47177b8bbaaa8b = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_17ed4571645c45b7b1c1f78a2424fd59.setIcon(custom_icon_b117f5ef4b2b47e7af47177b8bbaaa8b);
+            
+    
+            var popup_bba0ffd6b430412990b206e50f7c8383 = L.popup({maxWidth: '300'});
+
+            
+                var html_d9c6aa699b714e54b4088d1dcf8af912 = $('<div id="html_d9c6aa699b714e54b4088d1dcf8af912" style="width: 100.0%; height: 100.0%;">松泰 shop136783</div>')[0];
+                popup_bba0ffd6b430412990b206e50f7c8383.setContent(html_d9c6aa699b714e54b4088d1dcf8af912);
+            
+
+            marker_17ed4571645c45b7b1c1f78a2424fd59.bindPopup(popup_bba0ffd6b430412990b206e50f7c8383);
+
+            
+        
+    
+
+            var marker_4514077348204f76acd8c90de933ea3c = L.marker(
+                [25.0406569,121.576851],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_28f310a6abac48e8bc8bbb17f12fa8db = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_4514077348204f76acd8c90de933ea3c.setIcon(custom_icon_28f310a6abac48e8bc8bbb17f12fa8db);
+            
+    
+            var popup_bc76566e1a6142bbb5de276e279e8606 = L.popup({maxWidth: '300'});
+
+            
+                var html_82aa148185954b67b9361f4f8b38a446 = $('<div id="html_82aa148185954b67b9361f4f8b38a446" style="width: 100.0%; height: 100.0%;">忠林 shop144315</div>')[0];
+                popup_bc76566e1a6142bbb5de276e279e8606.setContent(html_82aa148185954b67b9361f4f8b38a446);
+            
+
+            marker_4514077348204f76acd8c90de933ea3c.bindPopup(popup_bc76566e1a6142bbb5de276e279e8606);
+
+            
+        
+    
+
+            var marker_8a24939951fe4c44a7517d976c8763e8 = L.marker(
+                [25.0388485,121.5668016],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_9138a6019b2c432d8d984cebf3e4d4ff = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8a24939951fe4c44a7517d976c8763e8.setIcon(custom_icon_9138a6019b2c432d8d984cebf3e4d4ff);
+            
+    
+            var popup_95263044cd2b47108453560e68be306b = L.popup({maxWidth: '300'});
+
+            
+                var html_39b0c528f73448d69294c54a780feeab = $('<div id="html_39b0c528f73448d69294c54a780feeab" style="width: 100.0%; height: 100.0%;">新光 shop144636</div>')[0];
+                popup_95263044cd2b47108453560e68be306b.setContent(html_39b0c528f73448d69294c54a780feeab);
+            
+
+            marker_8a24939951fe4c44a7517d976c8763e8.bindPopup(popup_95263044cd2b47108453560e68be306b);
+
+            
+        
+    
+
+            var marker_84b79ba061954f6bb883eff3e288d2a3 = L.marker(
+                [25.037434,121.575297],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_9b1744c975da4939bc20fd116af38d9f = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_84b79ba061954f6bb883eff3e288d2a3.setIcon(custom_icon_9b1744c975da4939bc20fd116af38d9f);
+            
+    
+            var popup_5917ccaab9004883bf606323db140a50 = L.popup({maxWidth: '300'});
+
+            
+                var html_08e395b82fb946ab8b98143b369b5167 = $('<div id="html_08e395b82fb946ab8b98143b369b5167" style="width: 100.0%; height: 100.0%;">德鄰 shop144669</div>')[0];
+                popup_5917ccaab9004883bf606323db140a50.setContent(html_08e395b82fb946ab8b98143b369b5167);
+            
+
+            marker_84b79ba061954f6bb883eff3e288d2a3.bindPopup(popup_5917ccaab9004883bf606323db140a50);
+
+            
+        
+    
+
+            var marker_22afc6ded4de4a26914ca80e36e61427 = L.marker(
+                [25.032912,121.574648],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_f3d4df8767b0454a89ee7de7e68b7055 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_22afc6ded4de4a26914ca80e36e61427.setIcon(custom_icon_f3d4df8767b0454a89ee7de7e68b7055);
+            
+    
+            var popup_1851dbde436b44e79ce515c5473b2f39 = L.popup({maxWidth: '300'});
+
+            
+                var html_985ffc9dea8949d698c8f4a5d63fad17 = $('<div id="html_985ffc9dea8949d698c8f4a5d63fad17" style="width: 100.0%; height: 100.0%;">松義 shop147299</div>')[0];
+                popup_1851dbde436b44e79ce515c5473b2f39.setContent(html_985ffc9dea8949d698c8f4a5d63fad17);
+            
+
+            marker_22afc6ded4de4a26914ca80e36e61427.bindPopup(popup_1851dbde436b44e79ce515c5473b2f39);
+
+            
+        
+    
+
+            var marker_203dcaf5a9e44739b1ebdefcdbeadc1a = L.marker(
+                [25.0290989,121.561392],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_0bf5e8ce0eb64224a44ab56bc5ddce08 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_203dcaf5a9e44739b1ebdefcdbeadc1a.setIcon(custom_icon_0bf5e8ce0eb64224a44ab56bc5ddce08);
+            
+    
+            var popup_34d1222589ae46889c2d69352f3928c2 = L.popup({maxWidth: '300'});
+
+            
+                var html_4a9385d990714ef2ae04a8c6369281ba = $('<div id="html_4a9385d990714ef2ae04a8c6369281ba" style="width: 100.0%; height: 100.0%;">三興 shop149697</div>')[0];
+                popup_34d1222589ae46889c2d69352f3928c2.setContent(html_4a9385d990714ef2ae04a8c6369281ba);
+            
+
+            marker_203dcaf5a9e44739b1ebdefcdbeadc1a.bindPopup(popup_34d1222589ae46889c2d69352f3928c2);
+
+            
+        
+    
+
+            var marker_30bacfe626c14df5b8fde48a09865c60 = L.marker(
+                [25.036607,121.55849],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_68a4d6b886e748daa3b8db9d1d615cbe = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_30bacfe626c14df5b8fde48a09865c60.setIcon(custom_icon_68a4d6b886e748daa3b8db9d1d615cbe);
+            
+    
+            var popup_86e6150277b842a39aa2984365888062 = L.popup({maxWidth: '300'});
+
+            
+                var html_608036734a324a6893904889644e944c = $('<div id="html_608036734a324a6893904889644e944c" style="width: 100.0%; height: 100.0%;">仁和 shop151335</div>')[0];
+                popup_86e6150277b842a39aa2984365888062.setContent(html_608036734a324a6893904889644e944c);
+            
+
+            marker_30bacfe626c14df5b8fde48a09865c60.bindPopup(popup_86e6150277b842a39aa2984365888062);
+
+            
+        
+    
+
+            var marker_f21bf5488f8a44e195e1d251ef2a84cc = L.marker(
+                [25.0258406,121.5612122],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_1980b7e101a84387840b16cc4fa9847e = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_f21bf5488f8a44e195e1d251ef2a84cc.setIcon(custom_icon_1980b7e101a84387840b16cc4fa9847e);
+            
+    
+            var popup_231e3cfddc154d00aa735593c7e819e0 = L.popup({maxWidth: '300'});
+
+            
+                var html_6aef7d67f4884ce8b907b8e3a1cbff1e = $('<div id="html_6aef7d67f4884ce8b907b8e3a1cbff1e" style="width: 100.0%; height: 100.0%;">北醫大 shop153216</div>')[0];
+                popup_231e3cfddc154d00aa735593c7e819e0.setContent(html_6aef7d67f4884ce8b907b8e3a1cbff1e);
+            
+
+            marker_f21bf5488f8a44e195e1d251ef2a84cc.bindPopup(popup_231e3cfddc154d00aa735593c7e819e0);
+
+            
+        
+    
+
+            var marker_73c1e68bcd7149059467c5d9ae8e8f37 = L.marker(
+                [25.0334929,121.564101],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_f4c75ae2ff0c4b14a426eefe5d1d9bc5 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_73c1e68bcd7149059467c5d9ae8e8f37.setIcon(custom_icon_f4c75ae2ff0c4b14a426eefe5d1d9bc5);
+            
+    
+            var popup_3103c69fcb5d4809a15f41e2588a45b9 = L.popup({maxWidth: '300'});
+
+            
+                var html_7b171ed359884cd398da0713ad071fe1 = $('<div id="html_7b171ed359884cd398da0713ad071fe1" style="width: 100.0%; height: 100.0%;">台金 shop153294</div>')[0];
+                popup_3103c69fcb5d4809a15f41e2588a45b9.setContent(html_7b171ed359884cd398da0713ad071fe1);
+            
+
+            marker_73c1e68bcd7149059467c5d9ae8e8f37.bindPopup(popup_3103c69fcb5d4809a15f41e2588a45b9);
+
+            
+        
+    
+
+            var marker_6ea97f118d4b4b178bb3aa7c67aaad96 = L.marker(
+                [25.043684,121.571913],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_29d121e1e49d414e89403f7777e67527 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_6ea97f118d4b4b178bb3aa7c67aaad96.setIcon(custom_icon_29d121e1e49d414e89403f7777e67527);
+            
+    
+            var popup_598952ce76ae4057b60a945fed073ede = L.popup({maxWidth: '300'});
+
+            
+                var html_2f85519e43a242508dd234b0a363d15b = $('<div id="html_2f85519e43a242508dd234b0a363d15b" style="width: 100.0%; height: 100.0%;">松信 shop155061</div>')[0];
+                popup_598952ce76ae4057b60a945fed073ede.setContent(html_2f85519e43a242508dd234b0a363d15b);
+            
+
+            marker_6ea97f118d4b4b178bb3aa7c67aaad96.bindPopup(popup_598952ce76ae4057b60a945fed073ede);
+
+            
+        
+    
+
+            var marker_bf9483282b3a4d029f0616062d6b34df = L.marker(
+                [25.037183,121.577097],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_c8c107d73b494dff882b2209a5d77857 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_bf9483282b3a4d029f0616062d6b34df.setIcon(custom_icon_c8c107d73b494dff882b2209a5d77857);
+            
+    
+            var popup_c0ec984407994b83bf721150e7efface = L.popup({maxWidth: '300'});
+
+            
+                var html_b722f13e5af74d5f954bcdb88bd6645e = $('<div id="html_b722f13e5af74d5f954bcdb88bd6645e" style="width: 100.0%; height: 100.0%;">信林 shop158738</div>')[0];
+                popup_c0ec984407994b83bf721150e7efface.setContent(html_b722f13e5af74d5f954bcdb88bd6645e);
+            
+
+            marker_bf9483282b3a4d029f0616062d6b34df.bindPopup(popup_c0ec984407994b83bf721150e7efface);
+
+            
+        
+    
+
+            var marker_16720a63a3ce4c5297c3535973fc39ac = L.marker(
+                [25.0467571,121.5722919],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_48cb8519a48a47b4b8638d60767096de = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_16720a63a3ce4c5297c3535973fc39ac.setIcon(custom_icon_48cb8519a48a47b4b8638d60767096de);
+            
+    
+            var popup_efc3418df5cb47e5939f470f2695bac6 = L.popup({maxWidth: '300'});
+
+            
+                var html_4cb51058459c4abaaa2a67377c90b283 = $('<div id="html_4cb51058459c4abaaa2a67377c90b283" style="width: 100.0%; height: 100.0%;">松錢 shop159269</div>')[0];
+                popup_efc3418df5cb47e5939f470f2695bac6.setContent(html_4cb51058459c4abaaa2a67377c90b283);
+            
+
+            marker_16720a63a3ce4c5297c3535973fc39ac.bindPopup(popup_efc3418df5cb47e5939f470f2695bac6);
+
+            
+        
+    
+
+            var marker_a9d7451342064cec9ecfa8544b8ea41b = L.marker(
+                [25.0416917,121.5790542],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_61bb4f31c39740a3b7496ceec03cc102 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_a9d7451342064cec9ecfa8544b8ea41b.setIcon(custom_icon_61bb4f31c39740a3b7496ceec03cc102);
+            
+    
+            var popup_9ef06094983b46b3ad267589222dc33f = L.popup({maxWidth: '300'});
+
+            
+                var html_f038663d97dd4c0398ee042b63cb45be = $('<div id="html_f038663d97dd4c0398ee042b63cb45be" style="width: 100.0%; height: 100.0%;">捷忠 shop161376</div>')[0];
+                popup_9ef06094983b46b3ad267589222dc33f.setContent(html_f038663d97dd4c0398ee042b63cb45be);
+            
+
+            marker_a9d7451342064cec9ecfa8544b8ea41b.bindPopup(popup_9ef06094983b46b3ad267589222dc33f);
+
+            
+        
+    
+
+            var marker_586d4c5b99fc46249aa0aa5ac7706410 = L.marker(
+                [25.0234125,121.5695056],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_d1d988a66e3b45308cc9aa96be8005e7 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_586d4c5b99fc46249aa0aa5ac7706410.setIcon(custom_icon_d1d988a66e3b45308cc9aa96be8005e7);
+            
+    
+            var popup_089c18f476814317b8b2243286496b59 = L.popup({maxWidth: '300'});
+
+            
+                var html_e3420196b9b543899a9d9fd79e549f21 = $('<div id="html_e3420196b9b543899a9d9fd79e549f21" style="width: 100.0%; height: 100.0%;">總站 shop162483</div>')[0];
+                popup_089c18f476814317b8b2243286496b59.setContent(html_e3420196b9b543899a9d9fd79e549f21);
+            
+
+            marker_586d4c5b99fc46249aa0aa5ac7706410.bindPopup(popup_089c18f476814317b8b2243286496b59);
+
+            
+        
+    
+
+            var marker_3d02bb51cc3f472c89d604834d5276f3 = L.marker(
+                [25.0342889,121.5600266],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_473043000f7c4271b6d4ab2918d78566 = L.icon({
+                    iconUrl: './pic/end_shop.png',
+                    iconSize: [50,50],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_3d02bb51cc3f472c89d604834d5276f3.setIcon(custom_icon_473043000f7c4271b6d4ab2918d78566);
+            
+    
+            var popup_db5e50c138e44265882c51698e61ef8b = L.popup({maxWidth: '300'});
+
+            
+                var html_cb929678638f4fd2a7cd717818caa661 = $('<div id="html_cb929678638f4fd2a7cd717818caa661" style="width: 100.0%; height: 100.0%;">凱悅 shop164216</div>')[0];
+                popup_db5e50c138e44265882c51698e61ef8b.setContent(html_cb929678638f4fd2a7cd717818caa661);
+            
+
+            marker_3d02bb51cc3f472c89d604834d5276f3.bindPopup(popup_db5e50c138e44265882c51698e61ef8b);
+
+            
+        
+    
+
+            var marker_54f9f4e990d04392b3ad54619aae271e = L.marker(
+                [25.0245326,121.5634423],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_5c0b6f2756f74b939c764a5d0d03f9ca = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_54f9f4e990d04392b3ad54619aae271e.setIcon(custom_icon_5c0b6f2756f74b939c764a5d0d03f9ca);
+            
+    
+            var popup_8b99fec4feb6497b956f8d95c8c8d08f = L.popup({maxWidth: '300'});
+
+            
+                var html_3331e5dcc15848ee80d4a5bc8c5a179b = $('<div id="html_3331e5dcc15848ee80d4a5bc8c5a179b" style="width: 100.0%; height: 100.0%;">吳興 shop164490</div>')[0];
+                popup_8b99fec4feb6497b956f8d95c8c8d08f.setContent(html_3331e5dcc15848ee80d4a5bc8c5a179b);
+            
+
+            marker_54f9f4e990d04392b3ad54619aae271e.bindPopup(popup_8b99fec4feb6497b956f8d95c8c8d08f);
+
+            
+        
+    
+
+            var marker_62c780d2a5424dd9893baba157a8b3b0 = L.marker(
+                [25.0342313,121.5610091],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_57c9c5ec8973427183437cbeedb0d014 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_62c780d2a5424dd9893baba157a8b3b0.setIcon(custom_icon_57c9c5ec8973427183437cbeedb0d014);
+            
+    
+            var popup_53d4acd2eeeb4a2eabd64199a4980584 = L.popup({maxWidth: '300'});
+
+            
+                var html_e5f141e99cdd4329adb04b3bb534ea85 = $('<div id="html_e5f141e99cdd4329adb04b3bb534ea85" style="width: 100.0%; height: 100.0%;">國貿 shop165987</div>')[0];
+                popup_53d4acd2eeeb4a2eabd64199a4980584.setContent(html_e5f141e99cdd4329adb04b3bb534ea85);
+            
+
+            marker_62c780d2a5424dd9893baba157a8b3b0.bindPopup(popup_53d4acd2eeeb4a2eabd64199a4980584);
+
+            
+        
+    
+
+            var marker_75e5bf210fe04643a5a3185f05792536 = L.marker(
+                [25.0339639,121.5644722],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_01c864304f6d435a96dc2b230c57ea3b = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_75e5bf210fe04643a5a3185f05792536.setIcon(custom_icon_01c864304f6d435a96dc2b230c57ea3b);
+            
+    
+            var popup_c5f60be9dff443e5b09d07ce08f01f5b = L.popup({maxWidth: '300'});
+
+            
+                var html_da376ff5bad4452c921b9922a67b26c6 = $('<div id="html_da376ff5bad4452c921b9922a67b26c6" style="width: 100.0%; height: 100.0%;">一零一 shop167651</div>')[0];
+                popup_c5f60be9dff443e5b09d07ce08f01f5b.setContent(html_da376ff5bad4452c921b9922a67b26c6);
+            
+
+            marker_75e5bf210fe04643a5a3185f05792536.bindPopup(popup_c5f60be9dff443e5b09d07ce08f01f5b);
+
+            
+        
+    
+
+            var marker_c0cc1292bcc44ae08d1f0c350c660559 = L.marker(
+                [25.04727,121.577578],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_905f8067d0a440efadc7ef744014f7bd = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c0cc1292bcc44ae08d1f0c350c660559.setIcon(custom_icon_905f8067d0a440efadc7ef744014f7bd);
+            
+    
+            var popup_988aeec34f77461f9e5f9a8988d3b1be = L.popup({maxWidth: '300'});
+
+            
+                var html_85b73fb7dc9945c78dfe5357a0f6bac7 = $('<div id="html_85b73fb7dc9945c78dfe5357a0f6bac7" style="width: 100.0%; height: 100.0%;">開源 shop170141</div>')[0];
+                popup_988aeec34f77461f9e5f9a8988d3b1be.setContent(html_85b73fb7dc9945c78dfe5357a0f6bac7);
+            
+
+            marker_c0cc1292bcc44ae08d1f0c350c660559.bindPopup(popup_988aeec34f77461f9e5f9a8988d3b1be);
+
+            
+        
+    
+
+            var marker_0ec8dfb391694ef7813cb0b40ff6c349 = L.marker(
+                [25.028375,121.568193],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_8513b994a427446b9ced82646d12d596 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_0ec8dfb391694ef7813cb0b40ff6c349.setIcon(custom_icon_8513b994a427446b9ced82646d12d596);
+            
+    
+            var popup_f478178efd904d39b07f2f0e1d60d005 = L.popup({maxWidth: '300'});
+
+            
+                var html_497183b5c92b4def96e90d01ed5756d9 = $('<div id="html_497183b5c92b4def96e90d01ed5756d9" style="width: 100.0%; height: 100.0%;">北府 shop170738</div>')[0];
+                popup_f478178efd904d39b07f2f0e1d60d005.setContent(html_497183b5c92b4def96e90d01ed5756d9);
+            
+
+            marker_0ec8dfb391694ef7813cb0b40ff6c349.bindPopup(popup_f478178efd904d39b07f2f0e1d60d005);
+
+            
+        
+    
+
+            var marker_c535dad8c78a4a748c6b2efb9f49ec4e = L.marker(
+                [25.0447069,121.577308],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_59d07856ebaa41aaab70fa05fe0a77b4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_c535dad8c78a4a748c6b2efb9f49ec4e.setIcon(custom_icon_59d07856ebaa41aaab70fa05fe0a77b4);
+            
+    
+            var popup_42ac53b82e31487795a79b211f229e38 = L.popup({maxWidth: '300'});
+
+            
+                var html_a9087324fcaf4b72ba69f79a246162a3 = $('<div id="html_a9087324fcaf4b72ba69f79a246162a3" style="width: 100.0%; height: 100.0%;">鑫吉 shop174534</div>')[0];
+                popup_42ac53b82e31487795a79b211f229e38.setContent(html_a9087324fcaf4b72ba69f79a246162a3);
+            
+
+            marker_c535dad8c78a4a748c6b2efb9f49ec4e.bindPopup(popup_42ac53b82e31487795a79b211f229e38);
+
+            
+        
+    
+
+            var marker_5fdf766073c94df284d8b71837779347 = L.marker(
+                [25.0291055,121.5648436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_2aa85aec00e340d1b6a7ff77e0a4dfad = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_5fdf766073c94df284d8b71837779347.setIcon(custom_icon_2aa85aec00e340d1b6a7ff77e0a4dfad);
+            
+    
+            var popup_34d45d68cf8f4ec6b7f66bd451398b6b = L.popup({maxWidth: '300'});
+
+            
+                var html_0eef2cc5a6334a98ab7d89d63e581b2c = $('<div id="html_0eef2cc5a6334a98ab7d89d63e581b2c" style="width: 100.0%; height: 100.0%;">松智 shop174970</div>')[0];
+                popup_34d45d68cf8f4ec6b7f66bd451398b6b.setContent(html_0eef2cc5a6334a98ab7d89d63e581b2c);
+            
+
+            marker_5fdf766073c94df284d8b71837779347.bindPopup(popup_34d45d68cf8f4ec6b7f66bd451398b6b);
+
+            
+        
+    
+
+            var marker_4954123ae7ad4c4a9e7a68b412365a7f = L.marker(
+                [25.0405044,121.5668964],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_7f7cef76539545f19d325d083e647964 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_4954123ae7ad4c4a9e7a68b412365a7f.setIcon(custom_icon_7f7cef76539545f19d325d083e647964);
+            
+    
+            var popup_5695375f2dbb492b945cf8ddb24ac7a3 = L.popup({maxWidth: '300'});
+
+            
+                var html_33280aa3572b48b7903f3bc750bb452d = $('<div id="html_33280aa3572b48b7903f3bc750bb452d" style="width: 100.0%; height: 100.0%;">鑫國泰 shop181912</div>')[0];
+                popup_5695375f2dbb492b945cf8ddb24ac7a3.setContent(html_33280aa3572b48b7903f3bc750bb452d);
+            
+
+            marker_4954123ae7ad4c4a9e7a68b412365a7f.bindPopup(popup_5695375f2dbb492b945cf8ddb24ac7a3);
+
+            
+        
+    
+
+            var marker_8a9438759f3c44a0b5fa848becd9619c = L.marker(
+                [25.0393572,121.5874363],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_6f24b648834845ce8d5aff015fc2fa14 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8a9438759f3c44a0b5fa848becd9619c.setIcon(custom_icon_6f24b648834845ce8d5aff015fc2fa14);
+            
+    
+            var popup_84ce542629934042968ab43236fbc1a0 = L.popup({maxWidth: '300'});
+
+            
+                var html_624e9872563b4fb8b7c8913e427ac464 = $('<div id="html_624e9872563b4fb8b7c8913e427ac464" style="width: 100.0%; height: 100.0%;">信福 shop181945</div>')[0];
+                popup_84ce542629934042968ab43236fbc1a0.setContent(html_624e9872563b4fb8b7c8913e427ac464);
+            
+
+            marker_8a9438759f3c44a0b5fa848becd9619c.bindPopup(popup_84ce542629934042968ab43236fbc1a0);
+
+            
+        
+    
+
+            var marker_31f5dad86c3842e286aed1c7bf661379 = L.marker(
+                [25.0437322,121.5444485],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_fb66f7f5bcf04c8caa95847f67a10124 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_31f5dad86c3842e286aed1c7bf661379.setIcon(custom_icon_fb66f7f5bcf04c8caa95847f67a10124);
+            
+    
+            var popup_79230019f55f42f0849f8f4fedbdeaf1 = L.popup({maxWidth: '300'});
+
+            
+                var html_e16852cb21b34809a75fd1a3e7b757a4 = $('<div id="html_e16852cb21b34809a75fd1a3e7b757a4" style="width: 100.0%; height: 100.0%;">光忠 shop182269</div>')[0];
+                popup_79230019f55f42f0849f8f4fedbdeaf1.setContent(html_e16852cb21b34809a75fd1a3e7b757a4);
+            
+
+            marker_31f5dad86c3842e286aed1c7bf661379.bindPopup(popup_79230019f55f42f0849f8f4fedbdeaf1);
+
+            
+        
+    
+
+            var marker_7f428550995b47f985cfc0848af96886 = L.marker(
+                [25.041892,121.563704],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_aac161d786e541aa9d5474c5f0937f3d = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_7f428550995b47f985cfc0848af96886.setIcon(custom_icon_aac161d786e541aa9d5474c5f0937f3d);
+            
+    
+            var popup_ac31866855b840ebb01ffc037f06e422 = L.popup({maxWidth: '300'});
+
+            
+                var html_66a4e513a24b4cd096abfb3b89619359 = $('<div id="html_66a4e513a24b4cd096abfb3b89619359" style="width: 100.0%; height: 100.0%;">聯合 shop184575</div>')[0];
+                popup_ac31866855b840ebb01ffc037f06e422.setContent(html_66a4e513a24b4cd096abfb3b89619359);
+            
+
+            marker_7f428550995b47f985cfc0848af96886.bindPopup(popup_ac31866855b840ebb01ffc037f06e422);
+
+            
+        
+    
+
+            var marker_346607dd5e294087a301dc92c289b2fe = L.marker(
+                [25.0280154,121.5567227],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_aaea76306fd04fd48e32bde5942f0091 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_346607dd5e294087a301dc92c289b2fe.setIcon(custom_icon_aaea76306fd04fd48e32bde5942f0091);
+            
+    
+            var popup_13083c9a7be648ddb98a89085a1a6c3a = L.popup({maxWidth: '300'});
+
+            
+                var html_39250ae2110a4689aae0e4a9a06a9e1e = $('<div id="html_39250ae2110a4689aae0e4a9a06a9e1e" style="width: 100.0%; height: 100.0%;">昌隆 shop185143</div>')[0];
+                popup_13083c9a7be648ddb98a89085a1a6c3a.setContent(html_39250ae2110a4689aae0e4a9a06a9e1e);
+            
+
+            marker_346607dd5e294087a301dc92c289b2fe.bindPopup(popup_13083c9a7be648ddb98a89085a1a6c3a);
+
+            
+        
+    
+
+            var marker_f1a77625642943f7bc63c7b34fa93744 = L.marker(
+                [25.0434723,121.5740349],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_f483dba46fe244c291213218223147b1 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_f1a77625642943f7bc63c7b34fa93744.setIcon(custom_icon_f483dba46fe244c291213218223147b1);
+            
+    
+            var popup_f59d4a2a44664d958553ba84bcaecf58 = L.popup({maxWidth: '300'});
+
+            
+                var html_c7392eb7bfa043d9ba670b2df884d749 = $('<div id="html_c7392eb7bfa043d9ba670b2df884d749" style="width: 100.0%; height: 100.0%;">信吉 shop188094</div>')[0];
+                popup_f59d4a2a44664d958553ba84bcaecf58.setContent(html_c7392eb7bfa043d9ba670b2df884d749);
+            
+
+            marker_f1a77625642943f7bc63c7b34fa93744.bindPopup(popup_f59d4a2a44664d958553ba84bcaecf58);
+
+            
+        
+    
+
+            var marker_3edee75dd5e843f3884be4c9b883ce94 = L.marker(
+                [25.0348367,121.573658],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_98824ed2aa6f4fc5a2bc08806ffb80da = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_3edee75dd5e843f3884be4c9b883ce94.setIcon(custom_icon_98824ed2aa6f4fc5a2bc08806ffb80da);
+            
+    
+            var popup_9296c502d189427f9f14675b4188118b = L.popup({maxWidth: '300'});
+
+            
+                var html_d52f96a95a0442ff8bb91d69c2e082db = $('<div id="html_d52f96a95a0442ff8bb91d69c2e082db" style="width: 100.0%; height: 100.0%;">信德 shop190259</div>')[0];
+                popup_9296c502d189427f9f14675b4188118b.setContent(html_d52f96a95a0442ff8bb91d69c2e082db);
+            
+
+            marker_3edee75dd5e843f3884be4c9b883ce94.bindPopup(popup_9296c502d189427f9f14675b4188118b);
+
+            
+        
+    
+
+            var marker_288f93bda3fb4bdab2afcaf8cd80fcb7 = L.marker(
+                [25.0424762,121.5649533],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_c8bea1370da54a24aac1c24d7691e417 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_288f93bda3fb4bdab2afcaf8cd80fcb7.setIcon(custom_icon_c8bea1370da54a24aac1c24d7691e417);
+            
+    
+            var popup_ad9680d01037413383d7b5b7f2be857a = L.popup({maxWidth: '300'});
+
+            
+                var html_9ac5700279984e38b72d79e23ede4892 = $('<div id="html_9ac5700279984e38b72d79e23ede4892" style="width: 100.0%; height: 100.0%;">必成 shop190330</div>')[0];
+                popup_ad9680d01037413383d7b5b7f2be857a.setContent(html_9ac5700279984e38b72d79e23ede4892);
+            
+
+            marker_288f93bda3fb4bdab2afcaf8cd80fcb7.bindPopup(popup_ad9680d01037413383d7b5b7f2be857a);
+
+            
+        
+    
+
+            var marker_6164d29c57684f229a69b88b3df54168 = L.marker(
+                [25.0388052,121.5859694],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_c4e0fc0932144b58af3f0b4fcf1711f9 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_6164d29c57684f229a69b88b3df54168.setIcon(custom_icon_c4e0fc0932144b58af3f0b4fcf1711f9);
+            
+    
+            var popup_97fa7be3e1d5460f9cc9b3d2cc4c392d = L.popup({maxWidth: '300'});
+
+            
+                var html_d8a64180b2ba473588509eb2cbbbd7b9 = $('<div id="html_d8a64180b2ba473588509eb2cbbbd7b9" style="width: 100.0%; height: 100.0%;">留公 shop854580</div>')[0];
+                popup_97fa7be3e1d5460f9cc9b3d2cc4c392d.setContent(html_d8a64180b2ba473588509eb2cbbbd7b9);
+            
+
+            marker_6164d29c57684f229a69b88b3df54168.bindPopup(popup_97fa7be3e1d5460f9cc9b3d2cc4c392d);
+
+            
+        
+    
+
+            var marker_7c4f608bd5d24246b83b6e3936d3fd80 = L.marker(
+                [25.047321,121.566457],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_f4289e44a59e40b6b17488762559e3d8 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_7c4f608bd5d24246b83b6e3936d3fd80.setIcon(custom_icon_f4289e44a59e40b6b17488762559e3d8);
+            
+    
+            var popup_b43c9ac699c64b2591dc399bc7ecfbd0 = L.popup({maxWidth: '300'});
+
+            
+                var html_c1ae46cac0924051aa5087dca1c5178f = $('<div id="html_c1ae46cac0924051aa5087dca1c5178f" style="width: 100.0%; height: 100.0%;">道生 shop870504</div>')[0];
+                popup_b43c9ac699c64b2591dc399bc7ecfbd0.setContent(html_c1ae46cac0924051aa5087dca1c5178f);
+            
+
+            marker_7c4f608bd5d24246b83b6e3936d3fd80.bindPopup(popup_b43c9ac699c64b2591dc399bc7ecfbd0);
+
+            
+        
+    
+
+            var marker_8464ef1f87e64ae599715122a9cf04a5 = L.marker(
+                [25.0267673,121.5685436],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_58e8779dd21649d485ef3d1d16b3dc29 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_8464ef1f87e64ae599715122a9cf04a5.setIcon(custom_icon_58e8779dd21649d485ef3d1d16b3dc29);
+            
+    
+            var popup_a2c08124759b4941862d57e4cb571c5c = L.popup({maxWidth: '300'});
+
+            
+                var html_75ac719943bd43448a4e0689152cf47f = $('<div id="html_75ac719943bd43448a4e0689152cf47f" style="width: 100.0%; height: 100.0%;">松仁 shop906564</div>')[0];
+                popup_a2c08124759b4941862d57e4cb571c5c.setContent(html_75ac719943bd43448a4e0689152cf47f);
+            
+
+            marker_8464ef1f87e64ae599715122a9cf04a5.bindPopup(popup_a2c08124759b4941862d57e4cb571c5c);
+
+            
+        
+    
+
+            var marker_e92b000c7fe5453c992bf7b46570174f = L.marker(
+                [25.041214,121.5794663],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_6cd78d9c9b66497e96172e4b9d1ce04f = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_e92b000c7fe5453c992bf7b46570174f.setIcon(custom_icon_6cd78d9c9b66497e96172e4b9d1ce04f);
+            
+    
+            var popup_6bc0988d9a4f4094b3c919e091ca4f0f = L.popup({maxWidth: '300'});
+
+            
+                var html_d93f3ba47e864a8f8dd1f18b24ce20cd = $('<div id="html_d93f3ba47e864a8f8dd1f18b24ce20cd" style="width: 100.0%; height: 100.0%;">光東 shop930637</div>')[0];
+                popup_6bc0988d9a4f4094b3c919e091ca4f0f.setContent(html_d93f3ba47e864a8f8dd1f18b24ce20cd);
+            
+
+            marker_e92b000c7fe5453c992bf7b46570174f.bindPopup(popup_6bc0988d9a4f4094b3c919e091ca4f0f);
+
+            
+        
+    
+
+            var marker_67aa1528ba94433d8303eeadea537d37 = L.marker(
+                [25.0221574,121.5688723],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_acd742556129413d92c08cf57ea70300 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_67aa1528ba94433d8303eeadea537d37.setIcon(custom_icon_acd742556129413d92c08cf57ea70300);
+            
+    
+            var popup_f7f3b86417084b55b5e6d893727465ca = L.popup({maxWidth: '300'});
+
+            
+                var html_f5119b5a88c64f8f8a60c13b799039a4 = $('<div id="html_f5119b5a88c64f8f8a60c13b799039a4" style="width: 100.0%; height: 100.0%;">惠安 shop961000</div>')[0];
+                popup_f7f3b86417084b55b5e6d893727465ca.setContent(html_f5119b5a88c64f8f8a60c13b799039a4);
+            
+
+            marker_67aa1528ba94433d8303eeadea537d37.bindPopup(popup_f7f3b86417084b55b5e6d893727465ca);
+
+            
+        
+    
+
+            var marker_1bd5170a5cec42a894023251784d226e = L.marker(
+                [25.0454044,121.5689813],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_8964ad7d0f10496f920a366f088fd689 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_1bd5170a5cec42a894023251784d226e.setIcon(custom_icon_8964ad7d0f10496f920a366f088fd689);
+            
+    
+            var popup_33ebdd9d01bd47e0a41a8644851e603c = L.popup({maxWidth: '300'});
+
+            
+                var html_f72307ae6d0d4b98a0c0c56d2e1ae37b = $('<div id="html_f72307ae6d0d4b98a0c0c56d2e1ae37b" style="width: 100.0%; height: 100.0%;">革新 shop961974</div>')[0];
+                popup_33ebdd9d01bd47e0a41a8644851e603c.setContent(html_f72307ae6d0d4b98a0c0c56d2e1ae37b);
+            
+
+            marker_1bd5170a5cec42a894023251784d226e.bindPopup(popup_33ebdd9d01bd47e0a41a8644851e603c);
+
+            
+        
+    
+
+            var marker_3732843a3e6248c8af1f9c2256a8dfc2 = L.marker(
+                [25.0312165,121.5611086],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_d9b0bad922ca40509034ce1fced790e4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_3732843a3e6248c8af1f9c2256a8dfc2.setIcon(custom_icon_d9b0bad922ca40509034ce1fced790e4);
+            
+    
+            var popup_db06b3560a6649758b87cacff50df68d = L.popup({maxWidth: '300'});
+
+            
+                var html_526e6babfcaa452bac1771d85fb4e9ac = $('<div id="html_526e6babfcaa452bac1771d85fb4e9ac" style="width: 100.0%; height: 100.0%;">興貿 shop963556</div>')[0];
+                popup_db06b3560a6649758b87cacff50df68d.setContent(html_526e6babfcaa452bac1771d85fb4e9ac);
+            
+
+            marker_3732843a3e6248c8af1f9c2256a8dfc2.bindPopup(popup_db06b3560a6649758b87cacff50df68d);
+
+            
+        
+    
+
+            var marker_5d6c264da1804d9da5914863e4acb947 = L.marker(
+                [25.026175,121.557473],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_c89de119210842dda8bb6fde455bb319 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_5d6c264da1804d9da5914863e4acb947.setIcon(custom_icon_c89de119210842dda8bb6fde455bb319);
+            
+    
+            var popup_0ca1b30e6d924afb8299ac30d14420f4 = L.popup({maxWidth: '300'});
+
+            
+                var html_2230afd298074891a73911788a656547 = $('<div id="html_2230afd298074891a73911788a656547" style="width: 100.0%; height: 100.0%;">信嘉 shop965194</div>')[0];
+                popup_0ca1b30e6d924afb8299ac30d14420f4.setContent(html_2230afd298074891a73911788a656547);
+            
+
+            marker_5d6c264da1804d9da5914863e4acb947.bindPopup(popup_0ca1b30e6d924afb8299ac30d14420f4);
+
+            
+        
+    
+
+            var marker_0a29fd2ea6734b11a1640662fa2c4f20 = L.marker(
+                [25.0258373,121.5663366],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_30c0cc07b7ab4440ba8f1967ad813837 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_0a29fd2ea6734b11a1640662fa2c4f20.setIcon(custom_icon_30c0cc07b7ab4440ba8f1967ad813837);
+            
+    
+            var popup_95261e0103f7468991a62419c9c0a973 = L.popup({maxWidth: '300'});
+
+            
+                var html_cfcec1d5a1d3462996a9d60c7a4853eb = $('<div id="html_cfcec1d5a1d3462996a9d60c7a4853eb" style="width: 100.0%; height: 100.0%;">信醫 shop970901</div>')[0];
+                popup_95261e0103f7468991a62419c9c0a973.setContent(html_cfcec1d5a1d3462996a9d60c7a4853eb);
+            
+
+            marker_0a29fd2ea6734b11a1640662fa2c4f20.bindPopup(popup_95261e0103f7468991a62419c9c0a973);
+
+            
+        
+    
+
+            var marker_0655a000da474ae18c279a694e054f0c = L.marker(
+                [25.0397963,121.5780166],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_9d1d8c682cbc46688b032193d72e4efc = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_0655a000da474ae18c279a694e054f0c.setIcon(custom_icon_9d1d8c682cbc46688b032193d72e4efc);
+            
+    
+            var popup_1cb0686bfe284b79a22ffceb9a0481ad = L.popup({maxWidth: '300'});
+
+            
+                var html_7d5f6de93a5649da9b9beeed8785f1e1 = $('<div id="html_7d5f6de93a5649da9b9beeed8785f1e1" style="width: 100.0%; height: 100.0%;">新東宮 shop975607</div>')[0];
+                popup_1cb0686bfe284b79a22ffceb9a0481ad.setContent(html_7d5f6de93a5649da9b9beeed8785f1e1);
+            
+
+            marker_0655a000da474ae18c279a694e054f0c.bindPopup(popup_1cb0686bfe284b79a22ffceb9a0481ad);
+
+            
+        
+    
+
+            var marker_7f616c3393f843fea603936f130f0dcf = L.marker(
+                [25.0270409,121.5631091],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_9a851fc192b247a5aa4b75c22a083e0d = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_7f616c3393f843fea603936f130f0dcf.setIcon(custom_icon_9a851fc192b247a5aa4b75c22a083e0d);
+            
+    
+            var popup_ac7d5b3f517448deae75c928e3d02d07 = L.popup({maxWidth: '300'});
+
+            
+                var html_9bbb56ff0c8444d0bc9cef0b6cf4d214 = $('<div id="html_9bbb56ff0c8444d0bc9cef0b6cf4d214" style="width: 100.0%; height: 100.0%;">北醫 shop978798</div>')[0];
+                popup_ac7d5b3f517448deae75c928e3d02d07.setContent(html_9bbb56ff0c8444d0bc9cef0b6cf4d214);
+            
+
+            marker_7f616c3393f843fea603936f130f0dcf.bindPopup(popup_ac7d5b3f517448deae75c928e3d02d07);
+
+            
+        
+    
+
+            var marker_891375bd19934c69a82b7168ca5fcd66 = L.marker(
+                [25.0368446,121.5686546],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_409c4d01fec84aa1aec6fa89d4792320 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_891375bd19934c69a82b7168ca5fcd66.setIcon(custom_icon_409c4d01fec84aa1aec6fa89d4792320);
+            
+    
+            var popup_3c795e3a335b429c833908804afc634b = L.popup({maxWidth: '300'});
+
+            
+                var html_ea87328400c44c4d99afabce360ae9fc = $('<div id="html_ea87328400c44c4d99afabce360ae9fc" style="width: 100.0%; height: 100.0%;">宏泰 shop981901</div>')[0];
+                popup_3c795e3a335b429c833908804afc634b.setContent(html_ea87328400c44c4d99afabce360ae9fc);
+            
+
+            marker_891375bd19934c69a82b7168ca5fcd66.bindPopup(popup_3c795e3a335b429c833908804afc634b);
+
+            
+        
+    
+
+            var marker_d665f87a13ec4e03b3be3a2266bcb2f1 = L.marker(
+                [25.034161,121.575201],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_2188d1aff1324764aaecb9013752f2ad = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_d665f87a13ec4e03b3be3a2266bcb2f1.setIcon(custom_icon_2188d1aff1324764aaecb9013752f2ad);
+            
+    
+            var popup_306e1d34b11843f18652423d4053a86f = L.popup({maxWidth: '300'});
+
+            
+                var html_b59adaeec165404798c4848a65ba31fe = $('<div id="html_b59adaeec165404798c4848a65ba31fe" style="width: 100.0%; height: 100.0%;">嘉馥 shop988016</div>')[0];
+                popup_306e1d34b11843f18652423d4053a86f.setContent(html_b59adaeec165404798c4848a65ba31fe);
+            
+
+            marker_d665f87a13ec4e03b3be3a2266bcb2f1.bindPopup(popup_306e1d34b11843f18652423d4053a86f);
+
+            
+        
+    
+
+            var marker_25114565ed40402faf72ae20bf13bb40 = L.marker(
+                [25.0358094,121.5785008],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_ae01fccac0cc410ca8425b4c4644e8a4 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_25114565ed40402faf72ae20bf13bb40.setIcon(custom_icon_ae01fccac0cc410ca8425b4c4644e8a4);
+            
+    
+            var popup_93d394bbc741434ca8c9d38f951c868e = L.popup({maxWidth: '300'});
+
+            
+                var html_d7aa7c5435774683a2504f12bd9cff86 = $('<div id="html_d7aa7c5435774683a2504f12bd9cff86" style="width: 100.0%; height: 100.0%;">松家 shop991702</div>')[0];
+                popup_93d394bbc741434ca8c9d38f951c868e.setContent(html_d7aa7c5435774683a2504f12bd9cff86);
+            
+
+            marker_25114565ed40402faf72ae20bf13bb40.bindPopup(popup_93d394bbc741434ca8c9d38f951c868e);
+
+            
+        
+    
+
+            var marker_936d9ee0a03d4f8a95fdc34d534bcbaa = L.marker(
+                [25.0429861,121.5659519],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+
+                var custom_icon_ea0203fe2bd843a79caad27af185d596 = L.icon({
+                    iconUrl: './pic/shop.png',
+                    iconSize: [40,40],
+                    
+
+                    
+                    
+                    
+
+                    
+                    });
+                marker_936d9ee0a03d4f8a95fdc34d534bcbaa.setIcon(custom_icon_ea0203fe2bd843a79caad27af185d596);
+            
+    
+            var popup_c4a0dcc8908a4288bc7fce16e7b09098 = L.popup({maxWidth: '300'});
+
+            
+                var html_5306a72a14874389941622e7f553a79c = $('<div id="html_5306a72a14874389941622e7f553a79c" style="width: 100.0%; height: 100.0%;">松高 shop993041</div>')[0];
+                popup_c4a0dcc8908a4288bc7fce16e7b09098.setContent(html_5306a72a14874389941622e7f553a79c);
+            
+
+            marker_936d9ee0a03d4f8a95fdc34d534bcbaa.bindPopup(popup_c4a0dcc8908a4288bc7fce16e7b09098);
+
+            
+        
+    
+                var poly_line_7b4450f6df784e66a1f85632c5c99109 = L.polyline(
+                    [[25.04062, 121.56404], [25.0405, 121.56394], [25.04045, 121.5639], [25.04038, 121.56385], [25.0406, 121.56338], [25.04063, 121.56256], [25.04083, 121.56256]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_41fb9c37e03e4cd5aaa55af7d406895b = L.polyline(
+                    [[25.04083, 121.56256], [25.04037, 121.56254], [25.04022, 121.56254], [25.04019, 121.56311], [25.04041, 121.56325]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_d677f47bf6f2494b98543a20e42a3f30 = L.polyline(
+                    [[25.04041, 121.56325], [25.04094, 121.56357], [25.04112, 121.56367], [25.04111, 121.56433], [25.04111, 121.56455], [25.04152, 121.56481], [25.0431, 121.56575]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_1a1c2eb75d9d4f63b805bc64993c7eeb = L.polyline(
+                    [[25.0431, 121.56575], [25.04335, 121.56591], [25.04331, 121.56608], [25.04327, 121.56659], [25.04327, 121.56684], [25.04334, 121.56708], [25.04355, 121.56749], [25.04431, 121.56871], [25.04439, 121.56879], [25.04397, 121.56878], [25.04315, 121.56875], [25.04253, 121.56873], [25.04171, 121.56875], [25.0411, 121.56871], [25.04116, 121.56686], [25.04121, 121.56512]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_bee40788cb734ef58e0d2d2bbb76970f = L.polyline(
+                    [[25.04121, 121.56512], [25.04125, 121.56441], [25.04127, 121.56364], [25.04145, 121.56364], [25.04189, 121.56365]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_10d6b970bdc845ab936a4523c6416298 = L.polyline(
+                    [[25.04193, 121.56365], [25.04236, 121.56366], [25.04271, 121.56367], [25.04325, 121.56368], [25.04323, 121.5646], [25.04322, 121.56484], [25.0432, 121.56493], [25.04307, 121.56522], [25.04298, 121.5654], [25.04262, 121.56518], [25.04242, 121.56506]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_51795aa2b9374b9f844b56beb8c9a9fe = L.polyline(
+                    [[25.04242, 121.56506], [25.04176, 121.56468], [25.04164, 121.56463], [25.0416, 121.56463], [25.04152, 121.56463], [25.04149, 121.56464], [25.04147, 121.56467], [25.04147, 121.5647], [25.04152, 121.56481], [25.0431, 121.56575], [25.04335, 121.56591], [25.04331, 121.56608], [25.04327, 121.56659], [25.04327, 121.56684], [25.04334, 121.56708], [25.04355, 121.56749], [25.04431, 121.56871], [25.04439, 121.56879], [25.04397, 121.56878], [25.04356, 121.56877], [25.04356, 121.56884]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_b091c10a86b74e249faa5a7c413f38d9 = L.polyline(
+                    [[25.04356, 121.56884], [25.04356, 121.56877], [25.04315, 121.56875], [25.04273, 121.56873], [25.04276, 121.56772], [25.04301, 121.56773], [25.04309, 121.56776], [25.04313, 121.56778], [25.04316, 121.56779], [25.04318, 121.56778], [25.04316, 121.5683]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_8d2d522b1986493eb64c1de8e344b2ce = L.polyline(
+                    [[25.04316, 121.5683], [25.04315, 121.56875], [25.04397, 121.56878], [25.04439, 121.56879], [25.04454, 121.56906], [25.04484, 121.56946], [25.04533, 121.57008], [25.0456, 121.57037], [25.04595, 121.57084], [25.04619, 121.57112], [25.04629, 121.57123], [25.04652, 121.57158], [25.04687, 121.57222]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_f321c5e63b5e49b8be7d60ce8ac8b8ea = L.polyline(
+                    [[25.04676, 121.57214], [25.04566, 121.57211], [25.04465, 121.57207], [25.04368, 121.57203]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_97dd3531666844cd80e8c13020f48490 = L.polyline(
+                    [[25.04368, 121.57203], [25.04347, 121.57202], [25.04346, 121.57236], [25.04346, 121.57288], [25.04342, 121.57403]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_404b6c8380ac41e9a151c9a940c97ed6 = L.polyline(
+                    [[25.04342, 121.57403], [25.04339, 121.57541], [25.0429, 121.57539], [25.04083, 121.57533], [25.04077, 121.57758], [25.0408, 121.57789], [25.0409, 121.57815], [25.04149, 121.57924], [25.04172, 121.5791]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_9e9669b5e6d3446a8b4a899a34ae5a78 = L.polyline(
+                    [[25.04172, 121.5791], [25.04159, 121.57918], [25.04146, 121.57895], [25.04102, 121.57812], [25.04092, 121.5779], [25.04089, 121.57776], [25.04079, 121.57777], [25.03991, 121.57778], [25.0398, 121.57779], [25.03967, 121.57777], [25.03962, 121.57775], [25.03956, 121.57785], [25.03964, 121.57788], [25.03979, 121.57789]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_a43fbf6b233445f8ba24aaa684012fbf = L.polyline(
+                    [[25.03979, 121.57789], [25.0408, 121.57789], [25.04092, 121.5779], [25.04089, 121.57776], [25.04087, 121.57761], [25.04087, 121.57753], [25.04093, 121.57533], [25.04097, 121.57403], [25.04087, 121.57402], [25.0402, 121.57401], [25.03893, 121.57397], [25.03847, 121.57394], [25.03844, 121.57396], [25.03784, 121.57447], [25.03738, 121.57489], [25.03759, 121.57516]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_47f598283c8044ea82acb4e0c997e1bc = L.polyline(
+                    [[25.03759, 121.57516], [25.03948, 121.57777], [25.03953, 121.57781], [25.03962, 121.57787], [25.03966, 121.57789], [25.04015, 121.57789], [25.04092, 121.5779], [25.04088, 121.5777], [25.04087, 121.57747], [25.04097, 121.57403], [25.04077, 121.57402]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_2930d231bfff4cfda6b54342f4dc1945 = L.polyline(
+                    [[25.04086, 121.57413], [25.0408, 121.57694], [25.04065, 121.57693]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_1f88cd1f69a144859f6a8c74f2e4bfa7 = L.polyline(
+                    [[25.04065, 121.57693], [25.04034, 121.57691], [25.0403, 121.5769], [25.0403, 121.57688], [25.04025, 121.57686], [25.03998, 121.57674], [25.03937, 121.57656], [25.03928, 121.57651], [25.03925, 121.57652], [25.0392, 121.57655], [25.0389, 121.5768], [25.03881, 121.57667], [25.03836, 121.57602], [25.03751, 121.57487], [25.03742, 121.57473], [25.03732, 121.57463], [25.03715, 121.57458], [25.03421, 121.57447], [25.03378, 121.57447], [25.03359, 121.5745], [25.03348, 121.57451], [25.03339, 121.57458], [25.03294, 121.57458], [25.03294, 121.57465]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_e37dc85ff3c243b5ab00bd35b841e334 = L.polyline(
+                    [[25.03294, 121.57465], [25.03293, 121.57488], [25.03294, 121.57511], [25.03345, 121.5751], [25.03355, 121.5751], [25.0336, 121.57509], [25.03364, 121.57508], [25.03366, 121.57507], [25.03384, 121.57492], [25.0341, 121.57526]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_b94d6bbb591a465694d190af72ec0552 = L.polyline(
+                    [[25.03422, 121.57527], [25.03437, 121.57514], [25.03442, 121.57512], [25.03577, 121.57517], [25.03611, 121.57518], [25.03611, 121.57546], [25.03612, 121.57552], [25.0372, 121.57702]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_3a6c5ed8bb7746eb8b12f38549f0e53a = L.polyline(
+                    [[25.03723, 121.57706], [25.03734, 121.57721], [25.03711, 121.57731], [25.0367, 121.57753], [25.03634, 121.57775], [25.03611, 121.57793], [25.03615, 121.57801], [25.03624, 121.57838], [25.03621, 121.57847], [25.0361, 121.5785], [25.03596, 121.57853], [25.03585, 121.57859]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_afe745ecc5474ab896dc2291ac5cdf94 = L.polyline(
+                    [[25.03585, 121.57859], [25.03596, 121.57853], [25.0361, 121.5785], [25.03621, 121.57847], [25.03627, 121.57878], [25.0363, 121.57892], [25.03629, 121.57904], [25.03627, 121.57914], [25.03633, 121.57915], [25.03688, 121.57921], [25.03761, 121.5793], [25.03814, 121.57937], [25.03824, 121.57936]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_32f63c14fe4a4dc682758f2d035a1484 = L.polyline(
+                    [[25.03824, 121.57936], [25.03874, 121.57926], [25.03912, 121.57918], [25.03936, 121.57916], [25.03944, 121.57918], [25.03955, 121.57921], [25.03961, 121.57929], [25.03969, 121.57942], [25.0399, 121.57999], [25.03997, 121.58018], [25.04026, 121.58], [25.0406, 121.57979], [25.04119, 121.57941]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_f470f298a9034ec8930317b77a8c9de6 = L.polyline(
+                    [[25.04119, 121.57941], [25.0406, 121.57979], [25.04026, 121.58], [25.03977, 121.58029], [25.03908, 121.58062], [25.03845, 121.58089], [25.03764, 121.58127], [25.03718, 121.58149], [25.0371, 121.58153], [25.03723, 121.58189], [25.03736, 121.58221], [25.03742, 121.58237], [25.03778, 121.58328]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_eaf0c3dbbb384d3180d7cc8c357c351e = L.polyline(
+                    [[25.03778, 121.58328], [25.03802, 121.58388], [25.0381, 121.58398], [25.03822, 121.58407], [25.0383, 121.5841], [25.0383, 121.58417], [25.03831, 121.58422], [25.03834, 121.5843], [25.03853, 121.58486], [25.03884, 121.58596]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_64df57833814429484b5f903abd22980 = L.polyline(
+                    [[25.03884, 121.58596], [25.03926, 121.58746]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_e54f7afa1f934186abecb63d58457c18 = L.polyline(
+                    [[25.03926, 121.58746], [25.039, 121.5865], [25.03853, 121.58486], [25.03832, 121.58425], [25.0383, 121.58418], [25.03831, 121.58403], [25.03816, 121.58394], [25.03803, 121.58377], [25.04007, 121.58283], [25.04159, 121.58212], [25.04262, 121.58146], [25.04286, 121.58129], [25.04294, 121.58122], [25.04311, 121.58104], [25.0428, 121.58072], [25.04236, 121.58025], [25.04203, 121.57979], [25.0418, 121.57947], [25.04159, 121.57918], [25.04146, 121.57895], [25.04102, 121.57812], [25.04092, 121.5779], [25.0421, 121.57787], [25.04441, 121.57786], [25.04511, 121.57786], [25.04625, 121.57785], [25.04747, 121.57784], [25.04808, 121.57785], [25.04892, 121.57785], [25.04891, 121.57829]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_b6eae778f4674be4946ac43f8cbe17d9 = L.polyline(
+                    [[25.04891, 121.57829], [25.04886, 121.57979], [25.04887, 121.58006], [25.04847, 121.58007], [25.04844, 121.57997], [25.04826, 121.57951], [25.04819, 121.57923], [25.04813, 121.57875], [25.04808, 121.57785], [25.04807, 121.57773], [25.04797, 121.57773], [25.04731, 121.57773], [25.04732, 121.57758]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_2cc7b742305a4317ace991c26c692905 = L.polyline(
+                    [[25.04732, 121.57758], [25.04733, 121.57683], [25.04675, 121.57694], [25.04649, 121.57698], [25.04604, 121.577], [25.04542, 121.57701], [25.04507, 121.57715], [25.04472, 121.57714]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_06b35373cde8468a844f343b754d07af = L.polyline(
+                    [[25.04472, 121.57714], [25.04435, 121.57712], [25.04434, 121.57773], [25.04327, 121.57774], [25.04164, 121.57776], [25.04089, 121.57776], [25.03985, 121.57779], [25.03969, 121.57778], [25.03962, 121.57775], [25.03925, 121.57726], [25.03881, 121.57667], [25.03836, 121.57602], [25.03751, 121.57487], [25.03742, 121.57473], [25.03737, 121.57467], [25.03726, 121.57461], [25.03715, 121.57458], [25.03644, 121.57455], [25.03468, 121.57449], [25.0347, 121.57365]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_889c0007e14d4fac809cc618bbb84ec2 = L.polyline(
+                    [[25.0347, 121.57365], [25.03469, 121.57439], [25.03468, 121.57449], [25.03459, 121.57449], [25.03386, 121.57447], [25.03372, 121.57447], [25.03359, 121.5745], [25.03336, 121.57405], [25.0332, 121.57367], [25.03304, 121.57319], [25.03301, 121.57309], [25.03289, 121.57266], [25.03284, 121.57225], [25.03284, 121.5718], [25.03284, 121.57069], [25.03288, 121.56839], [25.03288, 121.56824], [25.03277, 121.56824], [25.0326, 121.56829], [25.03215, 121.56829], [25.0304, 121.56832], [25.02838, 121.56834]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_dafc0fe5bad249329ad0514b2b509bee = L.polyline(
+                    [[25.02838, 121.56834], [25.02672, 121.56839], [25.02677, 121.56854]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_7dcc7843bbe64977a3fb99c4d54ea866 = L.polyline(
+                    [[25.02677, 121.56854], [25.02674, 121.56846], [25.02672, 121.56839], [25.02658, 121.56844], [25.0264, 121.56853], [25.02548, 121.56904], [25.02514, 121.56921], [25.02478, 121.56941], [25.02372, 121.57001], [25.02363, 121.56996], [25.02337, 121.56979], [25.02287, 121.56949], [25.02243, 121.56922], [25.02211, 121.56904], [25.02219, 121.56889]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_cb0d9d55c9db4903850870b3f3ff6b64 = L.polyline(
+                    [[25.02219, 121.56889], [25.02211, 121.56904], [25.02243, 121.56922], [25.02275, 121.56942], [25.0232, 121.5697], [25.02337, 121.56979], [25.02349, 121.56956]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_2e66b7d29dac478a9790b0ed2bc18ae2 = L.polyline(
+                    [[25.02349, 121.56956], [25.02423, 121.56811], [25.0245, 121.56782], [25.02471, 121.56759], [25.02479, 121.56745], [25.02533, 121.56677], [25.02588, 121.56642]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_1a51b7a52c96410595dd565a35efdd39 = L.polyline(
+                    [[25.02588, 121.56642], [25.02636, 121.56609], [25.02654, 121.56593], [25.02655, 121.56584], [25.02654, 121.56465], [25.02652, 121.56419], [25.02691, 121.56383], [25.02731, 121.5635]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_df93f240cc444474a54a7662dcbba4e0 = L.polyline(
+                    [[25.02731, 121.5635], [25.02716, 121.56362]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_1b11deedef3646c0ae4ed2a561c25de5 = L.polyline(
+                    [[25.02716, 121.56362], [25.02761, 121.56325], [25.02772, 121.56316], [25.02785, 121.56333], [25.02792, 121.56343], [25.02836, 121.56393], [25.0286, 121.56423], [25.02889, 121.56462], [25.02909, 121.56486]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_3ac5a9a3949f4d70b2f9ad399711064e = L.polyline(
+                    [[25.02909, 121.56486], [25.02878, 121.56449], [25.02857, 121.5642], [25.02788, 121.56338], [25.02742, 121.56278], [25.02643, 121.56153], [25.02608, 121.56107]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_b9e34dc8ee944d7dbc08975a904057aa = L.polyline(
+                    [[25.02608, 121.56107], [25.02649, 121.56161], [25.02677, 121.56137], [25.027, 121.56116], [25.02704, 121.55988], [25.02705, 121.55911], [25.02707, 121.55825], [25.02719, 121.55826], [25.02725, 121.55825], [25.02734, 121.55823], [25.02758, 121.55809], [25.02765, 121.55807], [25.02815, 121.55807], [25.0283, 121.55808], [25.0287, 121.55817], [25.02829, 121.55901], [25.02828, 121.55925], [25.02827, 121.56035], [25.02832, 121.56047], [25.02844, 121.56064], [25.02878, 121.5611], [25.02903, 121.56146], [25.02911, 121.5614]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_9e669dd74bc74d17a97c89f7fead53a7 = L.polyline(
+                    [[25.02911, 121.5614], [25.02903, 121.56146], [25.02915, 121.56162], [25.02943, 121.56203], [25.02959, 121.56228], [25.02915, 121.56265], [25.02816, 121.56346], [25.02809, 121.56352], [25.02805, 121.56357], [25.02792, 121.56343], [25.02785, 121.56333], [25.02772, 121.56316], [25.02761, 121.56325], [25.0271, 121.56368], [25.02681, 121.56392], [25.02657, 121.56363], [25.02628, 121.56332], [25.02554, 121.5625], [25.02487, 121.56315], [25.02454, 121.56346]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_92a5837cbb674d57bdcd686e9224064a = L.polyline(
+                    [[25.02454, 121.56346], [25.02437, 121.56364], [25.0247, 121.5637], [25.02555, 121.56392], [25.02572, 121.56397], [25.02603, 121.56411], [25.02637, 121.56426], [25.02652, 121.56419], [25.02681, 121.56392], [25.0271, 121.56368], [25.02761, 121.56325], [25.02772, 121.56316], [25.02785, 121.56333], [25.02792, 121.56343], [25.02805, 121.56357], [25.02809, 121.56352], [25.02816, 121.56346], [25.02967, 121.56221], [25.03069, 121.56131], [25.03077, 121.56128], [25.03109, 121.56128], [25.03112, 121.5611]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_027021abc86445e6be8e4698087b52e5 = L.polyline(
+                    [[25.03112, 121.5611], [25.03121, 121.56048], [25.03123, 121.56039], [25.03125, 121.56019], [25.0319, 121.56032], [25.03203, 121.56034], [25.0321, 121.56036], [25.0321, 121.56041], [25.03206, 121.56132], [25.03253, 121.5613], [25.03295, 121.56133], [25.03366, 121.56137], [25.0337, 121.56137], [25.03385, 121.56134], [25.03391, 121.56131], [25.03397, 121.56125], [25.03413, 121.56095]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_7c46af59d5854c21aa28108e6e2bef94 = L.polyline(
+                    [[25.03413, 121.56095], [25.03399, 121.56122], [25.03394, 121.56129], [25.03387, 121.56134], [25.03383, 121.56135], [25.03369, 121.56137], [25.03315, 121.56133], [25.03295, 121.56133], [25.03293, 121.56178], [25.03292, 121.56221], [25.03296, 121.56273], [25.03295, 121.56327], [25.03293, 121.56365], [25.03284, 121.56496], [25.03283, 121.56541], [25.03314, 121.56541], [25.03294, 121.56541], [25.03294, 121.56529], [25.03304, 121.56406]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_be88fa2237f24c7384fe3db4d36444b4 = L.polyline(
+                    [[25.03304, 121.56406], [25.03307, 121.56361], [25.03308, 121.5635], [25.0332, 121.56351], [25.03326, 121.56351], [25.03329, 121.56351], [25.03341, 121.56352], [25.034, 121.56356]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_8efacbbe52624d099c27e47c7b774ea5 = L.polyline(
+                    [[25.034, 121.56356], [25.03499, 121.56358], [25.0359, 121.56362], [25.03589, 121.56399], [25.03588, 121.56501], [25.03588, 121.56546], [25.03535, 121.56544], [25.03462, 121.56545], [25.03316, 121.56541], [25.03253, 121.5654], [25.03198, 121.56539], [25.03196, 121.56572], [25.03195, 121.56582], [25.03193, 121.56666]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_49501891ce314a3d974a43663ebdf78f = L.polyline(
+                    [[25.03193, 121.56666], [25.03189, 121.56817], [25.03189, 121.5683], [25.03215, 121.56829], [25.0326, 121.56829], [25.03276, 121.56836], [25.03288, 121.56839], [25.03315, 121.56838], [25.03394, 121.56839], [25.03482, 121.56842], [25.03595, 121.56844], [25.03685, 121.56845]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_12b22c65feab4b0c85a84a9cd4792549 = L.polyline(
+                    [[25.03685, 121.56845], [25.03754, 121.56846], [25.03857, 121.56849], [25.03905, 121.5685], [25.03906, 121.56837], [25.03908, 121.56714], [25.03912, 121.56567], [25.03911, 121.5655], [25.03919, 121.56543], [25.03919, 121.56508], [25.03922, 121.56411], [25.03923, 121.56373], [25.03921, 121.56365], [25.03942, 121.56367], [25.03959, 121.56366], [25.03979, 121.56371], [25.0399, 121.56376], [25.04014, 121.56389], [25.04091, 121.56434], [25.04111, 121.56455], [25.04111, 121.56475], [25.04107, 121.56597], [25.04103, 121.56692]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_eb8c9cfdfada46c3ad05558043584eb2 = L.polyline(
+                    [[25.04103, 121.56692], [25.04099, 121.56789], [25.04099, 121.56841], [25.04049, 121.5684], [25.03913, 121.56839], [25.03906, 121.56837], [25.03906, 121.56764], [25.03909, 121.56647], [25.03911, 121.56608], [25.03925, 121.56608], [25.03971, 121.5661]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_46605a2f33cd4270900b32a50084f016 = L.polyline(
+                    [[25.03971, 121.5661], [25.03925, 121.56608], [25.03911, 121.56608], [25.03912, 121.5658], [25.03911, 121.5655], [25.03919, 121.56543], [25.03911, 121.5655], [25.03912, 121.5658], [25.03909, 121.56647], [25.03908, 121.56681]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_d2e10630fb4d45b0925c9520ab1e669f = L.polyline(
+                    [[25.03908, 121.56681], [25.03905, 121.5685], [25.03903, 121.5698], [25.03907, 121.57084], [25.03906, 121.57125], [25.03906, 121.5713], [25.03903, 121.57186], [25.0397, 121.57189], [25.04002, 121.5719], [25.04002, 121.57173]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_e8df72580c8f40eaa7df6d4ba6784984 = L.polyline(
+                    [[25.04002, 121.57173], [25.04002, 121.5719], [25.04041, 121.57192], [25.04101, 121.57194], [25.04109, 121.5691], [25.0411, 121.56871], [25.04127, 121.56873], [25.04153, 121.56875], [25.0419, 121.56874], [25.04228, 121.56875], [25.04259, 121.56873], [25.04294, 121.56874], [25.04439, 121.56879], [25.04541, 121.56882]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_12d78c711394411492cd20f871e9caa0 = L.polyline(
+                    [[25.04541, 121.56882], [25.04577, 121.56884], [25.04581, 121.56731], [25.04583, 121.56718], [25.04592, 121.56697], [25.04597, 121.56687], [25.04639, 121.56667], [25.04672, 121.56652]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_52694b26d10d444d8602244a44f43900 = L.polyline(
+                    [[25.04672, 121.56652], [25.04727, 121.56627]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_2d29d73c4ac843149da80df1c6d7fa88 = L.polyline(
+                    [[25.04727, 121.56627], [25.04822, 121.56582], [25.04836, 121.56577], [25.04809, 121.56503], [25.04755, 121.56353], [25.04716, 121.56242], [25.04664, 121.56122], [25.04559, 121.55885], [25.04538, 121.55827], [25.04525, 121.55782], [25.04513, 121.55728], [25.04473, 121.55518], [25.04462, 121.55458], [25.04456, 121.5541], [25.04452, 121.55345], [25.04452, 121.55304], [25.04462, 121.55199], [25.04501, 121.54867], [25.04519, 121.54696], [25.04522, 121.54634], [25.04516, 121.54556], [25.04502, 121.54438], [25.04495, 121.54376], [25.04472, 121.54377], [25.04473, 121.5439], [25.0448, 121.54449], [25.04475, 121.54452], [25.04467, 121.54454], [25.04382, 121.54451], [25.04373, 121.54451]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_fd276e498f92499c9436d888075d61c5 = L.polyline(
+                    [[25.04373, 121.54451], [25.04268, 121.54448], [25.04251, 121.54448], [25.04242, 121.54528], [25.04224, 121.54563], [25.04204, 121.54601], [25.04198, 121.54616], [25.04166, 121.54617], [25.04151, 121.54611], [25.0415, 121.54645], [25.04147, 121.54817], [25.04146, 121.54862], [25.04105, 121.54862], [25.04062, 121.5486], [25.03971, 121.54861], [25.03864, 121.5486], [25.03825, 121.54862], [25.03824, 121.54859], [25.03822, 121.54855], [25.03815, 121.54846], [25.03806, 121.54841], [25.03789, 121.54835], [25.03773, 121.54837], [25.0376, 121.54843], [25.03749, 121.5485], [25.03746, 121.54854], [25.03744, 121.54859], [25.03726, 121.54868], [25.03702, 121.54879], [25.03692, 121.54881], [25.03583, 121.54882], [25.03441, 121.54881], [25.03333, 121.5488], [25.03296, 121.54881], [25.02992, 121.54876], [25.02461, 121.54872], [25.02452, 121.54872], [25.02451, 121.54886], [25.02449, 121.54906], [25.0244, 121.55032], [25.0243, 121.55222], [25.02429, 121.55239], [25.02426, 121.55248], [25.0242, 121.55257], [25.02404, 121.55275], [25.0227, 121.55424], [25.0215, 121.55553], [25.02058, 121.5565], [25.0203, 121.55679], [25.01963, 121.5575], [25.01902, 121.55815], [25.01872, 121.55844], [25.01866, 121.55842], [25.01858, 121.5584], [25.01848, 121.55835], [25.01828, 121.55856], [25.01816, 121.55874], [25.01813, 121.55895], [25.01814, 121.55905], [25.01823, 121.55912], [25.01829, 121.55918], [25.01846, 121.55896], [25.01859, 121.55881]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_a662e24013ba4ac798ec5819718188d6 = L.polyline(
+                    [[25.01859, 121.55881], [25.01906, 121.55827], [25.02036, 121.55689], [25.02056, 121.55668], [25.02065, 121.55659], [25.02098, 121.55655], [25.02171, 121.55647], [25.02229, 121.55642], [25.02322, 121.55628], [25.02383, 121.5562], [25.02407, 121.55564]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_55b1e16e1cdc49a9940a02de03436cf6 = L.polyline(
+                    [[25.02407, 121.55564], [25.02402, 121.55578], [25.0244, 121.55593], [25.02522, 121.55643], [25.02538, 121.55655], [25.02565, 121.55683], [25.02595, 121.55735], [25.0261, 121.55746], [25.02617, 121.55749]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_7129dd727ede4df9832897e127b24a86 = L.polyline(
+                    [[25.02617, 121.55749], [25.02604, 121.55741], [25.02595, 121.55735], [25.02572, 121.55696], [25.02561, 121.55678], [25.02532, 121.55649], [25.02476, 121.55613], [25.0244, 121.55593], [25.02402, 121.55578], [25.02416, 121.5554], [25.02421, 121.55528], [25.02423, 121.5549], [25.02428, 121.55392], [25.02434, 121.55294], [25.02448, 121.55292], [25.02458, 121.55288], [25.02576, 121.55423], [25.02595, 121.55445]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_82f20f5de447477ba13fd6d179a47207 = L.polyline(
+                    [[25.02595, 121.55445], [25.02739, 121.55607], [25.02767, 121.55639], [25.02805, 121.55665]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_bf95fb65b4d14871872e6fa5e180634f = L.polyline(
+                    [[25.02805, 121.55665], [25.02914, 121.55731], [25.02991, 121.55773], [25.03026, 121.55799], [25.03087, 121.55834], [25.03146, 121.5587], [25.03207, 121.55909], [25.03311, 121.55971], [25.03312, 121.55951], [25.03297, 121.55942], [25.03288, 121.55937], [25.03282, 121.55933], [25.0319, 121.55882]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#ffffcc", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#ffffcc", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_e70f4fb292d44def9878eaa3634647aa = L.polyline(
+                    [[25.0319, 121.55882], [25.03086, 121.55821], [25.03039, 121.55793], [25.03007, 121.55773], [25.02991, 121.5576], [25.02952, 121.55737], [25.0294, 121.55733], [25.02865, 121.55688], [25.02804, 121.55654], [25.02784, 121.5564], [25.02773, 121.55631], [25.02744, 121.556], [25.02739, 121.55607], [25.02752, 121.55623], [25.02761, 121.55634], [25.02769, 121.55641], [25.02788, 121.55655], [25.02885, 121.55712], [25.02986, 121.55771], [25.02996, 121.55752], [25.03002, 121.55748], [25.03007, 121.55747], [25.03052, 121.55748], [25.03195, 121.55752], [25.03299, 121.55753], [25.03331, 121.55754], [25.03365, 121.55755], [25.03365, 121.55767]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#253494", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#253494", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_a4f36e4066144140b99fc4009d1d9519 = L.polyline(
+                    [[25.03365, 121.55767], [25.03365, 121.55755], [25.03429, 121.55756], [25.03506, 121.55758], [25.03641, 121.55761], [25.03652, 121.55761], [25.03652, 121.5584], [25.03651, 121.55849]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#2c7fb8", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#2c7fb8", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_a19edff2df1a4eefabcd722a428d21a4 = L.polyline(
+                    [[25.03661, 121.5584], [25.0352, 121.5584], [25.03539, 121.55979], [25.03551, 121.56056], [25.03549, 121.56067], [25.03542, 121.56086], [25.03497, 121.56059], [25.03423, 121.56014]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#41b6c4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#41b6c4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+    
+                var poly_line_a29bdfabb563431da2bc0ebe597fa8d7 = L.polyline(
+                    [[25.03423, 121.56014], [25.03392, 121.55997], [25.03343, 121.5597], [25.03297, 121.55942], [25.03282, 121.55933], [25.03262, 121.55921], [25.0326, 121.55916], [25.03257, 121.55909], [25.03221, 121.55865], [25.03217, 121.55857], [25.0322, 121.55843], [25.03212, 121.55751], [25.03365, 121.55755], [25.03652, 121.55761], [25.03766, 121.55764], [25.03817, 121.55762], [25.03943, 121.55768], [25.04088, 121.55769], [25.04127, 121.55771], [25.04126, 121.55865], [25.04123, 121.55966], [25.04117, 121.56158], [25.04114, 121.56278], [25.04112, 121.56367], [25.04111, 121.56433], [25.04062, 121.56404]],
+                    {
+  "bubblingMouseEvents": true, 
+  "color": "#a1dab4", 
+  "dashArray": null, 
+  "dashOffset": null, 
+  "fill": false, 
+  "fillColor": "#a1dab4", 
+  "fillOpacity": 0.2, 
+  "fillRule": "evenodd", 
+  "lineCap": "round", 
+  "lineJoin": "round", 
+  "noClip": false, 
+  "opacity": 1, 
+  "smoothFactor": 1.0, 
+  "stroke": true, 
+  "weight": 5
+}).addTo(map_1949e294c7444cdfbba8d5f3a7f1399a);
+            
+</script>
