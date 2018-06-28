@@ -692,7 +692,7 @@ LR    = RegressionTrainer(data = ml_data, split = 0.8, model = 'LR', intercept =
 df = []
 while df == []:
     try:
-        df = RealTimeForecaster(stock = stock, symbol = symbol, model = LR, Const = 1, agg_data = ml_data , quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U', past_articles = down[1][1:])
+        df = RealTimeForecaster(stock = stock, symbol = symbol, model = LR, Const = 1, agg_data = ml_data , quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U', past_articles = down[1])
     except:
         print(datetime.now().time().strftime('%H:%M:%S -> ') + 'No New Articles. Retry in 5 min')
         time.sleep(5*60)
