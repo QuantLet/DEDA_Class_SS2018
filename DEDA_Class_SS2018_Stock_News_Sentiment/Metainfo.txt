@@ -1,4 +1,4 @@
-Name of Quantlet:  SSN
+Name of Quantlet:  DEDA_Sentiment_Regression
 
  
 
