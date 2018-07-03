@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Sample web form</title>
+    </head>
+<body>
+
+
+<form action="{{ url_for('submit') }}" method="post">
+    <textarea name="text" cols="40" rows="5"></textarea>
+</form>
+
+<h1>Please enter the details of your housing offer in doubt.</h1>
+
+<form class="col s12" id="offer_entry" action="{{ url_for('submit') }}" method="post">
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="date_posted">When was the offer posted?</label>
+			<input id="date_posted" type="text" name="date_posted" required class="validate">
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="area">Which area is it in?</label>
+			<input id="area" type="area" name="area" required class="validate">
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="freiab">When can you move in?</label>
+			<textarea id="freiab" name="freiab" class="materialize-textarea" class="validate"></textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="freibis">Til when can you stay there?</label>
+			<textarea id="freibis" name="freibis" class="materialize-textarea" class="validate"></textarea>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="miete">How much is the monthly rent? (in Euro)</label>
+			<textarea id="miete" name="miete" class="materialize-textarea" class="validate"></textarea>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="groesse">How big is the room? (in square meter)</label>
+			<textarea id="groesse" name="groesse" class="materialize-textarea" class="validate"></textarea>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="mitgliedseit">Look for the month started the wg-gesucht membership of the person posting it. If you are not sure, put it this month.</label>
+			<textarea id="mitgliedseit" name="mitgliedseit" class="materialize-textarea" class="validate"></textarea>
+		</div>
+	</div> 
+	<div class="row">
+		<div class="input-field col s12">
+			<label for="full_text">Please copy the full description in this box:</label>
+			<textarea id="full_text" name="full_text" class="materialize-textarea" class="validate" cols="100" rows="40"></textarea>
+		</div>
+	</div> 
+	<div>
+		<button class="waves-effect waves-light btn submitbtn" type="submit">Submit</button>
+	</div>
+</form>
+
+</body>
+</html>
