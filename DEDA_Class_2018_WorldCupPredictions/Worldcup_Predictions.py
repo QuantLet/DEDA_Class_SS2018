@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jun 27 21:22:54 2018
-
-@author: VWRZTS0
+@author: AlexMunz
 """
 #Import necessary packages
 import pandas as pd
