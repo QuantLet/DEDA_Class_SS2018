@@ -2,7 +2,7 @@
 """
 Created on Tue Jul  3 21:50:36 2018
 
-@author: VWRZTS0
+@author: AlexMunz
 """
 
 #load_ext signature
