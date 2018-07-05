@@ -575,8 +575,8 @@ def Plotter(forecast = False, data1 = None , model = None, prediction = None ):
 # Main
 
 # Data Preperation
-stock         = 'Travelers'
-symbol        = 'TRV'
+stock         = 'Travelers' # Please type in the name as described in the presentation (corresponding to the link structure of finanzen.net)
+symbol        = 'TRV'  # Symbol in terms of the Quandl-EOD dataset
 
 # Load the LM-Wordlists in English and German
 eng_neg_words = Words(filename = 'LM_Dict.csv',header = True, column = 7)
@@ -692,7 +692,7 @@ LR    = RegressionTrainer(data = ml_data, split = 0.8, model = 'LR', intercept =
 df = []
 while df == []:
     try:
-        df = RealTimeForecaster(stock = stock, symbol = symbol, model = LR, Const = 1, agg_data = ml_data , quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U', past_articles = down[1][1:])
+        df = RealTimeForecaster(stock = stock, symbol = symbol, model = LR, Const = 1, agg_data = ml_data , quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U', past_articles = down[1])
     except:
         print(datetime.now().time().strftime('%H:%M:%S -> ') + 'No New Articles. Retry in 5 min')
         time.sleep(5*60)
@@ -700,4 +700,7 @@ while df == []:
     print('Current Forecast for tomorrow: ' + str(float(df[2][0])))
 
 pic_raw = Plotter(data1 = raw_data, model = LR, forecast = True, prediction = float(df[2][0]))
-py.iplot(pic_raw)
+
+# Link for the graphic
+print('Please Note: See the link for the Plotly-plot')
+print(py.iplot(pic_raw).resource)
