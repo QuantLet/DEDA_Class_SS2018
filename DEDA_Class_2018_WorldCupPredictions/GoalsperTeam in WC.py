@@ -85,21 +85,25 @@ wc_participants['Team'] = wc_participants['Team'].replace(['Cï¿½te d\'Ivoire'
 countries['country'] = countries['country'].replace(['C?te dIvoire'],'CÃ´te d\'Ivoire')
 wc_participants['Team'] = wc_participants['Team'].replace(['Czechoslovakia'],'Czech Republic')
 
+#Delete countries from DataFrame which we have no data for
 wc_participants = wc_participants[wc_participants.Team != "Yugoslavia"]
 wc_participants = wc_participants[wc_participants.Team != "Zaire"]
 wc_participants = wc_participants[wc_participants.Team != "Dutch East Indies"]
 
-
+#Sum up Goals by Team for each World Cup
 goals_stats = wc_participants.groupby(['Year','Team']).Goals.sum().to_frame().reset_index()
 
+#Sum up overall Goals per Team
 goals_stats_sum = goals_stats.groupby(['Team']).Goals.sum().to_frame().reset_index()
 goals_stats_sum.insert(0, 'ADM0_A3', goals_stats_sum['Team'].map(codes.set_index('Country')['Alpha-3 code']))
 goals_stats_sum['Goals'] = goals_stats_sum['Goals'].apply(pd.to_numeric)
 goals_stats_sum['ADM0_A3'] = goals_stats_sum['ADM0_A3'].astype('str')
 
+#List all Teams
 allteams = list(goals_stats_sum['Team'])
 allteamsyears = allteams * 20
 
+# Include wcvears Series to DataFrame
 wcyears =[]
 for i in range(len(allteams)):
     wcyears.append('1930')
@@ -145,11 +149,14 @@ wcyears=pd.Series(wcyears)
 new_data=pd.DataFrame(wcyears)
 new_data.columns = ['Year']
 
+#include Teams to DataFrame
 allteamsyears = pd.Series(allteamsyears)
 new_data['Team'] = allteamsyears
 
+#Merge DataFrame
 df = pd.merge(new_data,goals_stats, on=['Year','Team'])
 
+#Fill DataFrame with missing rows so that all countries are included for all World Cups
 iterables = [df['Year'].unique(),df['Team'].unique()]
 new_df = df.set_index(['Year','Team'])
 new_df = new_df.reindex(index=pd.MultiIndex.from_product(iterables, names=['Year', 'Team']), fill_value=0).reset_index()
@@ -157,7 +164,7 @@ new_df = new_df.reindex(index=pd.MultiIndex.from_product(iterables, names=['Year
 new_df.insert(0, 'ADM0_A3', new_df['Team'].map(codes.set_index('Country')['Alpha-3 code']))
 
 
-
+#Specify datasets for each Worldcup
 data1930 = new_df.loc[:69]
 data1934 = new_df.loc[70:139]
 data1938 = new_df.loc[140:209]
@@ -179,6 +186,7 @@ data2006 = new_df.loc[1190:1259]
 data2010 = new_df.loc[1260:1329]
 data2014 = new_df.loc[1330:1399]
 
+#Define Choroplath map that are going to be plotted
 data=[]
 
 data1 =  dict(
@@ -618,7 +626,8 @@ data22 = dict(
       ) 
 
 data.append(data22)
-        
+
+#Define Dropdown Menu        
 updatemenus = list([
     dict(active=0,
          buttons=list([
@@ -798,8 +807,10 @@ updatemenus = list([
     )
 ])
 
+#Set layout for plotting
 layout = dict(title='WorldCup Goals per Team', showlegend=False,
               updatemenus=updatemenus)
 
+#Define data and layout for the fig and plot fig
 fig = dict(data=data, layout=layout)
 plot(fig, filename='update_dropdown.html')
