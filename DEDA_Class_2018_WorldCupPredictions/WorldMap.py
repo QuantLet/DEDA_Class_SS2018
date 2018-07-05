@@ -2,19 +2,14 @@
 """
 Created on Tue Jul  3 21:50:36 2018
 
-@author: AlexMunz
+@author: VWRZTS0
 """
 
-#load_ext signature
-#matplotlib inline
+#Load library
 import os
-import plotly
 import matplotlib.pyplot as plt
 import pandas as pd
 import geopandas as gpd
-import plotly.plotly as py
-from plotly.grid_objs import Grid, Column
-from plotly.tools import FigureFactory as FF
 
 #Load information about the World Cup (rounds, teams etc.)
 codes = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/countries_codes_and_coordinates.csv','r')
@@ -96,14 +91,13 @@ wc_participants = wc_participants[wc_participants.Team != "Yugoslavia"]
 wc_participants = wc_participants[wc_participants.Team != "Zaire"]
 wc_participants = wc_participants[wc_participants.Team != "Dutch East Indies"]
 
-
-
-
+#Add Goals to World Cup participants per Worldcup
 goals_stats = wc_participants.groupby(['Year','Team']).Goals.sum().to_frame().reset_index()
 goals_stats.insert(3, 'Longitude', goals_stats['Team'].map(countries.set_index('country')['longitude']))
 goals_stats.insert(4, 'Latitude', goals_stats['Team'].map(countries.set_index('country')['latitude']))
 goals_stats.insert(0, 'ADM0_A3', goals_stats['Team'].map(codes.set_index('Country')['Alpha-3 code']))
 
+#Sum up all World Cup Goals for Each Team
 goals_stats_sum = goals_stats.groupby(['Team']).Goals.sum().to_frame().reset_index()
 goals_stats_sum.insert(0, 'ADM0_A3', goals_stats_sum['Team'].map(codes.set_index('Country')['Alpha-3 code']))
 goals_stats_sum['Goals'] = goals_stats_sum['Goals'].apply(pd.to_numeric)
@@ -112,13 +106,16 @@ goals_stats_sum = goals_stats_sum.drop(columns=['Team'])
  
 datafile = goals_stats_sum
 shapefile = os.path.expanduser('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/ne_110m_admin_0_countries/ne_110m_admin_0_countries.shp')
-    
+ 
+#Read File in GeoDataFrame   
 gdf = gpd.read_file(shapefile)[['ADM0_A3', 'geometry']].to_crs('+proj=robin')
 gdf['ADM0_A3'] = gdf['ADM0_A3'].astype('str')
 
+#Merge files
 merged_1 = gdf.merge(goals_stats_sum, on='ADM0_A3')
 merged_1.describe()
 
+#Set map settings
 colors = 8
 cmap = 'RdBu_r'
 figsize =    (15, 10)
@@ -127,15 +124,22 @@ imgfile = 'img/{}.png'.format(title)
 description = '''
 Sum of all World Cup Goals by Country. • Author: Alexander Munz'''.strip()
 
-
+#plot figure
 ax = merged_1.dropna().plot(column= 'Goals', cmap = cmap, figsize=figsize, scheme='equal_interval', k=colors, legend=True)
 
 merged_1[merged_1.isna().any(axis=1)]
 
+#modify figure
 ax.set_title(title, fontdict={'fontsize': 20}, loc='left')
 ax.annotate(description, xy=(0.1, 0.1), size=12, xycoords='figure fraction')
 
+#Show figure and save it as png
 ax.set_axis_off()
 ax.set_xlim([-1.5e7, 1.7e7])
 ax.get_legend().set_bbox_to_anchor((.12, .4))
-ax.get_figure()
+ax.get_figure
+fig = ax.get_figure()
+fig.savefig("output.png")
+
+
+
