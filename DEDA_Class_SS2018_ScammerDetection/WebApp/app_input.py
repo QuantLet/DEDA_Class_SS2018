@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.ensemble import RandomForestClassifier
@@ -21,8 +22,9 @@ def data_prep_to_predict(eintrag, freiab, freibis, mitgliedseit, miete, groesse,
 	
 	keywords = ['möbliert','unmöbliert','bitte','leider','Skype','besichtigung','xx',':\)']
 	# features to prepare:
-	column_list = ['miete_delta','groesse','days_to_freiab','days_to_rent','polarity_de',\
-	'popular_area','new_user'] + keywords
+	extra_sentiments = ['polarity_de', 'polarity_de_min', 'polarity_de_max', 'polarity_de_median']
+	column_list = ['miete_delta','groesse','days_to_freiab','days_to_rent',\
+	'popular_area','new_user'] + keywords + extra_sentiments
 
 	# popular_area and miete_delta
 	areas = ['kreuzberg', 'wedding','neukoelln','charlottenburg','mitte','friedrichshain','prenzlauerberg','moabit']
@@ -39,8 +41,16 @@ def data_prep_to_predict(eintrag, freiab, freibis, mitgliedseit, miete, groesse,
 	days_to_rent = abs((freibis - freiab).days)
 	
 	#polarity_de
-	polarity_de = TextBlobDE(text).polarity
-	
+	tb_obj = TextBlobDE(text)
+	polarity_de = tb_obj.polarity
+	sentences_polarity_de=[]
+	for sentence in tb_obj.sentences:
+		sentences_polarity_de.append(TextBlobDE(str(sentence)).polarity)
+	polarity_de_median = np.median(sentences_polarity_de)
+	polarity_de_min = np.min(sentences_polarity_de)
+	polarity_de_max = np.max(sentences_polarity_de)
+	sentiment_features = [polarity_de,polarity_de_min,polarity_de_max,polarity_de_median]
+    
 	#new_user
 	new_user = 0
 	if abs((eintrag - mitgliedseit).days) < 30:
@@ -55,8 +65,8 @@ def data_prep_to_predict(eintrag, freiab, freibis, mitgliedseit, miete, groesse,
 		else:
 			keyword_features.append(0)
 			
-	feature_list = [miete_delta, groesse, days_to_freiab, days_to_rent, polarity_de,\
-	popular_area, new_user] + keyword_features
+	feature_list = [miete_delta, groesse, days_to_freiab, days_to_rent, \
+	popular_area, new_user] + keyword_features + sentiment_features
 	
 	features = pd.DataFrame(feature_list).T
 	features.columns = column_list
@@ -66,10 +76,11 @@ def data_prep_to_predict(eintrag, freiab, freibis, mitgliedseit, miete, groesse,
 def train_model():
 	train_data = pd.read_csv('/Users/jessiehsieh/Documents/Programming/Data_Science/WebScraping/WGgesucht/train_data.csv')
 	keywords = ['möbliert','unmöbliert','bitte','leider', 'Skype','besichtigung','xx', ':\)']
+	extra_sentiments = ['polarity_de', 'polarity_de_min', 'polarity_de_max', 'polarity_de_median']
 	feature_list = ['miete_delta','groesse', 'days_to_freiab', 'days_to_rent'\
-                   ,'polarity_de', 'popular_area', 'new_user'] + keywords
+                   ,'popular_area', 'new_user'] + keywords + extra_sentiments
 	
-	RF_model = RandomForestClassifier(random_state=123456, n_estimators=15, \
+	RF_model = RandomForestClassifier(random_state=123456, n_estimators=20, \
 	min_samples_leaf = 2, max_depth = 5, oob_score=True, class_weight = 'balanced')
 	RF_model.fit(train_data[feature_list], train_data['scam'])
 	return RF_model
@@ -127,4 +138,4 @@ def submit():
  
 if __name__ == "__main__":
 #	app.debug = True
-	app.run(host='0.0.0.0', port=80)
+	app.run(host='0.0.0.0', port=5000)
