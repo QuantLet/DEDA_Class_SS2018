@@ -2,7 +2,7 @@
 """
 Created on Mon Jul  9 09:53:30 2018
 
-@author: VWRZTS0
+@author: AlexMunz
 """
 
 #Import necessary packages
