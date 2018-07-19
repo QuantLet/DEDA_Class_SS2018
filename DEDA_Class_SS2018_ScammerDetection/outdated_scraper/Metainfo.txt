@@ -1,0 +1,25 @@
+Name of Quantlet:  offerpage_scraper
+
+ 
+
+Published in:      "Digital Economy and Decision Analytics (SS 18)"
+
+  
+
+Description:       Scripts written in python to scrape details of room offers on wg-gesucht.de. It is done in two stages, first from the list of offers available and second the detail description of an offer.
+
+ 
+
+Keywords:          "berlin, housing, expats, classification, advertisement, deposit, scam, rent"
+
+
+
+Author:            Jessie Hsieh
+
+  
+
+Submitted:         Thu, July 5 2015 by Jessie Hsieh
+
+  
+
+Datafile:          python script

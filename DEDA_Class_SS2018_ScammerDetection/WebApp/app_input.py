@@ -74,7 +74,7 @@ def data_prep_to_predict(eintrag, freiab, freibis, mitgliedseit, miete, groesse,
 	return features
 
 def train_model():
-	train_data = pd.read_csv('/Users/jessiehsieh/Documents/Programming/Data_Science/WebScraping/WGgesucht/train_data.csv')
+	train_data = pd.read_csv('/train_data.csv')
 	keywords = ['möbliert','unmöbliert','bitte','leider', 'Skype','besichtigung','xx', ':\)']
 	extra_sentiments = ['polarity_de', 'polarity_de_min', 'polarity_de_max', 'polarity_de_median']
 	feature_list = ['miete_delta','groesse', 'days_to_freiab', 'days_to_rent'\
