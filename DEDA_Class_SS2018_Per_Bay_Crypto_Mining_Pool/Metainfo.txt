@@ -1,4 +1,4 @@
-Name of Quantlet:  DEDA_Class_SS2018_Per_Bay_Crypto_Mining_Pool
+Name of Quantlet:  CrypPool
 
  
 
