@@ -1,4 +1,4 @@
-Name of Quantlet: WorldMaps
+Name of Quantlet: GoalsperTeam in WC
 
 Published in: 'Digital Economy and Decision Analytics (SS 18)'
 
