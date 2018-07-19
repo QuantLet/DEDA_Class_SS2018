@@ -1,4 +1,4 @@
-Name of Quantlet: WorldCupPredictions
+Name of Quantlet: Worldcup_Predictions
 
 Published in: 'Digital Economy and Decision Analytics (SS 18)'
 
