@@ -1,0 +1,13 @@
+Name of Quantlet: WorldCupPredictions
+
+Published in: 'Digital Economy and Decision Analytics (SS 18)'
+
+Description: 'Use Multionmial Logistic Regression (LogReg) to predict the Outcome of the Games of the World Cup Matches 2018. Predictions are based on historic results since 1993.' 
+
+Keywords: 'Scikit-learn', 'LogisticRegression','train-test-split'
+
+Author: Alexander Munz
+
+See also: 'WorldMaps'
+
+Submitted: Fri, July 19 2018 by Alexander Munz
