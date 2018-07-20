@@ -1,0 +1,25 @@
+Name of Quantlet:  app_input
+
+ 
+
+Published in:      "Digital Economy and Decision Analytics (SS 18)"
+
+  
+
+Description:       An web application built in Python. From the interface written in html, user input of an Berlin housing offer in doubt is parsed and entered into the prediction model built from existing data. A probability of how similar the offer is to scams is returned on the submit page. 
+
+ 
+
+Keywords:          "berlin, housing, expats, classification, advertisement, deposit, scam, rent"
+
+
+
+Author:            Jessie Hsieh
+
+  
+
+Submitted:         Thu, July 5 2015 by Jessie Hsieh
+
+  
+
+Datafile:          python script

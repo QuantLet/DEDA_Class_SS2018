@@ -1,0 +1,4 @@
+# Scammer Detection using Text Analytics
+This project contains python scripts in **outdated_scraper** to scrape offer information from open Berlin housing platform and a web application in **WebApp** to return a prediction of scam probability from a random forest classification model trained on data gathered in April to June 2018.
+
+The dataset available in the sub-folder **WebApp** contains extracted features from the raw data, which is not made available as it might contain personal information. Hence codes and visualisations in the iPython notebooks are for references only and cannot be run. 
