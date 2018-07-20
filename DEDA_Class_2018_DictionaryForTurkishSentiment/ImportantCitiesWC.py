@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 24 13:14:12 2018
+Created on Fri Jul 20 17:50:07 2018
 
 @author: cemre
 """
+
 import string
 
 import matplotlib.pyplot as plt
@@ -18,41 +19,6 @@ from googletrans import Translator
 translator = Translator()
 
 
-ist = open("1_RTE.txt", "r")
-
-ist = ist.read()
-
-
-gazi = open("2_RTE.txt", "r")
-
-gazi = gazi.read()
-
-
-maras = open("3_RTE.txt", "r")
-
-maras = maras.read()
-
-
-mardin = open("5_RTE.txt", "r")
-
-mardin = mardin.read()
-
-
-adana = open("6_RTE.txt", "r")
-
-adana = adana.read()
-
-
-ordu = open("7_RTE.txt", "r")
-
-ordu = ordu.read()
-
-
-antalya = open("8_RTE.txt", "r")
-
-antalya = antalya.read()
-
-
 yalova = open("9_RTE.txt", "r")
 
 yalova = yalova.read()
@@ -63,27 +29,18 @@ rize = open("10_RTE.txt", "r")
 rize = rize.read()
 
 
-denizli = open("11_RTE.txt", "r")
-
-denizli = denizli.read()
-
-
-
 ankara = open("12_RTE.txt", "r")
 
 ankara = ankara.read()
-
-agg = ist+gazi+maras+mardin+adana+ordu+antalya+yalova+rize+denizli+ankara
 
 
 translator = str.maketrans('', '', string.punctuation)
 #print(text.translate(translator))
 
-##CHANGE THE VARIABLE NAME "agg" to "ist", "gazi" etc to get the plots of individual cities
-agg = agg.translate(translator).lower()
+##CHANGE THE VARIABLE NAME "agg" to "ankara", "yalova" or "rize" to get the individual word clouds in slides 29-31 
+ank = ankara.translate(translator).lower()
 
-
-dat = list(agg.split())
+dat = list(ank.split())
 dict1 = {}
 for i in range(len(dat)):
     word = dat[i]
@@ -154,9 +111,9 @@ eng_FQwords = remove_duplicates(eng_FQwords)
 n = range(len(eng_FQwords))
 plt.bar(n, dictshow.values(), align='center', color = "red")
 plt.xticks(n, eng_FQwords, rotation = 45)
-plt.title("Erdogan Aggregate Speeches Most Frequent Words")
+plt.title("Erdogan Ankara Speeches Most Frequent Words")
 plt.tight_layout()
-plt.savefig("Agg_RTE FrequentWordsEN.png", transparent = True, dpi=1000)
+plt.savefig("RTE FrequentWordsEN.png", transparent = True, dpi=1000)
 
 
 import numpy as np
@@ -197,6 +154,6 @@ plt.figure()
 plt.imshow(wordcloud_FW_eng, interpolation='bilinear')
 plt.axis("off")
 plt.imshow(rte_mask, cmap=plt.cm.gray, interpolation='bilinear', alpha=0.2)
-plt.title("Erdogan Election Speech - Aggregate Word Cloud")
-plt.savefig("Agg_RTE - Word Cloud.png", transparent=True, dpi=1000)
+plt.title("Erdogan Election Speech - Word Cloud")
+plt.savefig("RTE - Word Cloud.png", transparent=True, dpi=1000)
 plt.show()
