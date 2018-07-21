@@ -5,7 +5,6 @@ Created on Sun Jun 24 13:14:12 2018
 
 @author: cemre
 """
-from bs4 import BeautifulSoup
 import string
 
 import matplotlib.pyplot as plt
@@ -80,7 +79,8 @@ agg = ist+gazi+maras+mardin+adana+ordu+antalya+yalova+rize+denizli+ankara
 translator = str.maketrans('', '', string.punctuation)
 #print(text.translate(translator))
 
-ist = ist.translate(translator).lower()
+##CHANGE THE VARIABLE NAME "agg" to "ist", "gazi" etc to get the plots of individual cities
+agg = agg.translate(translator).lower()
 
 
 dat = list(agg.split())
@@ -197,17 +197,6 @@ plt.figure()
 plt.imshow(wordcloud_FW_eng, interpolation='bilinear')
 plt.axis("off")
 plt.imshow(rte_mask, cmap=plt.cm.gray, interpolation='bilinear', alpha=0.2)
-plt.title("Erdogan Election Speech - Word Cloud 1")
-plt.savefig("1_RTE - Word Cloud.png", transparent=True, dpi=1000)
+plt.title("Erdogan Election Speech - Aggregate Word Cloud")
+plt.savefig("Agg_RTE - Word Cloud.png", transparent=True, dpi=1000)
 plt.show()
-
-
-
-    
-
-
-
-
-
-
-
