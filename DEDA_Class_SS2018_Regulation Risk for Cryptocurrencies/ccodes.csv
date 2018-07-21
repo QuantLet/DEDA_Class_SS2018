@@ -1,0 +1,218 @@
+Long Name,Value,code
+El Salvador,3,SLV
+Grenada,3,GRD
+Guatemala,3,GTM
+Haiti,3,HTI
+Honduras,3,HND
+Jamaica,2,JAM
+Mexico,1,MEX
+Nicaragua,1,NIC
+Panama,2,PAN
+St.Kitts & Nevis,3,KNA
+St.Lucia,3,LCA
+St.Vincent & the Grenadines,3,VCT
+Trinidad & Tobago,3,TTO
+United States,1,USA
+Greenland,3,GRL
+Argentina,2,ARG
+Bolivia,5,BOL
+Brazil,1,BRA
+Chile,1,CHL
+Colombia,2,COL
+Ecuador,4,ECU
+Falkland Islands,3,FLK
+Guyana,3,GUY
+Paraguay,2,PRY
+Peru,2,PER
+Suriname,3,SUR
+Uruguay,2,URY
+Venezuela,2,VEN
+Algeria,5,DZA
+Angola,3,AGO
+Benin,3,BEN
+Botswana,3,BWA
+Burkina Faso,3,BFA
+Burundi,3,BDI
+Cameroon,3,CMR
+Central African Republic,3,CAF
+Chad,3,TCD
+Comoros,3,COM
+Cote d'ivoire,3,CIV
+Democratic Republic of the Congo,3,COD
+Djibouti,3,DJI
+Egypt,4,EGY
+Equatorial Guinea,3,GNQ
+Eritrea,3,ERI
+Ethiopia,3,ETH
+Gabon,2,GAB
+Ghana,3,GHA
+Guinea,3,GIN
+Guinea-Bissau,3,GNB
+Kenya,2,KEN
+Lesotho,3,LSO
+Liberia,3,LBR
+Libya,1,LBY
+Madagascar,3,MDG
+Malawi,3,MWI
+Mali,3,MLI
+Mauritania,3,MRT
+Morocco,5,MAR
+Mozambique,3,MOZ
+Namibia,3,NAM
+Niger,3,NER
+Nigeria,2,NGA
+Rwanda,3,RWA
+Sao Tome and Principe,3,STP
+Senegal,3,SEN
+Seychelles,3,SYC
+Sierra Leone,3,SLE
+Somalia,3,SOM
+South Africa,1,ZAF
+Sudan,3,SDN
+Swaziland,3,SWZ
+Tanzania,2,TZA
+Togo,3,TGO
+Tunisia,2,TUN
+Uganda,3,UGA
+Zambia,4,ZMB
+Zimbabwe,1,ZWE
+Gambia,3,GMB
+Congo,1,COG
+Mauritius,2,MUS
+Afghanistan,5,AFG
+Armenia,3,ARM
+Azerbaijan,1,AZE
+Bangladesh,5,BGD
+Bhutan,3,BTN
+Brunei,1,BRN
+Burma (Myanmar),3,MMR
+Cambodia,3,KHM
+China,4,CHN
+East Timor,3,TLS
+Georgia,1,GEO
+India,4,IND
+Indonesia,4,IDN
+Iran,4,IRN
+Japan,1,JPN
+Kazakhstan,2,KAZ
+Korea (north),3,PRK
+Korea (south),1,KOR
+Kyrgyzstan,2,KGZ
+Laos,3,LAO
+Malaysia,2,MYS
+Mongolia,1,MNG
+Nepal,4,NPL
+Pakistan,5,PAK
+Philippines,1,PHL
+Russia,1,RUS
+Singapore,1,SGP
+Sri Lanka,3,LKA
+Tajikistan,3,TJK
+Thailand,1,THA
+Turkmenistan,3,TKM
+Uzbekistan,1,UZB
+Vietnam,5,VNM
+Taiwan,1,TWN
+Hong Kong,1,HKG
+Macau,3,MAC
+Albania,2,ALB
+Andorra,2,AND
+Austria,1,AUT
+Belarus,1,BLR
+Belgium,1,BEL
+Bosnia and Herzegovina,3,BIH
+Bulgaria,1,BGR
+Croatia,1,HRV
+Czech Republic,1,CZE
+Denmark,1,DNK
+Estonia,1,EST
+Finland,1,FIN
+France,1,FRA
+Germany,1,DEU
+Greece,1,GRC
+Hungary,1,HUN
+Iceland,1,ISL
+Ireland,1,IRL
+Italy,1,ITA
+Latvia,1,LVA
+Liechtenstein,1,LIE
+Lithuania,1,LTU
+Luxembourg,1,LUX
+Macedonia,5,MKD
+Malta,1,MLT
+Moldova,3,MDA
+Monaco,1,MCO
+Montenegro,3,MNE
+Netherlands,1,NLD
+Norway,1,NOR
+Poland,1,POL
+Portugal,1,PRT
+Romania,1,ROU
+San Marino,1,SMR
+Serbia,1,SRB
+Slovakia,1,SVK
+Slovenia,1,SVN
+Spain,1,ESP
+Sweden,1,SWE
+Switzerland,1,CHE
+Ukraine,1,UKR
+United Kingdom,1,GBR
+Cyprus,1,CYP
+Turkey,1,TUR
+Australia,1,AUS
+Fiji,3,FJI
+Kiribati,3,KIR
+Marshall Islands,3,MHL
+Micronesia,3,FSM
+New Zealand,1,NZL
+Palau,3,PLW
+Papua New Guinea,3,PNG
+Samoa,3,WSM
+Solomon Islands,3,SLB
+Tonga,3,TON
+Tuvalu,3,TUV
+Vanuatu,5,VUT
+New Caledonia,3,NCL
+Bahrain,3,BHR
+Iraq,1,IRQ
+Israel,1,ISR
+Jordan,2,JOR
+Kuwait,1,KWT
+Lebanon,1,LBN
+Oman,3,OMN
+Qatar,5,QAT
+Saudi Arabia,4,SAU
+Syria,3,SYR
+United Arab Emirates,2,ARE
+Yemen,3,YEM
+Puerto Rico,1,PRI
+Cayman Islands,3,CYM
+South Sudan,3,SSD
+Kosovo,2,KSV
+Aruba,3,ABW
+Anguilla,1,AIA
+Bermuda,3,BMU
+Cook Islands,3,COK
+Curacao,3,CUW
+Faroe Islands,3,FRO
+French Polynesia,1,PYF
+Gibraltar,3,GIB
+Guam,3,GUM
+Isle of Man,2,IMN
+Jersey,1,JEY
+Maldives,3,MDV
+Northern Mariana Islands,3,MNP
+Niue,3,NIU
+Sint Maarten,1,SXM
+Saint Pierre and Miquelon,3,SPM
+Virgin Islands (UK),3,VGB
+West Bank,3,WBG
+Costa Rica,1,CRI
+Barbados,2,BRB
+Dominica,3,DMA
+Dominican Republic,1,DOM
+Antigua and Barbuda,1,ATG
+Bahamas,3,BHM
+Belize,3,BLZ
+Cuba,1,CUB
+Canada,1,CAN
