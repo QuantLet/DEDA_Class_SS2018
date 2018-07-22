@@ -15,8 +15,13 @@ import random
 #Disable warning
 pd.options.mode.chained_assignment = None
 
+#Load necessary files
+worldcup = open('filepath/WorldCup2018.csv','r')
+ranking = open('filepath/FIFA_Ranking.csv', "r")
+hist_ranking  = open('filepath/fifa_ranking_1993-2018.csv', "r")
+results = pd.read_csv('filepath/results.csv')
+
 #Load updated information about the World Cup (rounds, teams etc.)
-worldcup = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/WorldCup2018_adapted.csv','r')
 worldcup= worldcup.readlines()
 worldcup = [i.replace('"',"") for i in worldcup]
 worldcup = [i.replace("ï»¿","") for i in worldcup]
@@ -43,7 +48,6 @@ df_worldcupteams=pd.DataFrame(worldcup_teams, columns={'worldcup_teams'})
 df_worldcupteams['Points']=0
 
 #Load current FIFA Rankings
-ranking = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/FIFA_Ranking.csv', "r")
 ranking = ranking.readlines()
 ranking = [i.replace('"', "") for i in ranking]
 ranking = [i.split(",") for i in ranking]
@@ -54,7 +58,6 @@ ranking['Position'] = ranking['Position'].apply(pd.to_numeric)
 ranking['Points'] = ranking['Points'].apply(pd.to_numeric)
 
 #Load historic FIFA Rankings
-hist_ranking  = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/fifa_ranking_1993-2018.csv', "r")
 hist_ranking = hist_ranking.readlines()
 hist_ranking  = [i.replace('"', "") for i in hist_ranking]
 hist_ranking = [i.split(",") for i in hist_ranking]
@@ -76,9 +79,6 @@ hist_ranking = hist_ranking.drop(columns=['date'])
 #Create another FIFA Ranking dataframe for later modification
 hist_ranking_away = hist_ranking.copy()
 hist_ranking_away.columns = ['rank_away','away_team','monthyear']
-
-#Load data of all matches
-results = pd.read_csv('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/results_adapted.csv')
 
 #Establish Winner
 winner = []
