@@ -10,6 +10,6 @@ Author: Alexander Munz
 
 See also: 'WorldCupPredictions'
 
-Submitted: Fri, July 19 2018 by Alexander Munz
+Submitted: Thu, July 5 2018 by Alexander Munz
 
 Output: 'output.png', 'updated.dropdown.html'
