@@ -1,0 +1,12 @@
+
+Name of Quantlet: Regrisk sentiment analysis
+
+Published in: 'Digital Economy and Decision Analytics (SS 18)'
+
+Description: 'Regulation Risk for Cryptocurrencies: Lexicon based sentiment analysis of scraped regulation news' 
+
+Keywords: 'regulation risk, sentiment analysis, lexicon, correlation analysis, web scraping, cryptocurrencies, python'
+
+Author: Wendy Wang & Brijesh Nanavati
+
+Submitted: Thu, July 05th 2018 by Wendy Wang & Brijesh Nanavati
