@@ -2,14 +2,19 @@
 """
 Created on Wed Jul  4 21:10:23 2018
 
-@author: AlexMunz
+@author: VWRZTS0
 """
 
 import pandas as pd
 from  plotly.offline import plot
 
+#Upload necessary files
+codes = open('filepath/datasets/countries_codes_and_coordinates.csv','r')
+wcmatches = open('filepath/datasets/WorldCupMatches.csv','r')
+wcwinners = pd.read_excel('filepath/datasets/WorldCup_Winner.xlsx', sheet_name='Tabelle1')
+countries = open('filepath/datasets/countries.csv','r')
+
 #Load information about the World Cup (rounds, teams etc.)
-codes = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/countries_codes_and_coordinates.csv','r')
 codes= codes.readlines()
 codes = [i.replace('"',"") for i in codes]
 codes = [i.split(",") for i in codes]
@@ -23,7 +28,6 @@ codes = codes.drop_duplicates(subset='Country')
 codes['Alpha-3 code'] = codes['Alpha-3 code'].str.lstrip()
 
 #Read all World Cup matches
-wcmatches = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/WorldCupMatches.csv','r')
 wcmatches = wcmatches.readlines()
 wcmatches = [i.replace('"',"") for i in wcmatches]
 wcmatches = [i.replace("\n","") for i in wcmatches]
@@ -42,11 +46,8 @@ wcmatches['Home Team Goals'] = wcmatches['Home Team Goals'].apply(pd.to_numeric)
 wcmatches['Away Team Goals'] = wcmatches['Away Team Goals'].apply(pd.to_numeric)
 wcmatches = wcmatches.iloc[:852,:]
 
-#Read all World Cup Winners
-wcwinners = pd.read_excel('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/WorldCup_Winner.xlsx', sheet_name='Tabelle1')
 
 #Read location of Countries
-countries = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/countries.csv','r')
 countries= countries.readlines()
 countries = [i.replace("'","") for i in countries]
 countries = [i.replace("\n","") for i in countries]

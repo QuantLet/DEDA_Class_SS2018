@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jun 28 16:20:11 2018
+Created on Mon Jul  9 09:53:30 2018
 
-@author: AlexMunz
+@author: VWRZTS0
 """
 
 #Import necessary packages
@@ -15,8 +15,13 @@ import random
 #Disable warning
 pd.options.mode.chained_assignment = None
 
-#Load information about the World Cup (rounds, teams etc.)
-worldcup = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/WorldCup2018_adapted.csv','r')
+#Load necessary files
+worldcup = open('filepath/WorldCup2018_adapted_semifinals.csv','r')
+ranking = open('filepath/FIFA_Ranking.csv', "r")
+hist_ranking  = open('filepath/fifa_ranking_1993-2018.csv', "r")
+results = pd.read_csv('filepath/results_adapted_semifinals.csv')
+
+#Load updated information about the World Cup (rounds, teams etc.)
 worldcup= worldcup.readlines()
 worldcup = [i.replace('"',"") for i in worldcup]
 worldcup = [i.replace("ï»¿","") for i in worldcup]
@@ -43,7 +48,6 @@ df_worldcupteams=pd.DataFrame(worldcup_teams, columns={'worldcup_teams'})
 df_worldcupteams['Points']=0
 
 #Load current FIFA Rankings
-ranking = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/FIFA_Ranking.csv', "r")
 ranking = ranking.readlines()
 ranking = [i.replace('"', "") for i in ranking]
 ranking = [i.split(",") for i in ranking]
@@ -54,7 +58,6 @@ ranking['Position'] = ranking['Position'].apply(pd.to_numeric)
 ranking['Points'] = ranking['Points'].apply(pd.to_numeric)
 
 #Load historic FIFA Rankings
-hist_ranking  = open('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/fifa_ranking_1993-2018.csv', "r")
 hist_ranking = hist_ranking.readlines()
 hist_ranking  = [i.replace('"', "") for i in hist_ranking]
 hist_ranking = [i.split(",") for i in hist_ranking]
@@ -76,9 +79,6 @@ hist_ranking = hist_ranking.drop(columns=['date'])
 #Create another FIFA Ranking dataframe for later modification
 hist_ranking_away = hist_ranking.copy()
 hist_ranking_away.columns = ['rank_away','away_team','monthyear']
-
-#Load data of all matches
-results = pd.read_csv('C:/Users/VWRZTS0/Desktop/DEDA/DEDA/datasets/results_adapted.csv')
 
 #Establish Winner
 winner = []
@@ -381,106 +381,31 @@ worldcup_semi=worldcup.iloc[60:62]
 worldcup_playoff3rd=worldcup.iloc[62:63]
 worldcup_final=worldcup.iloc[63:64]
 
-#Add rankings to dataset
-worldcup_quarter = worldcup_quarter.rename(columns={'Home Team': 'home_team', 'Away Team':'away_team'})
-worldcup_quarter.insert(0, 'ranking_home', worldcup_quarter['home_team'].map(ranking.set_index('Country')['Position']))
-worldcup_quarter.insert(2, 'ranking_away', worldcup_quarter['away_team'].map(ranking.set_index('Country')['Position']))
-worldcup_quarter['ranking_difference'] = worldcup_quarter['ranking_home']-worldcup_quarter['ranking_away']
-
-#expected goal difference for game outcome
-worldcup_quarter.insert(0, 'expected_score_home', worldcup_quarter['home_team'].map(weightedgd.set_index('team')['weighted_scored']))
-worldcup_quarter.insert(1, 'expected_conceded_away', worldcup_quarter['away_team'].map(weightedgd.set_index('team')['weighted_conceded']))
-worldcup_quarter['offensive_ability'] = worldcup_quarter['expected_score_home']-worldcup_quarter['expected_conceded_away']
-
-worldcup_quarter.insert(1, 'expected_score_away', worldcup_quarter['away_team'].map(weightedgd.set_index('team')['weighted_scored']))
-worldcup_quarter.insert(3, 'expected_conceded_home', worldcup_quarter['home_team'].map(weightedgd.set_index('team')['weighted_conceded']))
-worldcup_quarter['defensive_ability'] = worldcup_quarter['expected_score_away']-worldcup_quarter['expected_conceded_home']
-
-#Build reference Set
-reference_set_quarter = worldcup_quarter[['home_team','away_team']]
-
-#Prepare new predicition container
-pred_set_quarter=[]
-
-# Loop to add teams to new prediction dataset based on the ranking position of each team
-for index, row in worldcup_quarter.iterrows():
-    pred_set_quarter.append({'team': row['home_team'], 'ranking_difference': row['ranking_difference'], 'winning_team': None, 'offensive_ability': row['offensive_ability'],'defensive_ability': row['defensive_ability']})
-    
-pred_set_quarter = pd.DataFrame(pred_set_quarter)
-
-# Get dummy variables and drop winning_team column
-pred_set_quarter = pd.get_dummies(pred_set_quarter, prefix=None, columns=['team'])
-
-# Add missing columns compared to the model's training dataset
-missing_cols = set(final.columns) - set(pred_set_quarter.columns)
-for c in missing_cols:
-    pred_set_quarter[c] = 0
-pred_set_quarter = pred_set_quarter[final.columns]
-
-# Remove winning team column
-pred_set_quarter = pred_set_quarter.drop(['winning_team'], axis=1)
-
-# Create container to store Quarterfinal Winners
-winner_quarter=[]
-
-#group matches and add points based on results
-predictions_quarter = logreg.predict(pred_set_quarter)
-print("QUARTERFINALS")
-print("")
-for i in range(worldcup_quarter.shape[0]):
-    print(reference_set_quarter.iloc[i, 0] + " vs. " + reference_set_quarter.iloc[i, 1])
-    if predictions_quarter[i] == 2:
-        print("Winner: " + reference_set_quarter.iloc[i, 0])
-        winner_quarter.append(reference_set_quarter.iloc[i,0])
-    elif predictions_quarter[i] == 0:
-        winner_quarter.append(reference_set_quarter.iloc[i,1])
-        print("Winner: " + reference_set_quarter.iloc[i, 1])
-    else:
-        random_winner = random.choice([reference_set_quarter.iloc[i,0],reference_set_quarter.iloc[i,1]])
-        print("Penalty Shootout! Lucky Winner: " + random_winner )
-        winner_quarter.append(random_winner)
-        
-    print('Probability of ' + reference_set_quarter.iloc[i, 0] + ' winning: ', '%.3f'%(logreg.predict_proba(pred_set_quarter)[i][2]))
-    print('Probability of P-Shootout: ', '%.3f'%(logreg.predict_proba(pred_set_quarter)[i][1]))
-    print('Probability of ' + reference_set_quarter.iloc[i, 1] + ' winning: ', '%.3f'%(logreg.predict_proba(pred_set_quarter)[i][0]))
-    print("")
-    
-#add winner column to dataset
-reference_set_quarter['winner'] = winner_quarter
-
-#Prepare dataset for quarterfinals
-match_quarter_index=['W57','W58','W59','W60']
-reference_set_quarter['match_index']=match_quarter_index
-
-#Aad winning teams to semifinal games
-worldcup_semi.insert(0, 'home_team',worldcup_semi['Home Team'].map(reference_set_quarter.set_index('match_index')['winner']))
-worldcup_semi.insert(1, 'away_team',worldcup_semi['Away Team'].map(reference_set_quarter.set_index('match_index')['winner']))
-worldcup_semi = worldcup_semi.drop(columns=['Round Number','Home Team','Away Team','Group'])
 
 #Add rankings to dataset
-worldcup_semi.insert(0, 'ranking_home', worldcup_semi['home_team'].map(ranking.set_index('Country')['Position']))
-worldcup_semi.insert(2, 'ranking_away', worldcup_semi['away_team'].map(ranking.set_index('Country')['Position']))
+worldcup_semi.insert(0, 'ranking_home', worldcup_semi['Home Team'].map(ranking.set_index('Country')['Position']))
+worldcup_semi.insert(2, 'ranking_away', worldcup_semi['Away Team'].map(ranking.set_index('Country')['Position']))
 worldcup_semi['ranking_difference'] = worldcup_semi['ranking_home']-worldcup_semi['ranking_away']
 
 #expected goal difference for game outcome
-worldcup_semi.insert(0, 'expected_score_home', worldcup_semi['home_team'].map(weightedgd.set_index('team')['weighted_scored']))
-worldcup_semi.insert(1, 'expected_conceded_away', worldcup_semi['away_team'].map(weightedgd.set_index('team')['weighted_conceded']))
+worldcup_semi.insert(0, 'expected_score_home', worldcup_semi['Home Team'].map(weightedgd.set_index('team')['weighted_scored']))
+worldcup_semi.insert(1, 'expected_conceded_away', worldcup_semi['Away Team'].map(weightedgd.set_index('team')['weighted_conceded']))
 worldcup_semi['offensive_ability'] = worldcup_semi['expected_score_home']-worldcup_semi['expected_conceded_away']
 
-worldcup_semi.insert(1, 'expected_score_away', worldcup_semi['away_team'].map(weightedgd.set_index('team')['weighted_scored']))
-worldcup_semi.insert(3, 'expected_conceded_home', worldcup_semi['home_team'].map(weightedgd.set_index('team')['weighted_conceded']))
+worldcup_semi.insert(1, 'expected_score_away', worldcup_semi['Away Team'].map(weightedgd.set_index('team')['weighted_scored']))
+worldcup_semi.insert(3, 'expected_conceded_home', worldcup_semi['Home Team'].map(weightedgd.set_index('team')['weighted_conceded']))
 worldcup_semi['defensive_ability'] = worldcup_semi['expected_score_away']-worldcup_semi['expected_conceded_home']
 
 #Build reference Set
 reference_set_semi = worldcup_semi.drop(columns=['ranking_home','ranking_away','ranking_difference','expected_score_home','expected_conceded_away', 'expected_score_away', 'expected_conceded_home'])
-
+reference_set_semi = reference_set_semi.drop(columns=['Round Number','Group','offensive_ability','defensive_ability'])
 
 #Prepare new predicition container
 pred_set_semi=[]
 
 # Loop to add teams to new prediction dataset based on the ranking position of each team
 for index, row in worldcup_semi.iterrows():
-    pred_set_semi.append({'team': row['home_team'], 'ranking_difference': row['ranking_difference'], 'winning_team': None, 'offensive_ability': row['offensive_ability'],'defensive_ability': row['defensive_ability']})
+    pred_set_semi.append({'team': row['Home Team'], 'ranking_difference': row['ranking_difference'], 'winning_team': None, 'offensive_ability': row['offensive_ability'],'defensive_ability': row['defensive_ability']})
   
 pred_set_semi = pd.DataFrame(pred_set_semi)
 
@@ -541,7 +466,7 @@ worldcup_playoff3rd = worldcup_playoff3rd.drop(columns=['Round Number','Home Tea
 
 worldcup_final.insert(0, 'home_team',worldcup_final['Home Team'].map(reference_set_semi.set_index('match_index_win')['winner']))
 worldcup_final.insert(1, 'away_team',worldcup_final['Away Team'].map(reference_set_semi.set_index('match_index_win')['winner']))
-worldcup_final = worldcup_final.drop(columns=['Round Number','Home Team','Away Team','Group'])
+worldcup_final = worldcup_final.drop(columns=['Round Number','Group'])
 
 
 #Add rankings to dataset
