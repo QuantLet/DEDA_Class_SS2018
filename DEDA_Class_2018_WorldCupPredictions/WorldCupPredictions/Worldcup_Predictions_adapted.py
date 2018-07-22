@@ -16,10 +16,10 @@ import random
 pd.options.mode.chained_assignment = None
 
 #Load necessary files
-worldcup = open('filepath/WorldCup2018.csv','r')
+worldcup = open('filepath/WorldCup2018_adapted.csv','r')
 ranking = open('filepath/FIFA_Ranking.csv', "r")
 hist_ranking  = open('filepath/fifa_ranking_1993-2018.csv', "r")
-results = pd.read_csv('filepath/results.csv')
+results = pd.read_csv('filepath/results_adapted.csv')
 
 #Load updated information about the World Cup (rounds, teams etc.)
 worldcup= worldcup.readlines()
