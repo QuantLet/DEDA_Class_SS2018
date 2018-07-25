@@ -1,0 +1,3958 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_02aabea52a774a0486bcc6b8b778ff29 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_02aabea52a774a0486bcc6b8b778ff29" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_02aabea52a774a0486bcc6b8b778ff29 = L.map(
+                                  'map_02aabea52a774a0486bcc6b8b778ff29',
+                                  {center: [52.5189879,-13.3925988],
+                                  zoom: 3,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            L.control.scale().addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+        
+    
+            var tile_layer_d9daa51883234733943debfb7ca7d13d = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 15,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+        
+    
+
+            var marker_d77881a549fe4b4aa67f80e2a4fd1066 = L.marker(
+                [31.3070951,120.63573986811701],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_6ef0388656984471ad3ce8259901af86 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d77881a549fe4b4aa67f80e2a4fd1066.setIcon(icon_6ef0388656984471ad3ce8259901af86);
+            
+    
+            var popup_000827aad4d646b1bf7bd17e10aa7936 = L.popup({maxWidth: '300'});
+
+            
+                var html_61a421197138438090a3595d94f9358c = $('<div id="html_61a421197138438090a3595d94f9358c" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_000827aad4d646b1bf7bd17e10aa7936.setContent(html_61a421197138438090a3595d94f9358c);
+            
+
+            marker_d77881a549fe4b4aa67f80e2a4fd1066.bindPopup(popup_000827aad4d646b1bf7bd17e10aa7936);
+
+            
+        
+    
+
+            var marker_ad729e82ce834394bc32b949a2e4c413 = L.marker(
+                [24.98159995,121.57543234141],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_2c1e13237bee4fabb8b4e918fc4e5572 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ad729e82ce834394bc32b949a2e4c413.setIcon(icon_2c1e13237bee4fabb8b4e918fc4e5572);
+            
+    
+            var popup_1cc88581f9554c15860644ba8eed99fe = L.popup({maxWidth: '300'});
+
+            
+                var html_fecdfe2a211d4133b108d0577cfae3b7 = $('<div id="html_fecdfe2a211d4133b108d0577cfae3b7" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_1cc88581f9554c15860644ba8eed99fe.setContent(html_fecdfe2a211d4133b108d0577cfae3b7);
+            
+
+            marker_ad729e82ce834394bc32b949a2e4c413.bindPopup(popup_1cc88581f9554c15860644ba8eed99fe);
+
+            
+        
+    
+
+            var marker_74ec9af839114d44a975ecd05de4fac4 = L.marker(
+                [41.0039615,29.0197246919748],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4851f5bbb1284a249f5f1f945954bfbb = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_74ec9af839114d44a975ecd05de4fac4.setIcon(icon_4851f5bbb1284a249f5f1f945954bfbb);
+            
+    
+            var popup_e73b9d4d668c4b5ebf94b5842d46d9b4 = L.popup({maxWidth: '300'});
+
+            
+                var html_72da212d832c42368dd87b7ec9788cb1 = $('<div id="html_72da212d832c42368dd87b7ec9788cb1" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_e73b9d4d668c4b5ebf94b5842d46d9b4.setContent(html_72da212d832c42368dd87b7ec9788cb1);
+            
+
+            marker_74ec9af839114d44a975ecd05de4fac4.bindPopup(popup_e73b9d4d668c4b5ebf94b5842d46d9b4);
+
+            
+        
+    
+
+            var marker_9562a3cf461a4c73bcdada3e7d1a8535 = L.marker(
+                [38.52247515,-121.751392674913],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4b23e494ef1d4b799d38d81497a850ad = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9562a3cf461a4c73bcdada3e7d1a8535.setIcon(icon_4b23e494ef1d4b799d38d81497a850ad);
+            
+    
+            var popup_60019b16a23e486f8e02b33915883ebf = L.popup({maxWidth: '300'});
+
+            
+                var html_481963410957407dbe51609b03e2f544 = $('<div id="html_481963410957407dbe51609b03e2f544" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_60019b16a23e486f8e02b33915883ebf.setContent(html_481963410957407dbe51609b03e2f544);
+            
+
+            marker_9562a3cf461a4c73bcdada3e7d1a8535.bindPopup(popup_60019b16a23e486f8e02b33915883ebf);
+
+            
+        
+    
+
+            var marker_3a9a58cf7eb74e9681c009c3e0482778 = L.marker(
+                [40.004479499999995,116.37023799999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_77c00c9c9c7e447a981a2b520cd42db7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3a9a58cf7eb74e9681c009c3e0482778.setIcon(icon_77c00c9c9c7e447a981a2b520cd42db7);
+            
+    
+            var popup_a2daa774d062423e8c9cf740117f0142 = L.popup({maxWidth: '300'});
+
+            
+                var html_bdd1fe6dc163480483ff251501f8b4b5 = $('<div id="html_bdd1fe6dc163480483ff251501f8b4b5" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_a2daa774d062423e8c9cf740117f0142.setContent(html_bdd1fe6dc163480483ff251501f8b4b5);
+            
+
+            marker_3a9a58cf7eb74e9681c009c3e0482778.bindPopup(popup_a2daa774d062423e8c9cf740117f0142);
+
+            
+        
+    
+
+            var marker_35d65bf3d134464588dd0e1e51a126ea = L.marker(
+                [35.89056185,128.610846025227],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_e30f018443494ba6bc4b6859f6ad2cbc = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_35d65bf3d134464588dd0e1e51a126ea.setIcon(icon_e30f018443494ba6bc4b6859f6ad2cbc);
+            
+    
+            var popup_ab1b87976e364bc4b786354801940152 = L.popup({maxWidth: '300'});
+
+            
+                var html_f6d6b890ca2e4b9c81d003bf1e4b60cc = $('<div id="html_f6d6b890ca2e4b9c81d003bf1e4b60cc" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_ab1b87976e364bc4b786354801940152.setContent(html_f6d6b890ca2e4b9c81d003bf1e4b60cc);
+            
+
+            marker_35d65bf3d134464588dd0e1e51a126ea.bindPopup(popup_ab1b87976e364bc4b786354801940152);
+
+            
+        
+    
+
+            var marker_8c4548b46edb4f8c838423e35f9bdf02 = L.marker(
+                [1.29500195,103.84909213963199],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_344c92a7cc11426baa31fcd9cbfe520b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8c4548b46edb4f8c838423e35f9bdf02.setIcon(icon_344c92a7cc11426baa31fcd9cbfe520b);
+            
+    
+            var popup_6cc823a0821d457d9019d6b8646347a3 = L.popup({maxWidth: '300'});
+
+            
+                var html_1211a325c7f74fda85983bd4bcde1a77 = $('<div id="html_1211a325c7f74fda85983bd4bcde1a77" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_6cc823a0821d457d9019d6b8646347a3.setContent(html_1211a325c7f74fda85983bd4bcde1a77);
+            
+
+            marker_8c4548b46edb4f8c838423e35f9bdf02.bindPopup(popup_6cc823a0821d457d9019d6b8646347a3);
+
+            
+        
+    
+
+            var marker_9875b13a143c4daa89e319c6353555df = L.marker(
+                [41.78468745,-87.6007493265106],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7c5b33516f894c2baf15e5a8bd33c066 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9875b13a143c4daa89e319c6353555df.setIcon(icon_7c5b33516f894c2baf15e5a8bd33c066);
+            
+    
+            var popup_72c0d06a09ce4a28892756ee00ad2241 = L.popup({maxWidth: '300'});
+
+            
+                var html_56f22df53b0b40ac9d42dda16b573ac7 = $('<div id="html_56f22df53b0b40ac9d42dda16b573ac7" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_72c0d06a09ce4a28892756ee00ad2241.setContent(html_56f22df53b0b40ac9d42dda16b573ac7);
+            
+
+            marker_9875b13a143c4daa89e319c6353555df.bindPopup(popup_72c0d06a09ce4a28892756ee00ad2241);
+
+            
+        
+    
+
+            var marker_31be3cb5fd5343d2bc1b8a6fc306575e = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7a676a951ad74a74a458cf8d84db3705 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_31be3cb5fd5343d2bc1b8a6fc306575e.setIcon(icon_7a676a951ad74a74a458cf8d84db3705);
+            
+    
+            var popup_7e515c06ecc246eb8a0c1b6936439442 = L.popup({maxWidth: '300'});
+
+            
+                var html_3360edc149aa4f4ca247235a22f03bef = $('<div id="html_3360edc149aa4f4ca247235a22f03bef" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_7e515c06ecc246eb8a0c1b6936439442.setContent(html_3360edc149aa4f4ca247235a22f03bef);
+            
+
+            marker_31be3cb5fd5343d2bc1b8a6fc306575e.bindPopup(popup_7e515c06ecc246eb8a0c1b6936439442);
+
+            
+        
+    
+
+            var marker_96b84882970a4a2dbd2095c9a4e30259 = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_c1c8888c23e74a7b91db956b0c5c4154 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_96b84882970a4a2dbd2095c9a4e30259.setIcon(icon_c1c8888c23e74a7b91db956b0c5c4154);
+            
+    
+            var popup_dea104e2cda6455cba70bcb15e48b5d5 = L.popup({maxWidth: '300'});
+
+            
+                var html_e5ce7016d6a84c529127270f6f75268b = $('<div id="html_e5ce7016d6a84c529127270f6f75268b" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_dea104e2cda6455cba70bcb15e48b5d5.setContent(html_e5ce7016d6a84c529127270f6f75268b);
+            
+
+            marker_96b84882970a4a2dbd2095c9a4e30259.bindPopup(popup_dea104e2cda6455cba70bcb15e48b5d5);
+
+            
+        
+    
+
+            var marker_2fe69e4764aa44ab8f076c6f1a1a89a6 = L.marker(
+                [52.17638955,0.14308881541518698],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4127fc81e5014755a28ea72e9193c14c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2fe69e4764aa44ab8f076c6f1a1a89a6.setIcon(icon_4127fc81e5014755a28ea72e9193c14c);
+            
+    
+            var popup_048b9da2b3294cd08ba67e6302148ff6 = L.popup({maxWidth: '300'});
+
+            
+                var html_9d2d975be02548259c18563040af4f56 = $('<div id="html_9d2d975be02548259c18563040af4f56" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_048b9da2b3294cd08ba67e6302148ff6.setContent(html_9d2d975be02548259c18563040af4f56);
+            
+
+            marker_2fe69e4764aa44ab8f076c6f1a1a89a6.bindPopup(popup_048b9da2b3294cd08ba67e6302148ff6);
+
+            
+        
+    
+
+            var marker_ebeeb159b7dd4f0595dcefd28289d0e8 = L.marker(
+                [40.00471095,-83.0285936787604],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_c24402aa80fd44b99b5a0d5716f65cb5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ebeeb159b7dd4f0595dcefd28289d0e8.setIcon(icon_c24402aa80fd44b99b5a0d5716f65cb5);
+            
+    
+            var popup_a68af77835ff41af907df43a1399981d = L.popup({maxWidth: '300'});
+
+            
+                var html_d76631d05d8e4bfb9b274bf1e92be866 = $('<div id="html_d76631d05d8e4bfb9b274bf1e92be866" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_a68af77835ff41af907df43a1399981d.setContent(html_d76631d05d8e4bfb9b274bf1e92be866);
+            
+
+            marker_ebeeb159b7dd4f0595dcefd28289d0e8.bindPopup(popup_a68af77835ff41af907df43a1399981d);
+
+            
+        
+    
+
+            var marker_9a24a3c06476401092b7e94abcd21d36 = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_8708f2947b0f400b987a7817805f8827 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9a24a3c06476401092b7e94abcd21d36.setIcon(icon_8708f2947b0f400b987a7817805f8827);
+            
+    
+            var popup_6ca97db67ca8404d9d21521a81b8a223 = L.popup({maxWidth: '300'});
+
+            
+                var html_ba014e15479d4959a619b66aab25fc87 = $('<div id="html_ba014e15479d4959a619b66aab25fc87" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_6ca97db67ca8404d9d21521a81b8a223.setContent(html_ba014e15479d4959a619b66aab25fc87);
+            
+
+            marker_9a24a3c06476401092b7e94abcd21d36.bindPopup(popup_6ca97db67ca8404d9d21521a81b8a223);
+
+            
+        
+    
+
+            var marker_dfd85b31d31245cb8eda676acc581195 = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_fecb633734f348f39dbf840782f19387 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dfd85b31d31245cb8eda676acc581195.setIcon(icon_fecb633734f348f39dbf840782f19387);
+            
+    
+            var popup_6b8b09d8f8524f36a7ebe9667f435f6d = L.popup({maxWidth: '300'});
+
+            
+                var html_623b29fc403d4e5c826442ef7595c013 = $('<div id="html_623b29fc403d4e5c826442ef7595c013" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_6b8b09d8f8524f36a7ebe9667f435f6d.setContent(html_623b29fc403d4e5c826442ef7595c013);
+            
+
+            marker_dfd85b31d31245cb8eda676acc581195.bindPopup(popup_6b8b09d8f8524f36a7ebe9667f435f6d);
+
+            
+        
+    
+
+            var marker_739cc3ae0143460d9cfff67a4f74b061 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_573503a5cf1d42f2b30611de5ee9d6bc = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_739cc3ae0143460d9cfff67a4f74b061.setIcon(icon_573503a5cf1d42f2b30611de5ee9d6bc);
+            
+    
+            var popup_555bb4f7813c424a8d98a0a95115f648 = L.popup({maxWidth: '300'});
+
+            
+                var html_59c96831c69a4b64a1cf809730fb4f73 = $('<div id="html_59c96831c69a4b64a1cf809730fb4f73" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_555bb4f7813c424a8d98a0a95115f648.setContent(html_59c96831c69a4b64a1cf809730fb4f73);
+            
+
+            marker_739cc3ae0143460d9cfff67a4f74b061.bindPopup(popup_555bb4f7813c424a8d98a0a95115f648);
+
+            
+        
+    
+
+            var marker_0303f34e932040608802cc1bd63f1094 = L.marker(
+                [56.167205200000005,10.202608870964099],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_0db51c2fb38f469e9c8d1a4b27c4678b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0303f34e932040608802cc1bd63f1094.setIcon(icon_0db51c2fb38f469e9c8d1a4b27c4678b);
+            
+    
+            var popup_ac75584d08c74c4385fa16ea9fa216ca = L.popup({maxWidth: '300'});
+
+            
+                var html_c63b64c380874765884f6c256144e5bb = $('<div id="html_c63b64c380874765884f6c256144e5bb" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer (pro bono) </div>')[0];
+                popup_ac75584d08c74c4385fa16ea9fa216ca.setContent(html_c63b64c380874765884f6c256144e5bb);
+            
+
+            marker_0303f34e932040608802cc1bd63f1094.bindPopup(popup_ac75584d08c74c4385fa16ea9fa216ca);
+
+            
+        
+    
+
+            var marker_10dc5221a3284342b472b1bf8f2218e5 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_3196a58e33a24e11b25a7057ecce6ed2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_10dc5221a3284342b472b1bf8f2218e5.setIcon(icon_3196a58e33a24e11b25a7057ecce6ed2);
+            
+    
+            var popup_471116fc9c764044b0b61bac802bd12c = L.popup({maxWidth: '300'});
+
+            
+                var html_bad6d9aec6a74229b92e3285fb95d8d4 = $('<div id="html_bad6d9aec6a74229b92e3285fb95d8d4" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_471116fc9c764044b0b61bac802bd12c.setContent(html_bad6d9aec6a74229b92e3285fb95d8d4);
+            
+
+            marker_10dc5221a3284342b472b1bf8f2218e5.bindPopup(popup_471116fc9c764044b0b61bac802bd12c);
+
+            
+        
+    
+
+            var marker_4eba0e5800914842ae57ba4353a99a4a = L.marker(
+                [52.3793131,-1.5604252],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_bc341eeef1654ec9a22d6dadf0de62ba = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4eba0e5800914842ae57ba4353a99a4a.setIcon(icon_bc341eeef1654ec9a22d6dadf0de62ba);
+            
+    
+            var popup_eaf22e3fd5c84f04af53d527c0cfee0a = L.popup({maxWidth: '300'});
+
+            
+                var html_c2bc63449ea14bb0b0c495738b9bf98a = $('<div id="html_c2bc63449ea14bb0b0c495738b9bf98a" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_eaf22e3fd5c84f04af53d527c0cfee0a.setContent(html_c2bc63449ea14bb0b0c495738b9bf98a);
+            
+
+            marker_4eba0e5800914842ae57ba4353a99a4a.bindPopup(popup_eaf22e3fd5c84f04af53d527c0cfee0a);
+
+            
+        
+    
+
+            var marker_793361de58f84280980cdf442fa323c5 = L.marker(
+                [34.67551995,33.045429235198895],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_88c544eacd65473d83362450cf397630 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_793361de58f84280980cdf442fa323c5.setIcon(icon_88c544eacd65473d83362450cf397630);
+            
+    
+            var popup_db7d6e366d484f13b4f8e678a6f9c58b = L.popup({maxWidth: '300'});
+
+            
+                var html_137f247756074839831baadfa06e953b = $('<div id="html_137f247756074839831baadfa06e953b" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_db7d6e366d484f13b4f8e678a6f9c58b.setContent(html_137f247756074839831baadfa06e953b);
+            
+
+            marker_793361de58f84280980cdf442fa323c5.bindPopup(popup_db7d6e366d484f13b4f8e678a6f9c58b);
+
+            
+        
+    
+
+            var marker_9a2c293e467446b2a313c0b390a570f0 = L.marker(
+                [1.29500195,103.84909213963199],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_8df7600769b942fabb6be19831b685ec = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9a2c293e467446b2a313c0b390a570f0.setIcon(icon_8df7600769b942fabb6be19831b685ec);
+            
+    
+            var popup_842bd1726f0f47f09edfd39b0273d03b = L.popup({maxWidth: '300'});
+
+            
+                var html_1000824f680c481494a0e0f20138e70e = $('<div id="html_1000824f680c481494a0e0f20138e70e" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_842bd1726f0f47f09edfd39b0273d03b.setContent(html_1000824f680c481494a0e0f20138e70e);
+            
+
+            marker_9a2c293e467446b2a313c0b390a570f0.bindPopup(popup_842bd1726f0f47f09edfd39b0273d03b);
+
+            
+        
+    
+
+            var marker_3293f044e2804864b30229a6883b6691 = L.marker(
+                [1.29500195,103.84909213963199],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_f766c7698eb445ada7ad9eec8125a618 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3293f044e2804864b30229a6883b6691.setIcon(icon_f766c7698eb445ada7ad9eec8125a618);
+            
+    
+            var popup_a97994dd225c49dcb4d23fa27eb15165 = L.popup({maxWidth: '300'});
+
+            
+                var html_df358f11fe474ae9a49d09772c69dcd3 = $('<div id="html_df358f11fe474ae9a49d09772c69dcd3" style="width: 100.0%; height: 100.0%;">Position: Guest researcher </div>')[0];
+                popup_a97994dd225c49dcb4d23fa27eb15165.setContent(html_df358f11fe474ae9a49d09772c69dcd3);
+            
+
+            marker_3293f044e2804864b30229a6883b6691.bindPopup(popup_a97994dd225c49dcb4d23fa27eb15165);
+
+            
+        
+    
+
+            var marker_30afc1dceff14478aef1a9dd41dda55b = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_11742334e75042c790729982657cacb5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_30afc1dceff14478aef1a9dd41dda55b.setIcon(icon_11742334e75042c790729982657cacb5);
+            
+    
+            var popup_9510cfc0e348408bbf78479f61342cd3 = L.popup({maxWidth: '300'});
+
+            
+                var html_fe94deb0d1bf41ed815fc326039908ff = $('<div id="html_fe94deb0d1bf41ed815fc326039908ff" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_9510cfc0e348408bbf78479f61342cd3.setContent(html_fe94deb0d1bf41ed815fc326039908ff);
+            
+
+            marker_30afc1dceff14478aef1a9dd41dda55b.bindPopup(popup_9510cfc0e348408bbf78479f61342cd3);
+
+            
+        
+    
+
+            var marker_9082c6b2ed6d4e3cb1e7888b38aa62ea = L.marker(
+                [43.60519035,1.4349942173788202],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_1a9043ecbe0348739d4bb9453039991f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9082c6b2ed6d4e3cb1e7888b38aa62ea.setIcon(icon_1a9043ecbe0348739d4bb9453039991f);
+            
+    
+            var popup_323a2b0960ee43b2a0adf7f34875ee6b = L.popup({maxWidth: '300'});
+
+            
+                var html_d5f4d67d7d174659b31dc9aaea66e310 = $('<div id="html_d5f4d67d7d174659b31dc9aaea66e310" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_323a2b0960ee43b2a0adf7f34875ee6b.setContent(html_d5f4d67d7d174659b31dc9aaea66e310);
+            
+
+            marker_9082c6b2ed6d4e3cb1e7888b38aa62ea.bindPopup(popup_323a2b0960ee43b2a0adf7f34875ee6b);
+
+            
+        
+    
+
+            var marker_9cc19f20a3b4469cb3274303b73a86f8 = L.marker(
+                [34.220389000000004,70.38003140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_da22e3ecaadd4283a56f6f4daf8eea34 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9cc19f20a3b4469cb3274303b73a86f8.setIcon(icon_da22e3ecaadd4283a56f6f4daf8eea34);
+            
+    
+            var popup_055e57e220284766a955f06d767622ac = L.popup({maxWidth: '300'});
+
+            
+                var html_4b8cdd6d28e048ae89107b97fff3a56d = $('<div id="html_4b8cdd6d28e048ae89107b97fff3a56d" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_055e57e220284766a955f06d767622ac.setContent(html_4b8cdd6d28e048ae89107b97fff3a56d);
+            
+
+            marker_9cc19f20a3b4469cb3274303b73a86f8.bindPopup(popup_055e57e220284766a955f06d767622ac);
+
+            
+        
+    
+
+            var marker_06f4e1053b684ab1b81a1849e6ef91c4 = L.marker(
+                [46.52255555,6.580932394210711],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_0f780d46b1204615bcfb4c0500bf624d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_06f4e1053b684ab1b81a1849e6ef91c4.setIcon(icon_0f780d46b1204615bcfb4c0500bf624d);
+            
+    
+            var popup_4ed20bde1e4648d5b12fc4ce67ccea29 = L.popup({maxWidth: '300'});
+
+            
+                var html_60c301e2fb7b4f05b76c01554f346dfc = $('<div id="html_60c301e2fb7b4f05b76c01554f346dfc" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_4ed20bde1e4648d5b12fc4ce67ccea29.setContent(html_60c301e2fb7b4f05b76c01554f346dfc);
+            
+
+            marker_06f4e1053b684ab1b81a1849e6ef91c4.bindPopup(popup_4ed20bde1e4648d5b12fc4ce67ccea29);
+
+            
+        
+    
+
+            var marker_0e58dcf78a104c4f8cda4911cbf301dd = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_692e74c0870d4a06afd0b6c0bf93b56d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0e58dcf78a104c4f8cda4911cbf301dd.setIcon(icon_692e74c0870d4a06afd0b6c0bf93b56d);
+            
+    
+            var popup_34ef14a22c7f488d90840228b4fc8b86 = L.popup({maxWidth: '300'});
+
+            
+                var html_a8a12e227b074ea18fa7ab46f56c99e0 = $('<div id="html_a8a12e227b074ea18fa7ab46f56c99e0" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_34ef14a22c7f488d90840228b4fc8b86.setContent(html_a8a12e227b074ea18fa7ab46f56c99e0);
+            
+
+            marker_0e58dcf78a104c4f8cda4911cbf301dd.bindPopup(popup_34ef14a22c7f488d90840228b4fc8b86);
+
+            
+        
+    
+
+            var marker_f0e08cd88a3947798d36eb872432205d = L.marker(
+                [48.0451896,-1.7457907],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_816d355c8e934d6d91445161908ef2c5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f0e08cd88a3947798d36eb872432205d.setIcon(icon_816d355c8e934d6d91445161908ef2c5);
+            
+    
+            var popup_a5e3256828314d97bd27d29070a8cb58 = L.popup({maxWidth: '300'});
+
+            
+                var html_2b32a87d9f6145a89d928801d78fccf2 = $('<div id="html_2b32a87d9f6145a89d928801d78fccf2" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_a5e3256828314d97bd27d29070a8cb58.setContent(html_2b32a87d9f6145a89d928801d78fccf2);
+            
+
+            marker_f0e08cd88a3947798d36eb872432205d.bindPopup(popup_a5e3256828314d97bd27d29070a8cb58);
+
+            
+        
+    
+
+            var marker_8fac2adbf28f423f81c1702f67c3d018 = L.marker(
+                [56.167205200000005,10.202608870964099],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_fe335f3e7c03435181797d921e3bf2bd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8fac2adbf28f423f81c1702f67c3d018.setIcon(icon_fe335f3e7c03435181797d921e3bf2bd);
+            
+    
+            var popup_7a462c9d40be4fd3b690a212dc9731bc = L.popup({maxWidth: '300'});
+
+            
+                var html_99b4dcff98944221a759998494d56557 = $('<div id="html_99b4dcff98944221a759998494d56557" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer (pro bono) </div>')[0];
+                popup_7a462c9d40be4fd3b690a212dc9731bc.setContent(html_99b4dcff98944221a759998494d56557);
+            
+
+            marker_8fac2adbf28f423f81c1702f67c3d018.bindPopup(popup_7a462c9d40be4fd3b690a212dc9731bc);
+
+            
+        
+    
+
+            var marker_7096a00331874ee29e76e748c979e5e9 = L.marker(
+                [54.00975365,-2.78757490881378],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7854d24cf5254157996317d8dc2d3166 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7096a00331874ee29e76e748c979e5e9.setIcon(icon_7854d24cf5254157996317d8dc2d3166);
+            
+    
+            var popup_ef5f1d9be37a4200be3a8996b33214cb = L.popup({maxWidth: '300'});
+
+            
+                var html_477e6adcb5dd4b7a852e522a544031db = $('<div id="html_477e6adcb5dd4b7a852e522a544031db" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_ef5f1d9be37a4200be3a8996b33214cb.setContent(html_477e6adcb5dd4b7a852e522a544031db);
+            
+
+            marker_7096a00331874ee29e76e748c979e5e9.bindPopup(popup_ef5f1d9be37a4200be3a8996b33214cb);
+
+            
+        
+    
+
+            var marker_5c79a8415d954e9da208a2bad3b70377 = L.marker(
+                [40.8419836,-73.9436897071772],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_05b4cd6bbb9c4a6ea0facda5763ca6df = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5c79a8415d954e9da208a2bad3b70377.setIcon(icon_05b4cd6bbb9c4a6ea0facda5763ca6df);
+            
+    
+            var popup_1d90377b23fe42e29b22595a1dd07ba8 = L.popup({maxWidth: '300'});
+
+            
+                var html_bf596bbc69ba4ee0911260a8a368bb9e = $('<div id="html_bf596bbc69ba4ee0911260a8a368bb9e" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_1d90377b23fe42e29b22595a1dd07ba8.setContent(html_bf596bbc69ba4ee0911260a8a368bb9e);
+            
+
+            marker_5c79a8415d954e9da208a2bad3b70377.bindPopup(popup_1d90377b23fe42e29b22595a1dd07ba8);
+
+            
+        
+    
+
+            var marker_5398689d0c094bc7b655c321b58c06e0 = L.marker(
+                [33.6431901,-117.84016493553001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_3e8f16c5737d42a0b03966c7bc35cc62 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5398689d0c094bc7b655c321b58c06e0.setIcon(icon_3e8f16c5737d42a0b03966c7bc35cc62);
+            
+    
+            var popup_1c3c2e11daae42738956b1041a04e750 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e0e4509c68445f0a58dd3a73b0c895f = $('<div id="html_9e0e4509c68445f0a58dd3a73b0c895f" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_1c3c2e11daae42738956b1041a04e750.setContent(html_9e0e4509c68445f0a58dd3a73b0c895f);
+            
+
+            marker_5398689d0c094bc7b655c321b58c06e0.bindPopup(popup_1c3c2e11daae42738956b1041a04e750);
+
+            
+        
+    
+
+            var marker_29dc1060534d497ea228ec59412e42f7 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_b6dba2ee90bc4e13a93b22a0e967bb08 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_29dc1060534d497ea228ec59412e42f7.setIcon(icon_b6dba2ee90bc4e13a93b22a0e967bb08);
+            
+    
+            var popup_287c7dbb8d5c4a1292cfe8017179f7cd = L.popup({maxWidth: '300'});
+
+            
+                var html_da91e45f09314c88a7a4d565f23c38a1 = $('<div id="html_da91e45f09314c88a7a4d565f23c38a1" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer / SC 2018 </div>')[0];
+                popup_287c7dbb8d5c4a1292cfe8017179f7cd.setContent(html_da91e45f09314c88a7a4d565f23c38a1);
+            
+
+            marker_29dc1060534d497ea228ec59412e42f7.bindPopup(popup_287c7dbb8d5c4a1292cfe8017179f7cd);
+
+            
+        
+    
+
+            var marker_13b9f210608249c2a6b4fc5646d6c164 = L.marker(
+                [54.00975365,-2.78757490881378],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d5c3604803434aab8e82c1ec92f86292 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_13b9f210608249c2a6b4fc5646d6c164.setIcon(icon_d5c3604803434aab8e82c1ec92f86292);
+            
+    
+            var popup_3ad58eb73a2c4c4797936ef23fd2bb8f = L.popup({maxWidth: '300'});
+
+            
+                var html_9482d81e39d1473caec041614c66e547 = $('<div id="html_9482d81e39d1473caec041614c66e547" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_3ad58eb73a2c4c4797936ef23fd2bb8f.setContent(html_9482d81e39d1473caec041614c66e547);
+            
+
+            marker_13b9f210608249c2a6b4fc5646d6c164.bindPopup(popup_3ad58eb73a2c4c4797936ef23fd2bb8f);
+
+            
+        
+    
+
+            var marker_f843cbd9675a4fdcae7569c527f89244 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_32a52661650d4c0caee1797202fe7ea2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f843cbd9675a4fdcae7569c527f89244.setIcon(icon_32a52661650d4c0caee1797202fe7ea2);
+            
+    
+            var popup_df1c712e07a24e03a23976e023a46903 = L.popup({maxWidth: '300'});
+
+            
+                var html_d1f83e2852994495a668206e9de13f11 = $('<div id="html_d1f83e2852994495a668206e9de13f11" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_df1c712e07a24e03a23976e023a46903.setContent(html_d1f83e2852994495a668206e9de13f11);
+            
+
+            marker_f843cbd9675a4fdcae7569c527f89244.bindPopup(popup_df1c712e07a24e03a23976e023a46903);
+
+            
+        
+    
+
+            var marker_2afeb5fb96364c409298e3443b239713 = L.marker(
+                [51.51442905,-0.116588403365376],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4a9741fbd44b438cbef7560f3cecd87b = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2afeb5fb96364c409298e3443b239713.setIcon(icon_4a9741fbd44b438cbef7560f3cecd87b);
+            
+    
+            var popup_034fe13dd1604ff9ae9e0f0d5f7b4ed2 = L.popup({maxWidth: '300'});
+
+            
+                var html_e08f1a18651a47c491efeb9940b0482d = $('<div id="html_e08f1a18651a47c491efeb9940b0482d" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_034fe13dd1604ff9ae9e0f0d5f7b4ed2.setContent(html_e08f1a18651a47c491efeb9940b0482d);
+            
+
+            marker_2afeb5fb96364c409298e3443b239713.bindPopup(popup_034fe13dd1604ff9ae9e0f0d5f7b4ed2);
+
+            
+        
+    
+
+            var marker_e376fd2b5eb04f9892ff29235b44b9fd = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_18e071b189a74cf5b0b3164e180b20f1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e376fd2b5eb04f9892ff29235b44b9fd.setIcon(icon_18e071b189a74cf5b0b3164e180b20f1);
+            
+    
+            var popup_f6de784429674c5f93c4a3d1b795d409 = L.popup({maxWidth: '300'});
+
+            
+                var html_a6bfa8ee9dad46d4b172fac3d5267dfe = $('<div id="html_a6bfa8ee9dad46d4b172fac3d5267dfe" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_f6de784429674c5f93c4a3d1b795d409.setContent(html_a6bfa8ee9dad46d4b172fac3d5267dfe);
+            
+
+            marker_e376fd2b5eb04f9892ff29235b44b9fd.bindPopup(popup_f6de784429674c5f93c4a3d1b795d409);
+
+            
+        
+    
+
+            var marker_28067bf9bfb94656acfb440b26ef9c05 = L.marker(
+                [47.6899371,9.18938969288633],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_b90e1004de4a4047a5c0e27ab53d9d89 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_28067bf9bfb94656acfb440b26ef9c05.setIcon(icon_b90e1004de4a4047a5c0e27ab53d9d89);
+            
+    
+            var popup_964955b5fc1b4a0498102bad56492a92 = L.popup({maxWidth: '300'});
+
+            
+                var html_fefc4acdd24a45288d8d7447d6585395 = $('<div id="html_fefc4acdd24a45288d8d7447d6585395" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_964955b5fc1b4a0498102bad56492a92.setContent(html_fefc4acdd24a45288d8d7447d6585395);
+            
+
+            marker_28067bf9bfb94656acfb440b26ef9c05.bindPopup(popup_964955b5fc1b4a0498102bad56492a92);
+
+            
+        
+    
+
+            var marker_134801fbc37d4d969b32c107dfb7d90a = L.marker(
+                [49.4832445,8.4645749],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_9e8764ff77a8410cbd71f2468d6defbe = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_134801fbc37d4d969b32c107dfb7d90a.setIcon(icon_9e8764ff77a8410cbd71f2468d6defbe);
+            
+    
+            var popup_5a44e6e13c104f21a54e2034dcaaa77c = L.popup({maxWidth: '300'});
+
+            
+                var html_1af69d7b23854476bfeea7a77baa42dd = $('<div id="html_1af69d7b23854476bfeea7a77baa42dd" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_5a44e6e13c104f21a54e2034dcaaa77c.setContent(html_1af69d7b23854476bfeea7a77baa42dd);
+            
+
+            marker_134801fbc37d4d969b32c107dfb7d90a.bindPopup(popup_5a44e6e13c104f21a54e2034dcaaa77c);
+
+            
+        
+    
+
+            var marker_351ce1d573f348179e53c31036dc647a = L.marker(
+                [54.08408035,12.112823806571901],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_a241549999a9410fae11b25ac6dcc117 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_351ce1d573f348179e53c31036dc647a.setIcon(icon_a241549999a9410fae11b25ac6dcc117);
+            
+    
+            var popup_37b669a086094971917fa1ccdce12b32 = L.popup({maxWidth: '300'});
+
+            
+                var html_40b689924d2d4fbda2f3992aacfee31b = $('<div id="html_40b689924d2d4fbda2f3992aacfee31b" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_37b669a086094971917fa1ccdce12b32.setContent(html_40b689924d2d4fbda2f3992aacfee31b);
+            
+
+            marker_351ce1d573f348179e53c31036dc647a.bindPopup(popup_37b669a086094971917fa1ccdce12b32);
+
+            
+        
+    
+
+            var marker_50d862ac5fcf43eabb4ce0e142a56b7d = L.marker(
+                [50.0889154,14.416137207688902],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_2d6a4fdad9e244f1a16dacec4171ac9d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_50d862ac5fcf43eabb4ce0e142a56b7d.setIcon(icon_2d6a4fdad9e244f1a16dacec4171ac9d);
+            
+    
+            var popup_2728247e9a824b1e9bfa5a3a30c5e530 = L.popup({maxWidth: '300'});
+
+            
+                var html_c642d6bc40bf444fac7d34fdcdc53362 = $('<div id="html_c642d6bc40bf444fac7d34fdcdc53362" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_2728247e9a824b1e9bfa5a3a30c5e530.setContent(html_c642d6bc40bf444fac7d34fdcdc53362);
+            
+
+            marker_50d862ac5fcf43eabb4ce0e142a56b7d.bindPopup(popup_2728247e9a824b1e9bfa5a3a30c5e530);
+
+            
+        
+    
+
+            var marker_59f5c18988da4152b2786bf6c4803635 = L.marker(
+                [57.6985351,11.971248152778498],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_c8cf71886a5d4ffda877584a19dfd5b5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_59f5c18988da4152b2786bf6c4803635.setIcon(icon_c8cf71886a5d4ffda877584a19dfd5b5);
+            
+    
+            var popup_8b850ee104564dd7bc2bb87fcafaf505 = L.popup({maxWidth: '300'});
+
+            
+                var html_b5eb4897284a44589aa4ed08a08787cd = $('<div id="html_b5eb4897284a44589aa4ed08a08787cd" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_8b850ee104564dd7bc2bb87fcafaf505.setContent(html_b5eb4897284a44589aa4ed08a08787cd);
+            
+
+            marker_59f5c18988da4152b2786bf6c4803635.bindPopup(popup_8b850ee104564dd7bc2bb87fcafaf505);
+
+            
+        
+    
+
+            var marker_50e6ecfee2b14257999214cabe667bff = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7f04a25370ee43299433735005d30881 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_50e6ecfee2b14257999214cabe667bff.setIcon(icon_7f04a25370ee43299433735005d30881);
+            
+    
+            var popup_f2b02f167e394b5686dcaa86c0185282 = L.popup({maxWidth: '300'});
+
+            
+                var html_aaf2849f13f6466dab400e84a7752ab3 = $('<div id="html_aaf2849f13f6466dab400e84a7752ab3" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_f2b02f167e394b5686dcaa86c0185282.setContent(html_aaf2849f13f6466dab400e84a7752ab3);
+            
+
+            marker_50e6ecfee2b14257999214cabe667bff.bindPopup(popup_f2b02f167e394b5686dcaa86c0185282);
+
+            
+        
+    
+
+            var marker_68190ee5ac6843d1a2146a17e36049c8 = L.marker(
+                [46.52255555,6.580932394210711],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_8def96955d3c4a44885c8c941dc336f6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_68190ee5ac6843d1a2146a17e36049c8.setIcon(icon_8def96955d3c4a44885c8c941dc336f6);
+            
+    
+            var popup_adf1f9cde54f4b6fbc6c310d48bd0561 = L.popup({maxWidth: '300'});
+
+            
+                var html_316ccfa7a69c49759a8998f0c60392a9 = $('<div id="html_316ccfa7a69c49759a8998f0c60392a9" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_adf1f9cde54f4b6fbc6c310d48bd0561.setContent(html_316ccfa7a69c49759a8998f0c60392a9);
+            
+
+            marker_68190ee5ac6843d1a2146a17e36049c8.bindPopup(popup_adf1f9cde54f4b6fbc6c310d48bd0561);
+
+            
+        
+    
+
+            var marker_cc3cdc5728314cbc95b1a092e3635470 = L.marker(
+                [24.7600174,120.95340145011299],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_e98da2f8e5c94ae589227062175812a8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cc3cdc5728314cbc95b1a092e3635470.setIcon(icon_e98da2f8e5c94ae589227062175812a8);
+            
+    
+            var popup_660c4afe008d4f8b9eb98ea4b8d9a27f = L.popup({maxWidth: '300'});
+
+            
+                var html_e5ec3d1157c64f2581782f5ecf21ea4c = $('<div id="html_e5ec3d1157c64f2581782f5ecf21ea4c" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_660c4afe008d4f8b9eb98ea4b8d9a27f.setContent(html_e5ec3d1157c64f2581782f5ecf21ea4c);
+            
+
+            marker_cc3cdc5728314cbc95b1a092e3635470.bindPopup(popup_660c4afe008d4f8b9eb98ea4b8d9a27f);
+
+            
+        
+    
+
+            var marker_c1c40d1427884b3ab39f98a517ed4ea1 = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_3caed2c5352f47c2a54877e54a2a656d = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c1c40d1427884b3ab39f98a517ed4ea1.setIcon(icon_3caed2c5352f47c2a54877e54a2a656d);
+            
+    
+            var popup_fc0c2665d93e413fb1b87f2eb360f362 = L.popup({maxWidth: '300'});
+
+            
+                var html_6d7def311e344529b55d36c4939e336b = $('<div id="html_6d7def311e344529b55d36c4939e336b" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_fc0c2665d93e413fb1b87f2eb360f362.setContent(html_6d7def311e344529b55d36c4939e336b);
+            
+
+            marker_c1c40d1427884b3ab39f98a517ed4ea1.bindPopup(popup_fc0c2665d93e413fb1b87f2eb360f362);
+
+            
+        
+    
+
+            var marker_840fc0bc2d0746d2bdbcd48f35581656 = L.marker(
+                [52.17638955,0.14308881541518698],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_6eaed007506c4147a5faf78026ff18c0 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_840fc0bc2d0746d2bdbcd48f35581656.setIcon(icon_6eaed007506c4147a5faf78026ff18c0);
+            
+    
+            var popup_bd84ef5c861d45afa615ed6282c21be1 = L.popup({maxWidth: '300'});
+
+            
+                var html_97e9670a25744842a380451b3317318b = $('<div id="html_97e9670a25744842a380451b3317318b" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_bd84ef5c861d45afa615ed6282c21be1.setContent(html_97e9670a25744842a380451b3317318b);
+            
+
+            marker_840fc0bc2d0746d2bdbcd48f35581656.bindPopup(popup_bd84ef5c861d45afa615ed6282c21be1);
+
+            
+        
+    
+
+            var marker_fdfb3248a7654258bf916cd403304d6c = L.marker(
+                [-33.777415399999995,151.1181406],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_df92a7bf4b674dbfbbeb847e5f112355 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fdfb3248a7654258bf916cd403304d6c.setIcon(icon_df92a7bf4b674dbfbbeb847e5f112355);
+            
+    
+            var popup_840a0d25cb424b848d8c4f3a3b7c6378 = L.popup({maxWidth: '300'});
+
+            
+                var html_c844c3e543eb4502ac63c5565c35203c = $('<div id="html_c844c3e543eb4502ac63c5565c35203c" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_840a0d25cb424b848d8c4f3a3b7c6378.setContent(html_c844c3e543eb4502ac63c5565c35203c);
+            
+
+            marker_fdfb3248a7654258bf916cd403304d6c.bindPopup(popup_840a0d25cb424b848d8c4f3a3b7c6378);
+
+            
+        
+    
+
+            var marker_166f345905464cfc9432bc7471f26520 = L.marker(
+                [43.47157725,-3.8014150249364196],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_c22de206cc7f43af8edadca2c34ebbb5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_166f345905464cfc9432bc7471f26520.setIcon(icon_c22de206cc7f43af8edadca2c34ebbb5);
+            
+    
+            var popup_6888de8cb3504d31b729f5b929095d73 = L.popup({maxWidth: '300'});
+
+            
+                var html_fa8fc2d989014f0b81e4489f4ae5ffd1 = $('<div id="html_fa8fc2d989014f0b81e4489f4ae5ffd1" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_6888de8cb3504d31b729f5b929095d73.setContent(html_fa8fc2d989014f0b81e4489f4ae5ffd1);
+            
+
+            marker_166f345905464cfc9432bc7471f26520.bindPopup(popup_6888de8cb3504d31b729f5b929095d73);
+
+            
+        
+    
+
+            var marker_b8c8bf4f0bc34113ab5b89e2721c580f = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_fe6e56931a7c4f639b51e71af22cca2f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b8c8bf4f0bc34113ab5b89e2721c580f.setIcon(icon_fe6e56931a7c4f639b51e71af22cca2f);
+            
+    
+            var popup_a314d584baed45438b6f0827f7499c82 = L.popup({maxWidth: '300'});
+
+            
+                var html_dbbad8371c2543a38360d1a4d003f236 = $('<div id="html_dbbad8371c2543a38360d1a4d003f236" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_a314d584baed45438b6f0827f7499c82.setContent(html_dbbad8371c2543a38360d1a4d003f236);
+            
+
+            marker_b8c8bf4f0bc34113ab5b89e2721c580f.bindPopup(popup_a314d584baed45438b6f0827f7499c82);
+
+            
+        
+    
+
+            var marker_22664143fadc4a50950df39199aa70ad = L.marker(
+                [34.220389000000004,70.38003140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d400bfdf64a045fe88823c512e7dd221 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_22664143fadc4a50950df39199aa70ad.setIcon(icon_d400bfdf64a045fe88823c512e7dd221);
+            
+    
+            var popup_7c5ddc3cb57c4c1f9729632ecaacf505 = L.popup({maxWidth: '300'});
+
+            
+                var html_f5ea70a177924a9a8f05351d2182e47f = $('<div id="html_f5ea70a177924a9a8f05351d2182e47f" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_7c5ddc3cb57c4c1f9729632ecaacf505.setContent(html_f5ea70a177924a9a8f05351d2182e47f);
+            
+
+            marker_22664143fadc4a50950df39199aa70ad.bindPopup(popup_7c5ddc3cb57c4c1f9729632ecaacf505);
+
+            
+        
+    
+
+            var marker_87c7c6f463a94109b96b212e6731ba96 = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_33ce2210cd3f41ccadb8111915f65b38 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_87c7c6f463a94109b96b212e6731ba96.setIcon(icon_33ce2210cd3f41ccadb8111915f65b38);
+            
+    
+            var popup_d2595c7c8a834072bd8bade5f160556c = L.popup({maxWidth: '300'});
+
+            
+                var html_936784a0f67341f08c8ca68299068f6e = $('<div id="html_936784a0f67341f08c8ca68299068f6e" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_d2595c7c8a834072bd8bade5f160556c.setContent(html_936784a0f67341f08c8ca68299068f6e);
+            
+
+            marker_87c7c6f463a94109b96b212e6731ba96.bindPopup(popup_d2595c7c8a834072bd8bade5f160556c);
+
+            
+        
+    
+
+            var marker_c0f2ba24ce1a460395b79001f89c5a20 = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_0cfe97ab5d4c423d92785bfcc3fab4ac = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c0f2ba24ce1a460395b79001f89c5a20.setIcon(icon_0cfe97ab5d4c423d92785bfcc3fab4ac);
+            
+    
+            var popup_7aaa875ea97048278488e96024afb326 = L.popup({maxWidth: '300'});
+
+            
+                var html_3875dfb559d949129747ea0aa59c32e2 = $('<div id="html_3875dfb559d949129747ea0aa59c32e2" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_7aaa875ea97048278488e96024afb326.setContent(html_3875dfb559d949129747ea0aa59c32e2);
+            
+
+            marker_c0f2ba24ce1a460395b79001f89c5a20.bindPopup(popup_7aaa875ea97048278488e96024afb326);
+
+            
+        
+    
+
+            var marker_589958cdb62a424ea3123877b597ebec = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4dfbd90bdef54e2ba5726e54a3ede465 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_589958cdb62a424ea3123877b597ebec.setIcon(icon_4dfbd90bdef54e2ba5726e54a3ede465);
+            
+    
+            var popup_9d201a813cef475d957809999c8fa2e4 = L.popup({maxWidth: '300'});
+
+            
+                var html_33b475094cd945d4aa2412454c2843b8 = $('<div id="html_33b475094cd945d4aa2412454c2843b8" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher  </div>')[0];
+                popup_9d201a813cef475d957809999c8fa2e4.setContent(html_33b475094cd945d4aa2412454c2843b8);
+            
+
+            marker_589958cdb62a424ea3123877b597ebec.bindPopup(popup_9d201a813cef475d957809999c8fa2e4);
+
+            
+        
+    
+
+            var marker_72e3307931224192a498c3cc0fb1268b = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7130cef5c4854a35a02aaa73426cda4c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_72e3307931224192a498c3cc0fb1268b.setIcon(icon_7130cef5c4854a35a02aaa73426cda4c);
+            
+    
+            var popup_364efffd09b8422da1bd6c585157f649 = L.popup({maxWidth: '300'});
+
+            
+                var html_e8b2213cc397482c940a1e99dd419d40 = $('<div id="html_e8b2213cc397482c940a1e99dd419d40" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_364efffd09b8422da1bd6c585157f649.setContent(html_e8b2213cc397482c940a1e99dd419d40);
+            
+
+            marker_72e3307931224192a498c3cc0fb1268b.bindPopup(popup_364efffd09b8422da1bd6c585157f649);
+
+            
+        
+    
+
+            var marker_187715bec66a4bca983f4f62c9729429 = L.marker(
+                [31.30104395,121.50045496943501],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_e0688431e0734f5195e740d4a976de35 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_187715bec66a4bca983f4f62c9729429.setIcon(icon_e0688431e0734f5195e740d4a976de35);
+            
+    
+            var popup_da558ba3c08448b0b25c3c33b4e58235 = L.popup({maxWidth: '300'});
+
+            
+                var html_40c5cfb652924228a8c7e7913f162219 = $('<div id="html_40c5cfb652924228a8c7e7913f162219" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_da558ba3c08448b0b25c3c33b4e58235.setContent(html_40c5cfb652924228a8c7e7913f162219);
+            
+
+            marker_187715bec66a4bca983f4f62c9729429.bindPopup(popup_da558ba3c08448b0b25c3c33b4e58235);
+
+            
+        
+    
+
+            var marker_05130070003f4225b08a7bdeb4614126 = L.marker(
+                [22.62794005,120.266318480249],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_611e3b2f3b4a4647b75fe6cc49479ec6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_05130070003f4225b08a7bdeb4614126.setIcon(icon_611e3b2f3b4a4647b75fe6cc49479ec6);
+            
+    
+            var popup_8f9d077a7f014879960c1b3d06b45a1b = L.popup({maxWidth: '300'});
+
+            
+                var html_25222b6ed1c24916b06fc7afeea87621 = $('<div id="html_25222b6ed1c24916b06fc7afeea87621" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_8f9d077a7f014879960c1b3d06b45a1b.setContent(html_25222b6ed1c24916b06fc7afeea87621);
+            
+
+            marker_05130070003f4225b08a7bdeb4614126.bindPopup(popup_8f9d077a7f014879960c1b3d06b45a1b);
+
+            
+        
+    
+
+            var marker_2d95c550e28c43e1bc74b19959a95ee3 = L.marker(
+                [50.0889154,14.416137207688902],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_3e6a7a2ffad041238469520ac8ffd780 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2d95c550e28c43e1bc74b19959a95ee3.setIcon(icon_3e6a7a2ffad041238469520ac8ffd780);
+            
+    
+            var popup_da629fecdf9f4883812b76fc81d7b39e = L.popup({maxWidth: '300'});
+
+            
+                var html_60107ee586af419cb016e81ab57affd5 = $('<div id="html_60107ee586af419cb016e81ab57affd5" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_da629fecdf9f4883812b76fc81d7b39e.setContent(html_60107ee586af419cb016e81ab57affd5);
+            
+
+            marker_2d95c550e28c43e1bc74b19959a95ee3.bindPopup(popup_da629fecdf9f4883812b76fc81d7b39e);
+
+            
+        
+    
+
+            var marker_06eade2a307d46fcab5b02eddcecd0f9 = L.marker(
+                [38.52247515,-121.751392674913],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_763231a8be664bf0a677925216cf8ef7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_06eade2a307d46fcab5b02eddcecd0f9.setIcon(icon_763231a8be664bf0a677925216cf8ef7);
+            
+    
+            var popup_0ec18eaea78345cfb2bc6cedba21846c = L.popup({maxWidth: '300'});
+
+            
+                var html_3b3de29ab421404fa481327988a7b3a2 = $('<div id="html_3b3de29ab421404fa481327988a7b3a2" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_0ec18eaea78345cfb2bc6cedba21846c.setContent(html_3b3de29ab421404fa481327988a7b3a2);
+            
+
+            marker_06eade2a307d46fcab5b02eddcecd0f9.bindPopup(popup_0ec18eaea78345cfb2bc6cedba21846c);
+
+            
+        
+    
+
+            var marker_d978e78c46724a47a7d2947861609999 = L.marker(
+                [1.29500195,103.84909213963199],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_795af069218c486b899a942653b60112 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d978e78c46724a47a7d2947861609999.setIcon(icon_795af069218c486b899a942653b60112);
+            
+    
+            var popup_ae83c43f4f6b4200b1c64e1f1ac9e05e = L.popup({maxWidth: '300'});
+
+            
+                var html_e8ac6867f9ce426c8c641330321abafe = $('<div id="html_e8ac6867f9ce426c8c641330321abafe" style="width: 100.0%; height: 100.0%;">Position: Guest Reasercher </div>')[0];
+                popup_ae83c43f4f6b4200b1c64e1f1ac9e05e.setContent(html_e8ac6867f9ce426c8c641330321abafe);
+            
+
+            marker_d978e78c46724a47a7d2947861609999.bindPopup(popup_ae83c43f4f6b4200b1c64e1f1ac9e05e);
+
+            
+        
+    
+
+            var marker_25366b486faf40bf8a872cb0ed62cefe = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_99f7986a3b624bf8afa5ee768b17a898 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_25366b486faf40bf8a872cb0ed62cefe.setIcon(icon_99f7986a3b624bf8afa5ee768b17a898);
+            
+    
+            var popup_f38be3f9526142de9ce5bb794ae0dfdd = L.popup({maxWidth: '300'});
+
+            
+                var html_205a2b8db528401797f6e98368662337 = $('<div id="html_205a2b8db528401797f6e98368662337" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_f38be3f9526142de9ce5bb794ae0dfdd.setContent(html_205a2b8db528401797f6e98368662337);
+            
+
+            marker_25366b486faf40bf8a872cb0ed62cefe.bindPopup(popup_f38be3f9526142de9ce5bb794ae0dfdd);
+
+            
+        
+    
+
+            var marker_cddecdb350fa4c1c80ddaecc78369972 = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_fb63b1cb8b3e4139bdcced8de681592a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cddecdb350fa4c1c80ddaecc78369972.setIcon(icon_fb63b1cb8b3e4139bdcced8de681592a);
+            
+    
+            var popup_a2fa27857e684c3dbb0104539a25b60d = L.popup({maxWidth: '300'});
+
+            
+                var html_815a69ac917944459e4269542516c9a4 = $('<div id="html_815a69ac917944459e4269542516c9a4" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_a2fa27857e684c3dbb0104539a25b60d.setContent(html_815a69ac917944459e4269542516c9a4);
+            
+
+            marker_cddecdb350fa4c1c80ddaecc78369972.bindPopup(popup_a2fa27857e684c3dbb0104539a25b60d);
+
+            
+        
+    
+
+            var marker_aa6ae93eaa674b25841f472af25c49c9 = L.marker(
+                [53.48061595,10.240777346426599],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_9a13b2fe0259451092cafd176f62ab7c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_aa6ae93eaa674b25841f472af25c49c9.setIcon(icon_9a13b2fe0259451092cafd176f62ab7c);
+            
+    
+            var popup_8a9ff2fc345d42b28a23465ad661db7e = L.popup({maxWidth: '300'});
+
+            
+                var html_1a99f6ba710440b3b9d9d953975a5b45 = $('<div id="html_1a99f6ba710440b3b9d9d953975a5b45" style="width: 100.0%; height: 100.0%;">Position: Guest Researcher </div>')[0];
+                popup_8a9ff2fc345d42b28a23465ad661db7e.setContent(html_1a99f6ba710440b3b9d9d953975a5b45);
+            
+
+            marker_aa6ae93eaa674b25841f472af25c49c9.bindPopup(popup_8a9ff2fc345d42b28a23465ad661db7e);
+
+            
+        
+    
+
+            var marker_087239410e6f453683ce7373257008df = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_01253bdb26c74e21b5c242215607c49f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_087239410e6f453683ce7373257008df.setIcon(icon_01253bdb26c74e21b5c242215607c49f);
+            
+    
+            var popup_69d5d9292bba4df593423fe55f74c164 = L.popup({maxWidth: '300'});
+
+            
+                var html_e4b9916dc7e9498bac56a47d32fc2443 = $('<div id="html_e4b9916dc7e9498bac56a47d32fc2443" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_69d5d9292bba4df593423fe55f74c164.setContent(html_e4b9916dc7e9498bac56a47d32fc2443);
+            
+
+            marker_087239410e6f453683ce7373257008df.bindPopup(popup_69d5d9292bba4df593423fe55f74c164);
+
+            
+        
+    
+
+            var marker_b378e784764c40dbb31c4429737319d7 = L.marker(
+                [49.4832445,8.4645749],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_af086cdd64b348a3865373758d95171a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b378e784764c40dbb31c4429737319d7.setIcon(icon_af086cdd64b348a3865373758d95171a);
+            
+    
+            var popup_cce9b97aa9644888aa88743313ff27a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_d8e1612f5ea349a6bfe47ef93861d38f = $('<div id="html_d8e1612f5ea349a6bfe47ef93861d38f" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer  </div>')[0];
+                popup_cce9b97aa9644888aa88743313ff27a4.setContent(html_d8e1612f5ea349a6bfe47ef93861d38f);
+            
+
+            marker_b378e784764c40dbb31c4429737319d7.bindPopup(popup_cce9b97aa9644888aa88743313ff27a4);
+
+            
+        
+    
+
+            var marker_7370fdf7a7dd4f16911f262b807335f1 = L.marker(
+                [55.87230815,-4.28922544277935],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_640d5b6ed1d94126afd90ac76d421845 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_7370fdf7a7dd4f16911f262b807335f1.setIcon(icon_640d5b6ed1d94126afd90ac76d421845);
+            
+    
+            var popup_3baaf52cef464037a6dc80d1caf458ec = L.popup({maxWidth: '300'});
+
+            
+                var html_38728243fdae428c924d900e4839b03d = $('<div id="html_38728243fdae428c924d900e4839b03d" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_3baaf52cef464037a6dc80d1caf458ec.setContent(html_38728243fdae428c924d900e4839b03d);
+            
+
+            marker_7370fdf7a7dd4f16911f262b807335f1.bindPopup(popup_3baaf52cef464037a6dc80d1caf458ec);
+
+            
+        
+    
+
+            var marker_b7c3def5daa84994bad6d877703f9240 = L.marker(
+                [50.7338124,7.1022465],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_295bad94a7b54f838c3d0e115b4aa47e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b7c3def5daa84994bad6d877703f9240.setIcon(icon_295bad94a7b54f838c3d0e115b4aa47e);
+            
+    
+            var popup_ca8edcbca363481c91c1bbd4479f45da = L.popup({maxWidth: '300'});
+
+            
+                var html_560bfae881ac43f1aeea7cbd9b5e0d0b = $('<div id="html_560bfae881ac43f1aeea7cbd9b5e0d0b" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_ca8edcbca363481c91c1bbd4479f45da.setContent(html_560bfae881ac43f1aeea7cbd9b5e0d0b);
+            
+
+            marker_b7c3def5daa84994bad6d877703f9240.bindPopup(popup_ca8edcbca363481c91c1bbd4479f45da);
+
+            
+        
+    
+
+            var marker_ae3c11cc3f364fbbb7629895c3b7c019 = L.marker(
+                [50.174438,8.6282382],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7162206880e547d4990801139da7234f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ae3c11cc3f364fbbb7629895c3b7c019.setIcon(icon_7162206880e547d4990801139da7234f);
+            
+    
+            var popup_21e14af38aff4c3f91ebfa9eeda22ebd = L.popup({maxWidth: '300'});
+
+            
+                var html_8271b984b073416183d47df367f74eaf = $('<div id="html_8271b984b073416183d47df367f74eaf" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_21e14af38aff4c3f91ebfa9eeda22ebd.setContent(html_8271b984b073416183d47df367f74eaf);
+            
+
+            marker_ae3c11cc3f364fbbb7629895c3b7c019.bindPopup(popup_21e14af38aff4c3f91ebfa9eeda22ebd);
+
+            
+        
+    
+
+            var marker_6541518bab274dccb1342fed227095f8 = L.marker(
+                [-34.9189226,138.604236675404],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d449a5d31560424cbce0a6cd7f315537 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6541518bab274dccb1342fed227095f8.setIcon(icon_d449a5d31560424cbce0a6cd7f315537);
+            
+    
+            var popup_e48e398a46574928b610efb99b2bb13e = L.popup({maxWidth: '300'});
+
+            
+                var html_f79bcffe3da443fa986dadb0c9dd2c89 = $('<div id="html_f79bcffe3da443fa986dadb0c9dd2c89" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_e48e398a46574928b610efb99b2bb13e.setContent(html_f79bcffe3da443fa986dadb0c9dd2c89);
+            
+
+            marker_6541518bab274dccb1342fed227095f8.bindPopup(popup_e48e398a46574928b610efb99b2bb13e);
+
+            
+        
+    
+
+            var marker_ceb27fd5f9a242e78cc7ef56d621310c = L.marker(
+                [40.0949701,-88.21873585],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_bb1b622429234666969ae34f6664edc4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ceb27fd5f9a242e78cc7ef56d621310c.setIcon(icon_bb1b622429234666969ae34f6664edc4);
+            
+    
+            var popup_bf79877f6e53478e8d0e105c7cbc514d = L.popup({maxWidth: '300'});
+
+            
+                var html_158588a150b34328b5d8d9e40ad9020e = $('<div id="html_158588a150b34328b5d8d9e40ad9020e" style="width: 100.0%; height: 100.0%;">Position: Guest Lecturer </div>')[0];
+                popup_bf79877f6e53478e8d0e105c7cbc514d.setContent(html_158588a150b34328b5d8d9e40ad9020e);
+            
+
+            marker_ceb27fd5f9a242e78cc7ef56d621310c.bindPopup(popup_bf79877f6e53478e8d0e105c7cbc514d);
+
+            
+        
+    
+
+            var marker_4a19e4b625d34cc89d5d9925df6ed013 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_e1c5e3dbfd38449faa6e6c86ebc21cfb = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4a19e4b625d34cc89d5d9925df6ed013.setIcon(icon_e1c5e3dbfd38449faa6e6c86ebc21cfb);
+            
+    
+            var popup_a27d76eaaf244779ae0cd36b5e74f298 = L.popup({maxWidth: '300'});
+
+            
+                var html_b93220a031f44e168ce20ed47ed782e1 = $('<div id="html_b93220a031f44e168ce20ed47ed782e1" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_a27d76eaaf244779ae0cd36b5e74f298.setContent(html_b93220a031f44e168ce20ed47ed782e1);
+            
+
+            marker_4a19e4b625d34cc89d5d9925df6ed013.bindPopup(popup_a27d76eaaf244779ae0cd36b5e74f298);
+
+            
+        
+    
+
+            var marker_155e3872ee6d4f869cc62206e028bb36 = L.marker(
+                [38.7325601,-9.160668882795779],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_3b10da6ac9804efa836c4dcd66e28d0a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_155e3872ee6d4f869cc62206e028bb36.setIcon(icon_3b10da6ac9804efa836c4dcd66e28d0a);
+            
+    
+            var popup_b135464962a5405db727dc71d0f27c12 = L.popup({maxWidth: '300'});
+
+            
+                var html_5a89f949db7047ee9e6f76e3f983e217 = $('<div id="html_5a89f949db7047ee9e6f76e3f983e217" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_b135464962a5405db727dc71d0f27c12.setContent(html_5a89f949db7047ee9e6f76e3f983e217);
+            
+
+            marker_155e3872ee6d4f869cc62206e028bb36.bindPopup(popup_b135464962a5405db727dc71d0f27c12);
+
+            
+        
+    
+
+            var marker_28565acd241c48c8ab0a888e4f8ad654 = L.marker(
+                [51.523160700000005,-0.1282037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_ea7b6faf26814f88b516d799303c1291 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_28565acd241c48c8ab0a888e4f8ad654.setIcon(icon_ea7b6faf26814f88b516d799303c1291);
+            
+    
+            var popup_59bcd5c2fbd247edba36f366661c693c = L.popup({maxWidth: '300'});
+
+            
+                var html_557871caeeec4da6aa6ad4292a2d6e79 = $('<div id="html_557871caeeec4da6aa6ad4292a2d6e79" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_59bcd5c2fbd247edba36f366661c693c.setContent(html_557871caeeec4da6aa6ad4292a2d6e79);
+            
+
+            marker_28565acd241c48c8ab0a888e4f8ad654.bindPopup(popup_59bcd5c2fbd247edba36f366661c693c);
+
+            
+        
+    
+
+            var marker_c919f77172924bcc91e3e9ca32f049da = L.marker(
+                [48.84314765,2.33525041508714],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_2ac468349183472186811c854640eebe = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_c919f77172924bcc91e3e9ca32f049da.setIcon(icon_2ac468349183472186811c854640eebe);
+            
+    
+            var popup_f054da60dedc45df87d36209c7936ffd = L.popup({maxWidth: '300'});
+
+            
+                var html_7696eb45c2ca4d9c9e0ce93ad5e2d1e4 = $('<div id="html_7696eb45c2ca4d9c9e0ce93ad5e2d1e4" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_f054da60dedc45df87d36209c7936ffd.setContent(html_7696eb45c2ca4d9c9e0ce93ad5e2d1e4);
+            
+
+            marker_c919f77172924bcc91e3e9ca32f049da.bindPopup(popup_f054da60dedc45df87d36209c7936ffd);
+
+            
+        
+    
+
+            var marker_5b642c258e944eb88ef8834dfe555ad9 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_e00ae37c86ce4ab980ac178de658d109 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5b642c258e944eb88ef8834dfe555ad9.setIcon(icon_e00ae37c86ce4ab980ac178de658d109);
+            
+    
+            var popup_601dee5c1b1b4b7d878f7d311a7ccdb0 = L.popup({maxWidth: '300'});
+
+            
+                var html_11cefda27fc44aefb940970495aa680d = $('<div id="html_11cefda27fc44aefb940970495aa680d" style="width: 100.0%; height: 100.0%;">Position: Guest researcher </div>')[0];
+                popup_601dee5c1b1b4b7d878f7d311a7ccdb0.setContent(html_11cefda27fc44aefb940970495aa680d);
+            
+
+            marker_5b642c258e944eb88ef8834dfe555ad9.bindPopup(popup_601dee5c1b1b4b7d878f7d311a7ccdb0);
+
+            
+        
+    
+
+            var marker_4e82a1f7e1874d1a98176b117966d333 = L.marker(
+                [37.5556576,127.04368290000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_5fd22e575999496f87c02b370e7e303a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4e82a1f7e1874d1a98176b117966d333.setIcon(icon_5fd22e575999496f87c02b370e7e303a);
+            
+    
+            var popup_e1072416702b4fff9f0276726903da81 = L.popup({maxWidth: '300'});
+
+            
+                var html_319b35438d0844a7853c7c40c78f9f1f = $('<div id="html_319b35438d0844a7853c7c40c78f9f1f" style="width: 100.0%; height: 100.0%;">Position: Guest researcher </div>')[0];
+                popup_e1072416702b4fff9f0276726903da81.setContent(html_319b35438d0844a7853c7c40c78f9f1f);
+            
+
+            marker_4e82a1f7e1874d1a98176b117966d333.bindPopup(popup_e1072416702b4fff9f0276726903da81);
+
+            
+        
+    
+
+            var marker_500318c51a9b4f7b87284207dd527d7d = L.marker(
+                [25.01682835,121.538469235773],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_6cbef24551e1443886bddfde52082d83 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_500318c51a9b4f7b87284207dd527d7d.setIcon(icon_6cbef24551e1443886bddfde52082d83);
+            
+    
+            var popup_58f94bf9f25d4872b9b31d02ab6cfe1e = L.popup({maxWidth: '300'});
+
+            
+                var html_e9776fc7c5eb4a109a08f0d4da95e3f3 = $('<div id="html_e9776fc7c5eb4a109a08f0d4da95e3f3" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_58f94bf9f25d4872b9b31d02ab6cfe1e.setContent(html_e9776fc7c5eb4a109a08f0d4da95e3f3);
+            
+
+            marker_500318c51a9b4f7b87284207dd527d7d.bindPopup(popup_58f94bf9f25d4872b9b31d02ab6cfe1e);
+
+            
+        
+    
+
+            var marker_f1f5309aedd246ea80a36f99c1f9792e = L.marker(
+                [42.3583961,-71.0956778766393],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_dcb432987d69424db2b5949cee45ee42 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_f1f5309aedd246ea80a36f99c1f9792e.setIcon(icon_dcb432987d69424db2b5949cee45ee42);
+            
+    
+            var popup_6bd1e079fe984bd8bbc058c79b9f617f = L.popup({maxWidth: '300'});
+
+            
+                var html_becdb77017e04d0ba166c2013dffe56d = $('<div id="html_becdb77017e04d0ba166c2013dffe56d" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_6bd1e079fe984bd8bbc058c79b9f617f.setContent(html_becdb77017e04d0ba166c2013dffe56d);
+            
+
+            marker_f1f5309aedd246ea80a36f99c1f9792e.bindPopup(popup_6bd1e079fe984bd8bbc058c79b9f617f);
+
+            
+        
+    
+
+            var marker_780a014372834255a81e4bf4dca593ab = L.marker(
+                [1.29500195,103.84909213963199],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_5c16fd180f3f428996f520a5f5bd2236 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_780a014372834255a81e4bf4dca593ab.setIcon(icon_5c16fd180f3f428996f520a5f5bd2236);
+            
+    
+            var popup_4f34b76b535b4bb1abbf3ccece89aa28 = L.popup({maxWidth: '300'});
+
+            
+                var html_b1e4169ecc0946a09e978b6896b12336 = $('<div id="html_b1e4169ecc0946a09e978b6896b12336" style="width: 100.0%; height: 100.0%;">Position: Guest researcher </div>')[0];
+                popup_4f34b76b535b4bb1abbf3ccece89aa28.setContent(html_b1e4169ecc0946a09e978b6896b12336);
+            
+
+            marker_780a014372834255a81e4bf4dca593ab.bindPopup(popup_4f34b76b535b4bb1abbf3ccece89aa28);
+
+            
+        
+    
+
+            var marker_684cb7706f6d437bb3ca24ddfe2d99df = L.marker(
+                [37.431089,-122.16930093940701],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_5ed65f24e2364a51b3658e671bf03ec2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_684cb7706f6d437bb3ca24ddfe2d99df.setIcon(icon_5ed65f24e2364a51b3658e671bf03ec2);
+            
+    
+            var popup_e0baf2d7c59d4ac299fbd0fa11547210 = L.popup({maxWidth: '300'});
+
+            
+                var html_fd5547a8e926456aa14c981485f672d1 = $('<div id="html_fd5547a8e926456aa14c981485f672d1" style="width: 100.0%; height: 100.0%;">Position: Guest researcher </div>')[0];
+                popup_e0baf2d7c59d4ac299fbd0fa11547210.setContent(html_fd5547a8e926456aa14c981485f672d1);
+            
+
+            marker_684cb7706f6d437bb3ca24ddfe2d99df.bindPopup(popup_e0baf2d7c59d4ac299fbd0fa11547210);
+
+            
+        
+    
+
+            var marker_ca57b4bf52504a9ea61bb84a04f36d53 = L.marker(
+                [34.220389000000004,70.38003140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_6a33284c2cf04d9185939219c73425d3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ca57b4bf52504a9ea61bb84a04f36d53.setIcon(icon_6a33284c2cf04d9185939219c73425d3);
+            
+    
+            var popup_a91d0ffd58a044d98aa8c213d17883f4 = L.popup({maxWidth: '300'});
+
+            
+                var html_458820019a914bd58f88b302c0d24ec3 = $('<div id="html_458820019a914bd58f88b302c0d24ec3" style="width: 100.0%; height: 100.0%;">Position: Guest researcher </div>')[0];
+                popup_a91d0ffd58a044d98aa8c213d17883f4.setContent(html_458820019a914bd58f88b302c0d24ec3);
+            
+
+            marker_ca57b4bf52504a9ea61bb84a04f36d53.bindPopup(popup_a91d0ffd58a044d98aa8c213d17883f4);
+
+            
+        
+    
+
+            var marker_5ac56d6fe45c453db3bbc680e229db40 = L.marker(
+                [34.220389000000004,70.38003140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_baaf863c5d9742ebbd3dfe6d63acf23c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5ac56d6fe45c453db3bbc680e229db40.setIcon(icon_baaf863c5d9742ebbd3dfe6d63acf23c);
+            
+    
+            var popup_1d774c9a75324a0394bed4735826b61c = L.popup({maxWidth: '300'});
+
+            
+                var html_614f1b5bb4f141459c3fd6b5ca6818e9 = $('<div id="html_614f1b5bb4f141459c3fd6b5ca6818e9" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_1d774c9a75324a0394bed4735826b61c.setContent(html_614f1b5bb4f141459c3fd6b5ca6818e9);
+            
+
+            marker_5ac56d6fe45c453db3bbc680e229db40.bindPopup(popup_1d774c9a75324a0394bed4735826b61c);
+
+            
+        
+    
+
+            var marker_40196804685e4f069670ea0c1e76ae7a = L.marker(
+                [34.220389000000004,70.38003140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_5a6ecda9ccf24a5bbdd781fe08986621 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_40196804685e4f069670ea0c1e76ae7a.setIcon(icon_5a6ecda9ccf24a5bbdd781fe08986621);
+            
+    
+            var popup_a4860a57edc14ac6ad65541055981365 = L.popup({maxWidth: '300'});
+
+            
+                var html_c0289cebdc0c422b84c60c331f6df995 = $('<div id="html_c0289cebdc0c422b84c60c331f6df995" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_a4860a57edc14ac6ad65541055981365.setContent(html_c0289cebdc0c422b84c60c331f6df995);
+            
+
+            marker_40196804685e4f069670ea0c1e76ae7a.bindPopup(popup_a4860a57edc14ac6ad65541055981365);
+
+            
+        
+    
+
+            var marker_8b579c1cd8c8406d9f5261b2dd553560 = L.marker(
+                [41.741150399999995,-111.81223090000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_ba3c5625dc74499eb24423529d9bca5f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8b579c1cd8c8406d9f5261b2dd553560.setIcon(icon_ba3c5625dc74499eb24423529d9bca5f);
+            
+    
+            var popup_0734dfa77ec440b589a05ef9e406b284 = L.popup({maxWidth: '300'});
+
+            
+                var html_0a5226dc513c4c949abc7c410c2aeae9 = $('<div id="html_0a5226dc513c4c949abc7c410c2aeae9" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer in cooperation with CRC 649 </div>')[0];
+                popup_0734dfa77ec440b589a05ef9e406b284.setContent(html_0a5226dc513c4c949abc7c410c2aeae9);
+            
+
+            marker_8b579c1cd8c8406d9f5261b2dd553560.bindPopup(popup_0734dfa77ec440b589a05ef9e406b284);
+
+            
+        
+    
+
+            var marker_932603b875f0498ab96f6bac867af05b = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_7fa90fe44b71409790d00db5ade1fddb = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_932603b875f0498ab96f6bac867af05b.setIcon(icon_7fa90fe44b71409790d00db5ade1fddb);
+            
+    
+            var popup_f1f129dc5ca8463fa21b480e3821682e = L.popup({maxWidth: '300'});
+
+            
+                var html_52f15ec51d8443f8844f2d4a14dc86ab = $('<div id="html_52f15ec51d8443f8844f2d4a14dc86ab" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_f1f129dc5ca8463fa21b480e3821682e.setContent(html_52f15ec51d8443f8844f2d4a14dc86ab);
+            
+
+            marker_932603b875f0498ab96f6bac867af05b.bindPopup(popup_f1f129dc5ca8463fa21b480e3821682e);
+
+            
+        
+    
+
+            var marker_095afde322b449719211040b930dd7b1 = L.marker(
+                [31.30104395,121.50045496943501],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_f823c4819c3f42378c97788e65e80108 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_095afde322b449719211040b930dd7b1.setIcon(icon_f823c4819c3f42378c97788e65e80108);
+            
+    
+            var popup_b76d53d67ef54467a47677f5d3c6d5ee = L.popup({maxWidth: '300'});
+
+            
+                var html_7587a84646b24e11a76af016a5ce3fc3 = $('<div id="html_7587a84646b24e11a76af016a5ce3fc3" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_b76d53d67ef54467a47677f5d3c6d5ee.setContent(html_7587a84646b24e11a76af016a5ce3fc3);
+            
+
+            marker_095afde322b449719211040b930dd7b1.bindPopup(popup_b76d53d67ef54467a47677f5d3c6d5ee);
+
+            
+        
+    
+
+            var marker_5f83a0637f11493ab846d411daf29ac8 = L.marker(
+                [37.4581284,126.952134004935],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_741991493cc542ba9f629e9819b68b22 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5f83a0637f11493ab846d411daf29ac8.setIcon(icon_741991493cc542ba9f629e9819b68b22);
+            
+    
+            var popup_cde45cde907348c088210eebd34f5ef7 = L.popup({maxWidth: '300'});
+
+            
+                var html_5804fc315aff4a67b9bea5e86846bbf8 = $('<div id="html_5804fc315aff4a67b9bea5e86846bbf8" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer in cooperation with CRC 649 </div>')[0];
+                popup_cde45cde907348c088210eebd34f5ef7.setContent(html_5804fc315aff4a67b9bea5e86846bbf8);
+            
+
+            marker_5f83a0637f11493ab846d411daf29ac8.bindPopup(popup_cde45cde907348c088210eebd34f5ef7);
+
+            
+        
+    
+
+            var marker_ac80044816dd4982aa7e17ab4168955d = L.marker(
+                [24.4399419,118.093017809127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d80a13c74cf74f828ef007197c217ad6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ac80044816dd4982aa7e17ab4168955d.setIcon(icon_d80a13c74cf74f828ef007197c217ad6);
+            
+    
+            var popup_9ea275829d4b40c59623873a99bec708 = L.popup({maxWidth: '300'});
+
+            
+                var html_63be82cf96a241dfa30982b76e0a39e1 = $('<div id="html_63be82cf96a241dfa30982b76e0a39e1" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_9ea275829d4b40c59623873a99bec708.setContent(html_63be82cf96a241dfa30982b76e0a39e1);
+            
+
+            marker_ac80044816dd4982aa7e17ab4168955d.bindPopup(popup_9ea275829d4b40c59623873a99bec708);
+
+            
+        
+    
+
+            var marker_33ddeef3bb58462786a96bb2dcc1609f = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4f30fd8317ea4f8f83e32aed4b7cefc8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_33ddeef3bb58462786a96bb2dcc1609f.setIcon(icon_4f30fd8317ea4f8f83e32aed4b7cefc8);
+            
+    
+            var popup_0efe25d3027647188a4aff53746f6f74 = L.popup({maxWidth: '300'});
+
+            
+                var html_d85b9d23812043e29f6dfefa9bca1b08 = $('<div id="html_d85b9d23812043e29f6dfefa9bca1b08" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_0efe25d3027647188a4aff53746f6f74.setContent(html_d85b9d23812043e29f6dfefa9bca1b08);
+            
+
+            marker_33ddeef3bb58462786a96bb2dcc1609f.bindPopup(popup_0efe25d3027647188a4aff53746f6f74);
+
+            
+        
+    
+
+            var marker_0b62c451bed34c3391f2ed8de4dbef88 = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_f3ecdc2846bf4e5b8038f0973fcb25a4 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0b62c451bed34c3391f2ed8de4dbef88.setIcon(icon_f3ecdc2846bf4e5b8038f0973fcb25a4);
+            
+    
+            var popup_0f4510b96e754d4d8387a9f85d90beda = L.popup({maxWidth: '300'});
+
+            
+                var html_f33c0f424d524654992776499b76e31c = $('<div id="html_f33c0f424d524654992776499b76e31c" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_0f4510b96e754d4d8387a9f85d90beda.setContent(html_f33c0f424d524654992776499b76e31c);
+            
+
+            marker_0b62c451bed34c3391f2ed8de4dbef88.bindPopup(popup_0f4510b96e754d4d8387a9f85d90beda);
+
+            
+        
+    
+
+            var marker_8d3ce74b2ba1424fbc8114e9bc7ed0d1 = L.marker(
+                [51.108696,17.0593743681231],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_3b17aeb13a144067be8537dd29eac5c5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8d3ce74b2ba1424fbc8114e9bc7ed0d1.setIcon(icon_3b17aeb13a144067be8537dd29eac5c5);
+            
+    
+            var popup_d619b1ee6c92409f875f6c5cb34357c3 = L.popup({maxWidth: '300'});
+
+            
+                var html_fde8d5ff1c904d9bb543aa295471e458 = $('<div id="html_fde8d5ff1c904d9bb543aa295471e458" style="width: 100.0%; height: 100.0%;">Position: Research Guest in cooperation with CRC 649 </div>')[0];
+                popup_d619b1ee6c92409f875f6c5cb34357c3.setContent(html_fde8d5ff1c904d9bb543aa295471e458);
+            
+
+            marker_8d3ce74b2ba1424fbc8114e9bc7ed0d1.bindPopup(popup_d619b1ee6c92409f875f6c5cb34357c3);
+
+            
+        
+    
+
+            var marker_dc88ba3ba7f44b7c85fadad9ecf9247e = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d5a4460c67f044898baee09207989c9e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dc88ba3ba7f44b7c85fadad9ecf9247e.setIcon(icon_d5a4460c67f044898baee09207989c9e);
+            
+    
+            var popup_15d879b087044b8fb66fd489e8c65d5b = L.popup({maxWidth: '300'});
+
+            
+                var html_2a8ba630d90a459fa21ba6b8d87f8d41 = $('<div id="html_2a8ba630d90a459fa21ba6b8d87f8d41" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_15d879b087044b8fb66fd489e8c65d5b.setContent(html_2a8ba630d90a459fa21ba6b8d87f8d41);
+            
+
+            marker_dc88ba3ba7f44b7c85fadad9ecf9247e.bindPopup(popup_15d879b087044b8fb66fd489e8c65d5b);
+
+            
+        
+    
+
+            var marker_02b215678b254514ade27cf56d127f7c = L.marker(
+                [52.17638955,0.14308881541518698],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_b8821efdd27c4458b7316265c69cdfde = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_02b215678b254514ade27cf56d127f7c.setIcon(icon_b8821efdd27c4458b7316265c69cdfde);
+            
+    
+            var popup_65180c41f16645b098d2e339b4fad98b = L.popup({maxWidth: '300'});
+
+            
+                var html_5f50915528ac49c6bd7c4d351c6b57ba = $('<div id="html_5f50915528ac49c6bd7c4d351c6b57ba" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_65180c41f16645b098d2e339b4fad98b.setContent(html_5f50915528ac49c6bd7c4d351c6b57ba);
+            
+
+            marker_02b215678b254514ade27cf56d127f7c.bindPopup(popup_65180c41f16645b098d2e339b4fad98b);
+
+            
+        
+    
+
+            var marker_cec4e9ceb4dc4ad7a192b117b958d9f1 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_a04acdd6caf84b408cdc605567180696 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cec4e9ceb4dc4ad7a192b117b958d9f1.setIcon(icon_a04acdd6caf84b408cdc605567180696);
+            
+    
+            var popup_24f4d674e0684a1e9f66c2de9f5b33be = L.popup({maxWidth: '300'});
+
+            
+                var html_31b943c8c7644a8db2cf68734be8ed85 = $('<div id="html_31b943c8c7644a8db2cf68734be8ed85" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_24f4d674e0684a1e9f66c2de9f5b33be.setContent(html_31b943c8c7644a8db2cf68734be8ed85);
+            
+
+            marker_cec4e9ceb4dc4ad7a192b117b958d9f1.bindPopup(popup_24f4d674e0684a1e9f66c2de9f5b33be);
+
+            
+        
+    
+
+            var marker_e2b011285eb8458087a6b8d827ac94dd = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_59b2aecb62d9472d9bc3258d867d29fd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e2b011285eb8458087a6b8d827ac94dd.setIcon(icon_59b2aecb62d9472d9bc3258d867d29fd);
+            
+    
+            var popup_6e0c633a78114f4886f2afe32847376b = L.popup({maxWidth: '300'});
+
+            
+                var html_c0906d71e09a41fba64eda6d06554bf4 = $('<div id="html_c0906d71e09a41fba64eda6d06554bf4" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_6e0c633a78114f4886f2afe32847376b.setContent(html_c0906d71e09a41fba64eda6d06554bf4);
+            
+
+            marker_e2b011285eb8458087a6b8d827ac94dd.bindPopup(popup_6e0c633a78114f4886f2afe32847376b);
+
+            
+        
+    
+
+            var marker_e11f74b0cf1f4428848e667c7c536b2f = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_e1af7c6acfab43558b0ed1b46f7468e5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e11f74b0cf1f4428848e667c7c536b2f.setIcon(icon_e1af7c6acfab43558b0ed1b46f7468e5);
+            
+    
+            var popup_ec932ba93392415ca92880d11595b64b = L.popup({maxWidth: '300'});
+
+            
+                var html_d12707b476b940a88382b6da39c4d227 = $('<div id="html_d12707b476b940a88382b6da39c4d227" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_ec932ba93392415ca92880d11595b64b.setContent(html_d12707b476b940a88382b6da39c4d227);
+            
+
+            marker_e11f74b0cf1f4428848e667c7c536b2f.bindPopup(popup_ec932ba93392415ca92880d11595b64b);
+
+            
+        
+    
+
+            var marker_67f1cda5f3994e2eaaf725ffa0d8ce72 = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d849ecdd246740398ff22af63701ef36 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_67f1cda5f3994e2eaaf725ffa0d8ce72.setIcon(icon_d849ecdd246740398ff22af63701ef36);
+            
+    
+            var popup_3ae9d906781449cc91598fb19a4f28ec = L.popup({maxWidth: '300'});
+
+            
+                var html_f25c1523c79745ef8f6a32b354bf995f = $('<div id="html_f25c1523c79745ef8f6a32b354bf995f" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_3ae9d906781449cc91598fb19a4f28ec.setContent(html_f25c1523c79745ef8f6a32b354bf995f);
+            
+
+            marker_67f1cda5f3994e2eaaf725ffa0d8ce72.bindPopup(popup_3ae9d906781449cc91598fb19a4f28ec);
+
+            
+        
+    
+
+            var marker_829847eb69db409dbae79448ed16e31a = L.marker(
+                [24.78676765,120.997244116807],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_a50e4030cbe943a1a90438aab19116a9 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_829847eb69db409dbae79448ed16e31a.setIcon(icon_a50e4030cbe943a1a90438aab19116a9);
+            
+    
+            var popup_53b58bf6898445c7b0e286b8c7beb030 = L.popup({maxWidth: '300'});
+
+            
+                var html_24b2de9ca99b420399d9eb7d283f3de0 = $('<div id="html_24b2de9ca99b420399d9eb7d283f3de0" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_53b58bf6898445c7b0e286b8c7beb030.setContent(html_24b2de9ca99b420399d9eb7d283f3de0);
+            
+
+            marker_829847eb69db409dbae79448ed16e31a.bindPopup(popup_53b58bf6898445c7b0e286b8c7beb030);
+
+            
+        
+    
+
+            var marker_2c16ad8527e540a5ad2a9d538a6180f5 = L.marker(
+                [55.929035,37.5186680829482],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_f4e57bb8546f4a889675917f1079eeb1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2c16ad8527e540a5ad2a9d538a6180f5.setIcon(icon_f4e57bb8546f4a889675917f1079eeb1);
+            
+    
+            var popup_bd9f0743a9e4430ab0d19e45fc54937c = L.popup({maxWidth: '300'});
+
+            
+                var html_c6ac261468bd4febbd28430a1b322f87 = $('<div id="html_c6ac261468bd4febbd28430a1b322f87" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_bd9f0743a9e4430ab0d19e45fc54937c.setContent(html_c6ac261468bd4febbd28430a1b322f87);
+            
+
+            marker_2c16ad8527e540a5ad2a9d538a6180f5.bindPopup(popup_bd9f0743a9e4430ab0d19e45fc54937c);
+
+            
+        
+    
+
+            var marker_344146a446364f06ba961954d58833cc = L.marker(
+                [51.51442905,-0.116588403365376],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_392c6759a5ad4995a54a91c1cb22b1c1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_344146a446364f06ba961954d58833cc.setIcon(icon_392c6759a5ad4995a54a91c1cb22b1c1);
+            
+    
+            var popup_794318f556d94452a46f5c1ffe28a5d9 = L.popup({maxWidth: '300'});
+
+            
+                var html_af8c40aded48448fb24fffb296ba0916 = $('<div id="html_af8c40aded48448fb24fffb296ba0916" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_794318f556d94452a46f5c1ffe28a5d9.setContent(html_af8c40aded48448fb24fffb296ba0916);
+            
+
+            marker_344146a446364f06ba961954d58833cc.bindPopup(popup_794318f556d94452a46f5c1ffe28a5d9);
+
+            
+        
+    
+
+            var marker_2be1cb6a35d34936a3d6211c6d68036e = L.marker(
+                [41.78468745,-87.6007493265106],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4a5e637d5a974c42b1cd33d73bff0e25 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2be1cb6a35d34936a3d6211c6d68036e.setIcon(icon_4a5e637d5a974c42b1cd33d73bff0e25);
+            
+    
+            var popup_1741f08276a445a88d308b376c494bef = L.popup({maxWidth: '300'});
+
+            
+                var html_7d3edbaf56ea46f5ae935fd8d30c4a04 = $('<div id="html_7d3edbaf56ea46f5ae935fd8d30c4a04" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_1741f08276a445a88d308b376c494bef.setContent(html_7d3edbaf56ea46f5ae935fd8d30c4a04);
+            
+
+            marker_2be1cb6a35d34936a3d6211c6d68036e.bindPopup(popup_1741f08276a445a88d308b376c494bef);
+
+            
+        
+    
+
+            var marker_aa27caef04f74fddb55cfe9093565c45 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_9f7184fec6054dec896b28a0a7ccad90 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_aa27caef04f74fddb55cfe9093565c45.setIcon(icon_9f7184fec6054dec896b28a0a7ccad90);
+            
+    
+            var popup_cef8eb67da384b4684353f5877fe35bc = L.popup({maxWidth: '300'});
+
+            
+                var html_79d63db26ecc42dca0658996d3003f06 = $('<div id="html_79d63db26ecc42dca0658996d3003f06" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_cef8eb67da384b4684353f5877fe35bc.setContent(html_79d63db26ecc42dca0658996d3003f06);
+            
+
+            marker_aa27caef04f74fddb55cfe9093565c45.bindPopup(popup_cef8eb67da384b4684353f5877fe35bc);
+
+            
+        
+    
+
+            var marker_112808ca60384fd8a071e2fc1cf6216f = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_19230df8b183451cac2b7a08208f417c = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_112808ca60384fd8a071e2fc1cf6216f.setIcon(icon_19230df8b183451cac2b7a08208f417c);
+            
+    
+            var popup_ab8d0e6419b74799a593df53544105ec = L.popup({maxWidth: '300'});
+
+            
+                var html_26f1521f0f8f43a598220dcfac87afe0 = $('<div id="html_26f1521f0f8f43a598220dcfac87afe0" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_ab8d0e6419b74799a593df53544105ec.setContent(html_26f1521f0f8f43a598220dcfac87afe0);
+            
+
+            marker_112808ca60384fd8a071e2fc1cf6216f.bindPopup(popup_ab8d0e6419b74799a593df53544105ec);
+
+            
+        
+    
+
+            var marker_045345f8da3749edad5627b0578d6bd6 = L.marker(
+                [1.2962018,103.776899437848],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_99901cc93aa947139633c751518b7883 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_045345f8da3749edad5627b0578d6bd6.setIcon(icon_99901cc93aa947139633c751518b7883);
+            
+    
+            var popup_fd5f43529d6b4a2ab6114fb47e1d3bbf = L.popup({maxWidth: '300'});
+
+            
+                var html_72638bf583b9401bb6d7f7835bd65064 = $('<div id="html_72638bf583b9401bb6d7f7835bd65064" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_fd5f43529d6b4a2ab6114fb47e1d3bbf.setContent(html_72638bf583b9401bb6d7f7835bd65064);
+            
+
+            marker_045345f8da3749edad5627b0578d6bd6.bindPopup(popup_fd5f43529d6b4a2ab6114fb47e1d3bbf);
+
+            
+        
+    
+
+            var marker_328f5271d1414d41b09d9bee5893d5fe = L.marker(
+                [41.78468745,-87.6007493265106],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_6d8c927650364a62a5c830198fa025d5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_328f5271d1414d41b09d9bee5893d5fe.setIcon(icon_6d8c927650364a62a5c830198fa025d5);
+            
+    
+            var popup_d825705898c54932a1e275a7ad4419de = L.popup({maxWidth: '300'});
+
+            
+                var html_5122d30f7dde499ab539b09857794fe3 = $('<div id="html_5122d30f7dde499ab539b09857794fe3" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_d825705898c54932a1e275a7ad4419de.setContent(html_5122d30f7dde499ab539b09857794fe3);
+            
+
+            marker_328f5271d1414d41b09d9bee5893d5fe.bindPopup(popup_d825705898c54932a1e275a7ad4419de);
+
+            
+        
+    
+
+            var marker_8645cc79410249689f0a9058230f6461 = L.marker(
+                [25.042074300000003,121.614122601404],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_be6543caa7764bd79bcb624143109429 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8645cc79410249689f0a9058230f6461.setIcon(icon_be6543caa7764bd79bcb624143109429);
+            
+    
+            var popup_63f2863c24a14006ad1800ea1792ebc4 = L.popup({maxWidth: '300'});
+
+            
+                var html_082f44e42dbc41caa7e3d53feeadfe09 = $('<div id="html_082f44e42dbc41caa7e3d53feeadfe09" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_63f2863c24a14006ad1800ea1792ebc4.setContent(html_082f44e42dbc41caa7e3d53feeadfe09);
+            
+
+            marker_8645cc79410249689f0a9058230f6461.bindPopup(popup_63f2863c24a14006ad1800ea1792ebc4);
+
+            
+        
+    
+
+            var marker_07f963fcadff453ebd7572d7b587d591 = L.marker(
+                [25.01682835,121.538469235773],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_a4d24cd6b7674ff2ac18680ffad239b3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_07f963fcadff453ebd7572d7b587d591.setIcon(icon_a4d24cd6b7674ff2ac18680ffad239b3);
+            
+    
+            var popup_02c23c54ad614f8e93cd3fdf8281e1c0 = L.popup({maxWidth: '300'});
+
+            
+                var html_81db8cdabad840d5898072fe90f5b5af = $('<div id="html_81db8cdabad840d5898072fe90f5b5af" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_02c23c54ad614f8e93cd3fdf8281e1c0.setContent(html_81db8cdabad840d5898072fe90f5b5af);
+            
+
+            marker_07f963fcadff453ebd7572d7b587d591.bindPopup(popup_02c23c54ad614f8e93cd3fdf8281e1c0);
+
+            
+        
+    
+
+            var marker_9b72a48cfd1f463c9eff6e9088e8b35e = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_fc8d2566af7444eeb66a6449cc8cd164 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9b72a48cfd1f463c9eff6e9088e8b35e.setIcon(icon_fc8d2566af7444eeb66a6449cc8cd164);
+            
+    
+            var popup_3765c0b2062842a9b8f8341c1c4f9afc = L.popup({maxWidth: '300'});
+
+            
+                var html_95699588bb6d424089fc13fc4d5f65c6 = $('<div id="html_95699588bb6d424089fc13fc4d5f65c6" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_3765c0b2062842a9b8f8341c1c4f9afc.setContent(html_95699588bb6d424089fc13fc4d5f65c6);
+            
+
+            marker_9b72a48cfd1f463c9eff6e9088e8b35e.bindPopup(popup_3765c0b2062842a9b8f8341c1c4f9afc);
+
+            
+        
+    
+
+            var marker_e47650cd780141d5b6ba5d2d7adc8883 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_a643005f3c774e07a89746ee8bac36d7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e47650cd780141d5b6ba5d2d7adc8883.setIcon(icon_a643005f3c774e07a89746ee8bac36d7);
+            
+    
+            var popup_cf1fd9ac77604645ad76e56be52f1326 = L.popup({maxWidth: '300'});
+
+            
+                var html_d1b86d014a23489aa6710ecbc4ad068b = $('<div id="html_d1b86d014a23489aa6710ecbc4ad068b" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_cf1fd9ac77604645ad76e56be52f1326.setContent(html_d1b86d014a23489aa6710ecbc4ad068b);
+            
+
+            marker_e47650cd780141d5b6ba5d2d7adc8883.bindPopup(popup_cf1fd9ac77604645ad76e56be52f1326);
+
+            
+        
+    
+
+            var marker_1b816bbc86b54873ba41de2a6bd1b1a8 = L.marker(
+                [51.523160700000005,-0.1282037],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_4e40858b7a0048b9a2ff272c314760b6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1b816bbc86b54873ba41de2a6bd1b1a8.setIcon(icon_4e40858b7a0048b9a2ff272c314760b6);
+            
+    
+            var popup_9dbb976652d64423b7452f77b4da73ef = L.popup({maxWidth: '300'});
+
+            
+                var html_6c66dad9da84427db94a31e163a667a1 = $('<div id="html_6c66dad9da84427db94a31e163a667a1" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_9dbb976652d64423b7452f77b4da73ef.setContent(html_6c66dad9da84427db94a31e163a667a1);
+            
+
+            marker_1b816bbc86b54873ba41de2a6bd1b1a8.bindPopup(popup_9dbb976652d64423b7452f77b4da73ef);
+
+            
+        
+    
+
+            var marker_cd8a8a426b5c4e328114fbc250d7237f = L.marker(
+                [1.45892585,103.74872269024],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_b332f1fa74e34cae994908e4709dde75 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cd8a8a426b5c4e328114fbc250d7237f.setIcon(icon_b332f1fa74e34cae994908e4709dde75);
+            
+    
+            var popup_bfe54bafa87441679e9dc9c03130a1e8 = L.popup({maxWidth: '300'});
+
+            
+                var html_e8e7fbd1cfee41f697ed5ed823e16d89 = $('<div id="html_e8e7fbd1cfee41f697ed5ed823e16d89" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_bfe54bafa87441679e9dc9c03130a1e8.setContent(html_e8e7fbd1cfee41f697ed5ed823e16d89);
+            
+
+            marker_cd8a8a426b5c4e328114fbc250d7237f.bindPopup(popup_bfe54bafa87441679e9dc9c03130a1e8);
+
+            
+        
+    
+
+            var marker_6523ccd0fcca4da280de1b55f392a467 = L.marker(
+                [-13.392598800000002,52.5189879],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_ed025246b9b74779bd7c558fb39e54e3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6523ccd0fcca4da280de1b55f392a467.setIcon(icon_ed025246b9b74779bd7c558fb39e54e3);
+            
+    
+            var popup_f5747bc0afde4733a57b9e408d44af85 = L.popup({maxWidth: '300'});
+
+            
+                var html_2254284e29254280848f355adbfa3f75 = $('<div id="html_2254284e29254280848f355adbfa3f75" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_f5747bc0afde4733a57b9e408d44af85.setContent(html_2254284e29254280848f355adbfa3f75);
+            
+
+            marker_6523ccd0fcca4da280de1b55f392a467.bindPopup(popup_f5747bc0afde4733a57b9e408d44af85);
+
+            
+        
+    
+
+            var marker_89c931cc0dc34d0184b78f53e63ef34f = L.marker(
+                [40.48557460000001,-74.4319015],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_5d4d62edbfa545bd8b7fcc221eb1d7cd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_89c931cc0dc34d0184b78f53e63ef34f.setIcon(icon_5d4d62edbfa545bd8b7fcc221eb1d7cd);
+            
+    
+            var popup_191e61f4d54042fd8abbdd90bd1ccf91 = L.popup({maxWidth: '300'});
+
+            
+                var html_35f35baa58444f2080e7a734f1c11d9a = $('<div id="html_35f35baa58444f2080e7a734f1c11d9a" style="width: 100.0%; height: 100.0%;">Position: Professor of Statistics </div>')[0];
+                popup_191e61f4d54042fd8abbdd90bd1ccf91.setContent(html_35f35baa58444f2080e7a734f1c11d9a);
+            
+
+            marker_89c931cc0dc34d0184b78f53e63ef34f.bindPopup(popup_191e61f4d54042fd8abbdd90bd1ccf91);
+
+            
+        
+    
+
+            var marker_8ab7983ce2844393bb71c28eab87d6a8 = L.marker(
+                [50.6697934,4.61543],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_f87ef7bd378b45d8ab1136224a88e940 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8ab7983ce2844393bb71c28eab87d6a8.setIcon(icon_f87ef7bd378b45d8ab1136224a88e940);
+            
+    
+            var popup_b4c685f73f964eb9988e8e40ef06a83a = L.popup({maxWidth: '300'});
+
+            
+                var html_d5ca279c45454fdb85db128c489be7ec = $('<div id="html_d5ca279c45454fdb85db128c489be7ec" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_b4c685f73f964eb9988e8e40ef06a83a.setContent(html_d5ca279c45454fdb85db128c489be7ec);
+            
+
+            marker_8ab7983ce2844393bb71c28eab87d6a8.bindPopup(popup_b4c685f73f964eb9988e8e40ef06a83a);
+
+            
+        
+    
+
+            var marker_fb0216fb77d1470abbe4ba128b67d2f5 = L.marker(
+                [37.431089,-122.16930093940701],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_525a97e9cef748aeb8b2bb59f92fbba6 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_fb0216fb77d1470abbe4ba128b67d2f5.setIcon(icon_525a97e9cef748aeb8b2bb59f92fbba6);
+            
+    
+            var popup_d4834960e0df4a5988f0204dc2ee6465 = L.popup({maxWidth: '300'});
+
+            
+                var html_20c0fd0bb11a46ef845dabdbcd19712c = $('<div id="html_20c0fd0bb11a46ef845dabdbcd19712c" style="width: 100.0%; height: 100.0%;">Position: Guest lecturer </div>')[0];
+                popup_d4834960e0df4a5988f0204dc2ee6465.setContent(html_20c0fd0bb11a46ef845dabdbcd19712c);
+            
+
+            marker_fb0216fb77d1470abbe4ba128b67d2f5.bindPopup(popup_d4834960e0df4a5988f0204dc2ee6465);
+
+            
+        
+    
+
+            var marker_5b85c08e73bc4335bccde5090b60270d = L.marker(
+                [-33.882878399999996,151.200682779726],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_dbc967fc723640cab5b3edf0107f7199 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5b85c08e73bc4335bccde5090b60270d.setIcon(icon_dbc967fc723640cab5b3edf0107f7199);
+            
+    
+            var popup_2427dfe2aaad4435893924d543a8d927 = L.popup({maxWidth: '300'});
+
+            
+                var html_c1a8230ea4494a51918a0c47a38a5c9d = $('<div id="html_c1a8230ea4494a51918a0c47a38a5c9d" style="width: 100.0%; height: 100.0%;">Position: Professor of Statistics </div>')[0];
+                popup_2427dfe2aaad4435893924d543a8d927.setContent(html_c1a8230ea4494a51918a0c47a38a5c9d);
+            
+
+            marker_5b85c08e73bc4335bccde5090b60270d.bindPopup(popup_2427dfe2aaad4435893924d543a8d927);
+
+            
+        
+    
+
+            var marker_640fcd34f3d746aeacbffc0f79628978 = L.marker(
+                [3.1033706000000003,101.5983472],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_00343a718fac49f694d319feda79eb2f = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_640fcd34f3d746aeacbffc0f79628978.setIcon(icon_00343a718fac49f694d319feda79eb2f);
+            
+    
+            var popup_5a52edbcc68b47baa353591c7dc3e7c6 = L.popup({maxWidth: '300'});
+
+            
+                var html_5bb7ec16f2b7488dbb3de7979373665d = $('<div id="html_5bb7ec16f2b7488dbb3de7979373665d" style="width: 100.0%; height: 100.0%;">Position: Professor </div>')[0];
+                popup_5a52edbcc68b47baa353591c7dc3e7c6.setContent(html_5bb7ec16f2b7488dbb3de7979373665d);
+            
+
+            marker_640fcd34f3d746aeacbffc0f79628978.bindPopup(popup_5a52edbcc68b47baa353591c7dc3e7c6);
+
+            
+        
+    
+
+            var marker_92e721e077ad494fbc2348b714c631d5 = L.marker(
+                [40.75586365,14.7804889453213],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_344f7665690045bca5a4c4154842d7eb = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_92e721e077ad494fbc2348b714c631d5.setIcon(icon_344f7665690045bca5a4c4154842d7eb);
+            
+    
+            var popup_e5923a83a33f4e2fb2fc3ff6331be854 = L.popup({maxWidth: '300'});
+
+            
+                var html_f343a288574842bb8622112a0ce7407b = $('<div id="html_f343a288574842bb8622112a0ce7407b" style="width: 100.0%; height: 100.0%;">Position: Research Guest </div>')[0];
+                popup_e5923a83a33f4e2fb2fc3ff6331be854.setContent(html_f343a288574842bb8622112a0ce7407b);
+            
+
+            marker_92e721e077ad494fbc2348b714c631d5.bindPopup(popup_e5923a83a33f4e2fb2fc3ff6331be854);
+
+            
+        
+    
+
+            var marker_471aa40ce26c45ebb08394121e57df03 = L.marker(
+                [31.7918555,35.244723],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_02aabea52a774a0486bcc6b8b778ff29);
+            
+    
+
+                var icon_d271787d341b4881a3afcfb2a847fda2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'orange',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_471aa40ce26c45ebb08394121e57df03.setIcon(icon_d271787d341b4881a3afcfb2a847fda2);
+            
+    
+            var popup_1279ee2e60434b67a3e2581cb322bcc6 = L.popup({maxWidth: '300'});
+
+            
+                var html_1546c5cf99f049a986ab1a5d040e5d1e = $('<div id="html_1546c5cf99f049a986ab1a5d040e5d1e" style="width: 100.0%; height: 100.0%;">Position: Professor </div>')[0];
+                popup_1279ee2e60434b67a3e2581cb322bcc6.setContent(html_1546c5cf99f049a986ab1a5d040e5d1e);
+            
+
+            marker_471aa40ce26c45ebb08394121e57df03.bindPopup(popup_1279ee2e60434b67a3e2581cb322bcc6);
+
+            
+        
+</script>
