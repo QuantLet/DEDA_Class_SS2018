@@ -1,5 +1,5 @@
 
-Name of Quantlet: Regrisk sentiment analysis
+Name of Quantlet: DEDA_Class_SS2018_Regrisk_sentiment_analysis
 
 Published in: 'Digital Economy and Decision Analytics (SS 18)'
 

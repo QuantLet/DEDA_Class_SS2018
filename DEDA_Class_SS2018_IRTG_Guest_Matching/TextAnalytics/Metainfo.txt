@@ -1,0 +1,11 @@
+Name of Quantlet:   IRTG_Guest_Matching
+
+Published in:      "Digital Economy and Decision Analytics (SS 18)"
+
+Description:       "Analyzing textual of IRTG researchers then matching IRTG Researchers based on their interests"
+
+Keywords:          "matching, similarity, clustering"
+
+Author:            Natalie Habib
+
+Submitted:         Thursday, July 25 2018 by Natalie Habib

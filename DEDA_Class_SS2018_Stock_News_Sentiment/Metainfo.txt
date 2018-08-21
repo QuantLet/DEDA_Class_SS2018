@@ -1,4 +1,4 @@
-Name of Quantlet:  DEDA_Sentiment_Regression
+Name of Quantlet:  DEDA_Class_SS2018_DEDA_Sentiment_Regression
 
  
 
@@ -6,16 +6,11 @@ Published in:      "Digital Economy and Decision Analytics (SS 18)"
 
   
 
-Description:       „Calculates forecasts based on historic data and Sentiment of Stock News“
+Description:       "Calculates forecasts based on historical data and Sentiment of Stock News"
 
  
 
-Keywords:          „sentiment, news, textmining, lexicon, forecasting, stocks"
-
-
-
-See also :         
-
+Keywords:          "sentiment, news, text mining, lexicon, forecasting, stocks"
 
 
 Author:            Marvin Gauer

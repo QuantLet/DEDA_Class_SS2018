@@ -1,0 +1,15 @@
+Name of Quantlet: DEDA_Class_SS2018_DictionaryForTurkishSentiment
+
+Published in: Digital Economy and Decision Analytics (SS 18)
+
+Description: Demonstrating getting data from various websites (web scraping) and analyzing the election rally speeches in Turkey (24.06.2018) by constructing a bridge between Turkish and English through tokenization and translation. 
+
+Keywords: web scraping, Turkish sentiment, Turkish word frequency, election speeches, speech analysis
+
+Author: Cemre Ünal
+
+See also: Erdogan_TextFiles, Erdogan_Manifesto, Ince_Manifesto
+
+Submitted: Wed, June 27 2018 by Cemre Ünal
+
+Output: Agg_RTE FrequentWordsEN.png, Agg_RTE - Word Cloud.png, RTE - Word Cloud.png (x3)

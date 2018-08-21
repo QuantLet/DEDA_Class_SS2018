@@ -1,4 +1,4 @@
-Name of Quantlet:  offerpage_scraper
+Name of Quantlet:  DEDA_Class_SS2018_offerpage_scraper
 
  
 
@@ -10,7 +10,7 @@ Description:       Scripts written in python to scrape details of room offers on
 
  
 
-Keywords:          "berlin, housing, expats, classification, advertisement, deposit, scam, rent"
+Keywords:          "Berlin, housing, expats, classification, advertisement, deposit, scam, rent"
 
 
 

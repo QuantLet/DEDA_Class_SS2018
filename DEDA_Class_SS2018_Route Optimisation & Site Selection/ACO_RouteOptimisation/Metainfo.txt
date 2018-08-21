@@ -1,11 +1,10 @@
-
-Name of Quantlet: ACO_RouteOptimisation
+Name of Quantlet: DEDA_Class_SS2018_ACO_RouteOptimisation
 
 Published in: 'Digital Economy and Decision Analytics (SS 18)'
 
 Description: 'Use Ant Colony Optimisation(ACO) for Logistic Route Planning: A Case for Logistic Distribution of 7-Eleven Stores in the Xinyi District of Taipei.' 
 
-Keywords: 'ant colony optimisation, route optimisation, retail logistics, google map geocoding api, google map distance matrix api, folium map, web scraping'
+Keywords: 'ant colony optimization, route optimization, retail logistics, google map geocoding API, google map distance matrix API, folium map, web scraping'
 
 Author: Min-Bin Lin
 

@@ -1,5 +1,5 @@
 
-Name of Quantlet:   Sucess_of_startups-master
+Name of Quantlet:   DEDA_Class_2018_Crunchbase
 
 
 Published in:      "Digital Economy and Decision Analytics (SS 18)"
@@ -10,7 +10,6 @@ Description:       "Predicting success of startups based on crunchbase database"
 
 
 Keywords:          "prediction, operating status, closed, startups, industry, funding, founding"
-
 
 
 Author:            Miriam Hruzova

@@ -1,11 +1,11 @@
 
-Name of Quantlet: Folium_SiteSelection
+Name of Quantlet: DEDA_Class_SS2018_Folium_SiteSelection
 
 Published in: 'Digital Economy and Decision Analytics (SS 18)'
 
 Description: 'Use Folium Package for Site Location Selection: A Case for New-entry Retailers to the Xinyi District of Taipei.'
 
-Keywords: 'facility location selection, geographic information, google map geocoding api, folium map, web scraping'
+Keywords: 'facility location selection, geographic information, google map geocoding API, folium map, web scraping'
 
 Author: Min-Bin Lin
 
@@ -16,4 +16,3 @@ Submitted: Fri, June 22 2018 by Min-Bin Lin
 Datafile: xinyi_area.json,Li.geojson, MRT.geojson, poulation.pdf
 
 Output: xinyi_map.html
-

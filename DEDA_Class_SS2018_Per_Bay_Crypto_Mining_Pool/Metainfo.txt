@@ -1,29 +1,14 @@
-Name of Quantlet:  CrypPool
-
- 
+Name of Quantlet:  DEDA_Class_SS2018_CrypPool
 
 Published in:      "Digital Economy and Decision Analytics (SS 18)"
 
-  
 
-Description:       „Quantify the degree of Mining Pool concentration for different cryptocurrencies“
+Description:       Quantify the degree of Mining Pool concentration for different cryptocurrencies
 
- 
-
-Keywords:          „Blockchain, Cryptocurrency, Gini Index, Herfindahl Hirschman Index"
-
-
-
-See also :         
-
-
+Keywords:          Blockchain, Cryptocurrency, Gini Index, Herfindahl Hirschman Index
 
 Author:            Ivan Perez - Mahdi Bayat
-
   
-
 Submitted:         Thu, July 05th 2018 by Ivan Perez
-
-  
 
 Datafile:          PY Script

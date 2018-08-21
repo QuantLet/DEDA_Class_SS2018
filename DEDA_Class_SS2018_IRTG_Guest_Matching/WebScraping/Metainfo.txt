@@ -1,0 +1,11 @@
+Name of Quantlet:   DEDA_Class_SS2018_MainWebScraping
+
+Published in:      "Digital Economy and Decision Analytics (SS 18)"
+
+Description:       "Scarping from IRTG webpage to obtain researchers information for further analysis"
+
+Keywords:          "scraping, similarity, clustering"
+
+Author:            Natalie Habib
+
+Submitted:         Thursday, July 25 2018 by Natalie Habib
