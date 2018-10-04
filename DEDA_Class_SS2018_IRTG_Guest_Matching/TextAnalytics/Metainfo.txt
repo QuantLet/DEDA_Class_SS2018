@@ -1,4 +1,4 @@
-Name of Quantlet:   IRTG_Guest_Matching
+Name of Quantlet:   DEDA_Class_SS2018_IRTG_Guest_Matching
 
 Published in:      "Digital Economy and Decision Analytics (SS 18)"
 
