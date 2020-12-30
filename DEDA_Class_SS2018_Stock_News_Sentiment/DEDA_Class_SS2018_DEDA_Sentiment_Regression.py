@@ -18,6 +18,10 @@ from wordcloud import WordCloud
 import sys
 import warnings
 
+# The api key is linked to quandl account (https://www.quandl.com)
+# It would be necessary for each user to apply an account and use its corresonding api
+QUANDL_API_KEY = "kbkLEWbdv3Y8VzSUQFuf"
+
 if not sys.warnoptions:
     warnings.simplefilter("ignore")
 
@@ -64,7 +68,7 @@ def plot_figures(figures, nrows = 1, ncols=1, name = 'Wordcloud.png'):
     plt.figure(figsize=(10,10))
     fig.savefig(name, dpi = 720,transparent=True)
 
-def Downloader(stock = None, symbol = None, quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U'):
+def Downloader(stock = None, symbol = None, quandl_api_key = QUANDL_API_KEY):
 
     article_links = [] # List containing all the article links
     tmp_links     = ['1'] # Temporary list to extract the article links per page
@@ -311,7 +315,7 @@ def RealTimeForecaster(stock = None,
                        model = None, 
                        Const = 0, 
                        agg_data = None , 
-                       quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U', 
+                       quandl_api_key = QUANDL_API_KEY, 
                        past_articles = None):
 
 
@@ -692,7 +696,7 @@ LR    = RegressionTrainer(data = ml_data, split = 0.8, model = 'LR', intercept =
 df = []
 while df == []:
     try:
-        df = RealTimeForecaster(stock = stock, symbol = symbol, model = LR, Const = 1, agg_data = ml_data , quandl_api_key = 'Wf96zAVtLHhnKxuTUE_U', past_articles = down[1])
+        df = RealTimeForecaster(stock = stock, symbol = symbol, model = LR, Const = 1, agg_data = ml_data , quandl_api_key = QUANDL_API_KEY, past_articles = down[1])
     except:
         print(datetime.now().time().strftime('%H:%M:%S -> ') + 'No New Articles. Retry in 5 min')
         time.sleep(5*60)
